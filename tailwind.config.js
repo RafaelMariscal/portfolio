@@ -35,8 +35,10 @@ module.exports = {
       boxShadow: {
         'custom-img':
           '0px 45px 36px rgba(0, 0, 0, 0.18), 0px 19px 15px rgba(0, 0, 0, 0.14), 0px 10px 8px rgba(0, 0, 0, 0.12), 0px 6px 5px rgba(0, 0, 0, 0.1), 0px 3px 2px rgba(0, 0, 0, 0.08)',
-        'custom-text': '0px 1px 2px rgba(0, 0, 0, 0.18)',
         'custom-project': '0px 10px 20px rgba(0, 0, 0, 0.25)',
+      },
+      dropShadow: {
+        'custom-text': '0px 1px 2px rgba(0, 0, 0, 0.18)',
       },
       animation: {
         overlayShow: 'overlayShow 250ms cubic-bezier(0.16, 1, 0.3, 1)',

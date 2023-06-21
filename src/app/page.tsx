@@ -1,67 +1,49 @@
 import NavLogo from '@/assets/NavLogo'
+import Hero from '@/components/Hero'
 import NavLinks from '@/components/NavLinks'
-import Image from 'next/image'
 import Link from 'next/link'
-import CustomLink from '@/components/CustomLink'
-import HeroImg from '../assets/Hero.png'
-import Rectangle from '../assets/Squares.png'
-import FilePdf from '@/assets/icons/FilePdf'
-import LinkedInIcon from '@/assets/icons/LinkedInIcon'
-import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-cyan-800">
-      <div className="flex w-full max-w-[1060px] gap-3 px-3 py-6">
-        <Link
-          href={'/'}
-          className="outline-none transition-all focus:scale-[1.05]"
-        >
-          <NavLogo />
-        </Link>
+      <div role="container" className="w-full max-w-[1060px] px-3">
+        <header className="flex gap-3 py-6">
+          <Link
+            href={'/'}
+            className="outline-none transition-all focus:scale-[1.05]"
+          >
+            <NavLogo />
+          </Link>
+          <NavLinks />
+        </header>
 
-        <NavLinks />
-      </div>
+        <Hero />
 
-      <div
-        role="hero"
-        className="px-3 flex justify-between w-full max-w-[1060px] py-8"
-      >
-        <Image
-          src={HeroImg}
-          alt="Rafael Mariscal, Software Developer with in perspective and crossed arms"
-          quality={100}
-          className="rounded-lg shadow-custom-img w-[25rem] h-[28.125rem]"
-        />
-        <div className="relative text-gray-100 w-full max-w-[28.75rem] h-fit">
-          <h1 className="text-[3.25rem] font-bold leading-none shadow-custom-text tracking-[0.04em]">
-            Rafael Mariscal
-          </h1>
-          <h2 className="ml-[0.125rem] mt-[0.125rem] text-xl font-semibold leading-none shadow-custom-text text-gray-200">
-            Web Developer / Project Manager
-          </h2>
-          <h3 className="ml-[0.125rem] my-5 text-lg font-semibold leading-snug shadow-custom-text">
-            I&#39;ve been developing solutions and managing projects in order to
-            achieve goals.
-          </h3>
-          <div className="ml-[0.125rem] flex flex-col gap-3 shadow-custom-text mb-8">
-            <CustomLink href={''} text="linkedin.com/in/rafael-mariscal">
-              <LinkedInIcon />
-            </CustomLink>
-            <CustomLink href={''} text="rafael_mariscal_@outlook.com">
-              <MsOutlookIcon />
-            </CustomLink>
-            <CustomLink href={''} text="Curriculum Vitae">
-              <FilePdf />
-            </CustomLink>
-          </div>
-          <Image
-            src={Rectangle}
-            alt=""
-            quality={100}
-            className="absolute bottom-0 left-0 translate-y-[100%]"
-          />
-        </div>
+        <article className="w-full max-w-[30.625rem] text-gray-200 font-semibold self-start flex flex-col gap-4">
+          <p>
+            Web Developer with +3 years of experience in projects End-2-End,
+            working also in leadership positions. I&#39;m also one of those gym
+            rats and a BBQ enthusiast.
+          </p>
+          <p>
+            During my career, I&#39;ve been enrolled with projects in
+            Javascript, using Agile Methodology. In these projects, I had the
+            opportunity to participate from the client&#39;s briefing to the
+            final sprint.
+          </p>
+          <p>
+            About my academics, I&#39;m an Engineer from University of
+            Fortaleza(UNIFOR - Brazil) and currently, I&#39;m going to my second
+            graduation, Systems Analysis and Development.
+          </p>
+
+          <Link
+            href={''}
+            className="underline underline-offset-2 hover:text-cyan-400 transition-all duration-100 w-fit"
+          >
+            Learn more about me
+          </Link>
+        </article>
       </div>
     </main>
   )
