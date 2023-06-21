@@ -2,9 +2,12 @@ import NavLogo from '@/assets/NavLogo'
 import NavLinks from '@/components/NavLinks'
 import Image from 'next/image'
 import Link from 'next/link'
+import CustomLink from '@/components/CustomLink'
 import HeroImg from '../assets/Hero.png'
 import Rectangle from '../assets/Squares.png'
-import CustomLink from '@/components/CustomLink'
+import FilePdf from '@/assets/icons/FilePdf'
+import LinkedInIcon from '@/assets/icons/LinkedInIcon'
+import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
 
 export default function Home() {
   return (
@@ -42,9 +45,15 @@ export default function Home() {
             achieve goals.
           </h3>
           <div className="ml-[0.125rem] flex flex-col gap-3 shadow-custom-text mb-8">
-            <CustomLink href={''} text="linkedin.com/in/rafael-mariscal" />
-            <CustomLink href={''} text="rafael_mariscal_@outlook.com" />
-            <CustomLink href={''} text="Curriculum Vitae" />
+            <CustomLink href={''} text="linkedin.com/in/rafael-mariscal">
+              <LinkedInIcon />
+            </CustomLink>
+            <CustomLink href={''} text="rafael_mariscal_@outlook.com">
+              <MsOutlookIcon />
+            </CustomLink>
+            <CustomLink href={''} text="Curriculum Vitae">
+              <FilePdf />
+            </CustomLink>
           </div>
           <Image
             src={Rectangle}

@@ -17,7 +17,7 @@ export default function NavLink({
       <button
         onClick={() => setState(title)}
         className={clsx(
-          'leading-none font-semibold transition-all outline-none',
+          'leading-none font-semibold transition-all outline-none select-none',
           {
             'text-cyan-400': currentState === title,
             'text-gray-300 hover:text-cyan-500 focus:text-cyan-500':
