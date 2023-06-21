@@ -1,25 +1,21 @@
-import NavLogo from '@/assets/NavLogo'
 import Hero from '@/components/Hero'
-import NavLinks from '@/components/NavLinks'
+import Navigation from '@/components/Navigation'
 import Link from 'next/link'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-cyan-800">
       <div role="container" className="w-full max-w-[1060px] px-3">
-        <header className="flex gap-3 py-6">
-          <Link
-            href={'/'}
-            className="outline-none transition-all focus:scale-[1.05]"
-          >
-            <NavLogo />
-          </Link>
-          <NavLinks />
-        </header>
+        <Navigation />
 
         <Hero />
 
-        <article className="w-full max-w-[30.625rem] text-gray-200 font-semibold self-start flex flex-col gap-4">
+        <article
+          className="
+            w-full max-w-[30.625rem] text-gray-200 font-semibold self-start flex flex-col gap-4
+            [&_strong]:font-semibold [&_strong]:underline [&_strong]:underline-offset-2
+          "
+        >
           <p>
             Web Developer with +3 years of experience in projects End-2-End,
             working also in leadership positions. I&#39;m also one of those gym
@@ -27,9 +23,11 @@ export default function Home() {
           </p>
           <p>
             During my career, I&#39;ve been enrolled with projects in
-            Javascript, using Agile Methodology. In these projects, I had the
-            opportunity to participate from the client&#39;s briefing to the
-            final sprint.
+            <strong> Javascript</strong>, using <strong>React</strong>,{' '}
+            <strong>Next</strong>, <strong>Node</strong> and{' '}
+            <strong>Nest</strong>. In these projects, I had the opportunity to
+            participate from the client&#39;s briefing to the final sprint
+            delivery.
           </p>
           <p>
             About my academics, I&#39;m an Engineer from University of

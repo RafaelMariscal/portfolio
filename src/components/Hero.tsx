@@ -16,7 +16,7 @@ function Hero() {
         src={HeroImg}
         alt="Rafael Mariscal, Software Developer with in perspective and crossed arms"
         quality={100}
-        className="rounded-lg shadow-custom-img w-[25rem] h-[28.125rem]"
+        className="rounded-lg shadow-custom-img w-[25rem] h-[28.125rem] select-none"
       />
       <div className="relative text-gray-100 w-full max-w-[28.75rem] h-fit">
         <h1 className="text-[3.25rem] font-bold leading-none drop-shadow-custom-text tracking-[0.04em]">
@@ -44,7 +44,7 @@ function Hero() {
           src={Rectangle}
           alt=""
           quality={100}
-          className="absolute bottom-0 left-0 translate-y-[100%]"
+          className="absolute bottom-0 left-0 translate-y-[100%] select-none"
         />
       </div>
     </div>
