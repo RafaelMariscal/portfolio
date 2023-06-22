@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import Navigation from '@/components/Navigation'
+import QuickBriefing from '@/components/QuickBriefing'
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
         <Navigation />
 
         <Hero />
+
+        <QuickBriefing />
       </div>
     </main>
   )
