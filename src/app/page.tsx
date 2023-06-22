@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import MainSkills from '@/components/MainSkills'
 import Navigation from '@/components/Navigation'
 import QuickBriefing from '@/components/QuickBriefing'
 
@@ -11,6 +12,8 @@ export default function Home() {
         <Hero />
 
         <QuickBriefing />
+
+        <MainSkills />
       </div>
     </main>
   )
