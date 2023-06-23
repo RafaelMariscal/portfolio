@@ -1,6 +1,10 @@
-import JackePlanner from '@/assets/projects/jp-project.png'
 import Project from './Project'
 import Link from 'next/link'
+import { StaticImageData } from 'next/image'
+
+import JackePlanner from '@/assets/projects/jp-project.png'
+import RDProject from '@/assets/projects/rd-project.png'
+
 import javascript from '@/assets/icons/techs/JAVASCRIPT.svg'
 import html from '@/assets/icons/techs/HTML.svg'
 import css from '@/assets/icons/techs/CSS.svg'
@@ -10,7 +14,10 @@ import radix from '@/assets/icons/techs/RADIX.svg'
 import router from '@/assets/icons/techs/ROUTER.svg'
 import tailwind from '@/assets/icons/techs/TAILWIND.svg'
 import firebase from '@/assets/icons/techs/FIREBASE.svg'
-import { StaticImageData } from 'next/image'
+import nextjs from '@/assets/icons/techs/NEXT.svg'
+import nodejs from '@/assets/icons/techs/NODE.svg'
+import prisma from '@/assets/icons/techs/PRISMA.svg'
+import aws from '@/assets/icons/techs/AWS.svg'
 
 const jackedPlannerTechs: StaticImageData[] = [
   html,
@@ -22,6 +29,20 @@ const jackedPlannerTechs: StaticImageData[] = [
   router,
   tailwind,
   firebase,
+]
+
+const rdInspecTechs: StaticImageData[] = [
+  javascript,
+  typescript,
+  react,
+  nextjs,
+  radix,
+  tailwind,
+  nodejs,
+  prisma,
+  aws,
+  html,
+  css,
 ]
 
 export default function Projects() {
@@ -65,6 +86,26 @@ export default function Projects() {
           >
             Github
           </Link>
+        </div>
+      </Project>
+
+      <Project
+        title="RD Inspections - CRM"
+        src={RDProject}
+        alt="Jacked Plnner. A gym sass where the clients can create a user profile, manange their training plans and also take notes during the training sessions"
+        link=""
+        repo=""
+        techList={rdInspecTechs}
+        techShrink
+      >
+        <div className="max-w-4xl font-medium drop-shadow-custom-text [&_span]:text-cyan-400">
+          <p>
+            CRM developed for an Online Vehicle Inspection Company that provides
+            technical reports. The reason behind this project is to unify two
+            services, Inspection Meetings Manager and Client Pictures
+            Geolocation Provider. So, we developed a REST API in order to
+            resolve this problem, and also a modern dashboard for UI/UX matters.
+          </p>
         </div>
       </Project>
     </div>

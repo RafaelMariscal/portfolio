@@ -12,6 +12,7 @@ interface ProjectProps {
   techList: StaticImageData[]
   children: ReactNode
   className?: string
+  techShrink?: boolean
 }
 
 export default function Project({
@@ -23,10 +24,11 @@ export default function Project({
   techList,
   children,
   className,
+  techShrink = false,
 }: ProjectProps) {
   return (
     <>
-      <div className="flex h-[80vh] overflow-hidden shadow-custom-project">
+      <div className="flex h-[80vh] overflow-hidden bg-gray-300 shadow-custom-project">
         <Image
           src={src}
           alt={alt}
@@ -37,7 +39,7 @@ export default function Project({
           )}
         />
       </div>
-      <div className="mx-auto mt-6 w-full max-w-7xl px-3">
+      <div className="mx-auto mb-12 mt-6 w-full max-w-7xl px-3">
         <h2
           className="
             w-fit text-2xl font-semibold leading-none 
@@ -56,7 +58,11 @@ export default function Project({
             >
               Main Techs:
             </h3>
-            <div className="flex flex-wrap items-center gap-2">
+            <div
+              className={clsx('flex flex-wrap items-center gap-2', {
+                'max-w-[18rem]': techShrink === true,
+              })}
+            >
               {techList.map((tech) => (
                 <>
                   <Image
