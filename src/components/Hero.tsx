@@ -18,16 +18,22 @@ function Hero() {
         quality={100}
         className="h-[28.125rem] w-[25rem] select-none rounded-lg shadow-custom-img"
       />
-      <div className="relative h-fit w-full max-w-[28.75rem] text-gray-100">
-        <h1 className="text-[3.25rem] font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
+      <div className="relative h-fit w-full max-w-lg text-gray-100">
+        <h1 className="text-6xl font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
           Rafael Mariscal
         </h1>
         <h2 className="ml-[0.125rem] mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-          Web Developer / Project Manager
+          Software Developer - Project Manager
         </h2>
-        <h3 className="my-5 ml-[0.125rem] text-lg font-semibold leading-snug drop-shadow-custom-text">
-          I&#39;ve been developing solutions and managing projects in order to
-          achieve goals.
+        <h3
+          className="
+            my-5 ml-[0.125rem] w-full max-w-lg text-lg font-semibold leading-tight drop-shadow-custom-text
+            [&_span]:text-cyan-400
+          "
+        >
+          I&#39;ve been <span>developing solutions</span> and{' '}
+          <span>managing projects</span> in order to achieve goals with solid
+          results.
         </h3>
         <div className="mb-8 ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text">
           <CustomLink href={''} text="linkedin.com/in/rafael-mariscal">

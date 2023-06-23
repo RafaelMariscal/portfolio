@@ -37,7 +37,7 @@ export default function MainSkills() {
         main<span className="ml-1 text-gray-100">skills</span>
       </h2>
 
-      <div className="mb-12 mt-4 flex justify-around text-gray-100">
+      <div className="mb-12 mt-4 flex gap-10 text-gray-100">
         <div>
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
             Programming:

@@ -9,7 +9,7 @@ export default function Navigation() {
   const [selected, setSelected] = useState('Home')
 
   return (
-    <header className="flex gap-3 py-6">
+    <header className="flex gap-3 py-6 drop-shadow-custom-text">
       <Link
         href={'/'}
         className="outline-none transition-all focus:scale-[1.05]"

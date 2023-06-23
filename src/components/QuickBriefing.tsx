@@ -5,12 +5,12 @@ export default function QuickBriefing() {
     <article
       className="
         my-8 flex w-full max-w-[30.625rem] flex-col gap-4 
-        self-start font-semibold text-gray-200
+        self-start font-semibold text-gray-200 drop-shadow-custom-text
         [&_strong]:font-semibold [&_strong]:underline [&_strong]:underline-offset-2
       "
     >
       <p>
-        Web Developer with +3 years of experience in projects End-2-End, working
+        Web Developer with +2 years of experience in projects End-2-End, working
         also in leadership positions. I&#39;m also one of those gym rats and a
         BBQ enthusiast.
       </p>
