@@ -1,55 +1,25 @@
-'use client'
-
-import { useState } from 'react'
 import NavLink from './NavLink'
 import Link from 'next/link'
 import NavLogo from '@/assets/NavLogo'
 
 export default function Navigation() {
-  const [selected, setSelected] = useState('Home')
-
   return (
     <header className="flex gap-3 py-6 drop-shadow-custom-text">
       <Link
         href={'/'}
-        className="outline-none transition-all focus:scale-[1.05]"
+        className="outline-none transition-all"
         passHref={undefined}
       >
         <NavLogo />
       </Link>
       <nav>
         <ul className="flex h-full items-end gap-8 px-8">
-          <NavLink
-            title="Home"
-            currentState={selected}
-            setState={setSelected}
-          />
-          <NavLink
-            title="Briefing"
-            currentState={selected}
-            setState={setSelected}
-          />
-          <NavLink
-            title="Projects"
-            currentState={selected}
-            setState={setSelected}
-          />
-          <NavLink
-            title="Experience"
-            currentState={selected}
-            setState={setSelected}
-          />
-          <NavLink
-            title="About"
-            currentState={selected}
-            setState={setSelected}
-            prefetch
-          />
-          <NavLink
-            title="Contact me"
-            currentState={selected}
-            setState={setSelected}
-          />
+          <NavLink href="/" title="Home" newTab />
+          <NavLink href="#briefing" title="Briefing" />
+          <NavLink href="#projects" title="Projects" />
+          <NavLink href="#experience" title="Experience" />
+          <NavLink href="/about" title="About" newTab />
+          <NavLink href="/contact" title="Contact me" />
         </ul>
       </nav>
     </header>

@@ -48,6 +48,7 @@ const rdInspecTechs: StaticImageData[] = [
 export default function Projects() {
   return (
     <div
+      id="projects"
       className="
         max-w-screen-[1600px] flex w-11/12 min-w-[1256px] flex-col items-center justify-center
         max-[1256px]:w-full max-[1256px]:min-w-0

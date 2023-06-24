@@ -9,6 +9,7 @@ import FilePdf from '@/assets/icons/FilePdf'
 function Hero() {
   return (
     <div
+      id="hero"
       role="hero"
       className="flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8"
     >

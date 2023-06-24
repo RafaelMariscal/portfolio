@@ -3,6 +3,7 @@ import CustomLink from './CustomLink'
 export default function QuickBriefing() {
   return (
     <article
+      id="briefing"
       className="
         mb-16 mt-8 flex w-full max-w-[30.625rem] flex-col gap-4 
         self-start font-semibold text-gray-200 drop-shadow-custom-text
