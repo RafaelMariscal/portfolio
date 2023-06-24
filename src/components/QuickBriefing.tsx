@@ -4,7 +4,7 @@ export default function QuickBriefing() {
   return (
     <article
       className="
-        my-8 flex w-full max-w-[30.625rem] flex-col gap-4 
+        mb-16 mt-8 flex w-full max-w-[30.625rem] flex-col gap-4 
         self-start font-semibold text-gray-200 drop-shadow-custom-text
         [&_strong]:font-semibold [&_strong]:underline [&_strong]:underline-offset-2
       "
