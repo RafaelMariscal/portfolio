@@ -7,7 +7,7 @@ import { ReactNode } from 'react'
 interface CustomLinkProps extends LinkProps {
   text: string
   className?: string
-  cv?: boolean
+  copy?: boolean
   children?: ReactNode
 }
 
@@ -15,15 +15,14 @@ export default function CustomLink({
   children,
   text,
   className,
-  cv = false,
+  copy = false,
   legacyBehavior = false,
   ...props
 }: CustomLinkProps) {
   function handleClick() {
-    if (cv) {
-      console.log('cv download')
+    if (copy) {
+      navigator.clipboard.writeText(text)
     }
-    navigator.clipboard.writeText(text)
   }
   return (
     <>
@@ -35,6 +34,7 @@ export default function CustomLink({
               'tracking-wider transition-all duration-100 hover:text-cyan-400',
               '[&_*]:transition-all [&_*]:duration-100 [&_*]:hover:fill-cyan-400',
               'outline-none focus:text-cyan-400 [&_*]:focus:fill-cyan-400',
+              'drop-shadow-custom-text',
               className,
             )}
             target="_blank"
@@ -51,6 +51,7 @@ export default function CustomLink({
             'tracking-wider transition-all duration-100 hover:text-cyan-400',
             '[&_*]:transition-all [&_*]:duration-100 [&_*]:hover:fill-cyan-400',
             'outline-none focus:text-cyan-400 [&_*]:focus:fill-cyan-400',
+            'drop-shadow-custom-text',
             className,
           )}
           onClick={handleClick}

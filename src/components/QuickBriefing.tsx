@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import CustomLink from './CustomLink'
 
 export default function QuickBriefing() {
   return (
@@ -6,7 +6,8 @@ export default function QuickBriefing() {
       className="
         mb-16 mt-8 flex w-full max-w-[30.625rem] flex-col gap-4 
         self-start font-semibold text-gray-200 drop-shadow-custom-text
-        [&_strong]:font-semibold [&_strong]:underline [&_strong]:underline-offset-2
+        [&_strong]:font-semibold [&_strong]:text-cyan-400
+        [&_strong]:underline [&_strong]:underline-offset-2
       "
     >
       <p>
@@ -27,15 +28,12 @@ export default function QuickBriefing() {
         graduation, Systems Analysis and Development.
       </p>
 
-      <Link
-        href={''}
-        className="
-          w-fit underline underline-offset-2 transition-all duration-100 
-          hover:text-cyan-400
-        "
-      >
-        Learn more about me
-      </Link>
+      <CustomLink
+        text="Learn more about me"
+        href={'/about'}
+        legacyBehavior
+        className="w-fit text-base tracking-normal underline underline-offset-2"
+      ></CustomLink>
     </article>
   )
 }

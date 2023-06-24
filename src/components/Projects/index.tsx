@@ -1,5 +1,4 @@
 import Project from './Project'
-import Link from 'next/link'
 import { StaticImageData } from 'next/image'
 
 import JackePlanner from '@/assets/projects/jp-project.png'
@@ -18,6 +17,7 @@ import nextjs from '@/assets/icons/techs/NEXT.svg'
 import nodejs from '@/assets/icons/techs/NODE.svg'
 import prisma from '@/assets/icons/techs/PRISMA.svg'
 import aws from '@/assets/icons/techs/AWS.svg'
+import CustomLink from '../CustomLink'
 
 const jackedPlannerTechs: StaticImageData[] = [
   html,
@@ -73,19 +73,30 @@ export default function Projects() {
             <span>plain and pure Javascript</span>, <span>HTML</span> and{' '}
             <span>CSS</span>. Follow the link bellow, to access this version:
           </p>
-          <Link
-            href={''}
-            className="text-xs text-cyan-400 underline underline-offset-2 transition-all duration-100 hover:text-cyan-500"
-          >
-            Jacked Planner using plain and pure JS
-          </Link>
-          {' | '}
-          <Link
-            href={''}
-            className="text-xs text-cyan-400 underline underline-offset-2 transition-all duration-100 hover:text-cyan-500"
-          >
-            Github
-          </Link>
+
+          <div className="flex items-center gap-2">
+            <CustomLink
+              href={'https://jackedplanner.web.app/'}
+              text="Jacked Planner using plain and pure JS"
+              className="
+              text-xs font-medium tracking-normal text-cyan-400 
+              underline underline-offset-2 transition-all duration-100 
+              hover:text-cyan-500
+            "
+              legacyBehavior
+            />
+            {' | '}
+            <CustomLink
+              href={'https://github.com/RafaelMariscal/jackedPlanner'}
+              text="Github"
+              className="
+              text-xs font-medium tracking-normal text-cyan-400 
+              underline underline-offset-2 transition-all duration-100 
+              hover:text-cyan-500
+            "
+              legacyBehavior
+            />
+          </div>
         </div>
       </Project>
 

@@ -10,7 +10,7 @@ function Hero() {
   return (
     <div
       role="hero"
-      className="flex h-fit w-full max-w-[1060px] items-center justify-between gap-10 py-8"
+      className="flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8"
     >
       <Image
         src={HeroImg}
@@ -20,44 +20,51 @@ function Hero() {
       />
 
       <div className="relative w-full max-w-lg text-gray-100">
-        <div>
-          <h1 className="text-6xl font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
-            Rafael Mariscal
-          </h1>
-          <h2 className="ml-[0.125rem] mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-            Fullstack Software Developer - React / Node.js
-          </h2>
-          <h3
-            className="
+        <div className="absolute bottom-1/2 z-10 translate-y-1/2">
+          <div>
+            <h1 className="text-6xl font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
+              Rafael Mariscal
+            </h1>
+            <h2 className="ml-[0.125rem] mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
+              Fullstack Software Developer - React / Node.js
+            </h2>
+            <h3
+              className="
             my-5 ml-[0.125rem] w-full max-w-lg text-xl font-semibold leading-tight drop-shadow-custom-text
             [&_span]:text-cyan-400
           "
-          >
-            I&#39;ve been <span>developing solutions</span> and{' '}
-            <span>managing projects</span> in order to achieve goals.
-          </h3>
+            >
+              I&#39;ve been <span>developing solutions</span> and{' '}
+              <span>managing projects</span> in order to achieve goals.
+            </h3>
+          </div>
+
+          <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text">
+            <CustomLink
+              href={'https://www.linkedin.com/in/rafael-mariscal/'}
+              text="linkedin.com/in/rafael-mariscal"
+              legacyBehavior
+            >
+              <LinkedInIcon />
+            </CustomLink>
+            <CustomLink href={''} text="rafael_mariscal_@outlook.com" copy>
+              <MsOutlookIcon />
+            </CustomLink>
+            <CustomLink
+              href={'/pdf/Rafael_Mariscal_Goncalves_de_Souza.pdf'}
+              text="Curriculum Vitae"
+              legacyBehavior
+            >
+              <FilePdf />
+            </CustomLink>
+          </div>
         </div>
 
-        <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text">
-          <CustomLink
-            href={'https://www.linkedin.com/in/rafael-mariscal/'}
-            text="linkedin.com/in/rafael-mariscal"
-            legacyBehavior
-          >
-            <LinkedInIcon />
-          </CustomLink>
-          <CustomLink href={''} text="rafael_mariscal_@outlook.com">
-            <MsOutlookIcon />
-          </CustomLink>
-          <CustomLink href={''} text="Curriculum Vitae" cv>
-            <FilePdf />
-          </CustomLink>
-        </div>
         <Image
           src={Squares}
           alt=""
           quality={100}
-          className="absolute bottom-[15%] left-0 w-full translate-y-[100%] -scale-x-100 select-none"
+          className="absolute bottom-[25%] left-0 w-full translate-y-[100%] -scale-x-100 select-none"
         />
       </div>
     </div>

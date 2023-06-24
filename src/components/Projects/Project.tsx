@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
-import Link from 'next/link'
 import { ReactNode } from 'react'
+import CustomLink from '../CustomLink'
 
 interface ProjectProps {
   title: string
@@ -76,22 +76,26 @@ export default function Project({
             <div
               className="
                 mt-2 flex items-center justify-between gap-4 text-sm
-                font-semibold text-cyan-400 underline underline-offset-2
-                drop-shadow-custom-text
               "
             >
-              <Link
+              <CustomLink
                 href={link}
-                className="transition-all duration-100 hover:text-cyan-500"
-              >
-                Access {title}
-              </Link>
-              <Link
+                text={`Access ${title}`}
+                legacyBehavior
+                className="
+                  text-[0.875rem] tracking-normal text-cyan-400 underline 
+                  underline-offset-2 hover:text-cyan-500
+                "
+              />
+              <CustomLink
                 href={repo}
-                className="transition-all duration-100 hover:text-cyan-500"
-              >
-                Github
-              </Link>
+                text={`Github`}
+                legacyBehavior
+                className="
+                  text-[0.875rem] tracking-normal text-cyan-400 underline 
+                  underline-offset-2 hover:text-cyan-500
+                "
+              />
             </div>
           </div>
         </div>
