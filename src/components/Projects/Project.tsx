@@ -8,9 +8,9 @@ interface ProjectProps {
   src: StaticImageData
   alt: string
   link: string
-  repo: string
   techList: StaticImageData[]
   children: ReactNode
+  repo?: string
   className?: string
   techShrink?: boolean
 }
@@ -42,7 +42,7 @@ export default function Project({
       <div className="mx-auto mb-12 mt-6 w-full max-w-7xl px-3">
         <h2
           className="
-            w-fit text-2xl font-semibold leading-none 
+            w-fit text-2xl font-bold leading-none tracking-wider 
             underline underline-offset-4 drop-shadow-custom-text
           "
         >
@@ -60,14 +60,14 @@ export default function Project({
             </h3>
             <div
               className={clsx('flex flex-wrap items-center gap-2', {
-                'max-w-[18rem]': techShrink === true,
+                'max-w-[16rem]': techShrink === true,
               })}
             >
               {techList.map((tech) => (
                 <>
                   <Image
                     src={tech}
-                    alt=""
+                    alt={''}
                     className="drop-shadow-custom-text"
                   />
                 </>
@@ -87,15 +87,17 @@ export default function Project({
                   underline-offset-2 hover:text-cyan-500
                 "
               />
-              <CustomLink
-                href={repo}
-                text={`Github`}
-                legacyBehavior
-                className="
-                  text-[0.875rem] tracking-normal text-cyan-400 underline 
-                  underline-offset-2 hover:text-cyan-500
-                "
-              />
+              {repo && (
+                <CustomLink
+                  href={repo}
+                  text={`Github`}
+                  legacyBehavior
+                  className="
+                    text-[0.875rem] tracking-normal text-cyan-400 underline 
+                    underline-offset-2 hover:text-cyan-500
+                  "
+                />
+              )}
             </div>
           </div>
         </div>

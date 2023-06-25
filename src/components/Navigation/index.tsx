@@ -7,8 +7,11 @@ export default function Navigation() {
     <header className="flex gap-3 py-6 drop-shadow-custom-text">
       <Link
         href={'/'}
-        className="outline-none transition-all"
-        passHref={undefined}
+        className="
+            w-fit outline-none
+            [&_*]:transition-all [&_*]:hover:fill-cyan-400
+          "
+        target="_blank"
       >
         <NavLogo />
       </Link>
