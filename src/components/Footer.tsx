@@ -1,5 +1,5 @@
 import NavLogo from '@/assets/NavLogo'
-import CustomLink from './CustomLink'
+import NavLink from './Navigation/NavLink'
 
 export default function Footer() {
   return (
@@ -13,11 +13,21 @@ export default function Footer() {
       </div>
       <nav>
         <ul className="flex flex-col gap-4">
-          <CustomLink href={'/'} text="Home" />
-          <CustomLink href={'/#briefing'} text="Briefing" useScroll />
-          <CustomLink href={'/#projects'} text="Projects" useScroll />
-          <CustomLink href={'/#experience'} text="Experience" useScroll />
-          <CustomLink href={'/about'} text="About" />
+          <li>
+            <NavLink href="/" title="Home" newTab />
+          </li>
+          <li>
+            <NavLink href="#briefing" title="Briefing" />
+          </li>
+          <li>
+            <NavLink href="#projects" title="Projects" />
+          </li>
+          <li>
+            <NavLink href="#experience" title="Experience" />
+          </li>
+          <li>
+            <NavLink href="/about" title="About" newTab />
+          </li>
         </ul>
         <span>© 2023</span>
       </nav>

@@ -33,7 +33,7 @@ export default function NavLink({
   }
 
   return (
-    <li>
+    <>
       {newTab ? (
         <Link href={href} legacyBehavior prefetch>
           <a
@@ -68,6 +68,6 @@ export default function NavLink({
           </button>
         </Link>
       )}
-    </li>
+    </>
   )
 }

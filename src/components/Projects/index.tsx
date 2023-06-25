@@ -58,8 +58,8 @@ export default function Projects() {
         title="Jacked Planner"
         src={JackePlanner}
         alt="Jacked Plnner. A gym sass where the clients can create a user profile, manange their training plans and also take notes during the training sessions"
-        link=""
-        repo=""
+        link="https://jackedplannerreact.web.app/"
+        repo="https://github.com/RafaelMariscal/JackedPlanner-ReactJs"
         techList={jackedPlannerTechs}
       >
         <div className="max-w-4xl font-medium drop-shadow-custom-text [&_span]:text-cyan-400">
@@ -80,22 +80,18 @@ export default function Projects() {
               href={'https://jackedplanner.web.app/'}
               text="Jacked Planner using plain and pure JS"
               className="
-              text-xs font-medium tracking-normal text-cyan-400 
-              underline underline-offset-2 transition-all duration-100 
-              hover:text-cyan-500
-            "
-              legacyBehavior
+                text-cyan-400 underline underline-offset-2 
+                hover:text-cyan-500
+              "
             />
             {' | '}
             <CustomLink
               href={'https://github.com/RafaelMariscal/jackedPlanner'}
               text="Github"
               className="
-              text-xs font-medium tracking-normal text-cyan-400 
-              underline underline-offset-2 transition-all duration-100 
-              hover:text-cyan-500
-            "
-              legacyBehavior
+                text-cyan-400 underline underline-offset-2 
+                hover:text-cyan-500
+              "
             />
           </div>
         </div>

@@ -42,19 +42,24 @@ function Hero() {
 
           <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text">
             <CustomLink
+              className="tracking-wider"
               href={'https://www.linkedin.com/in/rafael-mariscal/'}
               text="linkedin.com/in/rafael-mariscal"
-              legacyBehavior
             >
               <LinkedInIcon />
             </CustomLink>
-            <CustomLink href={''} text="rafael_mariscal_@outlook.com" copy>
+            <CustomLink
+              className="tracking-wider"
+              href={''}
+              text="rafael_mariscal_@outlook.com"
+              copy
+            >
               <MsOutlookIcon />
             </CustomLink>
             <CustomLink
+              className="tracking-wider"
               href={'/pdf/Rafael_Mariscal_Goncalves_de_Souza.pdf'}
               text="Curriculum Vitae"
-              legacyBehavior
             >
               <FilePdf />
             </CustomLink>

@@ -33,8 +33,8 @@ export default function QuickBriefing() {
         text="Learn more about me"
         href={'/about'}
         legacyBehavior
-        className="w-fit text-base tracking-normal underline underline-offset-2"
-      ></CustomLink>
+        className="text-[1rem] underline underline-offset-2"
+      />
     </article>
   )
 }

@@ -14,12 +14,21 @@ export default function Navigation() {
       </Link>
       <nav>
         <ul className="flex h-full items-end gap-8 px-8">
-          <NavLink href="/" title="Home" newTab />
-          <NavLink href="#briefing" title="Briefing" />
-          <NavLink href="#projects" title="Projects" />
-          <NavLink href="#experience" title="Experience" />
-          <NavLink href="/about" title="About" newTab />
-          <NavLink href="/contact" title="Contact me" />
+          <li>
+            <NavLink href="/" title="Home" newTab />
+          </li>
+          <li>
+            <NavLink href="#briefing" title="Briefing" />
+          </li>
+          <li>
+            <NavLink href="#projects" title="Projects" />
+          </li>
+          <li>
+            <NavLink href="#experience" title="Experience" />
+          </li>
+          <li>
+            <NavLink href="/about" title="About" newTab />
+          </li>
         </ul>
       </nav>
     </header>
