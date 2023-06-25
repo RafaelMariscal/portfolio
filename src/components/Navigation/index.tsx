@@ -4,7 +4,7 @@ import NavLogo from '@/assets/NavLogo'
 
 export default function Navigation() {
   return (
-    <header className="flex gap-3 py-6 drop-shadow-custom-text">
+    <header className="flex w-full max-w-7xl gap-3 px-3 py-6 drop-shadow-custom-text">
       <Link
         href={'/'}
         className="

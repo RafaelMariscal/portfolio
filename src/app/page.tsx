@@ -1,21 +1,17 @@
-import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import MainSkills from '@/components/MainSkills'
-import Navigation from '@/components/Navigation'
 import Projects from '@/components/Projects'
 import QuickBriefing from '@/components/QuickBriefing'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center bg-cyan-800 text-gray-100">
+    <main className="flex flex-col items-center justify-center">
       <div role="container" className="w-full max-w-7xl px-3" id="top">
-        <Navigation />
         <Hero />
         <QuickBriefing />
         <MainSkills />
       </div>
       <Projects />
-      <Footer />
     </main>
   )
 }
