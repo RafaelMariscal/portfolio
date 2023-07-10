@@ -1,3 +1,4 @@
+import Experiences from '@/components/Experiences'
 import Hero from '@/components/Hero'
 import MainSkills from '@/components/MainSkills'
 import Projects from '@/components/Projects'
@@ -12,6 +13,7 @@ export default function Home() {
         <MainSkills />
       </div>
       <Projects />
+      <Experiences />
     </main>
   )
 }

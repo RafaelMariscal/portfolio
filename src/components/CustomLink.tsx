@@ -49,7 +49,7 @@ export default function CustomLink({
               'text-xs font-semibold transition-all duration-100',
               'outline-none drop-shadow-custom-text',
               'hover:text-cyan-400 focus:text-cyan-400',
-              '[&_*]:transition-all [&_*]:duration-100 ',
+              '[&_*]:transition-all [&_*]:duration-100',
               '[&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400',
               className,
             )}
