@@ -32,7 +32,6 @@ export default function QuickBriefing() {
       <CustomLink
         text="Learn more about me"
         href={'/about'}
-        legacyBehavior
         className="text-[1rem] underline underline-offset-2"
       />
     </article>

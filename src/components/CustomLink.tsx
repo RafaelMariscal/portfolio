@@ -1,8 +1,8 @@
 'use client'
 
-import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { ReactNode } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 interface CustomLinkProps extends LinkProps {
   text: string
@@ -28,7 +28,7 @@ export default function CustomLink({
     <>
       {copy ? (
         <button
-          className={clsx(
+          className={twMerge(
             'flex w-fit items-center justify-between gap-[0.375rem] text-xs font-semibold',
             'tracking-wider transition-all duration-100 hover:text-cyan-400',
             '[&_*]:transition-all [&_*]:duration-100 [&_*]:hover:fill-cyan-400',
@@ -42,22 +42,23 @@ export default function CustomLink({
           {text}
         </button>
       ) : (
-        <Link {...props} legacyBehavior>
-          <a
-            className={clsx(
-              'flex w-fit items-center justify-between gap-[0.375rem]',
-              'text-xs font-semibold transition-all duration-100',
-              'outline-none drop-shadow-custom-text',
-              'hover:text-cyan-400 focus:text-cyan-400',
-              '[&_*]:transition-all [&_*]:duration-100',
-              '[&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400',
-              className,
-            )}
-            target="_blank"
-          >
+        <Link
+          {...props}
+          target="_blank"
+          className={twMerge(
+            'flex w-fit items-center justify-between gap-[0.375rem]',
+            'text-xs font-semibold transition-all duration-100',
+            'outline-none drop-shadow-custom-text',
+            'hover:text-cyan-400 focus:text-cyan-400',
+            '[&_*]:transition-all [&_*]:duration-100',
+            '[&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400',
+            className,
+          )}
+        >
+          <>
             {children}
             {text}
-          </a>
+          </>
         </Link>
       )}
     </>
