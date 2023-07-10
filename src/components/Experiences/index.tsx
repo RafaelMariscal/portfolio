@@ -10,10 +10,10 @@ export default function Experiences() {
           Experiences
         </h2>
         <Experience.Root>
-          <Experience.Content text="Web Developer - Full stack" />
+          <Experience.Content text="Software Developer - Full stack" />
           <Experience.Description className="flex items-center justify-between">
-            <span>Front-end specialist</span>
-            <span>2022 - Atual</span>
+            <span>Freelancer Developer</span>
+            <span>2022 - Present</span>
           </Experience.Description>
         </Experience.Root>
 
@@ -21,7 +21,7 @@ export default function Experiences() {
           <Experience.Content text="Project Manager" />
           <Experience.Description className="flex items-center justify-between">
             <span>Inbox - Refeições Coletivas</span>
-            <span>2018 - Atual</span>
+            <span>2018 - Present</span>
           </Experience.Description>
         </Experience.Root>
 

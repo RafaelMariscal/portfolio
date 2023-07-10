@@ -4,7 +4,7 @@ import CustomLink from '@/components/CustomLink'
 import Squares from '../assets/Squares.png'
 import LinkedInIcon from '@/assets/icons/LinkedInIcon'
 import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
-import FilePdf from '@/assets/icons/FilePdf'
+import WhatsappIcon from '@/assets/icons/WhatsappIcon'
 
 function Hero() {
   return (
@@ -58,10 +58,10 @@ function Hero() {
             </CustomLink>
             <CustomLink
               className="tracking-wider"
-              href={'/pdf/Rafael_Mariscal_Goncalves_de_Souza.pdf'}
-              text="Curriculum Vitae"
+              href={'https://wa.me/5585981182281'}
+              text="Click to chat"
             >
-              <FilePdf />
+              <WhatsappIcon />
             </CustomLink>
           </div>
         </div>
