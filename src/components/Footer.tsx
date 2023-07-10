@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import NavLogo from '@/assets/NavLogo'
 import NavLink from './Navigation/NavLink'
@@ -17,16 +16,17 @@ export default function Footer() {
       "
     >
       <div className="flex flex-col gap-6">
-        <Link
-          href={'/'}
-          target="_blank"
+        <NavLink
+          href="/"
+          title=""
           className="
-            w-fit outline-none
-            [&_*]:transition-all [&_*]:hover:fill-cyan-400
+            w-fit outline-none [&_*]:transition-all
+             [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-500
           "
+          newTab
         >
           <NavLogo />
-        </Link>
+        </NavLink>
         <p className="w-full max-w-sm text-justify font-medium">
           If you think I can help you, I&#39;d love to talk about your problem.
           Shoot me an email or contact me through my socials here below.

@@ -1,20 +1,20 @@
 import NavLink from './NavLink'
-import Link from 'next/link'
 import NavLogo from '@/assets/NavLogo'
 
 export default function Navigation() {
   return (
     <header className="flex w-full max-w-7xl gap-3 px-3 py-6 drop-shadow-custom-text">
-      <Link
-        href={'/'}
+      <NavLink
+        href="/"
+        title=""
         className="
-            w-fit outline-none
-            [&_*]:transition-all [&_*]:hover:fill-cyan-400
+            w-fit outline-none [&_*]:transition-all
+             [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-500
           "
-        target="_blank"
+        newTab
       >
         <NavLogo />
-      </Link>
+      </NavLink>
       <nav>
         <ul className="flex h-full items-end gap-8 px-8">
           <li>
