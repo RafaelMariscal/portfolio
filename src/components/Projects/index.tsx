@@ -1,9 +1,6 @@
 import Project from './Project'
-import { StaticImageData } from 'next/image'
-
 import JackePlanner from '@/assets/projects/jp-project.png'
 import RDProject from '@/assets/projects/rd-project.png'
-
 import javascript from '@/assets/icons/techs/JAVASCRIPT.svg'
 import html from '@/assets/icons/techs/HTML.svg'
 import css from '@/assets/icons/techs/CSS.svg'
@@ -17,7 +14,7 @@ import nextjs from '@/assets/icons/techs/NEXT.svg'
 import nodejs from '@/assets/icons/techs/NODE.svg'
 import prisma from '@/assets/icons/techs/PRISMA.svg'
 import aws from '@/assets/icons/techs/AWS.svg'
-import NavLink from '../Navigation/NavLink'
+import { StaticImageData } from 'next/image'
 
 const jackedPlannerTechs: StaticImageData[] = [
   html,
@@ -50,7 +47,7 @@ export default function Projects() {
     <div
       id="projects"
       className="
-        max-w-screen-[1600px] flex w-11/12 min-w-[1256px] flex-col items-center justify-center
+        max-w-screen-[1600px] flex w-11/12 min-w-[1256px] flex-col items-center
         max-[1256px]:w-full max-[1256px]:min-w-0
       "
     >
@@ -74,27 +71,6 @@ export default function Projects() {
             daily exercises and schedule for the week. Also, the customer is
             able to take notes for each training day.
           </p>
-          <p className="mt-4 text-xs">
-            The first version of this app was built using{' '}
-            <span>plain and pure Javascript</span>, <span>HTML</span> and{' '}
-            <span>CSS</span>. Follow the link bellow, to access this version:
-          </p>
-
-          <div className="flex items-center gap-2">
-            <NavLink
-              href={'https://jackedplanner.web.app/'}
-              title="Jacked Planner using plain and pure JS"
-              className="text-xs text-cyan-400 underline underline-offset-2"
-              newTab
-            />
-            {' | '}
-            <NavLink
-              href={'https://github.com/RafaelMariscal/jackedPlanner'}
-              title="Github"
-              className="text-xs text-cyan-400 underline underline-offset-2"
-              newTab
-            />
-          </div>
         </div>
       </Project>
 

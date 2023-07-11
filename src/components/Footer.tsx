@@ -21,7 +21,7 @@ export default function Footer() {
           title=""
           className="
             w-fit outline-none [&_*]:transition-all
-             [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-500
+             [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400
           "
           newTab
         >
@@ -38,9 +38,11 @@ export default function Footer() {
             href=""
             title="rafael_mariscal_@outlook.com"
             className="
-              flex items-center gap-[.375rem] text-xs 
-              tracking-wider text-gray-100 [&_*]:transition-all
-             [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-500
+              flex items-center gap-[.375rem] text-xs
+              tracking-wider text-gray-100 duration-100 
+              hover:text-cyan-400 focus:text-cyan-400 
+              [&_*]:transition-all [&_*]:duration-100
+              [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400
             "
             copy
           >
@@ -50,9 +52,11 @@ export default function Footer() {
             href={'https://www.linkedin.com/in/rafael-mariscal/'}
             title="linkedin.com/in/rafael-mariscal"
             className="
-              flex items-center gap-[.375rem] text-xs 
-              tracking-wider text-gray-100 [&_*]:transition-all
-             [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-500
+              flex items-center gap-[.375rem] text-xs
+              tracking-wider text-gray-100 duration-100 
+              hover:text-cyan-400 focus:text-cyan-400 
+              [&_*]:transition-all [&_*]:duration-100
+              [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400
             "
             newTab
           >
