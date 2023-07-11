@@ -17,7 +17,7 @@ import nextjs from '@/assets/icons/techs/NEXT.svg'
 import nodejs from '@/assets/icons/techs/NODE.svg'
 import prisma from '@/assets/icons/techs/PRISMA.svg'
 import aws from '@/assets/icons/techs/AWS.svg'
-import CustomLink from '../CustomLink'
+import NavLink from '../Navigation/NavLink'
 
 const jackedPlannerTechs: StaticImageData[] = [
   html,
@@ -81,22 +81,18 @@ export default function Projects() {
           </p>
 
           <div className="flex items-center gap-2">
-            <CustomLink
+            <NavLink
               href={'https://jackedplanner.web.app/'}
-              text="Jacked Planner using plain and pure JS"
-              className="
-                text-cyan-400 underline underline-offset-2 
-                hover:text-cyan-500
-              "
+              title="Jacked Planner using plain and pure JS"
+              className="text-xs text-cyan-400 underline underline-offset-2"
+              newTab
             />
             {' | '}
-            <CustomLink
+            <NavLink
               href={'https://github.com/RafaelMariscal/jackedPlanner'}
-              text="Github"
-              className="
-                text-cyan-400 underline underline-offset-2 
-                hover:text-cyan-500
-              "
+              title="Github"
+              className="text-xs text-cyan-400 underline underline-offset-2"
+              newTab
             />
           </div>
         </div>

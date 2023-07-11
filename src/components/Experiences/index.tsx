@@ -1,6 +1,6 @@
 import FilePdf from '@/assets/icons/FilePdf'
 import { Experience } from './Experience'
-import Link from 'next/link'
+import NavLink from '../Navigation/NavLink'
 
 export default function Experiences() {
   return (
@@ -50,21 +50,17 @@ export default function Experiences() {
             </p>
 
             <Experience.Footer>
-              <Link
-                href={
-                  '/pdf/Objectives_and_Key_Results_Framework_Implementation_Case_Study.pdf'
-                }
-                target="_blank"
+              <NavLink
+                href="/pdf/Objectives_and_Key_Results_Framework_Implementation_Case_Study.pdf"
+                title="OKR Framework Case Study"
                 className="
-                  flex items-center gap-1 outline-none
-                  [&_*]:duration-100 
-                  [&_*]:hover:fill-cyan-500 [&_*]:hover:text-cyan-500
-                  [&_*]:focus:fill-cyan-500 [&_*]:focus:text-cyan-500
+                  flex items-center gap-1 text-cyan-400 [&_*]:duration-100
+                  [&_*]:hover:fill-cyan-500 [&_*]:focus:fill-cyan-500
                 "
+                newTab
               >
                 <FilePdf className="scale-75" />
-                <span>OKR Framework Case Study</span>
-              </Link>
+              </NavLink>
             </Experience.Footer>
           </Experience.Description>
         </Experience.Root>

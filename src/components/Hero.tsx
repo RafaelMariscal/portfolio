@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import HeroImg from '../assets/Hero.png'
-import CustomLink from '@/components/CustomLink'
 import Squares from '../assets/Squares.png'
 import LinkedInIcon from '@/assets/icons/LinkedInIcon'
 import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
 import WhatsappIcon from '@/assets/icons/WhatsappIcon'
+import NavLink from './Navigation/NavLink'
 
 function Hero() {
   return (
@@ -41,28 +41,50 @@ function Hero() {
           </div>
 
           <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text">
-            <CustomLink
-              className="tracking-wider"
+            <NavLink
+              newTab
               href={'https://www.linkedin.com/in/rafael-mariscal/'}
-              text="linkedin.com/in/rafael-mariscal"
+              title="linkedin.com/in/rafael-mariscal"
+              className="
+                flex items-center gap-[.375rem] text-xs
+                tracking-wider text-gray-100 duration-100
+                hover:text-cyan-400 focus:text-cyan-400 
+                [&_*]:transition-all [&_*]:duration-100
+                [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400
+              "
             >
               <LinkedInIcon />
-            </CustomLink>
-            <CustomLink
-              className="tracking-wider"
-              href={''}
-              text="rafael_mariscal_@outlook.com"
+            </NavLink>
+
+            <NavLink
               copy
+              href={'https://www.linkedin.com/in/rafael-mariscal/'}
+              title="rafael_mariscal_@outlook.com"
+              className="
+                flex items-center gap-[.375rem] text-xs
+                tracking-wider text-gray-100 duration-100 
+                hover:text-cyan-400 focus:text-cyan-400 
+                [&_*]:transition-all [&_*]:duration-100
+                [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400
+              "
             >
               <MsOutlookIcon />
-            </CustomLink>
-            <CustomLink
-              className="tracking-wider"
-              href={'https://wa.me/5585981182281'}
-              text="Click to chat"
+            </NavLink>
+
+            <NavLink
+              newTab
+              href="https://wa.me/5585981182281"
+              title="Click to chat"
+              className="
+                flex items-center gap-[.375rem] text-xs
+                tracking-wider text-gray-100 duration-100 
+                hover:text-cyan-400 focus:text-cyan-400 
+                [&_*]:transition-all [&_*]:duration-100
+                [&_*]:hover:fill-cyan-400 [&_*]:focus:fill-cyan-400
+              "
             >
               <WhatsappIcon />
-            </CustomLink>
+            </NavLink>
           </div>
         </div>
 

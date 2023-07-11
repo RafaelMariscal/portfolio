@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
-import CustomLink from '../CustomLink'
+import NavLink from '../Navigation/NavLink'
 
 interface ProjectProps {
   title: string
@@ -39,6 +39,7 @@ export default function Project({
           )}
         />
       </div>
+
       <div className="mx-auto mb-12 mt-6 w-full max-w-7xl px-3">
         <h2
           className="
@@ -75,27 +76,21 @@ export default function Project({
             </div>
             <div
               className="
-                mt-2 flex items-center justify-between gap-4 text-sm
+                mt-2 flex items-center gap-4
               "
             >
-              <CustomLink
+              <NavLink
                 href={link}
-                text={`Access ${title}`}
-                legacyBehavior
-                className="
-                  text-[0.875rem] tracking-normal text-cyan-400 underline 
-                  underline-offset-2 hover:text-cyan-500
-                "
+                title={`Access ${title}`}
+                className="text-sm text-cyan-400 underline underline-offset-2"
+                newTab
               />
               {repo && (
-                <CustomLink
+                <NavLink
                   href={repo}
-                  text={`Github`}
-                  legacyBehavior
-                  className="
-                    text-[0.875rem] tracking-normal text-cyan-400 underline 
-                    underline-offset-2 hover:text-cyan-500
-                  "
+                  title="Github"
+                  className="text-sm text-cyan-400 underline underline-offset-2"
+                  newTab
                 />
               )}
             </div>
