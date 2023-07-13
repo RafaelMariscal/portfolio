@@ -17,26 +17,28 @@ function Hero() {
         src={HeroImg}
         alt="Rafael Mariscal, Software Developer with in perspective and crossed arms"
         quality={100}
-        className="h-[28.125rem] w-[25rem] select-none rounded-lg shadow-custom-img"
+        className="h-[28.125rem] w-[25rem] select-none rounded shadow-custom-img"
       />
 
       <div className="relative w-full max-w-lg text-gray-100">
         <div className="absolute bottom-1/2 z-10 translate-y-1/2">
           <div>
-            <h1 className="text-6xl font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
+            <h1 className="-ml-[0.1875rem] text-6xl font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
               Rafael Mariscal
             </h1>
-            <h2 className="ml-[0.125rem] mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-              Fullstack Software Developer - React / Node.js
+            <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
+              Full-Stack Software Developer - React / Node.js
             </h2>
             <h3
               className="
-            my-5 ml-[0.125rem] w-full max-w-lg text-xl font-semibold leading-tight drop-shadow-custom-text
-            [&_span]:text-cyan-400
-          "
+                my-8 ml-[0.125rem] w-full max-w-lg 
+                text-lg font-semibold leading-tight drop-shadow-custom-text
+                [&_span]:text-cyan-400
+              "
             >
               I&#39;ve been <span>developing solutions</span> and{' '}
-              <span>managing projects</span> in order to achieve goals.
+              <span>managing projects</span> to deliver solid results in order
+              to achieve goals
             </h3>
           </div>
 
@@ -90,7 +92,7 @@ function Hero() {
 
         <Image
           src={Squares}
-          alt=""
+          alt="Blob image with squares"
           quality={100}
           className="absolute bottom-[25%] left-0 w-full translate-y-[100%] -scale-x-100 select-none"
         />

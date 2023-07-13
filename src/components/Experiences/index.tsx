@@ -1,5 +1,5 @@
 import FilePdf from '@/assets/icons/FilePdf'
-import { Experience } from './Experience'
+import { Experience } from './ExperienceCompose'
 import NavLink from '../Navigation/NavLink'
 
 export default function Experiences() {
@@ -10,7 +10,7 @@ export default function Experiences() {
     >
       <div className="flex w-full max-w-sm flex-col gap-4">
         <h2 className="text-2xl font-bold underline underline-offset-4">
-          Experiences
+          Main Experiences
         </h2>
         <Experience.Root>
           <Experience.Content text="Software Developer - Full stack" />
@@ -73,7 +73,7 @@ export default function Experiences() {
           </Experience.Description>
         </Experience.Root>
         <Experience.Root>
-          <Experience.Content text="Net Profit increased by +25% by using Agile Methodology(OKRs)" />
+          <Experience.Content text="Net Profit increased by +25% by using OKR Framework" />
           <Experience.Description>
             <p className="text-justify">
               Graduation Thesis based on the OKR framework implementation, which
