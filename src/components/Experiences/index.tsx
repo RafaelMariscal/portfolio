@@ -6,7 +6,7 @@ export default function Experiences() {
   return (
     <div
       id="experience"
-      className="flex w-full max-w-7xl justify-between gap-12 px-3 py-10"
+      className="flex w-full max-w-screen-xl justify-between gap-12 px-3 py-10"
     >
       <div className="flex w-full max-w-sm flex-col gap-4">
         <h2 className="text-2xl font-bold underline underline-offset-4">
