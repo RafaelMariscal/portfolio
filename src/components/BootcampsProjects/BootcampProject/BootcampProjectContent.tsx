@@ -3,7 +3,7 @@
 import { twMerge } from 'tailwind-merge'
 import clsx from 'clsx'
 import { useSelectedProject } from '@/contexts/SelectedProjectContext/hook'
-import { ReactNode } from 'react'
+import { ReactNode, Children, isValidElement, cloneElement } from 'react'
 import { ProjectsType } from '@/contexts/SelectedProjectContext'
 
 interface BootcampProjectContentProps {
@@ -22,14 +22,20 @@ export default function BootcampProjectContent({
     <div
       className={twMerge(
         clsx({
-          'flex h-[8.75rem] flex-col justify-between bg-gray-100':
+          'flex h-[9rem] flex-col justify-between bg-gray-100 transition-[height] duration-500':
             isSelected === true,
           'invisible h-0 w-0': isSelected === false,
         }),
         className,
       )}
     >
-      {children}
+      {Children.map(children, (child) => {
+        if (!isValidElement(child)) return null
+        return cloneElement(child, {
+          ...child.props,
+          name,
+        })
+      })}
     </div>
   )
 }

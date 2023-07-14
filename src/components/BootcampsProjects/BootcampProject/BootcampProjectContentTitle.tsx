@@ -11,7 +11,7 @@ export default function BootcampProjectContentTitle({
   return (
     <h3
       className={twMerge(
-        'text-2xl font-bold uppercase text-cyan-600 drop-shadow-custom-text',
+        'text-start text-2xl font-bold uppercase text-cyan-600 drop-shadow-custom-text',
         className,
       )}
     >

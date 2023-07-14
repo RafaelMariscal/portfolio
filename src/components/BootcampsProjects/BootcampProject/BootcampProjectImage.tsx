@@ -52,6 +52,7 @@ export default function BootcampProjectImage({
           </span>
         </Link>
       </div>
+
       <Image
         src={src}
         alt={alt}

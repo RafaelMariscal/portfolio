@@ -1,11 +1,11 @@
 import Image, { StaticImageData } from 'next/image'
-import Squares from '@/assets/Squares2.svg'
 import WaiterApp from '@/assets/projects/bootcampProjects/waiterApp.png'
 import DesignSystem from '@/assets/projects/bootcampProjects/designSystem.png'
 import NextBlog from '@/assets/projects/bootcampProjects/nextjsBlog.png'
 import VideoPlatform from '@/assets/projects/bootcampProjects/videoPlatform.png'
 import { BootcampProject } from './BootcampProject'
 
+import Squares from '@/assets/Squares2.svg'
 import html from '@/assets/icons/techs/HTML.svg'
 import css from '@/assets/icons/techs/CSS.svg'
 import sass from '@/assets/icons/techs/SASS.svg'
@@ -26,6 +26,8 @@ import jest from '@/assets/icons/techs/JEST.svg'
 import graphQL from '@/assets/icons/techs/GRAPHQL.svg'
 import graphCMS from '@/assets/icons/techs/GRAPH_CMS.svg'
 import apollo from '@/assets/icons/techs/APOLLO.svg'
+import jstackIcon from '@/assets/icons/bootcampCompanies/JStack.svg'
+import rocketseatIcon from '@/assets/icons/bootcampCompanies/Rocketseat.svg'
 
 const waiterAppTechs: StaticImageData[] = [
   html,
@@ -91,14 +93,15 @@ export default function BootcampsProjects() {
           className="object-cover object-right"
         />
 
-        <div className="flex  min-w-[46rem] items-center gap-3">
+        <div className="flex min-w-[46rem] items-center gap-3">
           <BootcampProject.Root>
             <BootcampProject.Card name="waiterApp">
               <BootcampProject.Content>
-                <div className="px-3 pt-3">
+                <div className="flex items-center justify-between px-3 pt-3">
                   <BootcampProject.Title title="Reataurant Sass" />
-                  <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
+                  <BootcampProject.CompanyIcon icon={jstackIcon} />
                 </div>
+                <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
                 <BootcampProject.TechsList techsList={waiterAppTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
@@ -110,10 +113,11 @@ export default function BootcampsProjects() {
 
             <BootcampProject.Card name="desingSystem">
               <BootcampProject.Content>
-                <div className="px-3 pt-3">
-                  <BootcampProject.Title title="Reataurant Sass" />
-                  <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
+                <div className="flex items-center justify-between px-3 pt-3">
+                  <BootcampProject.Title title="Design System" />
+                  <BootcampProject.CompanyIcon icon={rocketseatIcon} />
                 </div>
+                <BootcampProject.Description description="A simple login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case." />
                 <BootcampProject.TechsList techsList={designSystemTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
@@ -125,10 +129,11 @@ export default function BootcampsProjects() {
 
             <BootcampProject.Card name="nextBlog">
               <BootcampProject.Content>
-                <div className="px-3 pt-3">
-                  <BootcampProject.Title title="Reataurant Sass" />
-                  <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
+                <div className="flex items-center justify-between px-3 pt-3">
+                  <BootcampProject.Title title="Next.js blog" />
+                  <BootcampProject.CompanyIcon icon={rocketseatIcon} />
                 </div>
+                <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access the articles content if subscribed." />
                 <BootcampProject.TechsList techsList={nextBlogTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
@@ -140,10 +145,11 @@ export default function BootcampsProjects() {
 
             <BootcampProject.Card name="videoPlatform">
               <BootcampProject.Content>
-                <div className="px-3 pt-3">
-                  <BootcampProject.Title title="Reataurant Sass" />
-                  <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
+                <div className="flex items-center justify-between px-3 pt-3">
+                  <BootcampProject.Title title="Video Platform" />
+                  <BootcampProject.CompanyIcon icon={rocketseatIcon} />
                 </div>
+                <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access full content if signed up." />
                 <BootcampProject.TechsList techsList={videoPlatformTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
