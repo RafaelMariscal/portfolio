@@ -7,8 +7,8 @@ import { ReactNode } from 'react'
 import { ProjectsType } from '@/contexts/SelectedProjectContext'
 
 interface BootcampProjectContentProps {
-  name: ProjectsType
   children: ReactNode
+  name?: ProjectsType
   className?: string
 }
 export default function BootcampProjectContent({

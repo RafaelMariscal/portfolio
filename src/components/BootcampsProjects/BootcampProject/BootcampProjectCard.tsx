@@ -2,7 +2,7 @@
 
 import { ProjectsType } from '@/contexts/SelectedProjectContext'
 import { useSelectedProject } from '@/contexts/SelectedProjectContext/hook'
-import { ReactNode } from 'react'
+import { ReactNode, Children, isValidElement, cloneElement } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface BootcampProjectCardProps {
@@ -33,7 +33,13 @@ export default function BootcampProjectCard({
         finalWidthClass,
       )}
     >
-      {children}
+      {Children.map(children, (child) => {
+        if (!isValidElement(child)) return null
+        return cloneElement(child, {
+          ...child.props,
+          name,
+        })
+      })}
     </button>
   )
 }

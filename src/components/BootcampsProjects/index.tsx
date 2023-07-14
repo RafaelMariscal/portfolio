@@ -94,7 +94,7 @@ export default function BootcampsProjects() {
         <div className="flex  min-w-[46rem] items-center gap-3">
           <BootcampProject.Root>
             <BootcampProject.Card name="waiterApp">
-              <BootcampProject.Content name="waiterApp">
+              <BootcampProject.Content>
                 <div className="px-3 pt-3">
                   <BootcampProject.Title title="Reataurant Sass" />
                   <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
@@ -102,7 +102,6 @@ export default function BootcampsProjects() {
                 <BootcampProject.TechsList techsList={waiterAppTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
-                name="waiterApp"
                 src={WaiterApp}
                 alt="waiterApp Image"
                 className="object-[-34.75rem]"
@@ -110,7 +109,7 @@ export default function BootcampsProjects() {
             </BootcampProject.Card>
 
             <BootcampProject.Card name="desingSystem">
-              <BootcampProject.Content name="desingSystem">
+              <BootcampProject.Content>
                 <div className="px-3 pt-3">
                   <BootcampProject.Title title="Reataurant Sass" />
                   <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
@@ -118,7 +117,6 @@ export default function BootcampsProjects() {
                 <BootcampProject.TechsList techsList={designSystemTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
-                name="desingSystem"
                 src={DesignSystem}
                 alt="desingSystem image"
                 className="object-left-top"
@@ -126,7 +124,7 @@ export default function BootcampsProjects() {
             </BootcampProject.Card>
 
             <BootcampProject.Card name="nextBlog">
-              <BootcampProject.Content name="nextBlog">
+              <BootcampProject.Content>
                 <div className="px-3 pt-3">
                   <BootcampProject.Title title="Reataurant Sass" />
                   <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
@@ -134,7 +132,6 @@ export default function BootcampsProjects() {
                 <BootcampProject.TechsList techsList={nextBlogTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
-                name="nextBlog"
                 src={NextBlog}
                 alt="nextblog image"
                 className="object-[-27.5rem]"
@@ -142,7 +139,7 @@ export default function BootcampsProjects() {
             </BootcampProject.Card>
 
             <BootcampProject.Card name="videoPlatform">
-              <BootcampProject.Content name="videoPlatform">
+              <BootcampProject.Content>
                 <div className="px-3 pt-3">
                   <BootcampProject.Title title="Reataurant Sass" />
                   <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
@@ -150,7 +147,6 @@ export default function BootcampsProjects() {
                 <BootcampProject.TechsList techsList={videoPlatformTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
-                name="videoPlatform"
                 src={VideoPlatform}
                 alt="video platform image"
                 className="object-[-14rem]"

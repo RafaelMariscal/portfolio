@@ -17,6 +17,7 @@ export default function BootcampProjectRoot({
 }: BootcampProjectRootProps) {
   const [projectSelected, setProjectSelected] =
     useState<ProjectsType>('waiterApp')
+  console.log(projectSelected)
   return (
     <div className={twMerge('flex items-center gap-3', className)}>
       <SelectedProjectContext.Provider

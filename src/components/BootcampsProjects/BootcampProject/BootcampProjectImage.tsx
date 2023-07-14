@@ -8,15 +8,15 @@ import { useSelectedProject } from '@/contexts/SelectedProjectContext/hook'
 import { ProjectsType } from '@/contexts/SelectedProjectContext'
 
 interface BootcampProjectImageProps {
-  name: ProjectsType
   src: StaticImageData
   alt: string
+  name?: ProjectsType
   className?: string
 }
 export default function BootcampProjectImage({
-  name,
   src,
   alt,
+  name,
   className,
 }: BootcampProjectImageProps) {
   const { projectSelected } = useSelectedProject()
