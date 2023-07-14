@@ -29,7 +29,7 @@ export default function BootcampProjectContentTechs({
               src={tech}
               alt={''}
               quality={100}
-              className="h-5 drop-shadow-custom-text"
+              className="h-5 select-none drop-shadow-custom-text"
             />
           </>
         ))}

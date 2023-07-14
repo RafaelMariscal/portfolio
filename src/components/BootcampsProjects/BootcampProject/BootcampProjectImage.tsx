@@ -10,12 +10,14 @@ import { ProjectsType } from '@/contexts/SelectedProjectContext'
 interface BootcampProjectImageProps {
   src: StaticImageData
   alt: string
+  accessLink: string
   name?: ProjectsType
   className?: string
 }
 export default function BootcampProjectImage({
   src,
   alt,
+  accessLink,
   name,
   className,
 }: BootcampProjectImageProps) {
@@ -37,7 +39,7 @@ export default function BootcampProjectImage({
         )}
       >
         <Link
-          href={''}
+          href={accessLink}
           target="_blank"
           className={clsx(
             '-z-10 flex h-40 w-full -translate-y-[6rem] rotate-[-20deg]',
@@ -47,7 +49,7 @@ export default function BootcampProjectImage({
             'focus:bg-cyan-500 focus:text-cyan-800',
           )}
         >
-          <span className="mr-3 translate-y-[2rem] rotate-[20deg]">
+          <span className="mr-3 translate-y-[2rem] rotate-[20deg] select-none whitespace-nowrap">
             Access this Project
           </span>
         </Link>
@@ -57,7 +59,7 @@ export default function BootcampProjectImage({
         src={src}
         alt={alt}
         className={twMerge(
-          'object-cover',
+          'select-none object-cover',
           clsx(isSelected === false && classNameIfNotSelected),
         )}
         quality={100}

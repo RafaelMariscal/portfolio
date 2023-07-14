@@ -81,25 +81,48 @@ const videoPlatformTechs: StaticImageData[] = [
 export default function BootcampsProjects() {
   return (
     <div className="mx-auto w-full max-w-screen-xl overflow-visible px-3 py-6">
-      <h2 className="text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
+      <h2 className="mb-8 text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
         bootcamps<span className="ml-1 text-gray-100">projects</span>
       </h2>
 
-      <div className="flex w-full items-center justify-end overflow-visible">
+      <div className="flex w-full items-center justify-end gap-4 overflow-visible">
         <Image
           src={Squares}
           alt="Blob image of squares"
           quality={100}
-          className="object-cover object-right"
+          className="h-full max-h-[30rem] object-cover object-right"
         />
 
         <div className="flex min-w-[46rem] items-center gap-3">
           <BootcampProject.Root>
+            <BootcampProject.Card name="nextBlog">
+              <BootcampProject.Content>
+                <div className="flex items-center justify-between px-3 pt-3">
+                  <BootcampProject.Title title="Next.js blog" />
+                  <BootcampProject.CompanyIcon
+                    icon={rocketseatIcon}
+                    link="https://www.rocketseat.com.br/"
+                  />
+                </div>
+                <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access the articles content if subscribed." />
+                <BootcampProject.TechsList techsList={nextBlogTechs} />
+              </BootcampProject.Content>
+              <BootcampProject.Image
+                src={NextBlog}
+                alt="nextblog image"
+                accessLink="https://ignite-news-nextjs.vercel.app/"
+                className="object-[-27.5rem]"
+              />
+            </BootcampProject.Card>
+
             <BootcampProject.Card name="waiterApp">
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
                   <BootcampProject.Title title="Reataurant Sass" />
-                  <BootcampProject.CompanyIcon icon={jstackIcon} />
+                  <BootcampProject.CompanyIcon
+                    icon={jstackIcon}
+                    link="https://jstack.com.br/"
+                  />
                 </div>
                 <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
                 <BootcampProject.TechsList techsList={waiterAppTechs} />
@@ -107,6 +130,7 @@ export default function BootcampsProjects() {
               <BootcampProject.Image
                 src={WaiterApp}
                 alt="waiterApp Image"
+                accessLink="https://github.com/RafaelMariscal?tab=repositories&q=restaurant&type=&language=&sort="
                 className="object-[-34.75rem]"
               />
             </BootcampProject.Card>
@@ -115,7 +139,10 @@ export default function BootcampsProjects() {
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
                   <BootcampProject.Title title="Design System" />
-                  <BootcampProject.CompanyIcon icon={rocketseatIcon} />
+                  <BootcampProject.CompanyIcon
+                    icon={rocketseatIcon}
+                    link="https://www.rocketseat.com.br/"
+                  />
                 </div>
                 <BootcampProject.Description description="A simple login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case." />
                 <BootcampProject.TechsList techsList={designSystemTechs} />
@@ -123,23 +150,8 @@ export default function BootcampsProjects() {
               <BootcampProject.Image
                 src={DesignSystem}
                 alt="desingSystem image"
+                accessLink="https://rafaelmariscal.github.io/IgniteLab-DesignSystem/?path=/story/components-button--default"
                 className="object-left-top"
-              />
-            </BootcampProject.Card>
-
-            <BootcampProject.Card name="nextBlog">
-              <BootcampProject.Content>
-                <div className="flex items-center justify-between px-3 pt-3">
-                  <BootcampProject.Title title="Next.js blog" />
-                  <BootcampProject.CompanyIcon icon={rocketseatIcon} />
-                </div>
-                <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access the articles content if subscribed." />
-                <BootcampProject.TechsList techsList={nextBlogTechs} />
-              </BootcampProject.Content>
-              <BootcampProject.Image
-                src={NextBlog}
-                alt="nextblog image"
-                className="object-[-27.5rem]"
               />
             </BootcampProject.Card>
 
@@ -147,7 +159,10 @@ export default function BootcampsProjects() {
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
                   <BootcampProject.Title title="Video Platform" />
-                  <BootcampProject.CompanyIcon icon={rocketseatIcon} />
+                  <BootcampProject.CompanyIcon
+                    icon={rocketseatIcon}
+                    link="https://www.rocketseat.com.br/"
+                  />
                 </div>
                 <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access full content if signed up." />
                 <BootcampProject.TechsList techsList={videoPlatformTechs} />
@@ -155,6 +170,7 @@ export default function BootcampsProjects() {
               <BootcampProject.Image
                 src={VideoPlatform}
                 alt="video platform image"
+                accessLink="https://github.com/RafaelMariscal/Event-video-platform"
                 className="object-[-14rem]"
               />
             </BootcampProject.Card>

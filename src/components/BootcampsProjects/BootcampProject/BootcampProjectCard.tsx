@@ -24,6 +24,7 @@ export default function BootcampProjectCard({
   return (
     <button
       onClick={() => setProjectSelected(name)}
+      // onTouchStart={() => setProjectSelected(name)}
       onMouseEnter={() => setProjectSelected(name)}
       onFocus={() => setProjectSelected(name)}
       className={twMerge(

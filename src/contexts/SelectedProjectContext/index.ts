@@ -12,6 +12,6 @@ interface useSelectedProjectProps {
 }
 
 export const SelectedProjectContext = createContext<useSelectedProjectProps>({
-  projectSelected: 'waiterApp',
+  projectSelected: 'nextBlog',
   setProjectSelected: (state: ProjectsType) => undefined,
 })

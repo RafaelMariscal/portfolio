@@ -21,9 +21,8 @@ export default function BootcampProjectContent({
   return (
     <div
       className={twMerge(
+        'flex h-[9rem] flex-col justify-between bg-gray-100',
         clsx({
-          'flex h-[9rem] flex-col justify-between bg-gray-100 transition-[height] duration-500':
-            isSelected === true,
           'invisible h-0 w-0': isSelected === false,
         }),
         className,
