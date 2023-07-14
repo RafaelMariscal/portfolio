@@ -1,4 +1,4 @@
-import CustomLink from './CustomLink'
+import NavLink from './Navigation/NavLink'
 
 export default function QuickBriefing() {
   return (
@@ -29,11 +29,14 @@ export default function QuickBriefing() {
         graduation, Systems Analysis and Development.
       </p>
 
-      <CustomLink
-        text="Learn more about me"
+      <NavLink
+        newTab
         href={'/about'}
-        legacyBehavior
-        className="text-[1rem] underline underline-offset-2"
+        title="Learn more about me"
+        className="
+          text-gray-200 underline underline-offset-2 
+          hover:text-cyan-400 focus:text-cyan-400
+        "
       />
     </article>
   )

@@ -1,9 +1,5 @@
-import Project from './Project'
-import { StaticImageData } from 'next/image'
-
 import JackePlanner from '@/assets/projects/jp-project.png'
 import RDProject from '@/assets/projects/rd-project.png'
-
 import javascript from '@/assets/icons/techs/JAVASCRIPT.svg'
 import html from '@/assets/icons/techs/HTML.svg'
 import css from '@/assets/icons/techs/CSS.svg'
@@ -14,10 +10,33 @@ import router from '@/assets/icons/techs/ROUTER.svg'
 import tailwind from '@/assets/icons/techs/TAILWIND.svg'
 import firebase from '@/assets/icons/techs/FIREBASE.svg'
 import nextjs from '@/assets/icons/techs/NEXT.svg'
+import nestjs from '@/assets/icons/techs/NEST.svg'
 import nodejs from '@/assets/icons/techs/NODE.svg'
+import mongoDB from '@/assets/icons/techs/MONGO.svg'
 import prisma from '@/assets/icons/techs/PRISMA.svg'
+import docker from '@/assets/icons/techs/DOCKER.svg'
 import aws from '@/assets/icons/techs/AWS.svg'
-import CustomLink from '../CustomLink'
+import github from '@/assets/icons/techs/GITHUB.svg'
+import Image, { StaticImageData } from 'next/image'
+import { ProjectCompose } from './ProjectCompose'
+import NavLink from '../Navigation/NavLink'
+
+const rdInspecTechs: StaticImageData[] = [
+  html,
+  css,
+  javascript,
+  typescript,
+  react,
+  nextjs,
+  radix,
+  tailwind,
+  nodejs,
+  nestjs,
+  prisma,
+  docker,
+  mongoDB,
+  aws,
+]
 
 const jackedPlannerTechs: StaticImageData[] = [
   html,
@@ -31,100 +50,74 @@ const jackedPlannerTechs: StaticImageData[] = [
   firebase,
 ]
 
-const rdInspecTechs: StaticImageData[] = [
-  javascript,
-  typescript,
-  react,
-  nextjs,
-  radix,
-  tailwind,
-  nodejs,
-  prisma,
-  aws,
-  html,
-  css,
-]
-
 export default function Projects() {
   return (
-    <div
-      id="projects"
-      className="
-        max-w-screen-[1600px] flex w-11/12 min-w-[1256px] flex-col items-center justify-center
-        max-[1256px]:w-full max-[1256px]:min-w-0
-      "
-    >
-      <Project
-        title="Jacked Planner"
-        src={JackePlanner}
-        alt="Jacked Plnner. A gym sass where the clients can create a user profile, manange their training plans and also take notes during the training sessions"
-        link="https://jackedplannerreact.web.app/"
-        repo="https://github.com/RafaelMariscal/JackedPlanner-ReactJs"
-        techList={jackedPlannerTechs}
-      >
-        <div
-          className="
-            max-w-4xl text-justify font-medium drop-shadow-custom-text
-            [&_span]:text-cyan-400
-          "
-        >
-          <p>
-            A product created for Gyms, where their customers can now access,
-            create, and manage their training plans, as well as define their
-            daily exercises and schedule for the week. Also, the customer is
-            able to take notes for each training day.
-          </p>
-          <p className="mt-4 text-xs">
-            The first version of this app was built using{' '}
-            <span>plain and pure Javascript</span>, <span>HTML</span> and{' '}
-            <span>CSS</span>. Follow the link bellow, to access this version:
-          </p>
-
-          <div className="flex items-center gap-2">
-            <CustomLink
-              href={'https://jackedplanner.web.app/'}
-              text="Jacked Planner using plain and pure JS"
-              className="
-                text-cyan-400 underline underline-offset-2 
-                hover:text-cyan-500
-              "
-            />
-            {' | '}
-            <CustomLink
-              href={'https://github.com/RafaelMariscal/jackedPlanner'}
-              text="Github"
-              className="
-                text-cyan-400 underline underline-offset-2 
-                hover:text-cyan-500
-              "
-            />
-          </div>
-        </div>
-      </Project>
-
-      <Project
-        title="RD Inspections - CRM"
+    <ProjectCompose.Root>
+      <ProjectCompose.Image
         src={RDProject}
-        alt="Jacked Plnner. A gym sass where the clients can create a user profile, manange their training plans and also take notes during the training sessions"
-        link="https://www.rdinspecoesveiculares.com.br/"
-        techList={rdInspecTechs}
-        techShrink
-      >
-        <div
-          className="
-            max-w-4xl text-justify font-medium drop-shadow-custom-text
-            [&_span]:text-cyan-400
-          "
-        >
-          <p>
-            CRM developed for an Online Vehicle Inspection Company that provides
+        alt="CRM developed for an Online Vehicle Inspection Company that provides
+            technical reports"
+      />
+      <ProjectCompose.Content>
+        <ProjectCompose.Title title="RD Inspections - CRM" />
+        <ProjectCompose.Description>
+          <ProjectCompose.Text
+            text="CRM developed for an Online Vehicle Inspection Company that provides
             technical reports. The reason behind this project is to unify two
             services, Inspection Meetings Manager and Client Pictures
             Geolocation Provider. So, we developed a REST API in order to
-            resolve this problem, and also a modern dashboard for UI/UX matters.
-          </p>
-        </div>
-      </Project>
-    </div>
+            resolve this problem, and also a modern dashboard for UI/UX matters."
+          />
+          <ProjectCompose.Techs className="max-w-[16rem]">
+            <ProjectCompose.TechsTitle title="Main Techs" />
+            <ProjectCompose.TechsList techsList={rdInspecTechs} />
+            <ProjectCompose.Links>
+              <NavLink
+                href="https://www.rdinspecoesveiculares.com.br/"
+                title={`Access RD Inspections`}
+                newTab
+              />
+            </ProjectCompose.Links>
+          </ProjectCompose.Techs>
+        </ProjectCompose.Description>
+      </ProjectCompose.Content>
+
+      <ProjectCompose.Image
+        src={JackePlanner}
+        alt="Jacked Plnner. A gym sass where the clients can create a user profile,
+         manange their training plans and also take notes during the training sessions"
+      />
+      <ProjectCompose.Content>
+        <ProjectCompose.Title title="Jacked Planner" />
+        <ProjectCompose.Description>
+          <ProjectCompose.Text
+            text="Open Source Sass created for Gyms, where their customers can create,
+            access, and manage their training plans, as well as define their
+            daily exercises and schedule for the week. Also, the customer is
+            able to take notes for each training day, having both quantitative
+            and qualitative training valuation."
+          />
+          <ProjectCompose.Techs>
+            <ProjectCompose.TechsTitle title="Main Techs" />
+            <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
+            <ProjectCompose.Links>
+              <NavLink
+                href="https://jackedplannerreact.web.app/"
+                title={`Access Jacked Planner`}
+                newTab
+              />
+              <NavLink
+                href="https://github.com/RafaelMariscal/JackedPlanner-ReactJs"
+                title="Github"
+                newTab
+                className="flex items-center gap-1"
+              >
+                <Image src={github} alt="" />
+              </NavLink>
+            </ProjectCompose.Links>
+          </ProjectCompose.Techs>
+        </ProjectCompose.Description>
+      </ProjectCompose.Content>
+    </ProjectCompose.Root>
   )
 }
