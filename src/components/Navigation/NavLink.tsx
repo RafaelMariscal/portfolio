@@ -1,5 +1,6 @@
 'use client'
 
+import { useToastContext } from '@/contexts/ToastContext/hook'
 import clsx from 'clsx'
 import Link, { LinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -27,10 +28,14 @@ export default function NavLink({
   const path = usePathname()
   const routeSelected = path === href
 
+  const { setIsOpen, setMessage } = useToastContext()
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (newTab) return undefined
     if (copy) {
       e.preventDefault()
+      setIsOpen(true)
+      setMessage('My email has been copied to your clipboard!')
       return navigator.clipboard.writeText(title)
     } else if (scroll) {
       e.preventDefault()

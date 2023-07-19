@@ -49,6 +49,14 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        swipeIn: {
+          '0%': { right: '-50%', opacity: 0 },
+          '100%': { right: '1rem', opacity: 1 },
+        },
+        swipeOut: {
+          '0%': { right: '1rem', opacity: 1 },
+          '100%': { right: '-50%', opacity: 0 },
+        },
         contentShow: {
           '0%': {
             opacity: '0',
