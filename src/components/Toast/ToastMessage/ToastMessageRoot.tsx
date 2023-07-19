@@ -15,9 +15,10 @@ export default function ToastMessageRoot({
     <div
       {...rest}
       className={twMerge(
-        'fixed -right-[50%] top-4 translate-x-1 bg-cyan-400 px-3 py-1',
-        'border border-cyan-700 border-opacity-50 shadow-custom-project',
-
+        'fixed right-6 z-50 flex items-center pr-4 shadow-custom-project',
+        'invisible border border-cyan-700 border-opacity-50',
+        'bg-gray-100 md:-right-[50%] md:top-6',
+        'max-md:bottom-4 max-md:w-full max-md:max-w-[calc(100%-2.5rem)]',
         className,
       )}
     >

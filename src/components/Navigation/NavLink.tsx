@@ -28,13 +28,14 @@ export default function NavLink({
   const path = usePathname()
   const routeSelected = path === href
 
-  const { setIsOpen, setMessage } = useToastContext()
+  const { setIsOpen, setMessage, setTitle } = useToastContext()
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (newTab) return undefined
     if (copy) {
       e.preventDefault()
       setIsOpen(true)
+      setTitle('Copied to clipboard')
       setMessage('My email has been copied to your clipboard!')
       return navigator.clipboard.writeText(title)
     } else if (scroll) {

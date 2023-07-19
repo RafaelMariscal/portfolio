@@ -12,6 +12,7 @@ export const GlobalToastContextProvider = ({
   children,
 }: GlobalToastContextProviderProps) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [title, setTitle] = useState('')
   const [message, setMessage] = useState('')
   const [timer, setTimer] = useState(3000)
 
@@ -20,6 +21,11 @@ export const GlobalToastContextProvider = ({
       setTimeout(() => {
         setIsOpen(false)
       }, timer)
+    } else if (!isOpen) {
+      setTimeout(() => {
+        // setTitle('')
+        // setMessage('')
+      }, 400)
     }
   }, [isOpen, timer])
 
@@ -43,13 +49,15 @@ export const GlobalToastContextProvider = ({
         setIsOpen,
         message,
         setMessage,
+        title,
+        setTitle,
         handleShowToastMessage,
         timer,
         setTimer,
       }}
     >
       {children}
-      <Toast message={message} isOpen={isOpen} />
+      <Toast />
     </ToastContext.Provider>
   )
 }

@@ -50,12 +50,36 @@ module.exports = {
           '100%': { opacity: '1' },
         },
         swipeIn: {
-          '0%': { right: '-50%', opacity: 0 },
-          '100%': { right: '1rem', opacity: 1 },
+          '0%': { right: '-50%', opacity: 0, visibility: 'invisible' },
+          '100%': {
+            right: '1.5rem',
+            opacity: 1,
+            visibility: 'visible',
+          },
         },
         swipeOut: {
-          '0%': { right: '1rem', opacity: 1 },
-          '100%': { right: '-50%', opacity: 0 },
+          '0%': {
+            right: '1.5rem',
+            opacity: 1,
+            visibility: 'visible',
+          },
+          '100%': { right: '-50%', opacity: 0, visibility: 'invisible' },
+        },
+        swipeUp: {
+          '0%': { bottom: '-50%', opacity: 0, visibility: 'invisible' },
+          '100%': {
+            bottom: '1rem',
+            opacity: 1,
+            visibility: 'visible',
+          },
+        },
+        swipeDown: {
+          '0%': {
+            bottom: '1rem',
+            opacity: 1,
+            visibility: 'visible',
+          },
+          '100%': { bottom: '-50%', opacity: 0, visibility: 'invisible' },
         },
         contentShow: {
           '0%': {

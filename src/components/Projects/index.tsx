@@ -55,8 +55,8 @@ export default function Projects() {
     <ProjectCompose.Root>
       <ProjectCompose.Image
         src={RDProject}
-        alt="CRM developed for an Online Vehicle Inspection Company that provides
-            technical reports"
+        alt="CRM developed for an Online Vehicle Inspection Company that provides technical reports"
+        priority
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="RD Inspections - CRM" />

@@ -4,12 +4,14 @@ import { twMerge } from 'tailwind-merge'
 interface ProjectImageProps {
   src: StaticImageData
   alt: string
+  priority?: boolean
   className?: string
 }
 
 export default function ProjectImage({
   src,
   alt,
+  priority = false,
   className,
 }: ProjectImageProps) {
   return (
@@ -17,6 +19,7 @@ export default function ProjectImage({
       <Image
         src={src}
         alt={alt}
+        priority={priority}
         quality={100}
         className={twMerge(
           'object-cover transition-all duration-300 hover:scale-[1.03]',
