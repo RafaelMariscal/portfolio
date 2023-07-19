@@ -9,7 +9,7 @@ export default function Experiences() {
       className="flex w-full max-w-screen-xl justify-between gap-12 px-3 py-10"
     >
       <div className="flex w-full max-w-sm flex-col gap-4">
-        <h2 className="text-2xl font-bold underline underline-offset-4">
+        <h2 className="text-2xl font-bold underline underline-offset-4 drop-shadow-custom-text">
           Main Experiences
         </h2>
         <Experience.Root>
@@ -38,7 +38,7 @@ export default function Experiences() {
       </div>
 
       <div className="flex w-full max-w-[37.5rem] flex-col gap-4">
-        <h2 className="text-2xl font-bold underline underline-offset-4">
+        <h2 className="text-2xl font-bold underline underline-offset-4 drop-shadow-custom-text">
           Bootcamps and Papers
         </h2>
         <Experience.Root>
@@ -47,7 +47,6 @@ export default function Experiences() {
             <p className="text-justify">
               +100 hours web development focusing on Back-end using plain
               Node.js to develop RESTful APIs, but also Fastify and NestJs.
-              Techs used:
             </p>
             <Experience.Footer className="mt-1 transition-all">
               <p>
@@ -62,7 +61,7 @@ export default function Experiences() {
           <Experience.Description>
             <p className="text-justify">
               +100 hours of Front-End web development , but also applying some
-              Back-end tools into the development process. Techs used:
+              Back-end tools into the development process.
             </p>
             <Experience.Footer className="mt-1 transition-all">
               <p>

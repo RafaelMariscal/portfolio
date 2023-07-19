@@ -14,6 +14,7 @@ export default function ExperienceFooter({
       {...rest}
       className={twMerge(
         'text-sm font-semibold text-cyan-400 [&_*]:fill-cyan-400',
+        'drop-shadow-custom-text',
         rest.className,
       )}
     >

@@ -12,7 +12,10 @@ export default function ExperienceDescription({
   return (
     <div
       {...rest}
-      className={twMerge('font-semibold text-gray-300', rest.className)}
+      className={twMerge(
+        'font-semibold text-gray-300 drop-shadow-custom-text',
+        rest.className,
+      )}
     >
       {children}
     </div>
