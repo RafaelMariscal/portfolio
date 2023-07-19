@@ -92,6 +92,10 @@ module.exports = {
           },
         },
       },
+      screens: {
+        tablets: '976px',
+        'tablets-sm': '820px',
+      },
     },
   },
   plugins: [],

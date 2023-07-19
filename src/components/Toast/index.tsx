@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import { ToastMessage } from './ToastMessage'
 import CopyIcon from '@/assets/icons/CopyIcon'
 import X from '@/assets/icons/XIcon'
@@ -9,12 +8,12 @@ export default function Toast() {
   return (
     <ToastMessage.Root
       aria-hidden={!isOpen}
-      className={clsx(
-        "aria-[hidden='false']:md:animate-[swipeIn_200ms_ease-out_forwards]",
-        "aria-[hidden='true']:md:animate-[swipeOut_300ms_ease-in_forwards]",
-        "aria-[hidden='false']:animate-[swipeUp_200ms_ease-out_forwards]",
-        "aria-[hidden='true']:animate-[swipeDown_300ms_ease-in_forwards]",
-      )}
+      className="
+        aria-[hidden='false']:animate-[swipeUp_200ms_ease-out_forwards]
+        aria-[hidden='true']:animate-[swipeDown_300ms_ease-in_forwards]
+        aria-[hidden='false']:md:animate-[swipeIn_200ms_ease-out_forwards]
+        aria-[hidden='true']:md:animate-[swipeOut_300ms_ease-in_forwards]
+      "
     >
       <ToastMessage.Icon>
         <CopyIcon />

@@ -5,10 +5,9 @@ export default function QuickBriefing() {
     <article
       id="briefing"
       className="
-        mb-16 mt-8 flex w-full max-w-[30.625rem] flex-col gap-4 
-        self-start font-semibold text-gray-200 drop-shadow-custom-text
-        [&_strong]:font-semibold [&_strong]:text-cyan-400
-        [&_strong]:underline [&_strong]:underline-offset-2
+        mb-16 flex w-full max-w-[30.625rem] flex-col gap-4 pt-8
+        font-semibold text-gray-200 drop-shadow-custom-text
+        max-md:mx-auto
       "
     >
       <p>
@@ -16,7 +15,12 @@ export default function QuickBriefing() {
         also in leadership positions. I&#39;m also one of those gym rats and a
         BBQ enthusiast.
       </p>
-      <p>
+      <p
+        className="
+          [&_strong]:font-semibold [&_strong]:text-cyan-400
+          [&_strong]:underline [&_strong]:underline-offset-2
+        "
+      >
         During my career, I&#39;ve been enrolled with projects in
         <strong> Javascript</strong>, using <strong>React</strong>,{' '}
         <strong>Next</strong>, <strong>Node</strong> and <strong>Nest</strong>.

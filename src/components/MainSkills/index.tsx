@@ -37,12 +37,17 @@ export default function MainSkills() {
         main<span className="ml-1 text-gray-100">skills</span>
       </h2>
 
-      <div className="mb-16 mt-4 flex gap-10 text-gray-100">
-        <div>
+      <div className="mb-16 mt-4 flex gap-10 text-gray-100 max-tablets:flex-col">
+        <div className="">
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
             Programming:
           </h3>
-          <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+          <div
+            className="
+              flex w-full flex-wrap gap-1
+              tablets:grid tablets:grid-cols-3 tablets:gap-x-2 tablets:gap-y-2 
+            "
+          >
             <Skill skillName="HTML" src={HTML} alt="HTML icon" />
             <Skill skillName="CSS" src={CSS} alt="CSS icon" />
             <Skill skillName="SASS" src={SASS} alt="SASS icon" />
@@ -61,11 +66,16 @@ export default function MainSkills() {
           </div>
         </div>
 
-        <div>
+        <div className="">
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
             Management and Design:
           </h3>
-          <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+          <div
+            className="
+              flex w-full flex-wrap gap-1
+              tablets:grid tablets:grid-cols-3 tablets:gap-x-2 tablets:gap-y-2
+            "
+          >
             <Skill skillName="Jira" src={JIRA} alt="Jira icon" />
             <Skill skillName="Trello" src={TRELLO} alt="Trello icon" />
             <Skill skillName="Slack" src={SLACK} alt="Slack icon" />
@@ -78,11 +88,16 @@ export default function MainSkills() {
           </div>
         </div>
 
-        <div>
+        <div className="">
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
             Currently Learning:
           </h3>
-          <div className="grid grid-cols-2 gap-x-2 gap-y-2">
+          <div
+            className="
+              flex w-full flex-wrap gap-1
+              tablets:grid tablets:grid-cols-2 tablets:gap-x-2 tablets:gap-y-2
+            "
+          >
             <Skill skillName="Nest.js" src={NEST} alt="Nest.js icon" />
             <Skill skillName="Prisma" src={PRISMA} alt="Prisma icon" />
             <Skill skillName="Postgre" src={POSTGRE} alt="Postgre icon" />

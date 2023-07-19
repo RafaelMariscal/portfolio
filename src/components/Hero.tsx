@@ -11,38 +11,52 @@ function Hero() {
     <div
       id="hero"
       role="hero"
-      className="flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8"
+      className="flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8 max-md:flex-col-reverse max-md:items-center"
     >
       <Image
         src={HeroImg}
         alt="Rafael Mariscal, Software Developer with in perspective and crossed arms"
         quality={100}
-        className="h-[28.125rem] w-[25rem] select-none rounded shadow-custom-img"
+        className="h-[28.125rem] w-[25rem] select-none rounded shadow-custom-img max-md:scale-110"
       />
 
-      <div className="relative w-full max-w-lg text-gray-100">
-        <div className="absolute bottom-1/2 z-10 translate-y-1/2">
-          <div>
-            <h1 className="-ml-[0.1875rem] text-6xl font-bold leading-none tracking-[0.04em] drop-shadow-custom-text">
-              Rafael Mariscal
-            </h1>
-            <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-              Full-Stack Software Developer - React / Node.js
-            </h2>
-            <h3
-              className="
-                my-8 ml-[0.125rem] w-full max-w-lg 
+      <div
+        className="
+          relative flex w-full max-w-lg items-center justify-center text-gray-100 
+          max-tablets:items-start
+        "
+      >
+        <div>
+          <h1
+            className="
+              -ml-[0.1875rem] text-6xl font-bold leading-none tracking-[0.04em] 
+              drop-shadow-custom-text 
+            "
+          >
+            Rafael Mariscal
+          </h1>
+          <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
+            Full-Stack Software Developer{' '}
+            <span className="max-tablets:hidden max-md:inline-block">-</span>{' '}
+            <span className="max-tablets:block max-md:inline-block">
+              React / Node.js
+            </span>
+          </h2>
+          <h3
+            className="
+                my-8 ml-[0.125rem] w-full max-w-lg
                 text-lg font-semibold leading-tight drop-shadow-custom-text
+                max-tablets:max-w-[22.5rem] max-tablets:text-justify
+                max-md:max-w-max
                 [&_span]:text-cyan-400
               "
-            >
-              I&#39;ve been <span>developing solutions</span> and{' '}
-              <span>managing projects</span> to deliver solid results in order
-              to achieve goals
-            </h3>
-          </div>
+          >
+            I&#39;ve been <span>developing solutions</span> and{' '}
+            <span>managing projects</span> in order to achieve goals, delivering
+            solid results.
+          </h3>
 
-          <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text">
+          <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text max-md:pb-6">
             <NavLink
               newTab
               href={'https://www.linkedin.com/in/rafael-mariscal/'}
@@ -94,7 +108,10 @@ function Hero() {
           src={Squares}
           alt="Blob image with squares"
           quality={100}
-          className="absolute bottom-[25%] left-0 w-full translate-y-[100%] -scale-x-100 select-none"
+          className="
+            absolute bottom-[25%] left-0 -z-10 w-full translate-y-[100%] 
+            -scale-x-100 select-none max-tablets:bottom-[10%]
+          "
         />
       </div>
     </div>
