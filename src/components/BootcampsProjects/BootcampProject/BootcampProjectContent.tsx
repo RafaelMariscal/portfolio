@@ -23,7 +23,7 @@ export default function BootcampProjectContent({
   children,
   className,
 }: BootcampProjectContentProps) {
-  const [screenDimentions, setScreenDimentions] = useState(window.innerWidth)
+  const [screenDimentions, setScreenDimentions] = useState(50000)
 
   const { projectSelected } = useSelectedProject()
   const isSelected = name === projectSelected || screenDimentions < 768

@@ -22,7 +22,7 @@ export default function BootcampProjectImage({
   name,
   className,
 }: BootcampProjectImageProps) {
-  const [screenDimentions, setScreenDimentions] = useState(window.innerWidth)
+  const [screenDimentions, setScreenDimentions] = useState(50000)
   const { projectSelected } = useSelectedProject()
 
   useEffect(() => {
