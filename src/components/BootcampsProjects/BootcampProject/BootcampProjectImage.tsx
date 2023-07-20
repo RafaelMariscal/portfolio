@@ -23,6 +23,7 @@ export default function BootcampProjectImage({
   className,
 }: BootcampProjectImageProps) {
   const [screenDimentions, setScreenDimentions] = useState(50000)
+
   const { projectSelected } = useSelectedProject()
 
   useEffect(() => {
@@ -70,11 +71,11 @@ export default function BootcampProjectImage({
       <Image
         src={src}
         alt={alt}
+        quality={100}
         className={twMerge(
           'select-none object-cover',
           clsx(isSelected === false && classNameIfNotSelected),
         )}
-        quality={100}
       />
     </div>
   )
