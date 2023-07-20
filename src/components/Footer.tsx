@@ -28,7 +28,7 @@ export default function Footer() {
           <NavLogo />
         </NavLink>
 
-        <p className="w-full max-w-sm text-justify font-medium">
+        <p className="w-full max-w-sm text-justify font-medium max-phones:max-w-none">
           If you think I can help you, I&#39;d love to talk about your problem.
           Shoot me an email or contact me through my socials here below.
         </p>
@@ -83,10 +83,16 @@ export default function Footer() {
       <Image
         src={Squares}
         alt="Squares blob image"
-        className="h-fit select-none opacity-20"
+        className="
+          h-fit select-none opacity-20 
+          max-md:absolute max-md:bottom-0 max-md:right-1/2
+          max-md:w-72 max-md:translate-x-1/2 max-md:translate-y-[60%]
+          max-md:-scale-x-100 max-phones:right-4 max-phones:translate-x-0
+
+        "
       />
 
-      <nav className="flex flex-col gap-14">
+      <nav className="flex flex-col gap-14 max-phones:hidden">
         <ul className="flex flex-col gap-4">
           <li>
             <NavLink href="/" title="Home" newTab />

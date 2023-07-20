@@ -8,7 +8,7 @@ import QuickBriefing from '@/components/QuickBriefing'
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center">
-      <div role="container" className="w-full max-w-screen-xl px-3" id="top">
+      <div className="w-full max-w-screen-xl px-3" id="top">
         <Hero />
         <QuickBriefing />
         <MainSkills />

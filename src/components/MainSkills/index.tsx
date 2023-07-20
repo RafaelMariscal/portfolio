@@ -32,7 +32,7 @@ import AWS from '../../assets/icons/techs/AWS.svg'
 
 export default function MainSkills() {
   return (
-    <>
+    <div className="max-md:mx-auto max-md:max-w-[30.625rem]">
       <h2 className="text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
         main<span className="ml-1 text-gray-100">skills</span>
       </h2>
@@ -107,6 +107,6 @@ export default function MainSkills() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

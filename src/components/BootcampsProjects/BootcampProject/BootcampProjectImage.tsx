@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
 import { useSelectedProject } from '@/contexts/SelectedProjectContext/hook'
 import { ProjectsType } from '@/contexts/SelectedProjectContext'
+import { useEffect, useState } from 'react'
 
 interface BootcampProjectImageProps {
   src: StaticImageData
@@ -21,9 +22,18 @@ export default function BootcampProjectImage({
   name,
   className,
 }: BootcampProjectImageProps) {
+  const [screenDimentions, setScreenDimentions] = useState(window.innerWidth)
   const { projectSelected } = useSelectedProject()
 
-  const isSelected = name === projectSelected
+  useEffect(() => {
+    function handleScreenResize() {
+      setScreenDimentions(window.innerWidth)
+    }
+    window.addEventListener('resize', handleScreenResize)
+    return () => window.removeEventListener('resize', handleScreenResize)
+  }, [])
+
+  const isSelected = name === projectSelected || screenDimentions < 768
 
   const classNameIfNotSelected = `h-full ${className}`
 
@@ -36,6 +46,8 @@ export default function BootcampProjectImage({
               isSelected === true,
             'invisible h-0 w-0': isSelected === false,
           }),
+          'max-md:visible max-md:absolute max-md:right-0',
+          'max-md:h-8 max-md:w-[37.125%] max-md:overflow-hidden',
         )}
       >
         <Link

@@ -7,7 +7,7 @@ export default function QuickBriefing() {
       className="
         mb-16 flex w-full max-w-[30.625rem] flex-col gap-4 pt-8
         font-semibold text-gray-200 drop-shadow-custom-text
-        max-md:mx-auto
+        max-md:mx-auto max-md:mb-12 max-md:pt-12
       "
     >
       <p>

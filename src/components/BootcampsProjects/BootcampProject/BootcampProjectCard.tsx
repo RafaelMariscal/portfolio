@@ -19,7 +19,9 @@ export default function BootcampProjectCard({
 
   const isSelected = name === projectSelected
 
-  const finalWidthClass = isSelected ? 'w-[28.75rem]' : 'w-20 h-[30rem]'
+  const finalWidthClass = isSelected
+    ? 'w-full max-md:max-w-[28.75rem]'
+    : 'w-20 md:h-[30rem] max-md:w-full max-md:max-w-[28.75rem]'
 
   return (
     <button
@@ -29,8 +31,8 @@ export default function BootcampProjectCard({
       className={twMerge(
         'h-full max-h-[30rem] overflow-hidden border border-cyan-600 shadow-custom-project',
         'cursor-default outline-none transition-[width] duration-300',
-        className,
         finalWidthClass,
+        className,
       )}
     >
       {Children.map(children, (child) => {

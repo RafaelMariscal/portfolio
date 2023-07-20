@@ -26,9 +26,10 @@ export default function BootcampProjectContentDescription({
         'leading-none text-cyan-500 drop-shadow-sm',
         'transition-opacity duration-[625ms]',
         clsx({
-          'opacity-100': isSelected === true,
-          'invisible h-0 opacity-0': isSelected === false,
+          'md:opacity-100': isSelected === true,
+          'md:invisible md:h-0 md:opacity-0': isSelected === false,
         }),
+        '',
         className,
       )}
     >
