@@ -20,6 +20,7 @@ function Hero() {
         src={HeroImg}
         alt="Rafael Mariscal, Software Developer with in perspective and crossed arms"
         quality={100}
+        priority
         className="
           h-[28.125rem] w-[25rem] select-none rounded 
           shadow-custom-img max-md:scale-110 max-phones:h-auto max-phones:w-11/12 max-phones:scale-100
@@ -122,6 +123,7 @@ function Hero() {
           src={Squares}
           alt="Blob image with squares"
           quality={100}
+          priority
           className="
             absolute bottom-[25%] left-0 -z-10 w-full translate-y-[100%] 
             -scale-x-100 select-none max-tablets:bottom-[10%]

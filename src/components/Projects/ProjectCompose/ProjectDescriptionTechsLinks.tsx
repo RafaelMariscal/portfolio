@@ -14,6 +14,7 @@ export default function ProjectDescriptionTechsLinks({
       className={twMerge(
         'mt-4 flex flex-col gap-3',
         'text-sm underline underline-offset-2 [&_*]:text-cyan-400',
+        'max-phones:flex-row ',
         rest.className,
       )}
     >

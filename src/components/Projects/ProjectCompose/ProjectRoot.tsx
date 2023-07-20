@@ -11,8 +11,8 @@ export default function ProjectRoot({ children, ...rest }: ProjectRootProps) {
       {...rest}
       id="projects"
       className={twMerge(
-        'flex flex-col items-center',
-        'max-w-screen-[1600px] w-11/12 min-w-[1256px]',
+        'flex w-11/12 flex-col items-center',
+        'min-w-[1256px] max-w-[1600px]',
         'max-[1256px]:w-full max-[1256px]:min-w-0',
         rest.className,
       )}

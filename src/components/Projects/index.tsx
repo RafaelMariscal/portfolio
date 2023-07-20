@@ -116,9 +116,7 @@ export default function Projects() {
                 title="Github Repository"
                 newTab
                 className="flex min-w-max items-center gap-1"
-              >
-                {/* <Image src={github} alt="" /> */}
-              </NavLink>
+              />
             </ProjectCompose.Links>
           </ProjectCompose.Techs>
         </ProjectCompose.Description>

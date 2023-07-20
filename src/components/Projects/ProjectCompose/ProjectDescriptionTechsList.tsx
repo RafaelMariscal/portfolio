@@ -12,7 +12,11 @@ export default function ProjectDescriptionTechsList({
   return (
     <div
       {...rest}
-      className={twMerge('flex flex-wrap items-center gap-2', rest.className)}
+      className={twMerge(
+        'flex flex-wrap items-center gap-2',
+        'max-phones:mt-2',
+        rest.className,
+      )}
     >
       {techsList.map((tech) => (
         <>

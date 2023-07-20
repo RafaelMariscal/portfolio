@@ -86,11 +86,10 @@ export default function Footer() {
         src={Squares}
         alt="Squares blob image"
         className="
-          h-fit select-none opacity-20 
+          h-fit w-auto select-none opacity-20 
           max-tablets-sm:absolute max-tablets-sm:bottom-0 max-tablets-sm:right-1/2
           max-tablets-sm:translate-x-1/2 max-tablets-sm:translate-y-[60%] max-tablets-sm:-scale-x-100
           max-sm:w-72 max-tablets-xs:right-4 max-tablets-xs:translate-x-0
-
         "
       />
 
