@@ -22,14 +22,14 @@ export default function BootcampProjectContentDescription({
   return (
     <p
       className={twMerge(
-        'mx-3 w-[27rem] text-justify font-bold',
+        'mx-3 my-2 w-[27rem] text-justify font-bold',
         'leading-none text-cyan-500 drop-shadow-sm',
         'transition-opacity duration-[625ms]',
         clsx({
           'md:opacity-100': isSelected === true,
           'md:invisible md:h-0 md:opacity-0': isSelected === false,
         }),
-        '',
+        'max-phones:mx-0 max-phones:w-full max-phones:px-3',
         className,
       )}
     >

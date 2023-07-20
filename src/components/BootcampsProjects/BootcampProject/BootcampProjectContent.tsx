@@ -41,7 +41,7 @@ export default function BootcampProjectContent({
       className={twMerge(
         'md:invisible md:h-0 md:w-0',
         clsx({
-          'flex flex-col justify-between bg-gray-100 md:visible md:h-[9rem] md:w-auto':
+          'flex h-auto flex-col justify-between bg-gray-100 md:visible md:h-auto md:w-auto':
             isSelected === true,
         }),
         className,

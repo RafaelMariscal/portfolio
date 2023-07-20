@@ -83,10 +83,15 @@ export default function BootcampsProjects() {
     <div
       className="
         mx-auto w-full max-w-screen-xl overflow-visible px-3 py-6 
-        max-md:max-w-[30.625rem]
+        max-md:max-w-[30.625rem] max-[440px]:max-w-full max-[440px]:px-0
       "
     >
-      <h2 className="mb-8 text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
+      <h2
+        className="
+          mb-8 text-[2.5rem] font-bold uppercase leading-none text-cyan-500 
+          drop-shadow-custom-text max-[440px]:px-3
+        "
+      >
         bootcamps
         <span className="ml-1 text-gray-100 max-md:block">projects</span>
       </h2>

@@ -6,7 +6,10 @@ export default function Experiences() {
   return (
     <div
       id="experience"
-      className="flex w-full max-w-screen-xl justify-between gap-12 px-3 py-10 max-tablets-sm:flex-col"
+      className="
+        flex w-full max-w-screen-xl justify-between gap-12 px-3 py-10 max-tablets-sm:flex-col
+        max-md:max-w-[30.625rem]
+      "
     >
       <div className="flex w-full max-w-sm flex-col gap-4">
         <h2 className="text-2xl font-bold underline underline-offset-4 drop-shadow-custom-text">

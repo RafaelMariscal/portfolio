@@ -11,13 +11,19 @@ function Hero() {
     <div
       id="hero"
       role="hero"
-      className="flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8 max-md:flex-col-reverse max-md:items-center"
+      className="
+        flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8 
+        max-md:flex-col-reverse max-md:items-center
+      "
     >
       <Image
         src={HeroImg}
         alt="Rafael Mariscal, Software Developer with in perspective and crossed arms"
         quality={100}
-        className="h-[28.125rem] w-[25rem] select-none rounded shadow-custom-img max-md:scale-110"
+        className="
+          h-[28.125rem] w-[25rem] select-none rounded 
+          shadow-custom-img max-md:scale-110 max-phones:h-auto max-phones:w-11/12 max-phones:scale-100
+        "
       />
 
       <div
@@ -26,19 +32,21 @@ function Hero() {
           max-tablets:items-start
         "
       >
-        <div>
+        <div className="max-tablets-xs:max-w-md">
           <h1
             className="
               -ml-[0.1875rem] text-6xl font-bold leading-none tracking-[0.04em] 
-              drop-shadow-custom-text 
+              drop-shadow-custom-text
             "
           >
             Rafael Mariscal
           </h1>
           <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
             Full-Stack Software Developer{' '}
-            <span className="max-tablets:hidden max-md:inline-block">-</span>{' '}
-            <span className="max-tablets:block max-md:inline-block">
+            <span className="max-tablets:hidden max-md:inline-block max-tablets-xs:hidden">
+              -
+            </span>{' '}
+            <span className="max-tablets:block max-md:inline-block max-tablets-xs:hidden">
               React / Node.js
             </span>
           </h2>
@@ -47,7 +55,8 @@ function Hero() {
                 my-8 ml-[0.125rem] w-full max-w-lg
                 text-lg font-semibold leading-tight drop-shadow-custom-text
                 max-tablets:max-w-[22.5rem] max-tablets:text-justify
-                max-md:max-w-max
+                max-md:max-w-max max-tablets-xs:mx-auto
+                max-tablets-xs:text-start max-tablets-xs:tracking-wide
                 [&_span]:text-cyan-400
               "
           >
@@ -56,7 +65,12 @@ function Hero() {
             solid results.
           </h3>
 
-          <div className="ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text max-md:pb-6">
+          <div
+            className="
+              ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text 
+              max-md:pb-6 
+            "
+          >
             <NavLink
               newTab
               href={'https://www.linkedin.com/in/rafael-mariscal/'}
@@ -111,6 +125,7 @@ function Hero() {
           className="
             absolute bottom-[25%] left-0 -z-10 w-full translate-y-[100%] 
             -scale-x-100 select-none max-tablets:bottom-[10%]
+            max-phones:bottom-[15%]
           "
         />
       </div>

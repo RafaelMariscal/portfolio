@@ -93,8 +93,8 @@ module.exports = {
         },
       },
       screens: {
-        'realy-sm': '384px',
-        phones: '520px',
+        phones: '460px',
+        'tablets-xs': '520px',
         'tablets-sm': '820px',
         tablets: '976px',
       },
