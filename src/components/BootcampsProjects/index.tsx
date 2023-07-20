@@ -80,20 +80,36 @@ const videoPlatformTechs: StaticImageData[] = [
 
 export default function BootcampsProjects() {
   return (
-    <div className="mx-auto w-full max-w-screen-xl overflow-visible px-3 py-6">
-      <h2 className="mb-8 text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
-        bootcamps<span className="ml-1 text-gray-100">projects</span>
+    <div
+      className="
+        mx-auto w-full max-w-screen-xl overflow-visible px-3 py-6 
+        max-md:max-w-[30.625rem] max-[440px]:max-w-full max-[440px]:px-0
+      "
+    >
+      <h2
+        className="
+          mb-8 text-[2.5rem] font-bold uppercase leading-none text-cyan-500 
+          drop-shadow-custom-text max-[440px]:px-3
+        "
+      >
+        bootcamps
+        <span className="ml-1 text-gray-100 max-md:block">projects</span>
       </h2>
 
-      <div className="flex w-full items-center justify-end gap-4 overflow-visible">
+      <div
+        className="
+          relative flex w-full items-center justify-end gap-4 overflow-visible 
+          max-tablets-sm:justify-start
+        "
+      >
         <Image
           src={Squares}
           alt="Blob image of squares"
           quality={100}
-          className="h-full max-h-[30rem] object-cover object-right"
+          className="h-full max-h-[30rem] object-cover object-right max-tablets-sm:hidden"
         />
 
-        <div className="flex min-w-[46rem] items-center gap-3">
+        <div className="max-tablets-sm:w-full">
           <BootcampProject.Root>
             <BootcampProject.Card name="nextBlog">
               <BootcampProject.Content>
@@ -111,7 +127,7 @@ export default function BootcampsProjects() {
                 src={NextBlog}
                 alt="nextblog image"
                 accessLink="https://ignite-news-nextjs.vercel.app/"
-                className="object-[-27.5rem]"
+                className="md:object-[-27.5rem]"
               />
             </BootcampProject.Card>
 
@@ -131,7 +147,7 @@ export default function BootcampsProjects() {
                 src={WaiterApp}
                 alt="waiterApp Image"
                 accessLink="https://github.com/RafaelMariscal?tab=repositories&q=restaurant&type=&language=&sort="
-                className="object-[-34.75rem]"
+                className="md:object-[-34.75rem]"
               />
             </BootcampProject.Card>
 
@@ -151,7 +167,7 @@ export default function BootcampsProjects() {
                 src={DesignSystem}
                 alt="desingSystem image"
                 accessLink="https://rafaelmariscal.github.io/IgniteLab-DesignSystem/?path=/story/components-button--default"
-                className="object-left-top"
+                className="md:object-left-top"
               />
             </BootcampProject.Card>
 
@@ -171,7 +187,7 @@ export default function BootcampsProjects() {
                 src={VideoPlatform}
                 alt="video platform image"
                 accessLink="https://github.com/RafaelMariscal/Event-video-platform"
-                className="object-[-14rem]"
+                className="md:object-[-14rem]"
               />
             </BootcampProject.Card>
           </BootcampProject.Root>

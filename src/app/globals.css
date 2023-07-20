@@ -27,4 +27,10 @@
     background: #6CDFE2;
     border-radius: 1rem;
   }
+
+  @media (max-width: 641px){
+    html {
+      font-size: 14px
+    }
+  }
 }

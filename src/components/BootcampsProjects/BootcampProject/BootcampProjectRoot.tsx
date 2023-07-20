@@ -18,7 +18,13 @@ export default function BootcampProjectRoot({
   const [projectSelected, setProjectSelected] =
     useState<ProjectsType>('nextBlog')
   return (
-    <div className={twMerge('flex gap-3', className)}>
+    <div
+      className={twMerge(
+        'flex min-w-[46rem] gap-3 max-tablets-sm:gap-5 max-md:min-w-0',
+        'max-md:flex-col max-md:items-center',
+        className,
+      )}
+    >
       <SelectedProjectContext.Provider
         value={{ projectSelected, setProjectSelected }}
       >

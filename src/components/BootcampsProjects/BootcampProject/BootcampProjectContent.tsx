@@ -3,7 +3,14 @@
 import { twMerge } from 'tailwind-merge'
 import clsx from 'clsx'
 import { useSelectedProject } from '@/contexts/SelectedProjectContext/hook'
-import { ReactNode, Children, isValidElement, cloneElement } from 'react'
+import {
+  ReactNode,
+  Children,
+  isValidElement,
+  cloneElement,
+  useState,
+  useEffect,
+} from 'react'
 import { ProjectsType } from '@/contexts/SelectedProjectContext'
 
 interface BootcampProjectContentProps {
@@ -16,14 +23,26 @@ export default function BootcampProjectContent({
   children,
   className,
 }: BootcampProjectContentProps) {
+  const [screenDimentions, setScreenDimentions] = useState(50000)
+
   const { projectSelected } = useSelectedProject()
-  const isSelected = name === projectSelected
+  const isSelected = name === projectSelected || screenDimentions < 768
+
+  useEffect(() => {
+    function handleScreenResize() {
+      setScreenDimentions(window.innerWidth)
+    }
+    window.addEventListener('resize', handleScreenResize)
+    return () => window.removeEventListener('resize', handleScreenResize)
+  }, [])
+
   return (
     <div
       className={twMerge(
-        'flex h-[9rem] flex-col justify-between bg-gray-100',
+        'md:invisible md:h-0 md:w-0',
         clsx({
-          'invisible h-0 w-0': isSelected === false,
+          'flex h-auto flex-col justify-between bg-gray-100 md:visible md:h-auto md:w-auto':
+            isSelected === true,
         }),
         className,
       )}

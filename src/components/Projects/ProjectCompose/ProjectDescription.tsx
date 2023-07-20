@@ -11,7 +11,11 @@ export default function ProjectDescription({
   return (
     <div
       {...rest}
-      className={twMerge('mt-2 flex justify-between gap-6', rest.className)}
+      className={twMerge(
+        'mt-2 flex justify-between gap-6',
+        'max-tablets-sm:flex-col',
+        rest.className,
+      )}
     >
       {children}
     </div>

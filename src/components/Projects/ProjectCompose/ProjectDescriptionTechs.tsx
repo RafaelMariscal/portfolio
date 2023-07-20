@@ -6,10 +6,19 @@ interface ProjectDescriptionTechsProps extends HTMLProps<HTMLDivElement> {
 }
 export default function ProjectDescriptionTechs({
   children,
+  className,
   ...rest
 }: ProjectDescriptionTechsProps) {
   return (
-    <div {...rest} className={twMerge('w-full max-w-max', rest.className)}>
+    <div
+      {...rest}
+      className={twMerge(
+        'w-full max-w-max max-tablets-sm:max-w-none',
+        'max-tablets-sm:flex max-tablets-sm:justify-between',
+        'max-tablets-sm:gap-9 max-tablets-xs:gap-6',
+        className,
+      )}
+    >
       {children}
     </div>
   )

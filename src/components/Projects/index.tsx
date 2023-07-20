@@ -16,8 +16,7 @@ import mongoDB from '@/assets/icons/techs/MONGO.svg'
 import prisma from '@/assets/icons/techs/PRISMA.svg'
 import docker from '@/assets/icons/techs/DOCKER.svg'
 import aws from '@/assets/icons/techs/AWS.svg'
-import github from '@/assets/icons/techs/GITHUB.svg'
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
 import { ProjectCompose } from './ProjectCompose'
 import NavLink from '../Navigation/NavLink'
 
@@ -55,8 +54,8 @@ export default function Projects() {
     <ProjectCompose.Root>
       <ProjectCompose.Image
         src={RDProject}
-        alt="CRM developed for an Online Vehicle Inspection Company that provides
-            technical reports"
+        alt="CRM developed for an Online Vehicle Inspection Company that provides technical reports"
+        priority
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="RD Inspections - CRM" />
@@ -69,13 +68,16 @@ export default function Projects() {
             resolve this problem, and also a modern dashboard for UI/UX matters."
           />
           <ProjectCompose.Techs className="max-w-[16rem]">
-            <ProjectCompose.TechsTitle title="Main Techs" />
-            <ProjectCompose.TechsList techsList={rdInspecTechs} />
+            <div>
+              <ProjectCompose.TechsTitle title="Techs used:" />
+              <ProjectCompose.TechsList techsList={rdInspecTechs} />
+            </div>
             <ProjectCompose.Links>
               <NavLink
                 href="https://www.rdinspecoesveiculares.com.br/"
                 title={`Access RD Inspections`}
                 newTab
+                className="min-w-max"
               />
             </ProjectCompose.Links>
           </ProjectCompose.Techs>
@@ -98,21 +100,24 @@ export default function Projects() {
             and qualitative training valuation."
           />
           <ProjectCompose.Techs>
-            <ProjectCompose.TechsTitle title="Main Techs" />
-            <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
+            <div>
+              <ProjectCompose.TechsTitle title="Techs used:" />
+              <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
+            </div>
             <ProjectCompose.Links>
               <NavLink
                 href="https://jackedplannerreact.web.app/"
                 title={`Access Jacked Planner`}
                 newTab
+                className="min-w-max"
               />
               <NavLink
                 href="https://github.com/RafaelMariscal/JackedPlanner-ReactJs"
-                title="Github"
+                title="Github Repository"
                 newTab
-                className="flex items-center gap-1"
+                className="flex min-w-max items-center gap-1"
               >
-                <Image src={github} alt="" />
+                {/* <Image src={github} alt="" /> */}
               </NavLink>
             </ProjectCompose.Links>
           </ProjectCompose.Techs>

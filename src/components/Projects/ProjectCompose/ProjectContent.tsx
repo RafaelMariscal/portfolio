@@ -13,6 +13,7 @@ export default function ProjectContent({
       {...rest}
       className={twMerge(
         'mx-auto mb-12 mt-6 w-full max-w-7xl px-3',
+        'max-md:max-w-lg',
         rest.className,
       )}
     >

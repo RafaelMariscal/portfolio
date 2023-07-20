@@ -3,6 +3,7 @@ import './globals.css'
 import { Montserrat } from 'next/font/google'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import { GlobalToastContextProvider } from '@/contexts/ToastContext/provider'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -22,9 +23,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           ${montserrat.className} 
         `}
       >
-        <Navigation />
-        {children}
-        <Footer />
+        <GlobalToastContextProvider>
+          <Navigation />
+          {children}
+          <Footer />
+        </GlobalToastContextProvider>
       </body>
     </html>
   )

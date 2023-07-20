@@ -19,19 +19,20 @@ export default function BootcampProjectCard({
 
   const isSelected = name === projectSelected
 
-  const finalWidthClass = isSelected ? 'w-[28.75rem]' : 'w-20 h-[30rem]'
+  const finalWidthClass = isSelected
+    ? 'h-full max-h-[30rem]  w-[28.75rem] max-md:w-full max-md:max-w-[28.75rem]'
+    : 'md:h-[30rem] w-20 max-md:w-full max-md:max-w-[28.75rem]'
 
   return (
     <button
       onClick={() => setProjectSelected(name)}
-      // onTouchStart={() => setProjectSelected(name)}
       onMouseEnter={() => setProjectSelected(name)}
       onFocus={() => setProjectSelected(name)}
       className={twMerge(
-        'h-full max-h-[30rem] overflow-hidden border border-cyan-600 shadow-custom-project',
+        'overflow-hidden border border-cyan-600 shadow-custom-project',
         'cursor-default outline-none transition-[width] duration-300',
-        className,
         finalWidthClass,
+        className,
       )}
     >
       {Children.map(children, (child) => {
