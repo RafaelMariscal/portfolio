@@ -40,6 +40,21 @@ module.exports = {
         'custom-text': '0px 1px 2px rgba(0, 0, 0, 0.18)',
       },
       keyframes: {
+        menuAppear: {
+          '100%': { transform: 'translateX(0)' },
+        },
+        menuDisappear: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        showUp: {
+          '0%': { opacity: 0, visibility: 'invisible' },
+          '100%': { opacity: 1, visibility: 'visible' },
+        },
+        hide: {
+          '0%': { opacity: 1, visibility: 'visible' },
+          '100%': { opacity: 0, visibility: 'invisible' },
+        },
         swipeIn: {
           '0%': { right: '-50%', opacity: 0, visibility: 'invisible' },
           '100%': {

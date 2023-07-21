@@ -1,9 +1,16 @@
+import MobileNav from './MobileNav'
 import NavLink from './NavLink'
 import NavLogo from '@/assets/NavLogo'
 
 export default function Navigation() {
   return (
-    <header className="flex w-full max-w-7xl gap-3 px-3 py-6 drop-shadow-custom-text max-md:fixed">
+    <header
+      className="
+        flex w-full max-w-7xl gap-3 px-3 py-6 drop-shadow-custom-text 
+        max-md:fixed max-md:right-5 max-md:top-6 max-md:z-50 max-md:w-fit
+        max-md:p-0
+      "
+    >
       <NavLink
         href="/"
         title=""
@@ -30,12 +37,9 @@ export default function Navigation() {
           <li>
             <NavLink href="#experience" title="Experience" scroll />
           </li>
-          <li>
-            <NavLink href="/about" title="About" newTab />
-          </li>
         </ul>
       </nav>
-      {/* <NavMenu /> */}
+      <MobileNav />
     </header>
   )
 }
