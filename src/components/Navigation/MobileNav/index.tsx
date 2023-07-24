@@ -2,47 +2,87 @@
 
 import * as Dialog from '@radix-ui/react-dialog'
 import NavLink from '../NavLink'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false)
+  const triggerBoxRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    let lastScroll = 0
+    function handleScroll(e: Event) {
+      const curretScroll = window.scrollY
+      const IsMenuVisible =
+        !triggerBoxRef.current?.classList.contains('-translate-y-32')
+
+      if (curretScroll <= 110) {
+        triggerBoxRef.current?.classList.remove('bg-cyan-800', 'shadow-md')
+      } else if (curretScroll > lastScroll && IsMenuVisible) {
+        triggerBoxRef.current?.classList.add(
+          '-translate-y-32',
+          'bg-cyan-800',
+          'shadow-md',
+        )
+      } else if (curretScroll < lastScroll && !IsMenuVisible) {
+        triggerBoxRef.current?.classList.remove('-translate-y-32')
+      }
+      lastScroll = curretScroll
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger
+      <div
+        ref={triggerBoxRef}
+        aria-hidden={open}
         className="
-          h-8 pt-4 transition-all duration-300
-          data-[state=open]:px-4 md:hidden
+          fixed z-50 flex h-12 w-full justify-end 
+          transition-all duration-100
+          aria-hidden:bg-transparent
+          md:hidden
         "
       >
-        <span
-          aria-selected={open}
+        <Dialog.Trigger
           className="
+            px-3 outline-none
+            transition-all duration-300 
+            data-[state=open]:mr-7
+            data-[state=open]:bg-transparent
+          "
+        >
+          <div
+            aria-selected={open}
+            className="
             block h-[.1875rem]
             w-8 rounded-full bg-gray-100 transition-transform duration-300
             aria-selected:w-7 aria-selected:translate-y-[.1875rem] 
             aria-selected:rotate-45
           "
-        />
-        <span
-          aria-selected={open}
-          className="
+          />
+          <span
+            aria-selected={open}
+            className="
             aria-selected: mt-1
             block h-[.1875rem] w-6 rounded-full bg-cyan-400 
             transition-all duration-100 
             aria-selected:invisible aria-selected:mt-0 aria-selected:h-0
           "
-        />
-        <span
-          aria-selected={open}
-          className="
+          />
+          <div
+            aria-selected={open}
+            className="
             mt-1 block
             h-[.1875rem] w-8 rounded-full bg-gray-100 transition-transform duration-300
             aria-selected:mt-0 aria-selected:w-7 
             aria-selected:-rotate-45
           "
-        />
-      </Dialog.Trigger>
+          />
+        </Dialog.Trigger>
+      </div>
+
       <Dialog.Portal>
         <Dialog.Overlay
           className="
@@ -55,7 +95,7 @@ export default function MobileNav() {
           <Dialog.Content
             className="
               fixed right-0 flex h-screen translate-x-[100%]
-              flex-col items-end gap-8 bg-cyan-800 px-10 pt-10
+              flex-col items-end gap-8 bg-cyan-800 px-10 pt-4
               shadow-[0px_10px_20px_theme(colors.cyan.700)]
               data-[state=closed]:animate-[menuDisappear_600ms_ease_forwards]
               data-[state=open]:animate-[menuAppear_200ms_ease_forwards]
