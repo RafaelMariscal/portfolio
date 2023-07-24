@@ -26,7 +26,7 @@ export default function ProjectImage({
         href={link}
         title=""
         newTab
-        className="w-full bg-red-500 hover:scale-[1.03] focus:scale-[1.03]"
+        className="w-full hover:scale-[1.03] focus:scale-[1.03]"
       >
         <Image
           src={src}
