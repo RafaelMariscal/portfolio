@@ -36,6 +36,7 @@ export default function MainSkills() {
       className="
         max-md:mx-auto max-md:max-w-[30.625rem]
         max-tablets-xs:max-w-md
+        max-phones:px-4
       "
     >
       <h2 className="text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
@@ -49,8 +50,9 @@ export default function MainSkills() {
           </h3>
           <div
             className="
-              flex w-full flex-wrap gap-1
-              tablets:grid tablets:grid-cols-3 tablets:gap-x-2 tablets:gap-y-2 
+              flex w-full flex-wrap justify-between gap-1
+              tablets:grid tablets:grid-cols-3 tablets:gap-x-2
+              tablets:gap-y-2
             "
           >
             <Skill skillName="HTML" src={HTML} alt="HTML icon" />
@@ -77,7 +79,7 @@ export default function MainSkills() {
           </h3>
           <div
             className="
-              flex w-full flex-wrap gap-1
+              flex w-full flex-wrap justify-between gap-1
               tablets:grid tablets:grid-cols-3 tablets:gap-x-2 tablets:gap-y-2
             "
           >
@@ -99,7 +101,7 @@ export default function MainSkills() {
           </h3>
           <div
             className="
-              flex w-full flex-wrap gap-1
+              flex w-full flex-wrap justify-between gap-1
               tablets:grid tablets:grid-cols-2 tablets:gap-x-2 tablets:gap-y-2
             "
           >

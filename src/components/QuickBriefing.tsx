@@ -6,7 +6,7 @@ export default function QuickBriefing() {
         mb-16 flex w-full max-w-[30.625rem] flex-col gap-4 pt-8
         font-semibold text-gray-200 drop-shadow-custom-text
         max-md:mx-auto max-md:mb-12 max-md:pt-8 max-tablets-xs:max-w-md
-        max-tablets-xs:text-justify max-phones:pt-2  
+        max-tablets-xs:text-justify max-phones:px-4 max-phones:pt-2  
       "
     >
       <p>

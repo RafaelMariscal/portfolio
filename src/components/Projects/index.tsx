@@ -71,7 +71,10 @@ export default function Projects() {
           <ProjectCompose.Techs className="max-w-[16rem]">
             <div>
               <ProjectCompose.TechsTitle title="Techs used:" />
-              <ProjectCompose.TechsList techsList={rdInspecTechs} />
+              <ProjectCompose.TechsList
+                techsList={rdInspecTechs}
+                className="max-phones:max-w-[18rem]"
+              />
             </div>
             <ProjectCompose.Links>
               <NavLink

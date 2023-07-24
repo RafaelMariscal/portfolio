@@ -69,8 +69,8 @@ export default function NavLink({
         className,
       )}
     >
-      {title || null}
       {children}
+      {title || null}
     </Link>
   )
 }
