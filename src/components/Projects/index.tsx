@@ -55,6 +55,7 @@ export default function Projects() {
       <ProjectCompose.Image
         src={RDProject}
         alt="CRM developed for an Online Vehicle Inspection Company that provides technical reports"
+        link="https://www.rdinspecoesveiculares.com.br/"
         priority
       />
       <ProjectCompose.Content>
@@ -88,6 +89,7 @@ export default function Projects() {
         src={JackePlanner}
         alt="Jacked Plnner. A gym sass where the clients can create a user profile,
          manange their training plans and also take notes during the training sessions"
+        link="https://jackedplannerreact.web.app/"
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="Jacked Planner" />

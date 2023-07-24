@@ -8,7 +8,7 @@ import { MouseEvent, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface NavLinkProps extends LinkProps {
-  title: string
+  title?: string
   newTab?: boolean
   copy?: boolean
   className?: string
@@ -32,7 +32,7 @@ export default function NavLink({
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (newTab) return undefined
-    if (copy) {
+    if (copy && title) {
       e.preventDefault()
       setIsOpen(true)
       setTitle('Copied to clipboard')
@@ -58,7 +58,7 @@ export default function NavLink({
       onClick={handleClick}
       className={twMerge(
         clsx(
-          'font-semibold leading-none transition-all',
+          'w-fit font-semibold leading-none transition-all',
           'select-none, outline-none',
           {
             'text-cyan-400': routeSelected === true,
@@ -69,8 +69,8 @@ export default function NavLink({
         className,
       )}
     >
+      {title || null}
       {children}
-      {title}
     </Link>
   )
 }

@@ -53,17 +53,26 @@ function Hero() {
           </h2>
           <h3
             className="
-                my-8 ml-[0.125rem] w-full max-w-lg
-                text-lg font-semibold leading-tight drop-shadow-custom-text
-                max-tablets:max-w-[22.5rem] max-tablets:text-justify
-                max-md:max-w-max max-tablets-xs:mx-auto
-                max-tablets-xs:text-start max-tablets-xs:tracking-wide
+                my-8 ml-[0.125rem] w-full max-w-md
+                text-xl font-semibold leading-tight drop-shadow-custom-text
+                
+                max-tablets:text-justify
+                
+                max-md:max-w-max
+                
+                max-tablets-xs:text-start
+                max-tablets-xs:tracking-wide 
+
+                max-phones:max-w-[300px] max-phones:leading-[1.1]
                 [&_span]:text-cyan-400
+                
               "
           >
-            I&#39;ve been <span>developing solutions</span> and{' '}
+            {/* I&#39;ve been <span>developing solutions</span> and{' '}
             <span>managing projects</span> in order to achieve goals, delivering
-            solid results.
+            solid results. */}
+            I <span>develop solutions</span> to real life problems and{' '}
+            <span>manage teams</span> to achieve goals.
           </h3>
 
           <div
