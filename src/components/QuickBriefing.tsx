@@ -1,5 +1,3 @@
-import NavLink from './Navigation/NavLink'
-
 export default function QuickBriefing() {
   return (
     <article
@@ -8,7 +6,7 @@ export default function QuickBriefing() {
         mb-16 flex w-full max-w-[30.625rem] flex-col gap-4 pt-8
         font-semibold text-gray-200 drop-shadow-custom-text
         max-md:mx-auto max-md:mb-12 max-md:pt-8 max-tablets-xs:max-w-md
-        max-tablets-xs:text-justify max-phones:pt-2  
+        max-tablets-xs:text-justify max-phones:px-4 max-phones:pt-2  
       "
     >
       <p>
@@ -33,16 +31,6 @@ export default function QuickBriefing() {
         Fortaleza(UNIFOR - Brazil) and currently, I&#39;m going to my second
         graduation, Systems Analysis and Development.
       </p>
-
-      <NavLink
-        newTab
-        href={'/about'}
-        title="Learn more about me"
-        className="
-          text-gray-200 underline underline-offset-2 
-          hover:text-cyan-400 focus:text-cyan-400
-        "
-      />
     </article>
   )
 }

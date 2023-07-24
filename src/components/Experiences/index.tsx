@@ -16,26 +16,36 @@ export default function Experiences() {
           Main Experiences
         </h2>
         <Experience.Root>
-          <Experience.Content text="Software Developer - Full stack" />
-          <Experience.Description className="flex items-center justify-between">
+          <Experience.Content text="Software Developer" />
+          <Experience.Description className="flex items-center justify-between gap-4">
             <span>Freelancer Developer</span>
-            <span>2022 - Present</span>
+            <span className="w-full max-w-max">2022 - Present</span>
+          </Experience.Description>
+        </Experience.Root>
+
+        <Experience.Root>
+          <Experience.Content text="TI Analyst" />
+          <Experience.Description className="flex items-center justify-between gap-4">
+            <span>Inbox - Refeições Coletivas</span>
+            <span className="w-full max-w-max">2020 - Present</span>
           </Experience.Description>
         </Experience.Root>
 
         <Experience.Root>
           <Experience.Content text="Project Manager" />
-          <Experience.Description className="flex items-center justify-between">
+          <Experience.Description className="flex items-center justify-between gap-4">
             <span>Inbox - Refeições Coletivas</span>
-            <span>2018 - Present</span>
+            <span className="w-full max-w-max">2018 - 2020</span>
           </Experience.Description>
         </Experience.Root>
 
         <Experience.Root>
           <Experience.Content text="Operations Manager" />
-          <Experience.Description className="flex items-center justify-between">
-            <span>Qualittè Alimentação e Serviços</span>
-            <span>2013 - 2017</span>
+          <Experience.Description className="flex items-center justify-between gap-4">
+            <span className="w-full max-w-max truncate">
+              Qualittè Alimentação e Serviços
+            </span>
+            <span className="w-full max-w-max">2013 - 2017</span>
           </Experience.Description>
         </Experience.Root>
       </div>
@@ -63,7 +73,7 @@ export default function Experiences() {
           <Experience.Content text="Rocketseat Ignite ReactJs Bootcamp" />
           <Experience.Description>
             <p className="text-justify">
-              +100 hours of Front-End web development , but also applying some
+              +100 hours of Front-End web development, but also applying some
               Back-end tools into the development process.
             </p>
             <Experience.Footer className="mt-1 transition-all">

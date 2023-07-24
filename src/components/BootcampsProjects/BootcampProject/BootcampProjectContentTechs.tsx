@@ -22,14 +22,14 @@ export default function BootcampProjectContentTechs({
         className,
       )}
     >
-      <div className="flex h-full items-center gap-[.125rem]">
+      <div className="flex h-full items-center justify-between pr-4 ">
         {techsList.map((tech) => (
           <>
             <Image
               src={tech}
               alt={''}
               quality={100}
-              className="h-5 select-none drop-shadow-custom-text"
+              className="h-[1.15rem] w-[1.15rem] select-none drop-shadow-custom-text phones:h-5 phones:w-5"
             />
           </>
         ))}

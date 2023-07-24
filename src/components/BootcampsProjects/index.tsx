@@ -92,7 +92,7 @@ export default function BootcampsProjects() {
           drop-shadow-custom-text max-[440px]:px-3
         "
       >
-        bootcamps
+        bootcamp
         <span className="ml-1 text-gray-100 max-md:block">projects</span>
       </h2>
 

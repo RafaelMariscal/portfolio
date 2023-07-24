@@ -11,8 +11,9 @@ export default function Footer() {
     <div
       role="container"
       className="
-        flex h-[26.5rem] w-full max-w-7xl justify-between overflow-hidden 
+        relative flex h-[26.5rem] w-full max-w-7xl justify-between overflow-hidden 
         px-3 pt-16 drop-shadow-custom-text
+        
         max-md:max-w-[30.625rem] max-md:flex-col max-md:justify-start
         max-md:gap-10
       "
@@ -36,7 +37,7 @@ export default function Footer() {
           below.
         </p>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 max-phones:gap-4">
           <NavLink
             href={'https://www.linkedin.com/in/rafael-mariscal/'}
             title="linkedin.com/in/rafael-mariscal"
@@ -82,16 +83,23 @@ export default function Footer() {
         </div>
       </div>
 
-      <Image
-        src={Squares}
-        alt="Squares blob image"
+      <div
         className="
-          h-fit w-auto select-none opacity-20 
-          max-tablets-sm:absolute max-tablets-sm:bottom-0 max-tablets-sm:right-1/2
-          max-tablets-sm:translate-x-1/2 max-tablets-sm:translate-y-[60%] max-tablets-sm:-scale-x-100
-          max-sm:w-72 max-tablets-xs:right-4 max-tablets-xs:translate-x-0
+          -z-10 w-full max-w-sm 
+          max-tablets:absolute max-tablets:right-1/3 max-tablets:top-16
+          max-tablets:translate-x-1/2 
+          
+          max-md:right-0 max-md:top-full max-md:w-80 max-md:-translate-y-[40%] max-md:translate-x-0
         "
-      />
+      >
+        <Image
+          src={Squares}
+          alt="Squares blob image"
+          className="
+            mx-auto h-fit w-full -scale-x-100 select-none object-cover opacity-20
+        "
+        />
+      </div>
 
       <nav className="flex flex-col gap-14">
         <ul className="flex flex-col gap-4 max-md:hidden">
@@ -106,9 +114,6 @@ export default function Footer() {
           </li>
           <li>
             <NavLink href="#experience" title="Experience" scroll />
-          </li>
-          <li>
-            <NavLink href="/about" title="About" newTab />
           </li>
         </ul>
         <span>© 2023</span>

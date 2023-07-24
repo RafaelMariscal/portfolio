@@ -58,12 +58,13 @@ export default function BootcampProjectImage({
             '-z-10 flex h-40 w-full -translate-y-[6rem] rotate-[-20deg]',
             'items-center justify-center bg-cyan-400 outline-none',
             'text-sm font-bold text-cyan-700 underline',
+            'transition-colors duration-200',
             'hover:bg-cyan-500 hover:text-cyan-800',
             'focus:bg-cyan-500 focus:text-cyan-800',
           )}
         >
           <span className="mr-3 translate-y-[2rem] rotate-[20deg] select-none whitespace-nowrap">
-            Access this Project
+            Access here
           </span>
         </Link>
       </div>

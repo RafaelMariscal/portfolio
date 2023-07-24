@@ -27,6 +27,7 @@ export default function BootcampProjectContentCompanyIcon({
       className={twMerge(
         'grid h-6 w-6 place-items-center bg-cyan-600 shadow-md',
         'outline-none hover:bg-cyan-500 focus:bg-cyan-500',
+        'transition-colors duration-200',
         typeof className === 'object' && className.box,
       )}
     >

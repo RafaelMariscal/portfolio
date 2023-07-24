@@ -13,8 +13,8 @@ function Hero() {
       role="hero"
       className="
         flex h-fit w-full max-w-[1060px] justify-between gap-10 py-8 
-        max-md:flex-col-reverse max-md:items-center
-      "
+        max-md:flex-col-reverse max-md:items-center 
+     "
     >
       <Image
         src={HeroImg}
@@ -31,9 +31,10 @@ function Hero() {
         className="
           relative flex w-full max-w-lg items-center justify-center text-gray-100 
           max-tablets:items-start
+          
         "
       >
-        <div className="max-tablets-xs:max-w-md">
+        <div className="max-tablets-xs:max-w-md max-phones:text-center">
           <h1
             className="
               -ml-[0.1875rem] text-6xl font-bold leading-none tracking-[0.04em] 
@@ -53,23 +54,30 @@ function Hero() {
           </h2>
           <h3
             className="
-                my-8 ml-[0.125rem] w-full max-w-lg
-                text-lg font-semibold leading-tight drop-shadow-custom-text
-                max-tablets:max-w-[22.5rem] max-tablets:text-justify
-                max-md:max-w-max max-tablets-xs:mx-auto
-                max-tablets-xs:text-start max-tablets-xs:tracking-wide
+                my-8 ml-[0.125rem] w-full max-w-md
+                text-xl font-semibold leading-tight drop-shadow-custom-text
+                
+                max-tablets:text-justify
+                
+                max-md:max-w-max
+                
+                max-tablets-xs:text-start
+                max-tablets-xs:tracking-wide 
+
+                max-phones:text-center max-phones:leading-[1.1]
                 [&_span]:text-cyan-400
+                
               "
           >
-            I&#39;ve been <span>developing solutions</span> and{' '}
-            <span>managing projects</span> in order to achieve goals, delivering
-            solid results.
+            I <span>develop solutions</span> to real life problems and{' '}
+            <span>manage teams</span> to achieve goals.
           </h3>
 
           <div
             className="
               ml-[0.125rem] flex flex-col gap-3 drop-shadow-custom-text 
               max-md:pb-6 
+              max-phones:mx-auto max-phones:w-fit max-phones:gap-4
             "
           >
             <NavLink
