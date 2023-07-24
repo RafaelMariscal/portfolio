@@ -22,13 +22,18 @@ export default function ProjectImage({
         'relative flex h-[80vh] max-h-fit w-full overflow-hidden bg-cyan-700 shadow-custom-project max-tablets:h-[50vh]',
       )}
     >
-      <NavLink href={link} title="" newTab className="w-full bg-red-500">
+      <NavLink
+        href={link}
+        title=""
+        newTab
+        className="w-full bg-red-500 hover:scale-[1.03] focus:scale-[1.03]"
+      >
         <Image
           src={src}
           alt={alt}
           quality={100}
           className={twMerge(
-            'z-10 h-full w-full object-cover transition-all duration-300 hover:scale-[1.03]',
+            'z-10 h-full w-full object-cover transition-all duration-300',
             className,
           )}
           placeholder="blur"
