@@ -12,9 +12,9 @@ export default function ProjectDescriptionTechsLinks({
     <div
       {...rest}
       className={twMerge(
-        'mt-4 flex flex-col gap-3',
+        'mt-4 flex flex-row gap-3',
         'text-sm underline underline-offset-2 [&_*]:text-cyan-400',
-        'max-phones:flex-row ',
+        'max-phones:flex-col',
         rest.className,
       )}
     >

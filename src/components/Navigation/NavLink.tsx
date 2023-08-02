@@ -47,7 +47,7 @@ export default function NavLink({
       })
     }
     const aditionalTrigger = (rest.onClick as () => void) || undefined
-    return aditionalTrigger()
+    return aditionalTrigger ? aditionalTrigger() : null
   }
 
   return (

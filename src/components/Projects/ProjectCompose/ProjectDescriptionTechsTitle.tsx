@@ -12,7 +12,7 @@ export default function ProjectDescriptionTechsTitle({
     <h3
       {...rest}
       className={twMerge(
-        'mb-1 text-sm font-semibold tracking-wide',
+        'mb-1 text-sm font-semibold tracking-wide text-gray-100',
         'underline underline-offset-2 drop-shadow-custom-text',
         rest.className,
       )}

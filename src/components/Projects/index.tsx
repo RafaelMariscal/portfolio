@@ -55,35 +55,49 @@ export default function Projects() {
       <ProjectCompose.Image
         src={RDProject}
         alt="CRM developed for an Online Vehicle Inspection Company that provides technical reports"
-        link="https://www.rdinspecoesveiculares.com.br/"
+        link="/projects/rdInspections"
         priority
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="RD Inspections - CRM" />
         <ProjectCompose.Description>
-          <ProjectCompose.Text
-            text="CRM developed for an Online Vehicle Inspection Company that provides
-            technical reports. The reason behind this project is to unify two
-            services, Inspection Meetings Manager and Client Pictures
-            Geolocation Provider. So, we developed a REST API in order to
-            resolve this problem, and also a modern dashboard for UI/UX matters."
-          />
+          <ProjectCompose.Text>
+            <p
+              className="
+                max-w-4xl text-justify font-medium drop-shadow-custom-text 
+                max-md:text-start 
+                [&_strong]:font-semibold [&_strong]:text-cyan-400
+              "
+            >
+              CRM developed for an online vehicle inspection company that
+              provides technical reports. The reason behind this project is to
+              unify two services, <strong>Inspection Meetings Manager</strong>{' '}
+              and <strong>Vehicle&#39;s Pictures Geolocation Provider</strong>.
+              Therefore, we developed a <strong>REST API</strong> in order to
+              resolve this problem, and also a modern dashboard to improve
+              UI/UX.
+            </p>
+            <ProjectCompose.Links>
+              <NavLink
+                href={'projects/rdInspections'}
+                newTab
+                title="Learn more about RD Inspections"
+              />
+              <NavLink
+                href="https://www.rdinspecoesveiculares.com.br/"
+                title={`Access RD Inspections`}
+                newTab
+              />
+            </ProjectCompose.Links>
+          </ProjectCompose.Text>
           <ProjectCompose.Techs className="max-w-[16rem]">
             <div>
-              <ProjectCompose.TechsTitle title="Techs used:" />
+              <ProjectCompose.TechsTitle title="Techs used in this project:" />
               <ProjectCompose.TechsList
                 techsList={rdInspecTechs}
                 className="max-phones:max-w-[18rem]"
               />
             </div>
-            <ProjectCompose.Links>
-              <NavLink
-                href="https://www.rdinspecoesveiculares.com.br/"
-                title={`Access RD Inspections`}
-                newTab
-                className="min-w-max"
-              />
-            </ProjectCompose.Links>
           </ProjectCompose.Techs>
         </ProjectCompose.Description>
       </ProjectCompose.Content>
@@ -92,37 +106,49 @@ export default function Projects() {
         src={JackePlanner}
         alt="Jacked Plnner. A gym sass where the clients can create a user profile,
          manange their training plans and also take notes during the training sessions"
-        link="https://jackedplannerreact.web.app/"
+        link="projects/jackedPlanner"
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="Jacked Planner" />
         <ProjectCompose.Description>
-          <ProjectCompose.Text
-            text="Open Source Sass created for Gyms, where their customers can create,
-            access, and manage their training plans, as well as define their
-            daily exercises and schedule for the week. Also, the customer is
-            able to take notes for each training day, having both quantitative
-            and qualitative training valuation."
-          />
-          <ProjectCompose.Techs>
-            <div>
-              <ProjectCompose.TechsTitle title="Techs used:" />
-              <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
-            </div>
+          <ProjectCompose.Text>
+            <p
+              className="
+                max-w-4xl text-justify font-medium drop-shadow-custom-text 
+                max-md:text-start 
+                [&_strong]:font-semibold [&_strong]:text-cyan-400
+              "
+            >
+              Open Source Sass created for Gyms, where{' '}
+              <strong>
+                customers can create, access, and manage their training plans
+              </strong>
+              , choosing their daily exercises and it schedule. Also, users are
+              able to <strong>take notes for each training day</strong>, having
+              both quantitative and qualitative training valuation.
+            </p>
+            <p className="mt-1 text-xs leading-snug">
+              **All payments methods present in this project are unavailable.
+            </p>
             <ProjectCompose.Links>
+              <NavLink
+                href={'projects/jackedPlanner'}
+                newTab
+                title="Learn more about Jacked Planner"
+              />
               <NavLink
                 href="https://jackedplannerreact.web.app/"
                 title={`Access Jacked Planner`}
                 newTab
                 className="min-w-max"
               />
-              <NavLink
-                href="https://github.com/RafaelMariscal/JackedPlanner-ReactJs"
-                title="Github Repository"
-                newTab
-                className="flex min-w-max items-center gap-1"
-              />
             </ProjectCompose.Links>
+          </ProjectCompose.Text>
+          <ProjectCompose.Techs>
+            <div>
+              <ProjectCompose.TechsTitle title="Techs used in this project:" />
+              <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
+            </div>
           </ProjectCompose.Techs>
         </ProjectCompose.Description>
       </ProjectCompose.Content>

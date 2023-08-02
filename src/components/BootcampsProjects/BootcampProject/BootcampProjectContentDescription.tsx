@@ -22,7 +22,7 @@ export default function BootcampProjectContentDescription({
   return (
     <p
       className={twMerge(
-        'mx-3 my-2 w-[27rem] text-justify font-bold',
+        'mx-3 my-2 w-[27rem] text-start font-bold',
         'leading-none text-cyan-500 drop-shadow-sm',
         'transition-opacity duration-[625ms]',
         clsx({

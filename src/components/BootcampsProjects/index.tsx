@@ -93,7 +93,9 @@ export default function BootcampsProjects() {
         "
       >
         bootcamp
-        <span className="ml-1 text-gray-100 max-md:block">projects</span>
+        <span className="ml-1 text-gray-100 max-md:ml-0 max-md:block">
+          projects
+        </span>
       </h2>
 
       <div
@@ -160,7 +162,7 @@ export default function BootcampsProjects() {
                     link="https://www.rocketseat.com.br/"
                   />
                 </div>
-                <BootcampProject.Description description="A simple login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case." />
+                <BootcampProject.Description description="A Login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case." />
                 <BootcampProject.TechsList techsList={designSystemTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image

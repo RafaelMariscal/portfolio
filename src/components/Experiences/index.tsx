@@ -11,26 +11,31 @@ export default function Experiences() {
         max-md:max-w-[30.625rem]
       "
     >
-      <div className="flex w-full max-w-sm flex-col gap-4">
+      <div className="max flex w-full max-w-sm flex-col gap-4">
         <h2 className="text-2xl font-bold underline underline-offset-4 drop-shadow-custom-text">
           Main Experiences
         </h2>
         <Experience.Root>
-          <Experience.Content text="Software Developer" />
+          <Experience.Content text="Rd Inspections - Freelance" />
           <Experience.Description className="flex items-center justify-between gap-4">
-            <span>Freelancer Developer</span>
-            <span className="w-full max-w-max">2022 - Present</span>
+            <span>Design and Full-stack Project</span>
+            <span className="w-full max-w-max">2023 - Present</span>
           </Experience.Description>
         </Experience.Root>
-
         <Experience.Root>
-          <Experience.Content text="TI Analyst" />
+          <Experience.Content text="Software Developer" />
           <Experience.Description className="flex items-center justify-between gap-4">
             <span>Inbox - Refeições Coletivas</span>
             <span className="w-full max-w-max">2020 - Present</span>
           </Experience.Description>
         </Experience.Root>
-
+        <Experience.Root>
+          <Experience.Content text="Jacked Planner - Freelance" />
+          <Experience.Description className="flex items-center justify-between gap-4">
+            <span>Design and Full-stack Project</span>
+            <span className="w-full max-w-max">2022 - 2023</span>
+          </Experience.Description>
+        </Experience.Root>
         <Experience.Root>
           <Experience.Content text="Project Manager" />
           <Experience.Description className="flex items-center justify-between gap-4">
@@ -55,11 +60,12 @@ export default function Experiences() {
           Bootcamps and Papers
         </h2>
         <Experience.Root>
-          <Experience.Content text="Rocketseat Ignite NodeJs Bootcamp - In Progress" />
+          <Experience.Content text="Rocketseat Ignite NodeJs Bootcamp" />
           <Experience.Description>
-            <p className="text-justify">
+            <p className="">
               +100 hours web development focusing on Back-end using plain
-              Node.js to develop RESTful APIs, but also Fastify and NestJs.
+              Node.js to develop RESTful APIs, but also Fastify and NestJs - In
+              Progress.
             </p>
             <Experience.Footer className="mt-1 transition-all">
               <p>
@@ -72,7 +78,7 @@ export default function Experiences() {
         <Experience.Root>
           <Experience.Content text="Rocketseat Ignite ReactJs Bootcamp" />
           <Experience.Description>
-            <p className="text-justify">
+            <p className="">
               +100 hours of Front-End web development, but also applying some
               Back-end tools into the development process.
             </p>
@@ -87,7 +93,7 @@ export default function Experiences() {
         <Experience.Root>
           <Experience.Content text="Net Profit increased by +25% by using OKR Framework" />
           <Experience.Description>
-            <p className="text-justify">
+            <p className="">
               Graduation Thesis based on the OKR framework implementation, which
               resulted in the project&#39;s net profit increasing by +25% -
               written in pt-BR.

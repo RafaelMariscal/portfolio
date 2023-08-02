@@ -11,8 +11,8 @@ export default function Footer() {
     <div
       role="container"
       className="
-        relative flex h-[26.5rem] w-full max-w-7xl justify-between overflow-hidden 
-        px-3 pt-16 drop-shadow-custom-text
+        relative flex h-[26.5rem] w-full max-w-7xl justify-between 
+        overflow-hidden px-3 pt-16 drop-shadow-custom-text 
         
         max-md:max-w-[30.625rem] max-md:flex-col max-md:justify-start
         max-md:gap-10
@@ -31,7 +31,7 @@ export default function Footer() {
           <NavLogo />
         </NavLink>
 
-        <p className="w-full max-w-sm text-justify font-medium max-tablets-xs:max-w-none">
+        <p className="w-full max-w-sm text-start font-medium max-tablets-xs:max-w-none">
           If you think that I can help you, I&#39;d love to talk about your
           problem. Shoot me an email or contact me through my socials here
           below.
