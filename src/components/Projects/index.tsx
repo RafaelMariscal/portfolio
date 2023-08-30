@@ -1,5 +1,6 @@
 import JackePlanner from '@/assets/projects/jp-project.png'
 import RDProject from '@/assets/projects/rd-project.png'
+import IBProject from '@/assets/projects/ib-project.png'
 import javascript from '@/assets/icons/techs/JAVASCRIPT.svg'
 import html from '@/assets/icons/techs/HTML.svg'
 import css from '@/assets/icons/techs/CSS.svg'
@@ -15,6 +16,9 @@ import nodejs from '@/assets/icons/techs/NODE.svg'
 import mongoDB from '@/assets/icons/techs/MONGO.svg'
 import prisma from '@/assets/icons/techs/PRISMA.svg'
 import docker from '@/assets/icons/techs/DOCKER.svg'
+import framer from '@/assets/icons/techs/FRAMER_MOTION.svg'
+import reactHookForm from '@/assets/icons/techs/REACT_HOOK_FORM.svg'
+import zod from '@/assets/icons/techs/ZOD.svg'
 import aws from '@/assets/icons/techs/AWS.svg'
 import { StaticImageData } from 'next/image'
 import { ProjectCompose } from './ProjectCompose'
@@ -47,6 +51,21 @@ const jackedPlannerTechs: StaticImageData[] = [
   router,
   tailwind,
   firebase,
+]
+
+const IbWebsiteTechs: StaticImageData[] = [
+  html,
+  css,
+  javascript,
+  typescript,
+  react,
+  nextjs,
+  tailwind,
+  radix,
+  framer,
+  reactHookForm,
+  zod,
+  nodejs,
 ]
 
 export default function Projects() {
@@ -148,6 +167,56 @@ export default function Projects() {
             <div>
               <ProjectCompose.TechsTitle title="Techs used in this project:" />
               <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
+            </div>
+          </ProjectCompose.Techs>
+        </ProjectCompose.Description>
+      </ProjectCompose.Content>
+
+      <ProjectCompose.Image
+        src={IBProject}
+        alt="A Meal Supply Company website promotion image"
+        link="/projects/inboxWebsite"
+        priority
+        className="object-top"
+      />
+      <ProjectCompose.Content>
+        <ProjectCompose.Title title="Inbox Meals Supplier - Website" />
+        <ProjectCompose.Description>
+          <ProjectCompose.Text>
+            <p
+              className="
+                max-w-4xl text-justify font-medium drop-shadow-custom-text 
+                max-md:text-start 
+                [&_strong]:font-semibold [&_strong]:text-cyan-400
+              "
+            >
+              A website built for a meal supplier company, located in
+              Fortaleza-CE - Brazil. The client wanted to provide an easier way
+              to require a price quote, so a dynamic formulary was implemented
+              using React-Hook-Form and Zod for data validation and also
+              Radix-UI and Framer Motion to create animations. Finally, Google
+              SEO Checker was used to optmize the search engine.
+            </p>
+            <ProjectCompose.Links>
+              <NavLink
+                href={'projects/inboxWebsite'}
+                newTab
+                title="Learn more about Inbox Website"
+              />
+              <NavLink
+                href="https://www.rdinspecoesveiculares.com.br/"
+                title={`Access Inbox Website`}
+                newTab
+              />
+            </ProjectCompose.Links>
+          </ProjectCompose.Text>
+          <ProjectCompose.Techs className="max-w-[16rem]">
+            <div>
+              <ProjectCompose.TechsTitle title="Techs used in this project:" />
+              <ProjectCompose.TechsList
+                techsList={IbWebsiteTechs}
+                className="max-w-[14rem] max-phones:max-w-[18rem]"
+              />
             </div>
           </ProjectCompose.Techs>
         </ProjectCompose.Description>
