@@ -190,17 +190,18 @@ export default function Projects() {
                 [&_strong]:font-semibold [&_strong]:text-cyan-400
               "
             >
-              A website built for a meal supplier company, located in
-              Fortaleza-CE - Brazil.{' '}
+              A website built for a catering company located in Fortaleza-CE -
+              Brazil.
               <strong>
-                The client wanted to provide an easier way to require a price
-                quote
+                The company wanted to provide an easier way to their clients to
+                request a price quote
               </strong>
-              , so a dynamic formulary was implemented using{' '}
+              , so a dynamic form was implemented using{' '}
               <strong>React-Hook-Form</strong> and <strong>Zod</strong> for data
               validation and also <strong>Radix-UI</strong> and{' '}
               <strong>Framer Motion</strong> to create smooth animations.
-              Finally, Google SEO Checker was used to optmize the search engine.
+              Finally, Google SEO Checker was used to optimize the search
+              engine.
             </p>
             <ProjectCompose.Links>
               <NavLink
