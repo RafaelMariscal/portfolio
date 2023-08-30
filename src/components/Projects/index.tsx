@@ -174,13 +174,13 @@ export default function Projects() {
 
       <ProjectCompose.Image
         src={IBProject}
-        alt="A Meal Supply Company website promotion image"
+        alt="A Meal Supply Company website promo image"
         link="/projects/inboxWebsite"
         priority
         className="object-top"
       />
       <ProjectCompose.Content>
-        <ProjectCompose.Title title="Inbox Meals Supplier - Website" />
+        <ProjectCompose.Title title="Inbox Refeições - Website" />
         <ProjectCompose.Description>
           <ProjectCompose.Text>
             <p
@@ -191,11 +191,16 @@ export default function Projects() {
               "
             >
               A website built for a meal supplier company, located in
-              Fortaleza-CE - Brazil. The client wanted to provide an easier way
-              to require a price quote, so a dynamic formulary was implemented
-              using React-Hook-Form and Zod for data validation and also
-              Radix-UI and Framer Motion to create animations. Finally, Google
-              SEO Checker was used to optmize the search engine.
+              Fortaleza-CE - Brazil.{' '}
+              <strong>
+                The client wanted to provide an easier way to require a price
+                quote
+              </strong>
+              , so a dynamic formulary was implemented using{' '}
+              <strong>React-Hook-Form</strong> and <strong>Zod</strong> for data
+              validation and also <strong>Radix-UI</strong> and{' '}
+              <strong>Framer Motion</strong> to create smooth animations.
+              Finally, Google SEO Checker was used to optmize the search engine.
             </p>
             <ProjectCompose.Links>
               <NavLink
@@ -204,7 +209,7 @@ export default function Projects() {
                 title="Learn more about Inbox Website"
               />
               <NavLink
-                href="https://www.rdinspecoesveiculares.com.br/"
+                href="https://inboxrefeicoes.vercel.app/"
                 title={`Access Inbox Website`}
                 newTab
               />
