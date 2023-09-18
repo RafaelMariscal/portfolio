@@ -1,3 +1,12 @@
+import Navigation from './Navigation'
+
 export default function RdInspectionsPage() {
-  return <div className="">Rd Inspections Page</div>
+  return (
+    <>
+      <Navigation />
+      <main className="flex w-full flex-col items-center justify-center">
+        <div>Rd Inspection page </div>
+      </main>
+    </>
+  )
 }
