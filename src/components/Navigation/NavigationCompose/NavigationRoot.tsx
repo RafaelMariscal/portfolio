@@ -11,7 +11,7 @@ export default function NavigationRoot({
     <header
       {...props}
       className={twMerge(
-        'flex w-full max-w-7xl gap-3 px-3 py-6 drop-shadow-custom-text',
+        'mx-auto flex w-full max-w-7xl gap-3 px-3 py-6 drop-shadow-custom-text',
         'max-md:hidden',
         className,
       )}
