@@ -29,9 +29,9 @@ export default function Projects() {
               provides technical reports. The reason behind this project is to
               unify two services, <strong>Inspection Meetings Manager</strong>{' '}
               and <strong>Vehicle&#39;s Pictures Geolocation Provider</strong>.
-              Therefore, we developed a <strong>REST API</strong> in order to
-              resolve this problem, and also a modern dashboard to improve
-              UI/UX.
+              To achieve this, a <strong>REST API</strong> was developed to
+              bridge the gap between these two services, and a modern dashboard
+              to enhance user experience.
             </p>
             <ProjectCompose.Links>
               <NavLink
@@ -75,16 +75,25 @@ export default function Projects() {
                 [&_strong]:font-semibold [&_strong]:text-cyan-400
               "
             >
-              Open Source Sass created for Gyms, where{' '}
+              An SaaS platform developed specifically for Gyms and trainers.{' '}
               <strong>
-                customers can create, access, and manage their training plans
+                It enables customers to easily Create, Access, and Manage their
+                training plans
               </strong>
-              , choosing their daily exercises and it schedule. Also, users are
-              able to <strong>take notes for each training day</strong>, having
-              both quantitative and qualitative training valuation.
+              , offering then the flexibility to select daily exercises and
+              create schedules that suit their needs. Additionally, users have
+              the capability to{' '}
+              <strong>take notes for each training day</strong>, providing both
+              quantitative and qualitative assessments of their workouts. This
+              system enhances the overall gym experience,{' '}
+              <strong>
+                empowering users to have more control over their fitness
+                routines and progress tracking
+              </strong>
+              .
             </p>
             <p className="mt-1 text-xs leading-snug">
-              **All payments methods present in this project are unavailable.
+              **All payment methods in this project are currently unavailable.
             </p>
             <ProjectCompose.Links>
               <NavLink
@@ -127,18 +136,17 @@ export default function Projects() {
                 [&_strong]:font-semibold [&_strong]:text-cyan-400
               "
             >
-              A website built for a catering company located in Fortaleza-CE -
-              Brazil.
+              A website built for a catering company located in Fortaleza,
+              Brazil.{' '}
               <strong>
-                The company wanted to provide an easier way to their clients to
-                request a price quote
+                The goal was to simplify the price quote request process
               </strong>
-              , so a dynamic form was implemented using{' '}
-              <strong>React-Hook-Form</strong> and <strong>Zod</strong> for data
-              validation and also <strong>Radix-UI</strong> and{' '}
-              <strong>Framer Motion</strong> to create smooth animations.
-              Finally, Google SEO Checker was used to optimize the search
-              engine.
+              , enhancing the overall user experience. To achieve this, a
+              dynamic form was integrated using <strong>React-Hook-Form</strong>{' '}
+              and <strong>Zod</strong> for data validation and also{' '}
+              <strong>Radix-UI</strong> and <strong>Framer Motion</strong> to
+              provide accessibility and smooth animations. Finally, we used
+              Google SEO Checker to improve/boost search engine visibility.
             </p>
             <ProjectCompose.Links>
               <NavLink

@@ -32,9 +32,9 @@ export default function Footer() {
         </NavLink>
 
         <p className="w-full max-w-sm text-start font-medium max-tablets-xs:max-w-none">
-          If you think that I can help you, I&#39;d love to talk about your
-          problem. Shoot me an email or contact me through my socials here
-          below.
+          If you think that I can assist you, I&#39;d love to talk about your
+          problem. Feel free to shoot me an email or contact me through my
+          socials below.
         </p>
 
         <div className="flex flex-col gap-3 max-phones:gap-4">
