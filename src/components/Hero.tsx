@@ -68,7 +68,7 @@ function Hero() {
               [&_span]:text-cyan-400
             "
           >
-            I <span>develop solutions</span> to real life problems,{' '}
+            I <span>develop solutions</span> to real-life problems,{' '}
             <span>managing teams</span> to achieve goals.
           </h3>
 

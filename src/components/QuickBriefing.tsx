@@ -17,28 +17,26 @@ export default function QuickBriefing() {
         "
     >
       <p>
-        Software Developer with <strong>+3 years of experience</strong> in
-        projects End-2-End, also working in leadership positions. In addition to
-        that, I&#39;m a bbq enthusiast and passionate about gym and sports in
-        general.
+        I&#39;m a Software Developer with{' '}
+        <strong>over three years of experience</strong> working on End-2-End
+        projects, including leadership positions. Outside of work, I have a
+        strong passion about barbecue, fitness and sports in general.
       </p>
       <p>
-        During my career, I&#39;ve been enrolled with projects using
+        In my career, I&#39;ve been involved with projects using
         <strong> Javascript</strong>, <strong>Typescript</strong>,{' '}
         <strong>React</strong>, <strong>Next</strong>, <strong>Node.js</strong>{' '}
-        and <strong>NestJs</strong>.
+        and <strong>NestJs</strong>. In these projects, I had the opportunity to
+        contribute from the initial client briefing to the final sprint.
       </p>
       <p>
-        In these projects, I had the opportunity to participate from the
-        client&#39;s briefing to the final sprint.
-      </p>
-      <p>
-        About academics, I&#39;m an <strong>Engineer</strong> and a{' '}
-        <strong>System Analyst and Developer</strong> - 2024.
+        In terms of my academic background, I hold a degree in{' '}
+        <strong>Engineering</strong> and I&#39;m currently pursuing my second
+        degree in <strong>System Analysis and Development</strong> - 2024.
       </p>
       <NavLink
         href="#experience"
-        title="Learn more about my experiences"
+        title="About my experiences"
         scroll
         className="mt-2 text-gray-200 underline underline-offset-2 max-tablets:focus:text-gray-200"
       />
