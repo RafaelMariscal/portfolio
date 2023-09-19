@@ -2,6 +2,7 @@ import Navigation from './components/Navigation'
 import Image from 'next/image'
 import RdImageSrc from '@/assets/projects/rd-project.png'
 import Description from '@/components/ProjectsPage/Description'
+import ProjectBriefing from '@/components/ProjectsPage/ProjectBriefing/componet'
 
 export default function RdInspectionsPage() {
   return (
@@ -48,6 +49,8 @@ export default function RdInspectionsPage() {
             <span className="text-gray-100">Company System / CRM</span>
           </div>
         </Description.Root>
+
+        <ProjectBriefing />
       </main>
     </>
   )
