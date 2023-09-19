@@ -1,10 +1,19 @@
 import Highlight from '@/components/Basic/Highlight'
 import Paragraph from '@/components/Basic/Paragraph'
 import SectionTitle from '@/components/Basic/SectionTitle'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import RdLoginCardSrc from '@/assets/projects/rd-inspection/rd-login-card.png'
 import Title from '@/components/Basic/Title'
 import NavLink from '@/components/Navigation/NavLink'
+import MainDashboardSrc from '@/assets/projects/rd-inspection/rd-main-dashboard.png'
+import ModalSrc from '@/assets/projects/rd-inspection/rd-modal.png'
+import FinancialDashboardSrc from '@/assets/projects/rd-inspection/rd-financial-dashboard.png'
+
+const imagesSrc: StaticImageData[] = [
+  MainDashboardSrc,
+  ModalSrc,
+  FinancialDashboardSrc,
+]
 
 function MainFeatures() {
   return (
@@ -91,6 +100,17 @@ function MainFeatures() {
         />
         .
       </Paragraph>
+
+      {imagesSrc.map((image, i) => (
+        <Image
+          key={image.src}
+          src={image}
+          alt={`Project Screenshot${i + 1}`}
+          quality={100}
+          placeholder="blur"
+          className="mt-10 h-auto w-full [&_~img]:mt-4"
+        />
+      ))}
     </section>
   )
 }
