@@ -13,35 +13,38 @@ function RdProjectBriefing() {
         </Title>
         <Paragraph>
           RD Inspection was struggling with their system because the company was
-          growing, and as the company expanded, so did its requirements{' '}
+          growing, and as the company expanded, so did its requirements. In this
+          scenario,{' '}
           <Highlight>
-            The client&rsquo;s main issue was the current inspection process
-            that they had to navigate, in order to take the report
+            the customer&rsquo;s primary issue highlighted by the company was
+            the inspection process
           </Highlight>
           .
         </Paragraph>
         <Paragraph>
-          Based on this scenario, we started the project planning by evaluating
-          two critical aspects:
+          To address this, we started the project planning by evaluating two
+          critical aspects:
         </Paragraph>
         <List.Content>
-          <List.Item>The overall Client Journey.</List.Item>
           <List.Item>
-            Identify the primary issues within the inspection process.
+            The overall Client Journey, evaluating the entire client experience.
+          </List.Item>
+          <List.Item>
+            Identification of the primary issues within the inspection process.
           </List.Item>
         </List.Content>
         <Paragraph>
           In addition to that, it was mandatory that the new system retained all
           existing features, while introducing new enhancements aiming at{' '}
           <Highlight>
-            boosting the overall performance, productivity and also take client
-            experience to the next level
+            boosting the overall performance, productivity and also taking
+            client experience to the next level
           </Highlight>
           .
         </Paragraph>
         <Paragraph>
           Then <Highlight>we created the software flowchart</Highlight> and only
-          after approval, we started to create the main classes, data types,
+          after its approval, we started to create the main classes, data types,
           database schemas, we also listed all the artifacts required from the
           inception to the final stages, and finally, we started the Front End
           design/prototype.
@@ -54,12 +57,12 @@ function RdProjectBriefing() {
         </Paragraph>
         <List.Content>
           <List.Item>
-            RD Engineer share a third-party API link for clients to upload
+            RD Engineer shares a third-party API link for clients to upload
             vehicle pictures.
           </List.Item>
           <List.Item>
-            The Engineer follow up with a separate link for a recorded meeting,
-            where the technical inspection took place.
+            The Engineer followed up with a separate link for a recorded
+            meeting, where the technical inspection took place.
           </List.Item>
         </List.Content>
         <Paragraph>

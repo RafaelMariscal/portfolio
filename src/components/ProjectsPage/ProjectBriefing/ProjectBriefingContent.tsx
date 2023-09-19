@@ -8,6 +8,6 @@ export default function ProjectBriefingContent({
   ...props
 }: ProjectBriefingContentProps) {
   return (
-    <div {...props} className={twMerge('flex flex-col gap-3', className)} />
+    <div {...props} className={twMerge('flex flex-col gap-4', className)} />
   )
 }

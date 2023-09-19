@@ -96,6 +96,7 @@ module.exports = {
         'tablets-xs': '520px',
         'tablets-sm': '820px',
         tablets: '976px',
+        article: '860px',
       },
     },
   },

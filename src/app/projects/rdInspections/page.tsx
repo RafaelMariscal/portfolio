@@ -4,6 +4,7 @@ import RdImageSrc from '@/assets/projects/rd-project.png'
 import RdFlowchartSrc from '@/assets/projects/rd-front-end-flowchart.png'
 import RdProjectBriefing from './components/RdProjectBriefing'
 import RdProjectDescription from './components/RdProjectDescription'
+import MainFeatures from './components/MainFeatures'
 
 export default function RdInspectionsPage() {
   return (
@@ -19,7 +20,7 @@ export default function RdInspectionsPage() {
           placeholder="blur"
         />
         <RdProjectDescription />
-        <article className="py-10">
+        <article className="w-full py-10">
           <div className="grid w-full place-items-center">
             <RdProjectBriefing />
             <Image
@@ -28,6 +29,7 @@ export default function RdInspectionsPage() {
               className="absolute -z-10 h-auto w-screen max-w-screen-2xl opacity-30"
             />
           </div>
+          <MainFeatures />
         </article>
       </main>
     </>
