@@ -4,10 +4,10 @@ import SectionTitle from '@/components/Basic/SectionTitle'
 import Image, { StaticImageData } from 'next/image'
 import RdLoginCardSrc from '@/assets/projects/rd-inspection/rd-login-card.png'
 import Title from '@/components/Basic/Title'
-import NavLink from '@/components/Navigation/NavLink'
 import MainDashboardSrc from '@/assets/projects/rd-inspection/rd-main-dashboard.png'
 import ModalSrc from '@/assets/projects/rd-inspection/rd-modal.png'
 import FinancialDashboardSrc from '@/assets/projects/rd-inspection/rd-financial-dashboard.png'
+// import NavLink from '@/components/Navigation/NavLink'
 
 const imagesSrc: StaticImageData[] = [
   MainDashboardSrc,
@@ -84,7 +84,7 @@ function MainFeatures() {
         </Highlight>
         .
       </Paragraph>
-      <Paragraph className="mt-4">
+      {/* <Paragraph className="mt-4">
         In addition to that,{' '}
         <Highlight className="text-gray-100">
           at the end of the page you&rsquo;ll find the Components Showcase
@@ -99,7 +99,7 @@ function MainFeatures() {
           className="text-cyan-400 underline underline-offset-2 "
         />
         .
-      </Paragraph>
+      </Paragraph> */}
 
       {imagesSrc.map((image, i) => (
         <Image

@@ -5,6 +5,9 @@ import RdFlowchartSrc from '@/assets/projects/rd-inspection/rd-front-end-flowcha
 import RdProjectBriefing from './components/RdProjectBriefing'
 import RdProjectDescription from './components/RdProjectDescription'
 import MainFeatures from './components/MainFeatures'
+import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
+import SectionTitle from '@/components/Basic/SectionTitle'
+import Highlight from '@/components/Basic/Highlight'
 
 export default function RdInspectionsPage() {
   return (
@@ -31,6 +34,10 @@ export default function RdInspectionsPage() {
           </div>
           <MainFeatures />
         </article>
+        <SectionTitle className="mb-6 w-full max-w-screen-article">
+          Next<Highlight className="ml-1">Project</Highlight>
+        </SectionTitle>
+        <JackedPlannerProject />
       </main>
     </>
   )
