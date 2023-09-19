@@ -2,7 +2,10 @@ import BootcampsProjects from '@/components/BootcampsProjects'
 import Hero from '@/components/Hero'
 import MainSkills from '@/components/MainSkills'
 import Navigation from '@/components/Navigation/HomeNavigation'
-import Projects from '@/components/Projects'
+import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
+import Projects from '@/components/Projects/ProjectCompose'
+import RdInspectionProject from '@/components/Projects/RdInspectionProject'
+import InboxWebsiteProject from '@/components/Projects/inboxWebsiteProject'
 import QuickBriefing from '@/components/QuickBriefing'
 
 export default function Home() {
@@ -15,7 +18,11 @@ export default function Home() {
           <QuickBriefing />
           <MainSkills />
         </div>
-        <Projects />
+        <Projects.Root>
+          <RdInspectionProject />
+          <JackedPlannerProject />
+          <InboxWebsiteProject />
+        </Projects.Root>
         <BootcampsProjects />
       </main>
     </>

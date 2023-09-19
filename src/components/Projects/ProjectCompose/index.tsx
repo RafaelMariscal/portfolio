@@ -9,7 +9,7 @@ import ProjectDescriptionTechsTitle from './ProjectDescriptionTechsTitle'
 import ProjectDescriptionTechsList from './ProjectDescriptionTechsList'
 import ProjectDescriptionTechsLinks from './ProjectDescriptionTechsLinks'
 
-export const ProjectCompose = {
+const ProjectCompose = {
   Root: ProjectRoot,
   Image: ProjectImage,
   Content: ProjectContent,
@@ -21,3 +21,5 @@ export const ProjectCompose = {
   TechsList: ProjectDescriptionTechsList,
   Links: ProjectDescriptionTechsLinks,
 }
+
+export default ProjectCompose
