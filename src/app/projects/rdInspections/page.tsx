@@ -8,6 +8,7 @@ import MainFeatures from './components/MainFeatures'
 import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
+import RdComponentsShowcase from './components/RdComponentsShowcase'
 
 export default function RdInspectionsPage() {
   return (
@@ -34,6 +35,8 @@ export default function RdInspectionsPage() {
           </div>
           <MainFeatures />
         </article>
+        <RdComponentsShowcase />
+
         <SectionTitle className="mb-6 w-full max-w-screen-article">
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
