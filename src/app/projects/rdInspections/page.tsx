@@ -1,14 +1,13 @@
-import Navigation from './components/Navigation'
 import Image from 'next/image'
 import RdImageSrc from '@/assets/projects/rd-inspection/rd-project.png'
-import RdFlowchartSrc from '@/assets/projects/rd-inspection/rd-front-end-flowchart.png'
-import RdProjectBriefing from './components/RdProjectBriefing'
+import Navigation from './components/Navigation'
 import RdProjectDescription from './components/RdProjectDescription'
 import MainFeatures from './components/MainFeatures'
+import RdProjectBriefing from './components/RdProjectBriefing'
 import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
-import RdComponentsShowcase from './components/RdComponentsShowcase'
+import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
 
 export default function RdInspectionsPage() {
   return (
@@ -24,20 +23,20 @@ export default function RdInspectionsPage() {
           placeholder="blur"
         />
         <RdProjectDescription />
-        <article className="w-full py-10">
-          <div className="grid w-full place-items-center">
-            <RdProjectBriefing />
-            <Image
-              src={RdFlowchartSrc}
-              alt=""
-              className="absolute -z-10 h-auto w-screen max-w-screen-2xl opacity-30"
-            />
-          </div>
-          <MainFeatures />
-        </article>
-        <RdComponentsShowcase />
 
-        <SectionTitle className="mb-6 w-full max-w-screen-article">
+        <article className="flex w-full flex-col items-center">
+          <RdProjectBriefing />
+          <MainFeatures />
+          <ProjectShowcase>
+            <div className="h-10 max-w-screen-sm bg-cyan-700" />
+            <div className="mt-4 h-5 w-24 bg-cyan-700" />
+            <div className="mt-4 h-56 max-w-xs bg-cyan-700" />
+          </ProjectShowcase>
+        </article>
+        <SectionTitle
+          id="nextProject"
+          className="mb-6 w-full max-w-screen-article pt-14"
+        >
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
         <JackedPlannerProject />

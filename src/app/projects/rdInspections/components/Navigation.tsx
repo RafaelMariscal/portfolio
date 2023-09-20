@@ -64,10 +64,13 @@ export default function RdNavigation() {
             </Navigation.Item>
             <Navigation.Item>
               <NavLink
-                href="#componentShowcase"
+                href="#componentsShowcase"
                 title="Components Showcase"
                 scroll
               />
+            </Navigation.Item>
+            <Navigation.Item>
+              <NavLink href="#nextProject" title="Next Project" scroll />
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Content>

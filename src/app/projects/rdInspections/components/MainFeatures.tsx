@@ -19,7 +19,7 @@ function MainFeatures() {
   return (
     <section
       id="mainFeatures"
-      className="mx-auto w-full max-w-screen-article py-10"
+      className="mx-auto w-full max-w-screen-article pt-14"
     >
       <SectionTitle>
         Main<Highlight className="ml-1">Features</Highlight>

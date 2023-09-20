@@ -91,6 +91,9 @@ module.exports = {
           '100%': { transform: 'translateX(100%)' },
         },
       },
+      backgroundImage: {
+        'dot-pattern': 'url("../assets/dot-pattern.svg")',
+      },
       screens: {
         phones: '460px',
         'tablets-xs': '520px',
