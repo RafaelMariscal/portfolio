@@ -7,5 +7,5 @@ export default function NavigationContent({
   className,
   ...props
 }: NavigationContentProps) {
-  return <nav {...props} className={twMerge('max-md:hidden', className)} />
+  return <nav {...props} className={twMerge(className)} />
 }

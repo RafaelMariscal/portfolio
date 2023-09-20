@@ -34,7 +34,7 @@ export default function RdNavigation() {
         !isShown && 'md:invisible md:-top-20',
       )}
     >
-      <Navigation.Root>
+      <Navigation.Root className="max-tablets:hidden">
         <NavLink
           href="/"
           title=""
@@ -47,7 +47,7 @@ export default function RdNavigation() {
         >
           <NavLogo />
         </NavLink>
-        <Navigation.Content>
+        <Navigation.Content className="max-md:hidden">
           <Navigation.List>
             <Navigation.Item>
               <NavLink href="/projects/rdInspections" title="Home" newTab />

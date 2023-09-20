@@ -1,6 +1,7 @@
 'use client'
 
 import NavLink from '@/components/Navigation/NavLink'
+import Navigation from '@/components/Navigation/NavigationCompose'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useEffect, useRef, useState } from 'react'
 
@@ -16,13 +17,9 @@ export default function MobileNav() {
         !triggerBoxRef.current?.classList.contains('-translate-y-32')
 
       if (curretScroll <= 110) {
-        triggerBoxRef.current?.classList.remove('bg-cyan-800', 'shadow-md')
+        triggerBoxRef.current?.classList.remove('shadow-md')
       } else if (curretScroll > lastScroll && IsMenuVisible) {
-        triggerBoxRef.current?.classList.add(
-          '-translate-y-32',
-          'bg-cyan-800',
-          'shadow-md',
-        )
+        triggerBoxRef.current?.classList.add('-translate-y-32', 'shadow-md')
       } else if (curretScroll < lastScroll && !IsMenuVisible) {
         triggerBoxRef.current?.classList.remove('-translate-y-32')
       }
@@ -40,9 +37,10 @@ export default function MobileNav() {
         aria-hidden={open}
         className="
           fixed z-50 flex h-12 w-full justify-end 
+          bg-cyan-800/80 backdrop-blur
           transition-all duration-100
           aria-hidden:bg-transparent
-          md:hidden
+          tablets:hidden
         "
       >
         <Dialog.Trigger
@@ -102,42 +100,33 @@ export default function MobileNav() {
           "
           >
             <Dialog.Close className="h-6 w-6 outline-none" />
-            <nav>
-              <ul className="flex h-full flex-col items-end gap-8">
-                <li>
-                  <NavLink
-                    href="/projects/rdInspections"
-                    title="Home"
-                    newTab
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
+            <Navigation.Content>
+              <Navigation.List className="flex-col px-0">
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="/projects/rdInspections" title="Home" newTab />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="#projectBriefing"
                     title="Project Briefing"
                     scroll
-                    onClick={() => setOpen(false)}
                   />
-                </li>
-                <li>
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#mainFeatures" title="Main Features" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
-                    href="#mainFeatures"
-                    title="Main Features"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#componentShowcase"
+                    href="#componentsShowcase"
                     title="Components Showcase"
                     scroll
-                    onClick={() => setOpen(false)}
                   />
-                </li>
-              </ul>
-            </nav>
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#nextProject" title="Next Project" scroll />
+                </Navigation.Item>
+              </Navigation.List>
+            </Navigation.Content>
           </Dialog.Content>
         </Dialog.Overlay>
       </Dialog.Portal>
