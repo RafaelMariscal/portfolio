@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation/HomeNavigation'
 import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
 import Projects from '@/components/Projects/ProjectCompose'
 import RdInspectionProject from '@/components/Projects/RdInspectionProject'
-import InboxWebsiteProject from '@/components/Projects/inboxWebsiteProject'
+import InboxWebsiteProject from '@/components/Projects/InboxWebsiteProject'
 import QuickBriefing from '@/components/QuickBriefing'
 
 export default function Home() {

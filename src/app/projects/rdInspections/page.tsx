@@ -19,7 +19,7 @@ export default function RdInspectionsPage() {
           src={RdImageSrc}
           alt="Rd inspections software promo image."
           quality={100}
-          className="z-10 h-full max-h-screen w-full object-cover"
+          className="z-10 h-full max-h-screen w-full select-none object-cover"
           placeholder="blur"
         />
         <RdProjectDescription />

@@ -14,7 +14,7 @@ export default function ProjectBriefingRoot({
     <section
       {...props}
       className={twMerge(
-        'w-full max-w-4xl border border-cyan-700 bg-cyan-800/70 px-6 pt-4 ',
+        'w-full max-w-4xl border border-cyan-700 bg-cyan-800/70 px-6 py-4 ',
         'shadow-md shadow-dark/40 backdrop-blur-sm',
         className,
       )}
