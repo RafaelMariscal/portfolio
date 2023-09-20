@@ -7,7 +7,7 @@ import RdProjectBriefing from './components/RdProjectBriefing'
 import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
-import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
+// import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
 
 export default function RdInspectionsPage() {
   return (
@@ -27,11 +27,11 @@ export default function RdInspectionsPage() {
         <article className="flex w-full flex-col items-center">
           <RdProjectBriefing />
           <MainFeatures />
-          <ProjectShowcase>
+          {/* <ProjectShowcase>
             <div className="h-10 max-w-screen-sm bg-cyan-700" />
             <div className="mt-4 h-5 w-24 bg-cyan-700" />
             <div className="mt-4 h-56 max-w-xs bg-cyan-700" />
-          </ProjectShowcase>
+          </ProjectShowcase> */}
         </article>
         <SectionTitle
           id="nextProject"

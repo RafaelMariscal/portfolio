@@ -38,13 +38,13 @@ function inboxWebsiteProject() {
             </p>
             <ProjectCompose.Links>
               <NavLink
-                href={'projects/inboxWebsite'}
-                newTab
+                href="/projects/inboxWebsite"
                 title="Learn more about Inbox Website"
+                newTab
               />
               <NavLink
                 href="https://inboxrefeicoes.vercel.app/"
-                title={`Access Inbox Website`}
+                title="Access Inbox Website"
                 newTab
               />
             </ProjectCompose.Links>

@@ -33,13 +33,13 @@ function RdInspectionProject() {
             </p>
             <ProjectCompose.Links>
               <NavLink
-                href={'projects/rdInspections'}
-                newTab
+                href="/projects/rdInspections"
                 title="Learn more about RD Inspections"
+                newTab
               />
               <NavLink
                 href="https://www.rdinspecoesveiculares.com.br/"
-                title={`Access RD Inspections`}
+                title="Access RD Inspections"
                 newTab
               />
             </ProjectCompose.Links>

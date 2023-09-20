@@ -10,7 +10,7 @@ function JackedPlannerProject() {
         src={JackePlanner}
         alt="Jacked Plnner. A gym sass where the clients can create a user profile,
          manange their training plans and also take notes during the training sessions"
-        link="projects/jackedPlanner"
+        link="/projects/jackedPlanner"
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="Jacked Planner" />
@@ -28,7 +28,7 @@ function JackedPlannerProject() {
                 It enables customers to easily Create, Access, and Manage their
                 training plans
               </strong>
-              , offering then the flexibility to select daily exercises and
+              , offering them the flexibility to select daily exercises and
               create schedules that suit their needs. Additionally, users have
               the capability to{' '}
               <strong>take notes for each training day</strong>, providing both
@@ -45,13 +45,13 @@ function JackedPlannerProject() {
             </p>
             <ProjectCompose.Links>
               <NavLink
-                href={'projects/jackedPlanner'}
-                newTab
+                href="/projects/jackedPlanner"
                 title="Learn more about Jacked Planner"
+                newTab
               />
               <NavLink
                 href="https://jackedplannerreact.web.app/"
-                title={`Access Jacked Planner`}
+                title="Access Jacked Planner"
                 newTab
                 className="min-w-max"
               />
