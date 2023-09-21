@@ -16,7 +16,7 @@ function JpProjectBriefing() {
             Jacked Planner is a SaaS developed for Gyms, Personal Trainers and
             Fitness Enthusiasts that serves as{' '}
             <Highlight>
-              a platform responsible for documenting and tracking fitness goals.
+              a platform responsible for documenting and tracking fitness goals
             </Highlight>
             .
           </Paragraph>
