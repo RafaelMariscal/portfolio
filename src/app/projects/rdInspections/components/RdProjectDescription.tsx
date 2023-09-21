@@ -1,8 +1,9 @@
 import Description from '@/components/ProjectsPage/Description'
+import DescriptionTableItemContent from '@/components/ProjectsPage/Description/DescriptionTableItemContent'
 
 function RdProjectDescription() {
   return (
-    <Description.Root>
+    <Description.Root className="px-3">
       <Description.Paragraph className="max-w-screen-tablets-sm text-xl leading-tight">
         I am a{' '}
         <Description.Highlight>Full Stack Developer</Description.Highlight> at{' '}
@@ -24,14 +25,27 @@ function RdProjectDescription() {
         , providing them with the necessary tools to develop the most efficient
         REST APIs for our software.
       </Description.Paragraph>
-      <div className="mt-4 grid w-fit grid-cols-3 grid-rows-2 gap-x-12 text-sm">
-        <span className="text-gray-200">Role</span>
-        <span className="text-gray-200">Platform</span>
-        <span className="text-gray-200">Category</span>
-        <span className="text-gray-100">Full Stack Developer</span>
-        <span className="text-gray-100">Descktop / Mobile</span>
-        <span className="text-gray-100">Company System / CRM</span>
-      </div>
+
+      <Description.Table>
+        <Description.TableItem>
+          <Description.ItemHeader>Role</Description.ItemHeader>
+          <DescriptionTableItemContent>
+            Full Stack Developer
+          </DescriptionTableItemContent>
+        </Description.TableItem>
+        <Description.TableItem>
+          <Description.ItemHeader>Platform</Description.ItemHeader>
+          <DescriptionTableItemContent>
+            Descktop / Mobile
+          </DescriptionTableItemContent>
+        </Description.TableItem>
+        <Description.TableItem>
+          <Description.ItemHeader>Category</Description.ItemHeader>
+          <DescriptionTableItemContent>
+            Company System / CRM
+          </DescriptionTableItemContent>
+        </Description.TableItem>
+      </Description.Table>
     </Description.Root>
   )
 }
