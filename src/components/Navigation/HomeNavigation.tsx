@@ -34,21 +34,21 @@ export default function HomeNavigation() {
     <div
       ref={NavRef}
       className={clsx(
-        'sticky top-0 z-50 w-full bg-cyan-800/80 backdrop-blur',
+        'sticky top-0 z-50 w-full bg-cyan-800/80',
         'transition-all duration-300',
-        isShown && 'md:visible md:top-0',
+        isShown && 'md:visible md:top-0 md:backdrop-blur',
         !isShown && 'md:invisible md:-top-20',
       )}
     >
-      <Navigation.Root>
+      <Navigation.Root className="max-md:hidden">
         <NavLink
           href="/"
           title=""
           className="
-          w-fit outline-none max-md:hidden
-           [&_*]:transition-all [&_*]:hover:fill-cyan-400
-          [&_*]:focus:fill-cyan-500
-        "
+            w-fit outline-none
+             [&_*]:transition-all [&_*]:hover:fill-cyan-400
+            [&_*]:focus:fill-cyan-500
+          "
           newTab
         >
           <NavLogo />

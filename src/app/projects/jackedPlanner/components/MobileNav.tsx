@@ -16,10 +16,8 @@ export default function MobileNav() {
       const IsMenuVisible =
         !triggerBoxRef.current?.classList.contains('-translate-y-32')
 
-      if (curretScroll <= 110) {
-        triggerBoxRef.current?.classList.remove('shadow-md')
-      } else if (curretScroll > lastScroll && IsMenuVisible) {
-        triggerBoxRef.current?.classList.add('-translate-y-32', 'shadow-md')
+      if (curretScroll > lastScroll && IsMenuVisible) {
+        triggerBoxRef.current?.classList.add('-translate-y-32')
       } else if (curretScroll < lastScroll && !IsMenuVisible) {
         triggerBoxRef.current?.classList.remove('-translate-y-32')
       }

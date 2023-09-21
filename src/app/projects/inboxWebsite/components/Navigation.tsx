@@ -28,9 +28,9 @@ export default function RdNavigation() {
   return (
     <div
       className={clsx(
-        'fixed top-0 z-50 w-full bg-cyan-800/80 backdrop-blur',
+        'fixed top-0 z-50 w-full bg-cyan-800/80',
         'transition-all duration-300',
-        isShown && 'md:visible md:top-0',
+        isShown && 'md:visible md:top-0 md:backdrop-blur',
         !isShown && 'md:invisible md:-top-20',
       )}
     >
@@ -47,7 +47,7 @@ export default function RdNavigation() {
         >
           <NavLogo />
         </NavLink>
-        <Navigation.Content className="max-md:hidden">
+        <Navigation.Content className="max-tablets:hidden">
           <Navigation.List>
             <Navigation.Item>
               <NavLink href="/projects/rdInspections" title="Home" newTab />

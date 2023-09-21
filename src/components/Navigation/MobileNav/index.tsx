@@ -16,13 +16,9 @@ export default function MobileNav() {
         !triggerBoxRef.current?.classList.contains('-translate-y-32')
 
       if (curretScroll <= 110) {
-        triggerBoxRef.current?.classList.remove('bg-cyan-800', 'shadow-md')
+        triggerBoxRef.current?.classList.remove('bg-cyan-800')
       } else if (curretScroll > lastScroll && IsMenuVisible) {
-        triggerBoxRef.current?.classList.add(
-          '-translate-y-32',
-          'bg-cyan-800',
-          'shadow-md',
-        )
+        triggerBoxRef.current?.classList.add('-translate-y-32', 'bg-cyan-800')
       } else if (curretScroll < lastScroll && !IsMenuVisible) {
         triggerBoxRef.current?.classList.remove('-translate-y-32')
       }
