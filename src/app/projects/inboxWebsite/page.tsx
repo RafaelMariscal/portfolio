@@ -6,6 +6,7 @@ import Highlight from '@/components/Basic/Highlight'
 import RdInspectionProject from '@/components/Projects/RdInspectionProject'
 import IbProjectDescription from './components/IbProjectDescription'
 import IbProjectBriefing from './components/IbProjectBriefing'
+import DesignProcess from './components/DesignProcess'
 
 export default function RdInspectionsPage() {
   return (
@@ -24,7 +25,7 @@ export default function RdInspectionsPage() {
 
         <article className="flex w-full flex-col items-center">
           <IbProjectBriefing />
-          {/* <DesignProcess /> */}
+          <DesignProcess />
           {/* <SoftwareDevelopment /> */}
         </article>
         <SectionTitle
