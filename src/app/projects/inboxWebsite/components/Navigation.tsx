@@ -60,7 +60,14 @@ export default function RdNavigation() {
               />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#mainFeatures" title="Main Features" scroll />
+              <NavLink href="#designProcess" title="Design Process" scroll />
+            </Navigation.Item>
+            <Navigation.Item>
+              <NavLink
+                href="#softwareDevelopment"
+                title="Software Development"
+                scroll
+              />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink

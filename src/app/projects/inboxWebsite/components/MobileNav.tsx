@@ -100,7 +100,8 @@ export default function MobileNav() {
           "
           >
             <Dialog.Close className="h-6 w-6 outline-none" />
-            <Navigation.Content>
+
+            <Navigation.Content className="max-md:hidden">
               <Navigation.List className="flex-col px-0">
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink href="/projects/rdInspections" title="Home" newTab />
@@ -113,7 +114,18 @@ export default function MobileNav() {
                   />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#mainFeatures" title="Main Features" scroll />
+                  <NavLink
+                    href="#designProcess"
+                    title="Design Process"
+                    scroll
+                  />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink
+                    href="#softwareDevelopment"
+                    title="Software Development"
+                    scroll
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
