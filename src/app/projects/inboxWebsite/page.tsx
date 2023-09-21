@@ -7,6 +7,8 @@ import RdInspectionProject from '@/components/Projects/RdInspectionProject'
 import IbProjectDescription from './components/IbProjectDescription'
 import IbProjectBriefing from './components/IbProjectBriefing'
 import DesignProcess from './components/DesignProcess'
+import SoftwareDevelopment from './components/SoftwareDevelopment'
+// import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
 
 export default function RdInspectionsPage() {
   return (
@@ -26,7 +28,12 @@ export default function RdInspectionsPage() {
         <article className="flex w-full flex-col items-center">
           <IbProjectBriefing />
           <DesignProcess />
-          {/* <SoftwareDevelopment /> */}
+          <SoftwareDevelopment />
+          {/* <ProjectShowcase>
+            <div className="h-10 max-w-screen-sm bg-cyan-700" />
+            <div className="mt-4 h-5 w-24 bg-cyan-700" />
+            <div className="mt-4 h-56 max-w-xs bg-cyan-700" />
+          </ProjectShowcase> */}
         </article>
         <SectionTitle
           id="nextProject"

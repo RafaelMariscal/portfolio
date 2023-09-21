@@ -111,7 +111,6 @@ function SoftwareDevelopment() {
             mx-auto flex w-fit flex-col gap-5
             [&_img]:transition-transform
             hover:[&_img]:scale-[103%]
-
           "
         >
           <Image
