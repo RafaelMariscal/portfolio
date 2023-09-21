@@ -7,6 +7,7 @@ import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
 import InboxWebsiteProject from '@/components/Projects/InboxWebsiteProject'
 import DesignProcess from './components/DesignProcess'
+import SoftwareDevelopment from './components/SoftwareDevelopment'
 
 export default function JackedPlannerPage() {
   return (
@@ -26,6 +27,7 @@ export default function JackedPlannerPage() {
         <article className="flex w-full flex-col items-center">
           <JpProjectBriefing />
           <DesignProcess />
+          <SoftwareDevelopment />
         </article>
         <SectionTitle
           id="nextProject"
