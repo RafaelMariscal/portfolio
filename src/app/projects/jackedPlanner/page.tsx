@@ -5,7 +5,7 @@ import JpProjectDescription from './components/JpProjectDescription'
 import JpProjectBriefing from './components/JpProjectBriefing'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
-import InboxWebsiteProject from '@/components/Projects/InboxWebsiteProject'
+// import InboxWebsiteProject from '@/components/Projects/InboxWebsiteProject'
 import JpDesignProcess from './components/JpDesignProcess'
 import JpSoftwareDevelopment from './components/JpSoftwareDevelopment'
 
@@ -38,7 +38,7 @@ export default function JackedPlannerPage() {
         >
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
-        <InboxWebsiteProject />
+        {/* <InboxWebsiteProject /> */}
       </main>
     </>
   )
