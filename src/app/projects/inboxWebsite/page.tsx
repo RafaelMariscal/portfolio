@@ -1,19 +1,19 @@
 import Image from 'next/image'
-import Navigation from './components/Navigation'
+import IbNavigation from './components/IbNavigation'
 import IbWebsiteSrc from '@/assets/projects/inboxWebsite/ib-project.png'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
 import RdInspectionProject from '@/components/Projects/RdInspectionProject'
 import IbProjectDescription from './components/IbProjectDescription'
 import IbProjectBriefing from './components/IbProjectBriefing'
-import DesignProcess from './components/DesignProcess'
-import SoftwareDevelopment from './components/SoftwareDevelopment'
+import IbDesignProcess from './components/IbDesignProcess'
+import IbSoftwareDevelopment from './components/IbSoftwareDevelopment'
 // import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
 
 export default function RdInspectionsPage() {
   return (
     <>
-      <Navigation />
+      <IbNavigation />
       <main className="flex w-full flex-col items-center justify-center">
         <h1 className="invisible h-0 w-0">Jacked Planner project page</h1>
         <Image
@@ -27,8 +27,8 @@ export default function RdInspectionsPage() {
 
         <article className="flex w-full flex-col items-center">
           <IbProjectBriefing />
-          <DesignProcess />
-          <SoftwareDevelopment />
+          <IbDesignProcess />
+          <IbSoftwareDevelopment />
           {/* <ProjectShowcase>
             <div className="h-10 max-w-screen-sm bg-cyan-700" />
             <div className="mt-4 h-5 w-24 bg-cyan-700" />

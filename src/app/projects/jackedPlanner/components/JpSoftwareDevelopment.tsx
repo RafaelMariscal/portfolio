@@ -13,7 +13,7 @@ import Mobile3Src from '@/assets/projects/jackedPlanner/screenshots/jp-mobile3.p
 import Mobile4Src from '@/assets/projects/jackedPlanner/screenshots/jp-mobile4.png'
 import NavLink from '@/components/Navigation/NavLink'
 
-function SoftwareDevelopment() {
+export default function JpSoftwareDevelopment() {
   return (
     <section id="softwareDevelopment" className="pt-14">
       <div
@@ -183,4 +183,3 @@ function SoftwareDevelopment() {
     </section>
   )
 }
-export default SoftwareDevelopment

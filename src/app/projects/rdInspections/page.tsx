@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import RdImageSrc from '@/assets/projects/rd-inspection/rd-project.png'
-import Navigation from './components/Navigation'
+import RdNavigation from './components/RdNavigation'
 import RdProjectDescription from './components/RdProjectDescription'
-import MainFeatures from './components/MainFeatures'
+import RdMainFeatures from './components/RdMainFeatures'
 import RdProjectBriefing from './components/RdProjectBriefing'
 import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
 import SectionTitle from '@/components/Basic/SectionTitle'
@@ -12,7 +12,7 @@ import Highlight from '@/components/Basic/Highlight'
 export default function RdInspectionsPage() {
   return (
     <>
-      <Navigation />
+      <RdNavigation />
       <main className="flex w-full flex-col items-center justify-center">
         <h1 className="invisible h-0 w-0">RD Inspections project page</h1>
         <Image
@@ -26,7 +26,7 @@ export default function RdInspectionsPage() {
 
         <article className="flex w-full flex-col items-center">
           <RdProjectBriefing />
-          <MainFeatures />
+          <RdMainFeatures />
           {/* <ProjectShowcase>
             <div className="h-10 max-w-screen-sm bg-cyan-700" />
             <div className="mt-4 h-5 w-24 bg-cyan-700" />

@@ -4,7 +4,7 @@ import SectionTitle from '@/components/Basic/SectionTitle'
 import Image from 'next/image'
 import IbLogoSrc from '@/assets/projects/inboxWebsite/ib-logo.svg'
 
-function DesignProcess() {
+function IbDesignProcess() {
   return (
     <section id="designProcess" className="pt-14">
       <div
@@ -65,4 +65,4 @@ function DesignProcess() {
     </section>
   )
 }
-export default DesignProcess
+export default IbDesignProcess

@@ -1,18 +1,18 @@
 import Image from 'next/image'
 import JpImageSrc from '@/assets/projects/jackedPlanner/jp-project.png'
-import Navigation from './components/Navigation'
+import JpNavigation from './components/JpNavigation'
 import JpProjectDescription from './components/JpProjectDescription'
 import JpProjectBriefing from './components/JpProjectBriefing'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
 import InboxWebsiteProject from '@/components/Projects/InboxWebsiteProject'
-import DesignProcess from './components/DesignProcess'
-import SoftwareDevelopment from './components/SoftwareDevelopment'
+import JpDesignProcess from './components/JpDesignProcess'
+import JpSoftwareDevelopment from './components/JpSoftwareDevelopment'
 
 export default function JackedPlannerPage() {
   return (
     <>
-      <Navigation />
+      <JpNavigation />
       <main className="flex w-full flex-col items-center justify-center">
         <h1 className="invisible h-0 w-0">Jacked Planner project page</h1>
         <Image
@@ -26,8 +26,8 @@ export default function JackedPlannerPage() {
 
         <article className="flex w-full flex-col items-center">
           <JpProjectBriefing />
-          <DesignProcess />
-          <SoftwareDevelopment />
+          <JpDesignProcess />
+          <JpSoftwareDevelopment />
         </article>
         <SectionTitle
           id="nextProject"

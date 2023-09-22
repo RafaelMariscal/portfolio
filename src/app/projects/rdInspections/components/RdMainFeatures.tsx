@@ -15,7 +15,7 @@ const imagesSrc: StaticImageData[] = [
   FinancialDashboardSrc,
 ]
 
-function MainFeatures() {
+export default function RdMainFeatures() {
   return (
     <section
       id="mainFeatures"
@@ -122,4 +122,3 @@ function MainFeatures() {
     </section>
   )
 }
-export default MainFeatures

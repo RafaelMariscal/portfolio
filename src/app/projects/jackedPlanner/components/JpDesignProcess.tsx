@@ -12,7 +12,7 @@ import GirlImgSrc from '@/assets/projects/jackedPlanner/jp-elevate-your-fitness.
 
 const ProjectColors = ['#EEF4F6', '#343C3F', '#FE9016', '#61B8D9', '#121214']
 
-function DesignProcess() {
+export default function JpDesignProcess() {
   return (
     <section id="designProcess" className="pt-14">
       <div
@@ -206,4 +206,3 @@ function DesignProcess() {
     </section>
   )
 }
-export default DesignProcess

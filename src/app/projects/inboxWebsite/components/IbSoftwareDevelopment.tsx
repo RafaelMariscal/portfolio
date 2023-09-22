@@ -3,7 +3,7 @@ import Paragraph from '@/components/Basic/Paragraph'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import NavLink from '@/components/Navigation/NavLink'
 
-function SoftwareDevelopment() {
+function IbSoftwareDevelopment() {
   return (
     <section id="softwareDevelopment" className="pt-14">
       <div
@@ -85,4 +85,4 @@ function SoftwareDevelopment() {
     </section>
   )
 }
-export default SoftwareDevelopment
+export default IbSoftwareDevelopment

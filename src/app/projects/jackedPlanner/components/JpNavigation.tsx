@@ -7,7 +7,7 @@ import MobileNav from './MobileNav'
 import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 
-export default function RdNavigation() {
+export default function JpNavigation() {
   const [isShown, setIsShown] = useState(true)
 
   useEffect(() => {
