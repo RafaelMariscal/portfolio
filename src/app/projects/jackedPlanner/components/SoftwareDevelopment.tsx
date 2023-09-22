@@ -15,8 +15,13 @@ import NavLink from '@/components/Navigation/NavLink'
 
 function SoftwareDevelopment() {
   return (
-    <section id="softwareDevelopment" className="px-1 pt-14">
-      <div className="mx-auto w-full max-w-screen-article">
+    <section id="softwareDevelopment" className="pt-14">
+      <div
+        className="
+          mx-auto w-full max-w-screen-article
+          max-tablets:px-3 max-md:max-w-lg
+        "
+      >
         <SectionTitle className="leading-none">
           Software<Highlight className="block">Development</Highlight>
         </SectionTitle>

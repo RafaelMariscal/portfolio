@@ -14,10 +14,18 @@ const ProjectColors = ['#EEF4F6', '#343C3F', '#FE9016', '#61B8D9', '#121214']
 
 function DesignProcess() {
   return (
-    <section id="designProcess" className="px-1 pt-14">
-      <div className="mx-auto w-full max-w-screen-article">
-        <SectionTitle>
-          Design<Highlight className="ml-1">Process</Highlight>
+    <section id="designProcess" className="pt-14">
+      <div
+        className="
+          mx-auto w-full max-w-screen-article
+          max-tablets:px-3 max-md:max-w-lg
+        "
+      >
+        <SectionTitle className="max-phones:leading-none">
+          Design
+          <Highlight className="block phones:ml-1 phones:inline">
+            Process
+          </Highlight>
         </SectionTitle>
         <Paragraph className="mt-6">
           Looking for a proper Inspiration for the app, I was in search of
@@ -60,7 +68,8 @@ function DesignProcess() {
           relative pb-3 
           after:absolute after:bottom-0 after:left-1/2 after:h-px 
           after:w-full after:max-w-screen-article after:-translate-x-1/2 
-          after:bg-gray-100/20
+          after:bg-gray-100/20 
+          max-tablets:after:px-3 max-md:after:max-w-lg
         "
       >
         <Image
@@ -70,12 +79,22 @@ function DesignProcess() {
           quality={100}
           placeholder="blur"
         />
-        <figcaption className="mx-auto mt-2 max-w-screen-article text-sm opacity-50">
+        <figcaption
+          className="
+            mx-auto mt-2 max-w-screen-article text-sm opacity-50
+            max-tablets:px-3 max-md:max-w-lg
+          "
+        >
           Commemorative livery that was presented at Monaco GP-2021.
           (Disclosure/McLaren).
         </figcaption>
       </figure>
-      <div className="mx-auto mt-6 flex w-full max-w-screen-article flex-col gap-4">
+      <div
+        className="
+          mx-auto mt-6 flex w-full max-w-screen-article flex-col gap-4
+          max-tablets:px-3 max-md:max-w-lg
+        "
+      >
         <Paragraph>
           These visuals perfectly align with the emotions and concepts we strive
           to convey through our app. McLaren&rsquo;s fusion of{' '}
@@ -90,7 +109,11 @@ function DesignProcess() {
             <div
               key={color}
               style={{ backgroundColor: color }}
-              className="relative h-24 w-full border border-gray-500"
+              className="
+                relative h-24 w-full border border-gray-500
+                max-md:h-16
+                
+              "
             >
               <span className="absolute bottom-0 right-0 bg-light px-1 text-xs font-semibold text-cyan-800">
                 {color}
@@ -132,26 +155,46 @@ function DesignProcess() {
           their bodies.
         </Paragraph>
 
-        <div className="flex justify-center gap-4 py-2">
-          <div className="flex max-w-[240px] flex-col gap-3">
+        <div
+          className="
+            mx-auto flex items-center gap-4
+            max-md:flex-col max-md:gap-0
+          "
+        >
+          <div
+            className="
+              flex w-fit max-w-[240px] flex-col gap-3
+              max-md:max-w-none max-md:flex-row
+              max-sm:w-auto max-sm:max-w-sm max-sm:flex-col
+            "
+          >
             <Image src={LogoSrc} alt="logo" />
-            <Image src={LogoProSrc} alt="Logo Pro" />
+            <div className="flex flex-col gap-3">
+              <Image src={LogoProSrc} alt="Logo Pro" />
+              <Image
+                src={LogoSmSrc}
+                alt="Small logo"
+                className="h-auto max-h-[2.5rem] w-full max-w-[2.5rem] max-sm:hidden"
+              />
+            </div>
+          </div>
+          <div
+            className="
+              flex justify-center gap-4 py-2
+              max-sm:flex-wrap
+            "
+          >
             <Image
-              src={LogoSmSrc}
+              src={GuyImgSrc}
+              alt="Logo Pro"
+              className="h-fit max-w-[240px] max-sm:w-full max-sm:max-w-sm"
+            />
+            <Image
+              src={GirlImgSrc}
               alt="Small logo"
-              className="h-auto max-h-[2.5rem] w-full max-w-[2.5rem]"
+              className="h-fit max-w-[240px] max-sm:w-full max-sm:max-w-sm"
             />
           </div>
-          <Image
-            src={GuyImgSrc}
-            alt="Logo Pro"
-            className="h-fit max-w-[240px]"
-          />
-          <Image
-            src={GirlImgSrc}
-            alt="Small logo"
-            className="h-fit max-w-[240px]"
-          />
         </div>
         <Paragraph>
           The next step revolved around software development planning. During
