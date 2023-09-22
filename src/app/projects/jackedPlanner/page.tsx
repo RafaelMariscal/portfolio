@@ -5,9 +5,9 @@ import JpProjectDescription from './components/JpProjectDescription'
 import JpProjectBriefing from './components/JpProjectBriefing'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
-import InboxWebsiteProject from '@/components/Projects/InboxWebsiteProject'
 import JpDesignProcess from './components/JpDesignProcess'
 import JpSoftwareDevelopment from './components/JpSoftwareDevelopment'
+import InboxWebsiteProject from '@/components/Projects/IbWebsiteProject'
 
 export default function JackedPlannerPage() {
   return (
