@@ -7,8 +7,8 @@ function IbSoftwareDevelopment() {
   return (
     <section id="softwareDevelopment" className="pt-14">
       <div
-        className="
-          max-w-screen-tablest-sm mx-auto w-full
+        className="          
+          mx-auto w-full max-w-screen-article
           max-tablets:px-3 max-md:max-w-lg
         "
       >
