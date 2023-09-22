@@ -6,10 +6,18 @@ import IbLogoSrc from '@/assets/projects/inboxWebsite/ib-logo.svg'
 
 function DesignProcess() {
   return (
-    <section id="designProcess" className="px-1 pt-14">
-      <div className="mx-auto w-full max-w-screen-tablets-sm">
-        <SectionTitle>
-          Design<Highlight className="ml-1">Process</Highlight>
+    <section id="designProcess" className="pt-14">
+      <div
+        className="
+          mx-auto w-full max-w-screen-article
+          max-tablets:px-3 max-md:max-w-lg
+        "
+      >
+        <SectionTitle className="max-phones:leading-none">
+          Design
+          <Highlight className="block phones:ml-1 phones:inline">
+            Process
+          </Highlight>
         </SectionTitle>
         <Paragraph className="mt-6">
           The website design process is a collaborative endeavor aimed at
@@ -23,7 +31,10 @@ function DesignProcess() {
           src={IbLogoSrc}
           alt="Inbox Logo"
           quality={100}
-          className="float-right ml-6 mr-2 mt-4 h-auto w-full max-w-[310px]"
+          className="
+            float-right ml-6 mr-2 mt-4 h-auto w-full max-w-[310px]
+            max-md:float-none max-md:mx-auto max-md:max-w-xs
+          "
         />
 
         <Paragraph className="mt-4">

@@ -37,7 +37,10 @@ export default function RdInspectionsPage() {
         </article>
         <SectionTitle
           id="nextProject"
-          className="mb-6 w-full max-w-screen-article pt-14"
+          className="
+            mb-6 w-full max-w-screen-article px-3 pt-14
+            max-md:max-w-screen-tablets-xs
+          "
         >
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
