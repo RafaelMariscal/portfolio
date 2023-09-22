@@ -3,7 +3,7 @@ import ProjectCompose from './ProjectCompose'
 import JackePlanner from '@/assets/projects/jackedPlanner/jp-project.png'
 import { jackedPlannerTechs } from './techsLists'
 
-function JackedPlannerProject() {
+export default function JackedPlannerProject() {
   return (
     <>
       <ProjectCompose.Image
@@ -68,4 +68,3 @@ function JackedPlannerProject() {
     </>
   )
 }
-export default JackedPlannerProject

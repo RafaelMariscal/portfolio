@@ -3,7 +3,7 @@ import ProjectCompose from './ProjectCompose'
 import IBProject from '@/assets/projects/inboxWebsite/ib-project.png'
 import { IbWebsiteTechs } from './techsLists'
 
-function InboxWebsiteProject() {
+export default function InboxWebsiteProject() {
   return (
     <>
       <ProjectCompose.Image
@@ -63,4 +63,3 @@ function InboxWebsiteProject() {
     </>
   )
 }
-export default InboxWebsiteProject

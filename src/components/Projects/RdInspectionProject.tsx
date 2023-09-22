@@ -3,7 +3,7 @@ import ProjectCompose from './ProjectCompose'
 import RDProject from '@/assets/projects/rd-inspection/rd-project.png'
 import { rdInspecTechs } from './techsLists'
 
-function RdInspectionProject() {
+export default function RdInspectionProject() {
   return (
     <>
       <ProjectCompose.Image
@@ -58,4 +58,3 @@ function RdInspectionProject() {
     </>
   )
 }
-export default RdInspectionProject
