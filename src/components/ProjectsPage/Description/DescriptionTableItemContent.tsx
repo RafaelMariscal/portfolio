@@ -8,6 +8,13 @@ export default function DescriptionTableItemContent({
   ...props
 }: DescriptionTableItemContentProps) {
   return (
-    <span {...props} className={twMerge('text-sm text-gray-100', className)} />
+    <span
+      {...props}
+      className={twMerge(
+        'text-sm text-gray-100',
+        'max-tablets-xs:text-lg',
+        className,
+      )}
+    />
   )
 }

@@ -19,7 +19,12 @@ function MainFeatures() {
   return (
     <section
       id="mainFeatures"
-      className="mx-auto w-full max-w-screen-article pt-14"
+      className="
+        mx-auto w-full max-w-screen-article pt-14
+        max-tablets:px-3
+        max-md:max-w-lg
+
+      "
     >
       <SectionTitle>
         Main<Highlight className="ml-1">Features</Highlight>
@@ -30,7 +35,10 @@ function MainFeatures() {
         src={RdLoginCardSrc}
         alt=""
         quality={100}
-        className="float-right mb-4 ml-4 h-fit w-full max-w-[330px] select-none"
+        className="
+          float-right mb-4 ml-4 h-fit w-full max-w-[330px] select-none
+          max-md:hidden
+        "
       />
       <div>
         <Paragraph>

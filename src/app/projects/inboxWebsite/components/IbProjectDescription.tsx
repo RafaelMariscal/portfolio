@@ -26,14 +26,23 @@ function IbProjectDescription() {
         <Description.Highlight>PostgreSQL</Description.Highlight>, and{' '}
         <Description.Highlight>Resend</Description.Highlight>.
       </Description.Paragraph>
-      <div className="mt-4 grid w-fit grid-cols-3 grid-rows-2 gap-x-12 text-sm">
-        <span className="text-gray-200">Role</span>
-        <span className="text-gray-200">Platform</span>
-        <span className="text-gray-200">Category</span>
-        <span className="text-gray-100">Full Stack Developer</span>
-        <span className="text-gray-100">Descktop / Mobile</span>
-        <span className="text-gray-100">Company Website</span>
-      </div>
+
+      <Description.Table>
+        <Description.TableItem>
+          <Description.ItemHeader>Role</Description.ItemHeader>
+          <Description.ItemContent>
+            Full Stack Developer
+          </Description.ItemContent>
+        </Description.TableItem>
+        <Description.TableItem>
+          <Description.ItemHeader>Platform</Description.ItemHeader>
+          <Description.ItemContent>Desktop / Mobile</Description.ItemContent>
+        </Description.TableItem>
+        <Description.TableItem>
+          <Description.ItemHeader>Category</Description.ItemHeader>
+          <Description.ItemContent>Company Website</Description.ItemContent>
+        </Description.TableItem>
+      </Description.Table>
     </Description.Root>
   )
 }

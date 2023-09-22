@@ -1,9 +1,8 @@
 import Description from '@/components/ProjectsPage/Description'
-import DescriptionTableItemContent from '@/components/ProjectsPage/Description/DescriptionTableItemContent'
 
 function RdProjectDescription() {
   return (
-    <Description.Root className="px-3">
+    <Description.Root>
       <Description.Paragraph className="max-w-screen-tablets-sm text-xl leading-tight">
         I am a{' '}
         <Description.Highlight>Full Stack Developer</Description.Highlight> at{' '}
@@ -29,21 +28,19 @@ function RdProjectDescription() {
       <Description.Table>
         <Description.TableItem>
           <Description.ItemHeader>Role</Description.ItemHeader>
-          <DescriptionTableItemContent>
+          <Description.ItemContent>
             Full Stack Developer
-          </DescriptionTableItemContent>
+          </Description.ItemContent>
         </Description.TableItem>
         <Description.TableItem>
           <Description.ItemHeader>Platform</Description.ItemHeader>
-          <DescriptionTableItemContent>
-            Descktop / Mobile
-          </DescriptionTableItemContent>
+          <Description.ItemContent>Desktop / Mobile</Description.ItemContent>
         </Description.TableItem>
         <Description.TableItem>
           <Description.ItemHeader>Category</Description.ItemHeader>
-          <DescriptionTableItemContent>
+          <Description.ItemContent>
             Company System / CRM
-          </DescriptionTableItemContent>
+          </Description.ItemContent>
         </Description.TableItem>
       </Description.Table>
     </Description.Root>

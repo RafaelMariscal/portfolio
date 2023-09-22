@@ -11,7 +11,7 @@ export default function DescriptionRoot({
     <section
       {...props}
       className={twMerge(
-        'pt-14 font-semibold text-gray-200',
+        'px-3 pt-14 font-semibold text-gray-200',
         '[&_strong]:font-semibold [&_strong]:tracking-wide [&_strong]:text-cyan-400',
         className,
       )}

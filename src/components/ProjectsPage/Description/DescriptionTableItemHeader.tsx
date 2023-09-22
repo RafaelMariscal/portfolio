@@ -8,6 +8,15 @@ export default function DescriptionTableItemHeader({
   ...props
 }: DescriptionTableItemHeaderProps) {
   return (
-    <span {...props} className={twMerge('text-sm text-gray-200', className)} />
+    <span
+      {...props}
+      className={twMerge(
+        'text-sm text-gray-200',
+        'max-tablets-xs:text-lg',
+        className,
+      )}
+    >
+      {props.children}:
+    </span>
   )
 }
