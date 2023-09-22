@@ -19,6 +19,15 @@ function IbDesignProcess() {
             Process
           </Highlight>
         </SectionTitle>
+        <Image
+          src={IbLogoSrc}
+          alt="Inbox Logo"
+          quality={100}
+          className="
+            float-left mr-4 mt-6 h-auto w-full max-w-[250px]
+            max-md:hidden
+          "
+        />
         <Paragraph className="mt-6">
           The website design process is a collaborative endeavor aimed at
           crafting a coherent and authentic online experience that faithfully
@@ -27,15 +36,6 @@ function IbDesignProcess() {
           key elements such as the logo, color palette, typography, style
           guidelines, and any brand-related content.
         </Paragraph>
-        <Image
-          src={IbLogoSrc}
-          alt="Inbox Logo"
-          quality={100}
-          className="
-            float-right ml-6 mr-2 mt-4 h-auto w-full max-w-[310px]
-            max-md:float-none max-md:mx-auto max-md:max-w-xs
-          "
-        />
 
         <Paragraph className="mt-4">
           Upon receiving these materials, I embarked on the journey of
