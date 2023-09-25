@@ -1,9 +1,10 @@
 'use client'
 
 import * as Dialog from '@radix-ui/react-dialog'
+import clsx from 'clsx'
+import Navigation from '@/components/Navigation/NavigationCompose'
 import NavLink from '../NavLink'
 import { useEffect, useRef, useState } from 'react'
-import clsx from 'clsx'
 
 export default function MobileNav() {
   const [isShown, setIsShown] = useState(true)
@@ -107,42 +108,25 @@ export default function MobileNav() {
           "
           >
             <Dialog.Close className="h-6 w-6 outline-none" />
-            <nav>
-              <ul className="flex h-full flex-col items-end gap-8">
-                <li>
-                  <NavLink
-                    href="/"
-                    title="Home"
-                    newTab
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#briefing"
-                    title="Briefing"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#projects"
-                    title="Projects"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#experience"
-                    title="Experience"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-              </ul>
-            </nav>
+            <Navigation.Content>
+              <Navigation.List className="flex-col px-0">
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="/" title="Home" newTab />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#briefing" title="Briefing" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#projects" title="Projects" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#bootcamps" title="Bootcamps" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#experience" title="Experiences" scroll />
+                </Navigation.Item>
+              </Navigation.List>
+            </Navigation.Content>
           </Dialog.Content>
         </Dialog.Overlay>
       </Dialog.Portal>
