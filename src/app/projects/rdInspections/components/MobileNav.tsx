@@ -1,8 +1,8 @@
 'use client'
 
+import * as Dialog from '@radix-ui/react-dialog'
 import NavLink from '@/components/Navigation/NavLink'
 import Navigation from '@/components/Navigation/NavigationCompose'
-import * as Dialog from '@radix-ui/react-dialog'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 
@@ -10,25 +10,6 @@ export default function MobileNav() {
   const [isShown, setIsShown] = useState(true)
   const [open, setOpen] = useState(false)
   const triggerBoxRef = useRef<HTMLDivElement>(null)
-
-  // useEffect(() => {
-  //   let lastScroll = 0
-  //   function handleScroll(e: Event) {
-  //     const curretScroll = window.scrollY
-  //     const IsMenuVisible =
-  //       !triggerBoxRef.current?.classList.contains('-translate-y-32')
-
-  //     if (curretScroll > lastScroll && IsMenuVisible) {
-  //       triggerBoxRef.current?.classList.add('-translate-y-32')
-  //     } else if (curretScroll < lastScroll && !IsMenuVisible) {
-  //       triggerBoxRef.current?.classList.remove('-translate-y-32')
-  //     }
-  //     lastScroll = curretScroll
-  //   }
-  //   window.addEventListener('scroll', handleScroll)
-
-  //   return () => window.removeEventListener('scroll', handleScroll)
-  // }, [])
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -53,13 +34,6 @@ export default function MobileNav() {
       <div
         ref={triggerBoxRef}
         aria-hidden={open}
-        // className="
-        //   fixed z-50 flex h-12 w-full justify-end
-        //   bg-cyan-800/80 backdrop-blur
-        //   transition-all duration-100
-        //   aria-hidden:bg-transparent
-        //   tablets:hidden
-        // "
         className={clsx(
           'fixed z-50 flex h-12 w-full justify-end',
           'transition-all duration-100',
