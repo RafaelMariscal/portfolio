@@ -42,7 +42,7 @@ export default function MobileNav() {
         ref={triggerBoxRef}
         aria-hidden={open}
         className={clsx(
-          'fixed top-0 z-50 flex h-12 w-full justify-end',
+          'fixed z-50 flex h-12 w-full justify-end',
           'transition-all duration-100',
           'aria-hidden:bg-transparent aria-hidden:backdrop-blur-none',
           'md:hidden',
