@@ -25,6 +25,7 @@ export default function IbNavigation() {
       window.removeEventListener('scroll', scrollController)
     }
   }, [])
+
   return (
     <div
       className={clsx(
@@ -34,12 +35,12 @@ export default function IbNavigation() {
         !isShown && 'md:invisible md:-top-20',
       )}
     >
-      <Navigation.Root className="max-tablets:hidden">
+      <Navigation.Root className="max-xl:hidden">
         <NavLink
           href="/"
           title=""
           className="
-          w-fit outline-none max-md:hidden
+          w-fit outline-none
            [&_*]:transition-all [&_*]:hover:fill-cyan-400
           [&_*]:focus:fill-cyan-500
         "
@@ -47,10 +48,14 @@ export default function IbNavigation() {
         >
           <NavLogo />
         </NavLink>
-        <Navigation.Content className="max-tablets:hidden">
+        <Navigation.Content className="">
           <Navigation.List>
             <Navigation.Item>
-              <NavLink href="/projects/rdInspections" title="Home" newTab />
+              <NavLink
+                href="/projects/inboxWebsite"
+                title="Inbox Website"
+                newTab
+              />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink

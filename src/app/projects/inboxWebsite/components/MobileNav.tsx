@@ -1,31 +1,32 @@
 'use client'
 
+import * as Dialog from '@radix-ui/react-dialog'
 import NavLink from '@/components/Navigation/NavLink'
 import Navigation from '@/components/Navigation/NavigationCompose'
-import * as Dialog from '@radix-ui/react-dialog'
+import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 
 export default function MobileNav() {
+  const [isShown, setIsShown] = useState(true)
   const [open, setOpen] = useState(false)
   const triggerBoxRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    let lastScroll = 0
-    function handleScroll(e: Event) {
-      const curretScroll = window.scrollY
-      const IsMenuVisible =
-        !triggerBoxRef.current?.classList.contains('-translate-y-32')
-
-      if (curretScroll > lastScroll && IsMenuVisible) {
-        triggerBoxRef.current?.classList.add('-translate-y-32')
-      } else if (curretScroll < lastScroll && !IsMenuVisible) {
-        triggerBoxRef.current?.classList.remove('-translate-y-32')
+    let lastScrollY = window.scrollY
+    const scrollController = () => {
+      if (!triggerBoxRef.current) return null
+      if (window.scrollY < triggerBoxRef.current.offsetHeight) return null
+      if (lastScrollY < window.scrollY) {
+        setIsShown(false)
+      } else {
+        setIsShown(true)
       }
-      lastScroll = curretScroll
+      lastScrollY = window.scrollY
     }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', scrollController)
+    return () => {
+      window.removeEventListener('scroll', scrollController)
+    }
   }, [])
 
   return (
@@ -33,13 +34,14 @@ export default function MobileNav() {
       <div
         ref={triggerBoxRef}
         aria-hidden={open}
-        className="
-          fixed z-50 flex h-12 w-full justify-end 
-          bg-cyan-800/80 backdrop-blur
-          transition-all duration-100
-          aria-hidden:bg-transparent
-          tablets:hidden
-        "
+        className={clsx(
+          'fixed z-50 flex h-12 w-full justify-end',
+          'transition-all duration-100',
+          'aria-hidden:bg-transparent aria-hidden:backdrop-blur-none',
+          'xl:hidden',
+          isShown && 'visible top-0 bg-cyan-800/80 backdrop-blur',
+          !isShown && 'invisible -top-20 backdrop-blur-none',
+        )}
       >
         <Dialog.Trigger
           className="
@@ -98,11 +100,14 @@ export default function MobileNav() {
           "
           >
             <Dialog.Close className="h-6 w-6 outline-none" />
-
-            <Navigation.Content className="max-md:hidden">
+            <Navigation.Content>
               <Navigation.List className="flex-col px-0">
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="/projects/rdInspections" title="Home" newTab />
+                  <NavLink
+                    href="/projects/inboxWebsite"
+                    title="Inbox Website"
+                    newTab
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
@@ -134,6 +139,9 @@ export default function MobileNav() {
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink href="#nextProject" title="Next Project" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="/" title="Home Page" newTab />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>

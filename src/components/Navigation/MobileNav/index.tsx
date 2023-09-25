@@ -1,32 +1,40 @@
 'use client'
 
 import * as Dialog from '@radix-ui/react-dialog'
+import clsx from 'clsx'
+import Navigation from '@/components/Navigation/NavigationCompose'
 import NavLink from '../NavLink'
 import { useEffect, useRef, useState } from 'react'
 
 export default function MobileNav() {
+  const [isShown, setIsShown] = useState(true)
   const [open, setOpen] = useState(false)
   const triggerBoxRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    let lastScroll = 0
-    function handleScroll(e: Event) {
-      const curretScroll = window.scrollY
-      const IsMenuVisible =
-        !triggerBoxRef.current?.classList.contains('-translate-y-32')
-
-      if (curretScroll <= 110) {
-        triggerBoxRef.current?.classList.remove('bg-cyan-800')
-      } else if (curretScroll > lastScroll && IsMenuVisible) {
-        triggerBoxRef.current?.classList.add('-translate-y-32', 'bg-cyan-800')
-      } else if (curretScroll < lastScroll && !IsMenuVisible) {
-        triggerBoxRef.current?.classList.remove('-translate-y-32')
+    let lastScrollY = window.scrollY
+    const scrollController = () => {
+      if (!triggerBoxRef.current) return null
+      if (window.scrollY < triggerBoxRef.current.offsetHeight) return null
+      if (window.scrollY >= 140) {
+        triggerBoxRef.current.classList.add('bg-cyan-800/80', 'backdrop-blur')
+      } else {
+        triggerBoxRef.current.classList.remove(
+          'bg-cyan-800/80',
+          'backdrop-blur',
+        )
       }
-      lastScroll = curretScroll
+      if (lastScrollY < window.scrollY) {
+        setIsShown(false)
+      } else {
+        setIsShown(true)
+      }
+      lastScrollY = window.scrollY
     }
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', scrollController)
+    return () => {
+      window.removeEventListener('scroll', scrollController)
+    }
   }, [])
 
   return (
@@ -34,12 +42,14 @@ export default function MobileNav() {
       <div
         ref={triggerBoxRef}
         aria-hidden={open}
-        className="
-          fixed z-50 flex h-12 w-full justify-end 
-          transition-all duration-100
-          aria-hidden:bg-transparent
-          md:hidden
-        "
+        className={clsx(
+          'fixed z-50 flex h-12 w-full justify-end',
+          'transition-all duration-100',
+          'aria-hidden:bg-transparent aria-hidden:backdrop-blur-none',
+          'md:hidden',
+          isShown && 'visible top-0',
+          !isShown && 'invisible -top-20',
+        )}
       >
         <Dialog.Trigger
           className="
@@ -98,42 +108,25 @@ export default function MobileNav() {
           "
           >
             <Dialog.Close className="h-6 w-6 outline-none" />
-            <nav>
-              <ul className="flex h-full flex-col items-end gap-8">
-                <li>
-                  <NavLink
-                    href="/"
-                    title="Home"
-                    newTab
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#briefing"
-                    title="Briefing"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#projects"
-                    title="Projects"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    href="#experience"
-                    title="Experience"
-                    scroll
-                    onClick={() => setOpen(false)}
-                  />
-                </li>
-              </ul>
-            </nav>
+            <Navigation.Content>
+              <Navigation.List className="flex-col px-0">
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="/" title="Home" newTab />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#briefing" title="Briefing" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#projects" title="Projects" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#bootcamps" title="Bootcamps" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="#experience" title="Experiences" scroll />
+                </Navigation.Item>
+              </Navigation.List>
+            </Navigation.Content>
           </Dialog.Content>
         </Dialog.Overlay>
       </Dialog.Portal>

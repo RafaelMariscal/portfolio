@@ -17,6 +17,7 @@ import {
 export default function BootcampsProjects() {
   return (
     <div
+      id="bootcamps"
       className="
         mx-auto w-full max-w-screen-xl overflow-visible px-3 py-6 
         max-md:max-w-[30.625rem] max-[440px]:max-w-full max-[440px]:px-0

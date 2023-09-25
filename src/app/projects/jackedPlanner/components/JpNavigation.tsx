@@ -50,7 +50,11 @@ export default function JpNavigation() {
         <Navigation.Content className="max-md:hidden">
           <Navigation.List>
             <Navigation.Item>
-              <NavLink href="/projects/rdInspections" title="Home" newTab />
+              <NavLink
+                href="/projects/jackedPlanner"
+                title="Jacked Planner"
+                newTab
+              />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink

@@ -50,7 +50,11 @@ export default function RdNavigation() {
         <Navigation.Content className="max-md:hidden">
           <Navigation.List>
             <Navigation.Item>
-              <NavLink href="/projects/rdInspections" title="Home" newTab />
+              <NavLink
+                href="/projects/rdInspections"
+                title="RD Inspections"
+                newTab
+              />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink
