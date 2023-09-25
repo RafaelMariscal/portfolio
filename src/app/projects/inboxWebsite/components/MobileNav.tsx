@@ -38,7 +38,7 @@ export default function MobileNav() {
           'fixed z-50 flex h-12 w-full justify-end',
           'transition-all duration-100',
           'aria-hidden:bg-transparent aria-hidden:backdrop-blur-none',
-          'tablets:hidden',
+          'xl:hidden',
           isShown && 'visible top-0 bg-cyan-800/80 backdrop-blur',
           !isShown && 'invisible -top-20 backdrop-blur-none',
         )}
@@ -100,11 +100,14 @@ export default function MobileNav() {
           "
           >
             <Dialog.Close className="h-6 w-6 outline-none" />
-
-            <Navigation.Content className="max-md:hidden">
+            <Navigation.Content>
               <Navigation.List className="flex-col px-0">
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="/projects/rdInspections" title="Home" newTab />
+                  <NavLink
+                    href="/projects/inboxWebsite"
+                    title="Inbox Website"
+                    newTab
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
@@ -136,6 +139,9 @@ export default function MobileNav() {
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink href="#nextProject" title="Next Project" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="/" title="Home Page" newTab />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>

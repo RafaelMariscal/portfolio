@@ -103,7 +103,11 @@ export default function MobileNav() {
             <Navigation.Content>
               <Navigation.List className="flex-col px-0">
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="/projects/rdInspections" title="Home" newTab />
+                  <NavLink
+                    href="/projects/jackedPlanner"
+                    title="Jacked Planner"
+                    newTab
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
@@ -124,6 +128,9 @@ export default function MobileNav() {
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink href="#nextProject" title="Next Project" scroll />
+                </Navigation.Item>
+                <Navigation.Item onClick={() => setOpen(false)}>
+                  <NavLink href="/" title="Home Page" newTab />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>
