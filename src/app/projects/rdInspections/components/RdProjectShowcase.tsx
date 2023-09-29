@@ -1,13 +1,14 @@
 import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
 import RdInputs from './showcase/RdInputs'
 import RegisterDialogModal from './showcase/RegisterDialogModal'
+import QuickSearch from './showcase/QuickSearch'
 
 export default function RdProjectShowcase() {
   return (
     <ProjectShowcase>
       <div
         className="
-          flex items-start gap-10 
+          mb-4 flex items-start gap-10
           max-phones:flex-col
           max-phones:gap-4
         "
@@ -15,7 +16,7 @@ export default function RdProjectShowcase() {
         <RdInputs />
         <RegisterDialogModal />
       </div>
-      <div className="mt-6 h-56 max-w-xs bg-cyan-700" />
+      <QuickSearch />
     </ProjectShowcase>
   )
 }
