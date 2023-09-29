@@ -57,7 +57,7 @@ export default function CnpjVerifierForm({
       onSubmit={handleSubmit(handleCnpjCheck)}
       className="
         flex items-center gap-4
-        text-sm font-semibold text-blue-700 [&_span]:text-end
+        text-sm font-semibold text-[#151D68] [&_span]:text-end
       "
     >
       <FormInput
@@ -73,7 +73,7 @@ export default function CnpjVerifierForm({
           label: 'w-28',
           input: clsx('w-[10.625rem]', {
             'bg-light': isVerified === false,
-            'bg-blue-steel-100 text-center': isVerified === true,
+            'bg-blue-400/30 text-center': isVerified === true,
           }),
         }}
       />
@@ -81,7 +81,7 @@ export default function CnpjVerifierForm({
       {!isVerified ? (
         <button
           className="
-          shadow-custom-sm relative h-8 w-20 rounded-[6px] bg-blue-700
+          shadow-custom-sm relative h-8 w-20 rounded-[6px] bg-[#151D68]
           font-medium text-light outline-none transition-all duration-75
           hover:bg-blue-600 focus:bg-blue-600 
         "
@@ -100,8 +100,8 @@ export default function CnpjVerifierForm({
           ) : null}
         </button>
       ) : (
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500">
-          <Check weight="bold" />
+        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#2637dd]">
+          <Check weight="bold" color="#fff" />
         </div>
       )}
     </form>

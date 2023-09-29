@@ -49,7 +49,7 @@ export default function FormInput({
         <span
           className={clsx(
             'font-bold',
-            { 'font-semibold text-gray-500': isVerified === false },
+            { 'font-semibold text-gray-300': isVerified === false },
             className?.label,
           )}
         >
@@ -73,9 +73,9 @@ export default function FormInput({
         placeholder={placeholder}
         className={clsx(
           'flex h-8 items-center truncate rounded-[6px]',
-          'shadow-custom-sm px-[0.625rem] tracking-tight outline-none',
+          'px-[0.625rem] tracking-tight shadow-md shadow-dark/10 outline-none',
           'disabled:cursor-not-allowed disabled:bg-gray-200',
-          'placeholder:text-blue-700 placeholder:opacity-30',
+          'placeholder:text-[#151D68] placeholder:opacity-30',
           'placeholder:font-bold placeholder:tracking-tight',
           ' focus:placeholder:text-transparent',
           {

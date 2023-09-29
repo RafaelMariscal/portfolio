@@ -28,7 +28,7 @@ export default function FormCheckbox({
   return (
     <div className="flex items-center gap-2">
       <label
-        className="pl-[.875rem] font-bold text-blue-700"
+        className="pl-[.875rem] font-bold text-[#151D68]"
         htmlFor={inputName}
       >
         {label}
@@ -39,15 +39,16 @@ export default function FormCheckbox({
         aria-checked={value || undefined}
         defaultChecked
         className="
-          shadow-custom-sm hover:bg-blue-steel-100 focus:bg-blue-steel-100 flex h-5 w-5 items-center justify-center
-          rounded border border-blue-700 
-          bg-light outline-none
-          aria-[checked]:bg-blue-500 aria-[checked]:focus:shadow-[0_0_0_1px_theme(colors.blue.700)]
+          flex h-5 w-5 items-center justify-center rounded 
+          border border-[#151D68] bg-light
+          shadow-md shadow-dark/10 outline-none 
+          hover:bg-[#151D68]/20 focus:bg-[#151D68]/20
+          aria-[checked]:bg-[#2637dd] aria-[checked]:focus:shadow-[0_0_0_1px_#151D68]
           [&_*]:aria-[checked]:fill-light
         "
       >
         <Checkbox.Indicator>
-          <Check weight="bold" className="[&_*]:fill-blue-700" />
+          <Check weight="bold" className="[&_*]:fill-[#151D68]" />
         </Checkbox.Indicator>
       </Checkbox.Root>
     </div>

@@ -103,7 +103,7 @@ export default function ClientForm({
       onSubmit={handleSubmit(handleCreateClient)}
       className="
         flex flex-col gap-3 pt-6
-        text-sm font-semibold text-blue-700 [&_span]:text-end
+        text-sm font-semibold text-[#151D68] [&_span]:text-end
       "
     >
       <FormInput

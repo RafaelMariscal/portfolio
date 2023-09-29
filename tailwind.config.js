@@ -87,9 +87,29 @@ module.exports = {
           },
           '100%': { bottom: '-50%', opacity: 0, visibility: 'invisible' },
         },
+        overlayShow: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        contentShow: {
+          '0%': {
+            opacity: '0',
+            transform: 'translate(-50%, -48%) scale(0.96)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translate(-50%, -50%) scale(1)',
+          },
+        },
         shimmer: {
           '100%': { transform: 'translateX(100%)' },
         },
+      },
+      animation: {
+        showContent: 'overlayShow 750ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'showContent-300': 'overlayShow 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        overlayShow: 'overlayShow 250ms cubic-bezier(0.16, 1, 0.3, 1)',
+        contentShow: 'contentShow 500ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
       backgroundImage: {
         'dot-pattern': 'url("../assets/dot-pattern.svg")',

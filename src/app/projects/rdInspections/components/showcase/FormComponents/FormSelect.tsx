@@ -67,7 +67,7 @@ export default function FormSelect({
         <Select.Trigger
           className={twMerge(
             'flex h-8 items-center justify-center rounded-[6px]',
-            'shadow-custom-sm w-full px-[0.625rem] outline-none',
+            'w-full px-[0.625rem] shadow-md shadow-dark/10 outline-none',
             'placeholder:text-red-500',
             'focus:bg-blue-steel-100',
             clsx({
@@ -92,8 +92,8 @@ export default function FormSelect({
         <Select.Portal>
           <Select.Content
             className={twMerge(
-              'animate-overlayShow flex items-center overflow-hidden',
-              'shadow-custom-sm rounded-[6px] bg-light outline-none',
+              'flex animate-overlayShow items-center overflow-hidden',
+              'rounded-[6px] bg-light shadow-md shadow-dark/10 outline-none',
               className?.content,
             )}
             position="popper"

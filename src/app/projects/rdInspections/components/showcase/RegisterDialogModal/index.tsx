@@ -39,10 +39,10 @@ export default function RegisterDialogModal() {
       <Dialog.Trigger className="outline-none">
         <li
           className={clsx(
-            'flex cursor-pointer items-center gap-1 rounded-md px-4 py-[2px]',
+            'mt-4 flex cursor-pointer items-center gap-1 rounded-md px-4 py-[2px]',
             'shadow-custom-sm select-none font-medium text-light outline-none',
             'transition-all duration-100',
-            'bg-blue-700 hover:bg-blue-600 focus:bg-blue-600',
+            'bg-[#151d68] hover:bg-blue-800 focus:bg-blue-800 active:bg-blue-600',
           )}
         >
           <FileText />
@@ -52,19 +52,19 @@ export default function RegisterDialogModal() {
       <Dialog.Portal>
         <Dialog.Overlay
           className="
-            animate-overlayShow fixed inset-0 flex items-center 
+            fixed inset-0 flex animate-overlayShow items-center 
             justify-center bg-black bg-opacity-10 backdrop-blur-[2px]
           "
         />
         <Dialog.Content
           className="
-            animate-contentShow shadow-custom-md fixed left-1/2 top-1/2 w-full max-w-[37.625rem]
-            -translate-x-1/2 -translate-y-1/2 rounded-lg bg-gray-100 p-4 outline-none
+            shadow-custom-md fixed left-1/2 top-1/2 w-full max-w-[37.625rem] -translate-x-1/2
+            -translate-y-1/2 animate-contentShow rounded-lg bg-gray-100 p-4 outline-none
           "
         >
           <header className="mb-2 flex items-center justify-between">
             <Dialog.Title asChild>
-              <h3 className="font-bold leading-tight text-blue-700">
+              <h3 className="font-bold leading-tight text-[#151d68]">
                 Formulário de Cadastro:
               </h3>
             </Dialog.Title>

@@ -27,7 +27,7 @@ export default function FormController({
       {...props}
     >
       <span
-        className={clsx('text-end font-bold text-blue-700', {
+        className={clsx('text-end font-bold text-[#151d68]', {
           'w-fit': fit === true,
           'w-28': fit === false,
         })}
@@ -38,13 +38,13 @@ export default function FormController({
       <Select.Root value={optionSelected} onValueChange={setOptionSelected}>
         <Select.Trigger
           className="
-            shadow-custom-sm focus:bg-blue-steel-100 flex h-8 w-[7.5rem] items-center 
-            justify-center rounded-[6px] bg-light px-[0.625rem]
+            focus:bg-blue-steel-100 flex h-8 w-[7.5rem] items-center justify-center rounded-[6px] 
+            bg-light px-[0.625rem] shadow-md shadow-dark/10
             outline-none
           "
         >
           <Select.Value asChild>
-            <span className="w-full truncate whitespace-nowrap text-center font-bold capitalize text-blue-700">
+            <span className="w-full truncate whitespace-nowrap text-center font-bold capitalize text-[#151d68]">
               {optionSelected || 'Select User'}&nbsp;
             </span>
           </Select.Value>
@@ -56,8 +56,8 @@ export default function FormController({
         <Select.Portal>
           <Select.Content
             className="
-              animate-overlayShow shadow-custom-sm flex w-[7.5rem] items-center 
-              overflow-hidden rounded-[6px] bg-light outline-none
+              flex w-[7.5rem] animate-overlayShow items-center overflow-hidden rounded-[6px] 
+              bg-light shadow-md shadow-dark/10 outline-none
             "
             position="popper"
             side="bottom"
@@ -80,7 +80,7 @@ export default function FormController({
                         <span
                           className="
                               w-[5rem] text-center text-sm font-bold 
-                              capitalize text-blue-700
+                              capitalize text-[#151d68]
                             "
                         >
                           {opt}
@@ -111,7 +111,7 @@ export default function FormController({
                               <span
                                 className="
                                   w-[5rem] text-center text-sm font-bold 
-                                  capitalize text-blue-700
+                                  capitalize text-[#151d68]
                                 "
                               >
                                 {opt}
@@ -128,9 +128,9 @@ export default function FormController({
 
                   <Select.Separator
                     className="
-                      bg-blue-steel-500 via-blue-steel-500 mb-px h-px
-                      bg-gradient-to-r from-gray-100 
-                      from-5% 
+                      mb-px h-px bg-gradient-to-r
+                      from-gray-100 from-5% 
+                      via-[#151D68]/30 
                       to-gray-100 to-95%
                     "
                   />
@@ -138,7 +138,7 @@ export default function FormController({
                   <Select.Group>
                     <Select.Label
                       className="
-                        text-blue-steel-700 px-2 text-[0.625rem] font-medium leading-snug
+                        px-2 text-[0.625rem] font-medium leading-snug text-[#151D68]/50
                       "
                     >
                       Apenas Admin
@@ -155,7 +155,7 @@ export default function FormController({
                         <span
                           className="
                             w-[5rem] text-center text-sm font-bold 
-                            capitalize text-blue-700
+                            capitalize text-[#151d68]
                           "
                         >
                           {'usuário'}
