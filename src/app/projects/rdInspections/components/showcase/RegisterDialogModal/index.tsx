@@ -68,15 +68,18 @@ export default function RegisterDialogModal() {
                 Formulário de Cadastro:
               </h3>
             </Dialog.Title>
-            <ConfirmModal
-              visible={isConfirmModalVisible}
-              action={() => setOpen(false)}
-              setVisible={setIsConfirmModalVisible}
+            <Dialog.Close
+              asChild
+              className="cursor-pointer p-1 outline-none [&_*]:hover:fill-red-500 [&_*]:focus:fill-red-500"
             >
-              <Dialog.Close className="cursor-pointer p-1 outline-none [&_*]:hover:fill-red-500 [&_*]:focus:fill-red-500">
+              <ConfirmModal
+                visible={isConfirmModalVisible}
+                action={() => setOpen(false)}
+                setVisible={setIsConfirmModalVisible}
+              >
                 <X color="#151D68" />
-              </Dialog.Close>
-            </ConfirmModal>
+              </ConfirmModal>
+            </Dialog.Close>
           </header>
 
           <hr className="via-blue-steel-500 h-[2px] bg-gradient-to-r from-gray-100 from-5% to-gray-100 to-95%" />

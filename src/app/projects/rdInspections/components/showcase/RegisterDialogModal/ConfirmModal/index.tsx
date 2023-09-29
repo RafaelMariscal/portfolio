@@ -43,32 +43,27 @@ export default function ConfirmModal({
             </strong>
           </AlertDialog.Description>
           <div className="mt-5 flex items-center justify-end gap-4">
-            <AlertDialog.Cancel asChild className="outline-none">
-              <button
-                autoFocus
-                className="
+            <AlertDialog.Cancel
+              className="
                   rounded bg-[#151d68]/10 px-6 py-1 font-bold text-[#151d68]
                   hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-[#151d68]/50 
                   focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#151d68]/50 
                 "
-              >
-                Cancel
-              </button>
+            >
+              Cancel
             </AlertDialog.Cancel>
 
-            <AlertDialog.Action asChild>
-              <button
-                onClick={action}
-                className="
+            <AlertDialog.Action
+              className="
                   rounded bg-red-200 px-6 py-1 font-bold text-red-600
                   hover:outline hover:outline-2  hover:outline-offset-2
                   hover:outline-red-600 
                   focus:outline focus:outline-2 focus:outline-offset-2
                   focus:outline-red-600 
                 "
-              >
-                Sair do formulário
-              </button>
+              onClick={action}
+            >
+              Sair do formulário
             </AlertDialog.Action>
           </div>
         </AlertDialog.Content>
