@@ -58,7 +58,7 @@ export default function ClientResearchForm() {
       onSubmit={handleSubmit(handleSearchClient)}
       className="
         flex h-[calc(100%-3.125rem)] w-full flex-col justify-between
-        text-sm font-semibold text-blue-700 [&_span]:text-end
+        text-sm font-semibold text-[#151D68] [&_span]:text-end
       "
     >
       <div className="flex animate-showContent flex-col gap-3">
@@ -102,7 +102,7 @@ export default function ClientResearchForm() {
             </span>
           </div>
         ) : null}
-        <FormButton title="Buscar" />
+        <FormButton title="Buscar" className="mt-4" />
       </div>
     </form>
   )

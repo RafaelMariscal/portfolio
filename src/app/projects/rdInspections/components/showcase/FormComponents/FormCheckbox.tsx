@@ -28,7 +28,7 @@ export default function FormCheckbox({
   return (
     <div className="flex items-center gap-2">
       <label
-        className="pl-[.875rem] font-bold text-[#151D68]"
+        className="pl-[.875rem] font-bold text-[#151D68] max-phones:pl-[.25rem]"
         htmlFor={inputName}
       >
         {label}
@@ -42,7 +42,7 @@ export default function FormCheckbox({
           flex h-5 w-5 items-center justify-center rounded 
           border border-[#151D68] bg-light
           shadow-md shadow-dark/10 outline-none 
-          hover:bg-[#151D68]/20 focus:bg-[#151D68]/20
+          hover:bg-blue-200/20 focus:bg-blue-200/20
           aria-[checked]:bg-[#2637dd] aria-[checked]:focus:shadow-[0_0_0_1px_#151D68]
           [&_*]:aria-[checked]:fill-light
         "

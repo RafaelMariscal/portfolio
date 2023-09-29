@@ -42,9 +42,9 @@ export default function FormController({
       <Select.Root value={optionSelected} onValueChange={setOptionSelected}>
         <Select.Trigger
           className="
-            focus:bg-blue-steel-100 flex h-8 w-[7.5rem] items-center justify-center rounded-[6px] 
-            bg-light px-[0.625rem] shadow-md shadow-dark/10
-            outline-none
+            flex h-8 w-[7.5rem] items-center justify-center rounded-[6px] bg-light 
+            px-[0.625rem] shadow-md shadow-dark/10 outline-none
+            focus:bg-blue-200/20
           "
         >
           <Select.Value asChild>
@@ -75,9 +75,9 @@ export default function FormController({
                       key={opt}
                       value={opt}
                       className="
-                          hover:bg-blue-steel-100 focus:bg-blue-steel-100 flex cursor-pointer select-none 
-                          items-center justify-between px-[0.625rem]
-                          py-[0.125rem] outline-none
+                          flex cursor-pointer select-none items-center justify-between 
+                          px-[0.625rem] py-[0.125rem] outline-none
+                          hover:bg-blue-200/20 focus:bg-blue-200/20
                         "
                     >
                       <Select.ItemText asChild>
@@ -106,9 +106,9 @@ export default function FormController({
                             key={opt}
                             value={opt}
                             className="
-                              hover:bg-blue-steel-100 focus:bg-blue-steel-100 flex cursor-pointer select-none 
-                              items-center justify-between px-[0.625rem]
-                              py-[0.125rem] outline-none
+                              flex cursor-pointer select-none items-center justify-between 
+                              px-[0.625rem] py-[0.125rem] outline-none
+                              hover:bg-blue-200/20 focus:bg-blue-200/20
                             "
                           >
                             <Select.ItemText asChild>
@@ -150,9 +150,9 @@ export default function FormController({
                     <Select.Item
                       value={'usuário'}
                       className="
-                        hover:bg-blue-steel-100 focus:bg-blue-steel-100 flex cursor-pointer select-none 
-                        items-center justify-between px-[0.625rem]
-                        py-[0.125rem] outline-none
+                        flex cursor-pointer select-none items-center justify-between 
+                        px-[0.625rem] py-[0.125rem] outline-none
+                        hover:bg-blue-200/20 focus:bg-blue-200/20
                       "
                     >
                       <Select.ItemText asChild>

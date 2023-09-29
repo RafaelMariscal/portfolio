@@ -9,8 +9,8 @@ export default function RdProjectShowcase() {
       <div
         className="
           mb-4 flex items-start gap-10
-          max-phones:flex-col
-          max-phones:gap-4
+          max-md:flex-col
+          max-md:gap-4
         "
       >
         <RdInputs />

@@ -75,7 +75,7 @@ export default function VehicleSearchForm() {
       onSubmit={handleSubmit(handleSearchVehicle)}
       className="
         flex h-[calc(100%-3.125rem)] w-full flex-col
-        justify-between text-sm font-semibold text-blue-700
+        justify-between text-sm font-semibold text-[#151D68]
         [&_span]:text-end
       "
     >
@@ -150,7 +150,7 @@ export default function VehicleSearchForm() {
             </span>
           </div>
         ) : null}
-        <FormButton title="Buscar" />
+        <FormButton title="Buscar" className="mt-4" />
       </div>
     </form>
   )

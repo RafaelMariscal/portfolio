@@ -41,12 +41,12 @@ export default function CalendarPopover({
         <button
           className={clsx(
             'flex h-8 select-none items-center justify-center',
-            'shadow-custom-sm gap-[.625rem] rounded-md px-[.625rem] py-1',
-            'focus:bg-blue-steel-100 outline-none',
+            'gap-[.625rem] rounded-md px-[.625rem] py-1 shadow-md shadow-dark/10',
+            'outline-none',
             {
-              'cursor-not-allowed bg-gray-200 text-blue-700 text-opacity-30':
+              'cursor-not-allowed bg-gray-200 text-[#151D68] text-opacity-30':
                 disabled === true,
-              'bg-light': disabled === false,
+              'bg-light focus:bg-blue-200/20': disabled === false,
             },
           )}
         >
@@ -54,7 +54,7 @@ export default function CalendarPopover({
           <CalendarBlank
             weight="bold"
             className={clsx({
-              '[&_*]:fill-blue-700': disabled === false,
+              '[&_*]:fill-[#151D68]': disabled === false,
               '[&_*]:fill-gray-500': disabled === true,
             })}
           />

@@ -12,7 +12,11 @@ export default function ProjectShowcase({
   return (
     <section
       id="componentsShowcase"
-      className="w-full max-w-screen-article pt-14"
+      className="
+        mx-auto w-full max-w-screen-article pt-14
+        max-tablets:px-3
+        max-md:max-w-lg
+      "
     >
       <SectionTitle className="leading-none">
         Components<Highlight className="block">Showcase</Highlight>

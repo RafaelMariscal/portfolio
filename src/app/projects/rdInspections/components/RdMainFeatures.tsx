@@ -23,7 +23,6 @@ export default function RdMainFeatures() {
         mx-auto w-full max-w-screen-article pt-14
         max-tablets:px-3
         max-md:max-w-lg
-
       "
     >
       <SectionTitle>

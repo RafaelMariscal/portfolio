@@ -65,7 +65,7 @@ export default function UserSearchForm() {
       onSubmit={handleSubmit(handleSearchUser)}
       className="
         flex h-[calc(100%-3.125rem)] w-full flex-col justify-between
-        text-sm font-semibold text-blue-700
+        text-sm font-semibold text-[#151D68]
       "
     >
       <div className="flex animate-showContent flex-col gap-3">
@@ -76,7 +76,7 @@ export default function UserSearchForm() {
           value={userValue}
           setValue={setValue}
           className={{
-            label: 'w-[4.5rem]',
+            label: 'w-[4.5rem] max-phones:ml-1 max-phones:w-fit',
             trigger: 'max-w-[12.5rem]',
             content: 'min-w-[12.5rem] max-w-xs',
           }}
@@ -109,7 +109,7 @@ export default function UserSearchForm() {
         ) : null}
       </div>
 
-      <FormButton title="Buscar" />
+      <FormButton title="Buscar" className="mt-4" />
     </form>
   )
 }

@@ -69,11 +69,11 @@ export default function FormSelect({
             'relative flex h-8 items-center justify-center rounded-[6px]',
             'w-full px-[0.625rem] shadow-md shadow-dark/10 outline-none',
             'placeholder:text-red-500',
-            'focus:bg-blue-steel-100',
+            'focus:bg-blue-200/20',
             clsx({
               'border border-red-500': error?.message === ' ',
               'bg-light': disabled === false,
-              '[&_*]:fill-blue-steel-200 cursor-not-allowed bg-gray-200 [&_*]:text-opacity-30':
+              'cursor-not-allowed bg-gray-200 [&_*]:fill-blue-200/20 [&_*]:text-opacity-30':
                 disabled === true,
             }),
             className?.trigger,
@@ -107,9 +107,9 @@ export default function FormSelect({
                     key={opt + index}
                     value={opt}
                     className="
-                          hover:bg-blue-steel-100 focus:bg-blue-steel-100 flex cursor-pointer
-                          select-none items-center justify-between px-[0.625rem]
-                          py-[0.125rem] outline-none
+                          flex cursor-pointer select-none items-center
+                          justify-between px-[0.625rem] py-[0.125rem] outline-none
+                          hover:bg-blue-200/20 focus:bg-blue-200/20
                         "
                   >
                     <Select.ItemText asChild>

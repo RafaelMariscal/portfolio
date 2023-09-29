@@ -80,10 +80,10 @@ export function Calendar({
   }
 
   return (
-    <div className="bg-light rounded-md shadow-custom-sm">
+    <div className="bg-light rounded-md shadow-md shadow-dark/20 border border-[#151D68]/10">
       <div className="h-full w-full min-w-[236px] text-sm leading-tight px-3 pt-2 pb-1">
         <div className="flex items-center justify-between">
-          <p className=" text-blue-700 font-semibold capitalize drop-shadow-custom-text">
+          <p className=" text-[#151D68] font-semibold capitalize drop-shadow-custom-text">
             {format(firsDayOfCurrentMonth, 'MMMM yyyy', { locale: ptBR })}
           </p>
 
@@ -93,11 +93,11 @@ export function Calendar({
               onClick={() => handleMonth(-1)}
               className="
                 cursor-pointer rounded p-1 overflow-hidden outline-none
-                hover:bg-blue-steel-200 focus:bg-blue-steel-200
-                hover:shadow-custom-sm focus:shadow-custom-sm
+                hover:bg-blue-200/20 focus:bg-blue-200/20
+                hover:shadow-md hover:shadow-dark/20 focus:shadow-md focus:shadow-dark/20
               "
             >
-              <Control className="[&_*]:fill-blue-700 translate-y-[15%]" weight='bold' />
+              <Control className="[&_*]:fill-[#151D68] translate-y-[15%]" weight='bold' />
             </button>
 
             <button
@@ -105,35 +105,35 @@ export function Calendar({
               onClick={() => handleMonth(1)}
               className="
                 cursor-pointer rounded p-1 overflow-hidden outline-none
-                hover:bg-blue-steel-200 focus:bg-blue-steel-200
-                hover:shadow-custom-sm focus:shadow-custom-sm
+                hover:bg-blue-200/20 focus:bg-blue-200/20
+                hover:shadow-md hover:shadow-dark/20 focus:shadow-md focus:shadow-dark/20
               "
             >
-              <Control className="rotate-180 [&_*]:fill-blue-700 -translate-y-[15%]" weight='bold' />
+              <Control className="rotate-180 [&_*]:fill-[#151D68] -translate-y-[15%]" weight='bold' />
             </button>
           </div>
         </div>
 
         <div className="mt-4 grid grid-cols-7 font-semibold">
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             S
           </span>
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             M
           </span>
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             T
           </span>
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             W
           </span>
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             T
           </span>
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             F
           </span>
-          <span className="flex h-5 w-full items-center justify-center text-blue-700">
+          <span className="flex h-5 w-full items-center justify-center text-[#151D68]">
             S
           </span>
         </div>
@@ -145,27 +145,29 @@ export function Calendar({
                 type="button"
                 onClick={() => handleSelectDay(day)}
                 onKeyDown={(e) => handleKeyDown(e, day)}
+                disabled={isAfter(day, today)}
                 className={clsx(
                   'mt-[.625rem] h-6 w-6 rounded select-none border border-transparent',
                   'transition-colors duration-100 font-semibold outline-none',
-                  'hover:shadow-custom-sm focus:shadow-custom-sm',
-                  isEqual(day, selectedDay) && 'text-gray-100',
+                  'hover:shadow-md hover:shadow-dark/20 focus:shadow-md focus:shadow-dark/20',
+                  isEqual(day, selectedDay) && 'text-light',
                   !isEqual(day, selectedDay) &&
                   isToday(day) &&
                   'text-red-500 font-semibold',
-                  isEqual(day, prevDate) && 'bg-blue-steel-500 shadow-custom-sm text-gray-100',
-                  isAfter(day, prevDate) && isBefore(day, selectedDay) && 'bg-blue-steel-100 text-blue-700',
+                  prevDate && isEqual(day, prevDate) && 'bg-[#151D68] shadow-md shadow-dark/20 text-[#fff]',
+                  prevDate && isAfter(day, prevDate) && isBefore(day, selectedDay) && 'bg-[#151D68]/10 text-light',
                   !isEqual(day, selectedDay) &&
                   !isToday(day) &&
                   isSameMonth(day, firsDayOfCurrentMonth) &&
-                  'hover:bg-blue-steel-100 focus:bg-blue-steel-100 hover:text-blue-700 focus:text-blue-700',
+                  'hover:bg-blue-200/20 focus:bg-blue-200/20 hover:text-[#151D68] focus:text-[#151D68] text-[#151D68]/80',
                   !isEqual(day, selectedDay) &&
                   !isToday(day) &&
                   !isSameMonth(day, firsDayOfCurrentMonth) &&
-                  'text-blue-steel-500 text-opacity-50',
-                  isEqual(day, selectedDay) && isToday(day) && 'text-gray-100 bg-blue-500 shadow-custom-sm',
-                  isEqual(day, selectedDay) && !isToday(day) && 'text-gray-100 bg-blue-500 shadow-custom-sm',
+                  'text-[#151D68]/20',
+                  isEqual(day, selectedDay) && isToday(day) && 'text-gray-100 bg-blue-500 shadow-sm shadow-dark/20',
+                  isEqual(day, selectedDay) && !isToday(day) && 'text-gray-100 bg-blue-500 shadow-sm shadow-dark/20',
                   !isEqual(day, selectedDay) && 'text-blue-steel-500',
+                  'disabled:text-gray-200 disabled:cursor-not-allowed',
                 )}
               >
                 <time dateTime={format(day, 'yyyy-MM-dd')}>

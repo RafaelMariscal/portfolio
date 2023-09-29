@@ -39,7 +39,7 @@ export default function RegisterDialogModal() {
       <Dialog.Trigger className="outline-none">
         <li
           className={clsx(
-            'mt-4 flex cursor-pointer items-center gap-1 rounded-md px-4 py-[2px]',
+            'mb-6 mt-4 flex cursor-pointer items-center gap-1 rounded-md px-4 py-[2px]',
             'select-none font-medium text-light shadow-md shadow-dark/20 outline-none',
             'transition-all duration-100',
             'bg-[#151d68] hover:bg-blue-800 focus:bg-blue-800 active:bg-blue-600',
