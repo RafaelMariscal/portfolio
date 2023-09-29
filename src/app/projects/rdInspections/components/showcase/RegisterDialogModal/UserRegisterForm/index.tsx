@@ -13,10 +13,10 @@ const UserRegisterFormSchema = z
       .max(60, { message: 'max 60 chars.' })
       .nonempty({ message: ' ' }),
     email: z
-      .string({ required_error: ' ' })
-      .min(3, { message: 'min 3 chars.' })
-      .max(60, { message: 'max 60 chars.' })
-      .nonempty({ message: ' ' }),
+      .string()
+      .email({ message: 'Email inválido' })
+      .min(3, { message: 'Deve conter ao menos 3 caracteres' })
+      .max(45, { message: 'Máximo de 45 caracteres' }),
     password: z
       .string({ required_error: ' ' })
       .max(20, { message: 'max 20 chars.' })
@@ -71,7 +71,7 @@ export default function UserRegisterForm({
       <div
         className="
           flex max-w-sm flex-col gap-3
-          text-sm font-semibold text-blue-700 [&_span]:text-end
+          text-sm font-semibold text-[#151D68] [&_span]:text-end
         "
       >
         <FormInput

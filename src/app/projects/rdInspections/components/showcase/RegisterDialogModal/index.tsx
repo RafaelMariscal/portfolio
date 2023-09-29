@@ -40,7 +40,7 @@ export default function RegisterDialogModal() {
         <li
           className={clsx(
             'mt-4 flex cursor-pointer items-center gap-1 rounded-md px-4 py-[2px]',
-            'shadow-custom-sm select-none font-medium text-light outline-none',
+            'select-none font-medium text-light outline-none',
             'transition-all duration-100',
             'bg-[#151d68] hover:bg-blue-800 focus:bg-blue-800 active:bg-blue-600',
           )}
@@ -53,13 +53,13 @@ export default function RegisterDialogModal() {
         <Dialog.Overlay
           className="
             fixed inset-0 flex animate-overlayShow items-center 
-            justify-center bg-black bg-opacity-10 backdrop-blur-[2px]
+            justify-center bg-black/10 backdrop-blur-[2px]
           "
         />
         <Dialog.Content
           className="
-            shadow-custom-md fixed left-1/2 top-1/2 w-full max-w-[37.625rem] -translate-x-1/2
-            -translate-y-1/2 animate-contentShow rounded-lg bg-gray-100 p-4 outline-none
+            fixed left-1/2 top-1/2 w-full max-w-[37.625rem] -translate-x-1/2 -translate-y-1/2 animate-contentShow
+            rounded-lg bg-gray-100 p-4 shadow-md shadow-dark/10 outline-none
           "
         >
           <header className="mb-2 flex items-center justify-between">

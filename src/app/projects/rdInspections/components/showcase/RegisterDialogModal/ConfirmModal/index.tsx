@@ -22,21 +22,21 @@ export default function ConfirmModal({
       <AlertDialog.Portal>
         <AlertDialog.Overlay
           className="
-            animate-overlayShow fixed inset-0 flex items-center 
+            fixed inset-0 flex animate-overlayShow items-center 
             justify-center bg-black bg-opacity-10 backdrop-blur-[2px]
           "
         />
         <AlertDialog.Content
           className="
-            animate-contentShow shadow-custom-md fixed left-1/2 top-1/2 w-full max-w-[30.25rem]
-            -translate-x-1/2 -translate-y-1/2 rounded-lg bg-gray-100 p-4 outline-none
+            fixed left-1/2 top-1/2 w-full max-w-[30.25rem] -translate-x-1/2 -translate-y-1/2 animate-contentShow
+            rounded-lg bg-gray-100 p-4 shadow-md shadow-dark/10 outline-none
           "
         >
-          <AlertDialog.Title className="font-bold text-blue-700">
+          <AlertDialog.Title className="font-bold text-[#151d68]">
             Essa ação irá fechar o formulário.
           </AlertDialog.Title>
 
-          <AlertDialog.Description className="my-1 font-bold leading-snug text-blue-700/50">
+          <AlertDialog.Description className="my-1 font-bold leading-snug text-[#151d68]/50">
             Ao fechar o formulário, todos os campos serão apagados. Ou seja,
             <strong className="font-bold">
               todas as informações serão perdidas.
@@ -47,11 +47,9 @@ export default function ConfirmModal({
               <button
                 autoFocus
                 className="
-                  bg-blue-steel-200 text-blue-steel-700 hover:outline-blue-steel-700 focus:outline-blue-steel-700 rounded px-6
-                  py-1 font-bold  hover:outline
-                  hover:outline-2 
-                  hover:outline-offset-2 focus:outline focus:outline-2
-                  focus:outline-offset-2 
+                  rounded bg-[#151d68]/10 px-6 py-1 font-bold text-[#151d68]
+                  hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-[#151d68]/50 
+                  focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#151d68]/50 
                 "
               >
                 Cancel
