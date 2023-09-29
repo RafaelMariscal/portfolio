@@ -18,6 +18,7 @@ export default function Input(props: InputProps) {
       className="
         relative w-full min-w-[300px] rounded-lg border border-[#151d68]
         bg-gray-100 bg-transparent px-4 text-xs
+        max-sm:min-w-0
         [&:has(input:disabled)]:bg-[#151d68]/30
     "
     >

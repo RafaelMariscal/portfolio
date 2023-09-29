@@ -54,7 +54,7 @@ export default function RdInputs() {
       onSubmit={handleSubmit((data) => {
         handleFormSubmit(data)
       })}
-      className="max-w-xs bg-gray-100 pb-2 pt-4"
+      className="w-full max-w-xs bg-gray-100 pb-2 pt-4"
       noValidate
     >
       <div className="mb-4 flex flex-col gap-6">
