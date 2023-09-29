@@ -14,7 +14,7 @@ export default function DashboardCard({
     <div
       className={clsx(
         'h-full w-full overflow-hidden rounded-xl bg-light',
-        'bg-opacity-70 shadow-custom-md backdrop-blur-sm',
+        'bg-opacity-70 shadow-md shadow-dark/20 backdrop-blur-sm',
         className,
       )}
       {...props}
