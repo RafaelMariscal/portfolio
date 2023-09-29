@@ -79,8 +79,8 @@ export default function VehicleSearchForm() {
         [&_span]:text-end
       "
     >
-      <div className="flex animate-showContent flex-col gap-3 ">
-        <div className="flex items-center gap-3">
+      <div className="flex animate-showContent flex-col gap-3 max-phones:gap-2">
+        <div className="flex items-center gap-3 max-phones:flex-col max-phones:gap-2">
           <FormInput
             fieldName="plate"
             fieldTitle="Placa:"
@@ -108,7 +108,7 @@ export default function VehicleSearchForm() {
           />
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center max-phones:flex-col max-phones:gap-2">
           <FormInput
             fieldName="brand"
             fieldTitle="Marca:"
