@@ -61,7 +61,7 @@ export default function RdInputs() {
         <Input
           title="Usuário"
           maxLength={45}
-          tabIndex={1}
+          tabIndex={-1}
           required
           disabled={isLoading}
           inputname="email"
@@ -72,7 +72,7 @@ export default function RdInputs() {
           title="Password"
           type="password"
           maxLength={45}
-          tabIndex={2}
+          tabIndex={-1}
           required
           disabled={isLoading}
           inputname="password"
@@ -82,7 +82,7 @@ export default function RdInputs() {
       </div>
 
       <button
-        tabIndex={30}
+        tabIndex={-1}
         type="submit"
         disabled={isLoading}
         className="
