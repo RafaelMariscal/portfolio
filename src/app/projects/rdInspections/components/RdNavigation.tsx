@@ -39,10 +39,10 @@ export default function RdNavigation() {
           href="/"
           title=""
           className="
-          w-fit outline-none max-md:hidden
-           [&_*]:transition-all [&_*]:hover:fill-cyan-400
-          [&_*]:focus:fill-cyan-500
-        "
+            w-fit outline-none max-md:hidden
+             [&_*]:transition-all [&_*]:hover:fill-cyan-400
+            [&_*]:focus:fill-cyan-500
+          "
           newTab
         >
           <NavLogo />

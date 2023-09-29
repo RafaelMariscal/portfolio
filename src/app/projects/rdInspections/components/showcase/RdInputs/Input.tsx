@@ -17,7 +17,7 @@ export default function Input(props: InputProps) {
       htmlFor={props.type}
       className="
         relative w-full min-w-[300px] rounded-lg border border-[#151d68]
-        bg-gray-100 bg-transparent px-4 text-sm
+        bg-gray-100 bg-transparent px-4 text-xs
         [&:has(input:disabled)]:bg-[#151d68]/30
     "
     >
@@ -33,7 +33,7 @@ export default function Input(props: InputProps) {
         }
         id={props.type}
         className="
-            h-full w-full max-w-[93%] bg-transparent py-4
+            h-full w-full max-w-[93%] bg-transparent py-3
             font-semibold leading-none text-[#151d68] outline-none 
             [&_~span]:valid:top-0 [&_~span]:focus:top-0 
           "
@@ -45,7 +45,7 @@ export default function Input(props: InputProps) {
 
       {errorMessage && (
         <div className="absolute -top-4 right-1 flex items-center gap-[2px]">
-          <Info weight="bold" color="#E73325" size={14} />
+          <Info weight="bold" color="#E73325" size={12} />
           <span className="block text-[.625rem] font-semibold leading-none text-red-500">
             {errorMessage}
           </span>

@@ -15,7 +15,7 @@ export const userLoginFormSchema = z.object({
     .max(45, { message: 'Máximo de 45 caracteres' }),
   password: z
     .string()
-    .min(6, { message: 'Deve conter ao menos 6 caracteres' })
+    .min(6, { message: 'Ao menos 6 caracteres' })
     .max(45, { message: 'Máximo de 45 caracteres' }),
 })
 
@@ -54,7 +54,7 @@ export default function RdInputs() {
       onSubmit={handleSubmit((data) => {
         handleFormSubmit(data)
       })}
-      className="max-w-sm bg-gray-100 py-4"
+      className="max-w-xs bg-gray-100 pb-2 pt-4"
       noValidate
     >
       <div className="mb-4 flex flex-col gap-6">
@@ -82,11 +82,12 @@ export default function RdInputs() {
       </div>
 
       <button
+        tabIndex={30}
         type="submit"
         disabled={isLoading}
         className="
           shadow-custom-md flex w-full items-center justify-center rounded-lg bg-[#151d68] 
-          py-3 text-sm font-semibold text-light outline-none 
+          py-3 text-xs font-semibold text-light outline-none 
           transition-all duration-75 
           hover:bg-blue-800 focus:scale-[100.5%]
           focus:bg-blue-800
