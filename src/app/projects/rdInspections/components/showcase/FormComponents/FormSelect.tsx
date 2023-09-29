@@ -49,9 +49,9 @@ export default function FormSelect({
     <div role="formController" className="flex items-center gap-2 text-sm">
       <span
         className={twMerge(
-          'text-end font-bold text-blue-700',
+          'text-end font-bold text-[#151D68]',
           clsx({
-            'font-semibold text-gray-500': disabled === true,
+            'font-semibold text-gray-300': disabled === true,
           }),
           className?.label,
         )}
@@ -66,7 +66,7 @@ export default function FormSelect({
       >
         <Select.Trigger
           className={twMerge(
-            'flex h-8 items-center justify-center rounded-[6px]',
+            'relative flex h-8 items-center justify-center rounded-[6px]',
             'w-full px-[0.625rem] shadow-md shadow-dark/10 outline-none',
             'placeholder:text-red-500',
             'focus:bg-blue-steel-100',
@@ -80,12 +80,12 @@ export default function FormSelect({
           )}
         >
           <Select.Value asChild>
-            <span className="mx-auto truncate whitespace-nowrap pr-1 font-bold text-blue-700">
+            <span className="mx-auto truncate whitespace-nowrap pr-1 font-bold text-[#151D68]">
               {value === '' || value === undefined ? selectPlaceholder : value}
             </span>
           </Select.Value>
-          <Select.Icon className="SelectIcon">
-            <CaretDown color="#151D68" weight="bold" />
+          <Select.Icon className="absolute right-2">
+            <CaretDown color={disabled ? '#9c9c9c' : '#151D68'} weight="bold" />
           </Select.Icon>
         </Select.Trigger>
 
@@ -117,7 +117,7 @@ export default function FormSelect({
                         className="
                               w-11/12 truncate whitespace-nowrap pr-1
                               text-center text-sm
-                              font-bold text-blue-700
+                              font-bold text-[#151D68]
                             "
                       >
                         {opt}

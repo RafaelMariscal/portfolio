@@ -41,9 +41,6 @@ export default function CnpjVerifierForm({
 
   function handleCnpjCheck() {
     console.log(cnpjValue)
-
-    /* here we'll test if the CPNJ exists at Receita Federal */
-
     setIsVerified(true)
     return null
   }
@@ -81,8 +78,8 @@ export default function CnpjVerifierForm({
       {!isVerified ? (
         <button
           className="
-          shadow-custom-sm relative h-8 w-20 rounded-[6px] bg-[#151D68]
-          font-medium text-light outline-none transition-all duration-75
+          relative h-8 w-20 rounded-[6px] bg-[#151D68] font-medium text-light
+          shadow-md shadow-dark/10 outline-none transition-all duration-75
           hover:bg-blue-600 focus:bg-blue-600 
         "
         >
@@ -95,7 +92,9 @@ export default function CnpjVerifierForm({
               "
             >
               <Info color="#E73325" size={12} />
-              <span className="text-[10px] text-red-500">{errorMessage}</span>
+              <span className="whitespace-nowrap text-[10px] text-red-500">
+                {errorMessage}
+              </span>
             </div>
           ) : null}
         </button>

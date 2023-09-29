@@ -52,7 +52,7 @@ export default function VehiclePlateVerifier({
       onSubmit={handleSubmit(handlePlateCheck)}
       className="
         flex items-center gap-4
-        text-sm font-semibold text-blue-700 [&_span]:text-end
+        text-sm font-semibold text-[#151D68] [&_span]:text-end
       "
     >
       <FormInput
@@ -68,7 +68,7 @@ export default function VehiclePlateVerifier({
           label: 'w-28',
           input: clsx('w-[6.25rem] uppercase', {
             'bg-light': isVerified === false,
-            'bg-blue-steel-100 text-center': isVerified === true,
+            'bg-blue-400/30 text-center': isVerified === true,
           }),
         }}
       />
@@ -76,8 +76,8 @@ export default function VehiclePlateVerifier({
       {!isVerified ? (
         <button
           className="
-          shadow-custom-sm relative h-8 w-20 rounded-[6px] bg-blue-700
-          font-medium text-light outline-none transition-all duration-75
+          relative h-8 w-20 rounded-[6px] bg-[#151D68] font-medium text-light
+          shadow-md shadow-dark/10 outline-none transition-all duration-75
           hover:bg-blue-600 focus:bg-blue-600 
         "
         >
@@ -90,13 +90,15 @@ export default function VehiclePlateVerifier({
               "
             >
               <Info color="#E73325" size={12} />
-              <span className="text-[10px] text-red-500">{errorMessage}</span>
+              <span className="whitespace-nowrap text-[10px] text-red-500">
+                {errorMessage}
+              </span>
             </div>
           ) : null}
         </button>
       ) : (
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500">
-          <Check weight="bold" />
+        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#2637dd]">
+          <Check weight="bold" color="#fff" />
         </div>
       )}
     </form>
