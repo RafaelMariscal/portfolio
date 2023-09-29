@@ -71,7 +71,8 @@ export default function UserRegisterForm({
       <div
         className="
           flex max-w-sm flex-col gap-3
-          text-sm font-semibold text-[#151D68] [&_span]:text-end
+          text-sm font-semibold text-[#151D68] max-phones:max-w-none max-phones:gap-2
+          [&_span]:text-end
         "
       >
         <FormInput

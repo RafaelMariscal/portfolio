@@ -103,7 +103,9 @@ export default function ClientForm({
       onSubmit={handleSubmit(handleCreateClient)}
       className="
         flex flex-col gap-3 pt-6
-        text-sm font-semibold text-[#151D68] [&_span]:text-end
+        text-sm font-semibold text-[#151D68]
+        max-phones:gap-2
+        [&_span]:text-end
       "
     >
       <FormInput
@@ -132,7 +134,7 @@ export default function ClientForm({
         }}
       />
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 max-tablets-xs:flex-col">
         <FormInput
           fieldName="legalNature"
           fieldTitle="Nat. Jurídica:"
@@ -154,12 +156,13 @@ export default function ClientForm({
           maxLength={30}
           errorMessage={errors.companySize?.message}
           className={{
-            input: 'w-32',
+            input: 'w-full tablets-xs:w-32',
+            label: 'max-tablets-xs:w-[7rem]',
           }}
         />
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 max-phones:flex-col">
         <FormInput
           fieldName="address"
           fieldTitle="Endereço:"
@@ -186,7 +189,7 @@ export default function ClientForm({
         />
       </div>
 
-      <div className="flex w-full gap-2">
+      <div className="flex w-full gap-2 max-phones:flex-col">
         <FormInput
           fieldName="city"
           fieldTitle="Cidade:"
@@ -195,6 +198,7 @@ export default function ClientForm({
           maxLength={100}
           errorMessage={errors.city?.message}
           className={{
+            root: 'w-full',
             label: 'w-[7rem]',
             input: 'w-full',
           }}

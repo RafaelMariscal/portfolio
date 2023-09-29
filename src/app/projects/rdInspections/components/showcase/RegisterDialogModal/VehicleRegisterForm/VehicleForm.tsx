@@ -113,7 +113,9 @@ export default function VehicleForm({
       onSubmit={handleSubmit(handleRegisterVehicle)}
       className="
         flex flex-col gap-3 pt-6
-        text-sm font-semibold text-[#151D68] [&_span]:text-end
+        text-sm font-semibold text-[#151D68] 
+        max-phones:gap-2
+        [&_span]:text-end
       "
     >
       <FormInput
@@ -182,7 +184,7 @@ export default function VehicleForm({
           value={yearFabValue}
           disabled={!isVerified}
           className={{
-            label: 'min-w-[7rem]',
+            label: 'min-w-[7rem] max-phones:min-w-[4rem]',
             trigger: 'min-w-[5rem] max-w-[5rem]',
             content: 'max-h-[8.25rem] w-[5rem] overflow-y-auto',
           }}
@@ -217,7 +219,7 @@ export default function VehicleForm({
         value={companyRelatedValue}
         disabled={!isVerified}
         className={{
-          label: 'w-full max-w-[7rem]',
+          label: 'w-full max-w-[7rem] max-phones:max-w-[4rem]',
           trigger: 'max-w-[21.25rem]',
           content: 'w-[21.25rem]',
         }}

@@ -27,10 +27,14 @@ export default function FormController({
       {...props}
     >
       <span
-        className={clsx('text-end font-bold text-[#151d68]', {
-          'w-fit': fit === true,
-          'w-28': fit === false,
-        })}
+        className={clsx(
+          'text-end font-bold text-[#151d68]',
+          {
+            'w-fit': fit === true,
+            'w-28': fit === false,
+          },
+          'max-phones:ml-1 max-phones:w-fit',
+        )}
       >
         {label}
       </span>

@@ -54,7 +54,11 @@ export default function CnpjVerifierForm({
       onSubmit={handleSubmit(handleCnpjCheck)}
       className="
         flex items-center gap-4
-        text-sm font-semibold text-[#151D68] [&_span]:text-end
+        text-sm font-semibold text-[#151D68] 
+        max-phones:w-fit
+        max-phones:items-end 
+        max-phones:gap-0
+        [&_span]:text-end
       "
     >
       <FormInput

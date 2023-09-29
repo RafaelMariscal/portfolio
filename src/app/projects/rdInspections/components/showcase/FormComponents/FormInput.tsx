@@ -43,13 +43,24 @@ export default function FormInput({
   return (
     <label
       htmlFor={fieldName}
-      className={clsx('relative flex items-center gap-2', className?.root)}
+      className={clsx(
+        'relative flex items-center gap-2',
+        'max-phones:w-full max-phones:flex-col max-phones:items-start max-phones:gap-0',
+        className?.root,
+      )}
     >
-      <div className={clsx('flex flex-col', className?.labelBox)}>
+      <div
+        className={clsx(
+          'flex flex-col',
+          'max-phones:flex-row max-phones:items-end max-phones:gap-1',
+          className?.labelBox,
+        )}
+      >
         <span
           className={clsx(
-            'font-bold',
+            'font-bold leading-[1.15]',
             { 'font-semibold text-gray-300': isVerified === false },
+            'max-phones:ml-1 max-phones:w-fit',
             className?.label,
           )}
         >
@@ -90,6 +101,7 @@ export default function FormInput({
           onClick={() => setIsVisible((prev) => !prev)}
           className={clsx(
             'absolute right-4 top-1/2 inline-block -translate-y-1/2',
+            'max-phones:-translate-y-[20%]',
             className?.iconBox,
           )}
         >

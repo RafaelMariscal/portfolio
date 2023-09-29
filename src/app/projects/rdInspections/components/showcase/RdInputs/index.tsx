@@ -86,8 +86,8 @@ export default function RdInputs() {
         type="submit"
         disabled={isLoading}
         className="
-          shadow-custom-md flex w-full items-center justify-center rounded-lg bg-[#151d68] 
-          py-3 text-xs font-semibold text-light outline-none 
+          flex w-full items-center justify-center rounded-lg bg-[#151d68] py-3 text-xs 
+          font-semibold text-light shadow-md shadow-dark/20 outline-none 
           transition-all duration-75 
           hover:bg-blue-800 focus:scale-[100.5%]
           focus:bg-blue-800
