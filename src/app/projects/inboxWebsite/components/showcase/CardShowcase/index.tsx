@@ -3,7 +3,7 @@ import { Card } from './Card'
 
 export default function CardShowcase() {
   return (
-    <Card.Root tabIndex={3}>
+    <Card.Root>
       <Card.Image src={KitchenSrc} alt="Industrial restaurant's kitchen" />
       <Card.Content>
         <Card.Title>
