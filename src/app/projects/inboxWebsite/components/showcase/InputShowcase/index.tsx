@@ -5,6 +5,8 @@ import Input from './Input'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import SERVICES from '@/utils/mocks/servicesMock'
+import Button from './Button'
+import { Soup } from 'lucide-react'
 
 export const quoteFormSchema = z.object({
   name: z
@@ -33,7 +35,7 @@ export default function InputsShowcase() {
   const serviceModelValue = watch('serviceModel')
 
   return (
-    <form className="flex w-full max-w-xs flex-col gap-3">
+    <div className="flex w-full max-w-sm flex-col gap-3">
       <Input.Root errorMessage={errors.name}>
         <Input.Input<QuoteFormData>
           inputName="name"
@@ -56,6 +58,26 @@ export default function InputsShowcase() {
         options={SERVICES}
         disabled={isSubmitSuccessful}
       />
-    </form>
+      <Button
+        type="button"
+        form="mealRequestForm"
+        variant="light"
+        className="mt-4 w-full"
+        disabled={isSubmitSuccessful}
+      >
+        <Soup size={18} strokeWidth={2} fillOpacity={0} />
+        Button Variant 1
+      </Button>
+      <Button
+        type="submit"
+        form="mealRequestForm"
+        variant="eden"
+        className="mt-4 w-full"
+        disabled={isSubmitSuccessful}
+      >
+        <Soup size={18} strokeWidth={2} fillOpacity={0} />
+        Button Variant 2
+      </Button>
+    </div>
   )
 }
