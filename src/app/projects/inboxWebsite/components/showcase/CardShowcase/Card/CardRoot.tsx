@@ -8,8 +8,8 @@ export default function CardRoot(props: CardRootProps) {
       type="button"
       {...props}
       className="
-        relative block cursor-default select-none overflow-hidden shadow-card
-        outline-none
+        relative block min-w-max cursor-default select-none overflow-hidden
+        shadow-card outline-none max-tablets:max-w-fit 
         
         [&_>div]:hover:bg-[#062e24]/80 [&_>div]:focus:bg-[#062e24]/80
       
