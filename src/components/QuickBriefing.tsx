@@ -18,7 +18,7 @@ export default function QuickBriefing() {
     >
       <p>
         I&#39;m a Software Developer with{' '}
-        <strong>over three years of experience</strong> working on End-2-End
+        <strong>over two years of experience</strong> working on End-2-End
         projects, including leadership positions. Outside of work, I have a
         strong passion about barbecue, fitness and sports in general.
       </p>
