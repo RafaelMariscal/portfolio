@@ -18,7 +18,7 @@ export default function Experiences() {
         <Experience.Root>
           <Experience.Content text="Rd Inspections - Freelance" />
           <Experience.Description className="flex items-center justify-between gap-4">
-            <span>Design and Full-stack Project</span>
+            <span>Design and Full Stack Project</span>
             <span className="w-full max-w-max">2023 - Present</span>
           </Experience.Description>
         </Experience.Root>
@@ -26,13 +26,13 @@ export default function Experiences() {
           <Experience.Content text="Software Developer" />
           <Experience.Description className="flex items-center justify-between gap-4">
             <span>Inbox - Refeições Coletivas</span>
-            <span className="w-full max-w-max">2020 - Present</span>
+            <span className="w-full max-w-max">2021 - Present</span>
           </Experience.Description>
         </Experience.Root>
         <Experience.Root>
           <Experience.Content text="Jacked Planner - Freelance" />
           <Experience.Description className="flex items-center justify-between gap-4">
-            <span>Design and Full-stack Project</span>
+            <span>Design and Full Stack Project</span>
             <span className="w-full max-w-max">2022 - 2023</span>
           </Experience.Description>
         </Experience.Root>

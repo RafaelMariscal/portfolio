@@ -45,7 +45,7 @@ export default function BootcampsProjects() {
           src={Squares}
           alt="Blob image of squares"
           quality={100}
-          className="h-full max-h-[30rem] object-cover object-right max-tablets-sm:hidden"
+          className="h-full max-h-[30rem] select-none object-cover object-right max-tablets-sm:hidden"
         />
 
         <div className="max-tablets-sm:w-full">

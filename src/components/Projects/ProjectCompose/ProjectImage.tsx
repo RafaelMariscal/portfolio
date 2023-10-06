@@ -19,7 +19,7 @@ export default function ProjectImage({
   return (
     <div
       className={twMerge(
-        'relative flex h-[80vh] max-h-fit w-full overflow-hidden bg-cyan-700 shadow-custom-project max-tablets:h-[50vh]',
+        'relative flex h-[80vh] max-h-fit w-full select-none overflow-hidden bg-cyan-700 shadow-custom-project max-tablets:h-[50vh]',
       )}
     >
       <NavLink

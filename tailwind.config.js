@@ -35,6 +35,7 @@ module.exports = {
         'custom-img':
           '0px 45px 36px rgba(0, 0, 0, 0.18), 0px 19px 15px rgba(0, 0, 0, 0.14), 0px 10px 8px rgba(0, 0, 0, 0.12), 0px 6px 5px rgba(0, 0, 0, 0.1), 0px 3px 2px rgba(0, 0, 0, 0.08)',
         'custom-project': '0px 10px 20px rgba(0, 0, 0, 0.25)',
+        card: '0px 32px 44px 0px rgba(0, 0, 0, 0.18), 0px 26px 32px 0px rgba(0, 0, 0, 0.14), 0px 18px 24px 0px rgba(0, 0, 0, 0.12), 0px 10px 18px 0px rgba(0, 0, 0, 0.10), 0px 4px 8px 0px rgba(0, 0, 0, 0.08)',
       },
       dropShadow: {
         'custom-text': '0px 1px 2px rgba(0, 0, 0, 0.18)',
@@ -103,6 +104,15 @@ module.exports = {
         },
         shimmer: {
           '100%': { transform: 'translateX(100%)' },
+        },
+        'show-divider': {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+        'show-text': {
+          '0%': { opacity: '0%', transform: 'translate(-150%)' },
+          '60%': { opacity: '30%' },
+          '100%': { opacity: '100%', transform: 'translate(0%)' },
         },
       },
       animation: {

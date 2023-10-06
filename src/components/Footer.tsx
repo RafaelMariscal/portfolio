@@ -5,17 +5,18 @@ import LinkedInIcon from '@/assets/icons/LinkedInIcon'
 import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
 import Squares from '@/assets/Squares.png'
 import WhatsappIcon from '@/assets/icons/WhatsappIcon'
+import Navigation from './Navigation/NavigationCompose'
 
 export default function Footer() {
   return (
     <div
       role="container"
       className="
-        relative flex h-[26.5rem] w-full max-w-7xl justify-between 
-        overflow-hidden px-3 pt-16 drop-shadow-custom-text 
+        relative flex h-[26.5rem] w-full max-w-7xl 
+        justify-between overflow-hidden px-3 pt-16 drop-shadow-custom-text
         
-        max-md:max-w-[30.625rem] max-md:flex-col max-md:justify-start
-        max-md:gap-10
+        max-md:h-fit max-md:max-w-[30.625rem] max-md:flex-col
+        max-md:justify-start max-md:gap-10
       "
     >
       <div className="flex flex-col gap-6">
@@ -101,23 +102,38 @@ export default function Footer() {
         />
       </div>
 
-      <nav className="flex flex-col gap-14">
-        <ul className="flex flex-col gap-4 max-md:hidden">
-          <li>
+      <Navigation.Content className="max-md:mt-4">
+        <span className="mb-4 mr-7 block text-end text-sm text-gray-100/50 max-md:text-start">
+          Quick Navigation:
+        </span>
+        <Navigation.List className="flex-col whitespace-nowrap  max-md:items-start max-md:pl-0">
+          <Navigation.Item>
             <NavLink href="/" title="Home" newTab />
-          </li>
-          <li>
-            <NavLink href="#briefing" title="Briefing" scroll />
-          </li>
-          <li>
-            <NavLink href="#projects" title="Projects" scroll />
-          </li>
-          <li>
-            <NavLink href="#experience" title="Experience" scroll />
-          </li>
-        </ul>
-        <span>© 2023</span>
-      </nav>
+          </Navigation.Item>
+          <Navigation.Item>
+            <NavLink
+              href="/projects/rdInspections"
+              title="RD Inspections - CRM"
+              newTab
+            />
+          </Navigation.Item>
+          <Navigation.Item>
+            <NavLink
+              href="/projects/jackedPlanner"
+              title="Jacked Planner - SaaS"
+              newTab
+            />
+          </Navigation.Item>
+          <Navigation.Item>
+            <NavLink
+              href="/projects/inboxWebsite"
+              title="Inbox - Website"
+              newTab
+            />
+          </Navigation.Item>
+          <span>© 2023</span>
+        </Navigation.List>
+      </Navigation.Content>
     </div>
   )
 }
