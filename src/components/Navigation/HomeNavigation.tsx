@@ -13,9 +13,9 @@ import { Locale } from '@/config/i18n.config'
 export default function HomeNavigation() {
   const [isShown, setIsShown] = useState(true)
   const NavRef = useRef<HTMLDivElement>(null)
+
   const params = useParams()
   const lang = params.lang as Locale
-
   const dict = getDictionaryUseClient(lang)
 
   useEffect(() => {

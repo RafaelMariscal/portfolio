@@ -7,6 +7,9 @@ import WhatsappIcon from '@/assets/icons/WhatsappIcon'
 import NavLink from './Navigation/NavLink'
 
 function Hero() {
+  // const lang = params.lang as Locale
+  // const dict = getDictionaryServerOnly(lang)
+
   return (
     <div
       id="hero"
@@ -44,12 +47,13 @@ function Hero() {
             Rafael Mariscal
           </h1>
           <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-            Full-Stack Software Developer{' '}
+            Software Engineer{' '}
             <span className="max-tablets:hidden max-md:inline-block max-tablets-xs:hidden">
-              -
+              /
             </span>{' '}
             <span className="max-tablets:block max-md:inline-block max-tablets-xs:hidden">
-              React / Node.js
+              {/* React / Node.js */}
+              Project Manager
             </span>
           </h2>
           <h3
