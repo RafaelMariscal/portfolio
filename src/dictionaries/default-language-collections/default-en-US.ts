@@ -8,7 +8,7 @@ export const enUS: DefaultDictionary = {
     experience: 'Experience',
   },
   homeHero: {
-    role: 'Software Engineer / Project Manager',
+    role: ['Software Engineer', '/', 'Project Manager'],
     description: [
       'I ',
       'develop solutions ',

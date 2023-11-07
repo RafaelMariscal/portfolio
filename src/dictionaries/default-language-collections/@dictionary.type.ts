@@ -8,7 +8,7 @@ interface HomeNavigation {
 type WhatsappChat = string
 
 interface HomeHero {
-  role: string
+  role: string[]
   description: string[]
   whatsappChat: WhatsappChat
 }
