@@ -1,4 +1,4 @@
-import './globals.css'
+import '../globals.css'
 import { ReactNode } from 'react'
 import { Montserrat } from 'next/font/google'
 import { GlobalToastContextProvider } from '@/contexts/ToastContext/provider'
