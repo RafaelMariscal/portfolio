@@ -45,13 +45,16 @@ interface Projects {
 interface Bootcamp {
   title: string
   description: string
-  techsList: string
 }
 
 interface BootcampProjects {
   title: string[]
-  bootcamps: Bootcamp[]
-  accessLink: string
+  bootcamps: {
+    nextBlog: Bootcamp
+    waiterApp: Bootcamp
+    desingSystem: Bootcamp
+    videoPlatform: Bootcamp
+  }
 }
 
 interface Experience {

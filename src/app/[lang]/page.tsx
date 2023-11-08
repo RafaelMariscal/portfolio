@@ -25,7 +25,7 @@ export default function Home({ params }: { params: { lang: Locale } }) {
           <JackedPlannerProject lang={lang} />
           <InboxWebsiteProject lang={lang} />
         </Projects.Root>
-        <BootcampsProjects />
+        <BootcampsProjects lang={lang} />
       </main>
     </>
   )

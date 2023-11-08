@@ -107,33 +107,28 @@ export const enUS: DefaultDictionary = {
   },
   bootcampProjects: {
     title: ['bootcamp', 'projects'],
-    accessLink: 'Access here',
-    bootcamps: [
-      {
+    bootcamps: {
+      nextBlog: {
         title: 'Next.js blog',
         description:
           'Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access the articles content if subscribed.',
-        techsList: 'nextBlogTechs',
       },
-      {
+      waiterApp: {
         title: 'Reataurant Sass',
         description:
           'A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager.',
-        techsList: 'waiterAppTechs',
       },
-      {
+      desingSystem: {
         title: 'Design System',
         description:
           'A Login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case.',
-        techsList: 'designSystemTechs',
       },
-      {
+      videoPlatform: {
         title: 'Video Platform',
         description:
-          'Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access full content if signed up.',
-        techsList: 'videoPlatformTechs',
+          'Developed using React, GraphQL, Apollo Client, and Tailwind. A use case of consuming GraphQL API data where users can access available videos.',
       },
-    ],
+    },
   },
   experiences: {
     mainExperiences: {

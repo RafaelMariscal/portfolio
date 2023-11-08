@@ -107,33 +107,28 @@ export const ptBR: DefaultDictionary = {
   },
   bootcampProjects: {
     title: ['bootcamp', 'projects'],
-    accessLink: 'Access here',
-    bootcamps: [
-      {
+    bootcamps: {
+      nextBlog: {
         title: 'Next.js blog',
         description:
-          'Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access the articles content if subscribed.',
-        techsList: 'nextBlogTechs',
+          'Desenvolvido usando Next, NextAuth, FaunaDB, Stripe e Prismic. O usuário só poderá acessar o conteúdo dos artigos se estiver inscrito.',
       },
-      {
+      waiterApp: {
         title: 'Reataurant Sass',
         description:
-          'A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager.',
-        techsList: 'waiterAppTechs',
+          'Uma API Node.js foi desenvolvida para gerenciar pedidos de um restaurante, bem como um aplicativo móvel conectado a um backoffice.',
       },
-      {
+      desingSystem: {
         title: 'Design System',
         description:
-          'A Login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case.',
-        techsList: 'designSystemTechs',
+          'Uma página de Login criada apenas como exemplo para construir um Design System com Storybook, MSW e ser um caso de implementação de CI/CD.',
       },
-      {
+      videoPlatform: {
         title: 'Video Platform',
         description:
-          'Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access full content if signed up.',
-        techsList: 'videoPlatformTechs',
+          'Desenvolvido com React, GraphQL, Apollo Client e Tailwind. Caso de uso de consumo de uma API GraphQL onde usuários acessam vídeos liberados.',
       },
-    ],
+    },
   },
   experiences: {
     mainExperiences: {
