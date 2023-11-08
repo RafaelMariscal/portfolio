@@ -18,7 +18,7 @@ export default function Home({ params }: { params: { lang: Locale } }) {
         <div className="w-full max-w-screen-xl px-3" id="top">
           <Hero lang={lang} />
           <QuickBriefing lang={lang} />
-          <MainSkills />
+          <MainSkills lang={lang} />
         </div>
         <Projects.Root>
           <RdInspectionProject />

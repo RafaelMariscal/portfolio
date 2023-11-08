@@ -51,8 +51,8 @@ export const enUS: DefaultDictionary = {
   mainSkills: {
     title: ['main', 'skills'],
     programming: 'Programming',
-    management: 'Management',
-    learning: 'Learning',
+    management: 'Management and Design',
+    learning: 'Currently Learning',
   },
   projects: {
     rdInspec: {

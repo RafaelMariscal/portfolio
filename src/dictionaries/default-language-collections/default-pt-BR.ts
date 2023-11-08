@@ -50,9 +50,9 @@ export const ptBR: DefaultDictionary = {
   },
   mainSkills: {
     title: ['main', 'skills'],
-    programming: 'Programming',
-    management: 'Management',
-    learning: 'Learning',
+    programming: 'Programação',
+    management: 'Gerenciamento e Design',
+    learning: 'Atualmente estudando',
   },
   projects: {
     rdInspec: {
