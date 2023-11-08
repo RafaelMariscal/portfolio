@@ -55,6 +55,7 @@ export const enUS: DefaultDictionary = {
     learning: 'Currently Learning',
   },
   projects: {
+    techsLabel: 'Techs used in this project:',
     rdInspec: {
       title: 'RD Inspections - CRM',
       description: [
@@ -66,11 +67,10 @@ export const enUS: DefaultDictionary = {
         'REST API ',
         'was developed to bridge the gap between these two services, and a modern dashboard to enhance user experience.',
       ],
-      techsLabel: 'Techs used in this project:',
       learnMoreLink: 'Learn more about RD Inspections',
       accessLink: 'Access RD Inspections',
     },
-    JPlanner: {
+    jPlanner: {
       title: 'Jacked Planner',
       description: [
         'An SaaS platform developed specifically for Gyms and trainers. ',
@@ -81,13 +81,12 @@ export const enUS: DefaultDictionary = {
         'empowering users to have more control over their fitness routines and progress tracking',
         '.',
       ],
-      techsLabel: 'Techs used in this project:',
       learnMoreLink: 'Learn more about Jacked Planner',
       accessLink: 'Access Jacked Planner',
       footnote:
         '**All payment methods in this project are currently unavailable.',
     },
-    IbWebsite: {
+    ibWebsite: {
       title: 'Inbox Refeições - Website',
       description: [
         'A website built for a catering company located in Fortaleza, Brazil. ',
@@ -102,7 +101,6 @@ export const enUS: DefaultDictionary = {
         'Framer Motion ',
         'to provide accessibility and smooth animations. Finally, we used Google SEO Checker to improve/boost search engine visibility.',
       ],
-      techsLabel: 'Techs used in this project:',
       learnMoreLink: 'Learn more about Inbox Website',
       accessLink: 'Access Inbox Website',
     },

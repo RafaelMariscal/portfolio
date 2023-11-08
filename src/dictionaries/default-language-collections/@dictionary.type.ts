@@ -30,23 +30,16 @@ interface MainSkills {
 interface Project {
   title: string
   description: string[]
-  techsLabel: string
   learnMoreLink: string
   accessLink: string
+  footnote?: string
 }
-
-interface RdProject extends Project {}
-
-interface JpProject extends Project {
-  footnote: string
-}
-
-interface IbProject extends Project {}
 
 interface Projects {
-  rdInspec: RdProject
-  JPlanner: JpProject
-  IbWebsite: IbProject
+  rdInspec: Project
+  jPlanner: Project
+  ibWebsite: Project
+  techsLabel: string
 }
 
 interface Bootcamp {

@@ -21,9 +21,9 @@ export default function Home({ params }: { params: { lang: Locale } }) {
           <MainSkills lang={lang} />
         </div>
         <Projects.Root>
-          <RdInspectionProject />
-          <JackedPlannerProject />
-          <InboxWebsiteProject />
+          <RdInspectionProject lang={lang} />
+          <JackedPlannerProject lang={lang} />
+          <InboxWebsiteProject lang={lang} />
         </Projects.Root>
         <BootcampsProjects />
       </main>
