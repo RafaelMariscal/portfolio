@@ -8,7 +8,7 @@ export const ptBR: DefaultDictionary = {
     experience: 'Experiencias',
   },
   homeHero: {
-    role: ['Engenheiro de Software', '/', 'Gerente de Projetos'],
+    role: ['Desenvolvedor de Software', '/', 'Gerente de Projetos'],
     description: [
       'Eu ',
       'desenvolvo soluções ',
@@ -20,12 +20,12 @@ export const ptBR: DefaultDictionary = {
   },
   homeBriefing: {
     p1: [
-      "I'm a Software Developer with ",
-      'over two years of experience ',
-      'working on End-2-End projects, including leadership positions. Outside of work, I have a strong passion about barbecue, fitness and sports in general.',
+      'Sou um Desenvolvedor com ',
+      'mais de dois anos de experiência',
+      ', tendo trabalhado em projetos End-2-End, inclusive em posições de liderança. Fora do trabalho, sou um entusiasta do churrasco e amo esportes em geral.',
     ],
     p2: [
-      "In my career, I've been involved with projects using",
+      'Durante minha carreira, estive envolvido em projetos utilizando ',
       'Javascript',
       ', ',
       'Typescript',
@@ -35,18 +35,18 @@ export const ptBR: DefaultDictionary = {
       'Next',
       ', ',
       'Node.js',
-      'and ',
+      ' e ',
       'NestJs',
-      '. In these projects, I had the opportunity to contribute from the initial client briefing to the final sprint.',
+      '. Nesses projetos, tive a oportunidade de contribuir desde o contato inicial com o cliente até a sprint final.',
     ],
     p3: [
-      'In terms of my academic background, I hold a degree in ',
-      'Engineering ',
-      "and I'm currently pursuing my second degree in ",
-      'System Analysis and Development ',
-      '- 2024.',
+      'Sobre meu background acadêmico, sou graduado em ',
+      'Engenharia',
+      ' e atualmente estou cursando uma segunda graduação, ',
+      'Análise e Desenvolvimento de Sistemas',
+      '.',
     ],
-    link: 'About my experiences',
+    link: 'Acesse minhas experiências',
   },
   mainSkills: {
     title: ['main', 'skills'],

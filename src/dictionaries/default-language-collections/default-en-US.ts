@@ -20,12 +20,12 @@ export const enUS: DefaultDictionary = {
   },
   homeBriefing: {
     p1: [
-      "I'm a Software Developer with ",
+      "I'm a Software Engineer with ",
       'over two years of experience ',
       'working on End-2-End projects, including leadership positions. Outside of work, I have a strong passion about barbecue, fitness and sports in general.',
     ],
     p2: [
-      "In my career, I've been involved with projects using",
+      "In my career, I've been involved with projects using ",
       'Javascript',
       ', ',
       'Typescript',
@@ -34,7 +34,7 @@ export const enUS: DefaultDictionary = {
       ', ',
       'Next',
       ', ',
-      'Node.js',
+      'Node.js ',
       'and ',
       'NestJs',
       '. In these projects, I had the opportunity to contribute from the initial client briefing to the final sprint.',

@@ -11,14 +11,13 @@ import { Locale } from '@/config/i18n.config'
 
 export default function Home({ params }: { params: { lang: Locale } }) {
   const lang = params.lang as Locale
-
   return (
     <>
       <Navigation />
       <main className="flex w-full flex-col items-center justify-center">
         <div className="w-full max-w-screen-xl px-3" id="top">
           <Hero lang={lang} />
-          <QuickBriefing />
+          <QuickBriefing lang={lang} />
           <MainSkills />
         </div>
         <Projects.Root>
