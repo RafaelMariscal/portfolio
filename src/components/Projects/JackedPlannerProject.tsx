@@ -7,7 +7,9 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-s
 
 export default function JackedPlannerProject({ lang }: { lang: Locale }) {
   const {
-    projects: { jPlanner, techsLabel },
+    home: {
+      projects: { jPlanner, techsLabel },
+    },
   } = getDictionaryServerOnly(lang)
   return (
     <>

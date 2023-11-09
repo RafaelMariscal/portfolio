@@ -33,7 +33,9 @@ import { Locale } from '@/config/i18n.config'
 import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 export default function MainSkills({ lang }: { lang: Locale }) {
-  const { mainSkills } = getDictionaryServerOnly(lang)
+  const {
+    home: { mainSkills },
+  } = getDictionaryServerOnly(lang)
   return (
     <div
       className="

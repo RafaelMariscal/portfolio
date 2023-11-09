@@ -3,8 +3,11 @@ import { Locale } from '@/config/i18n.config'
 import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 export default function QuickBriefing({ lang }: { lang: Locale }) {
-  const { homeBriefing } = getDictionaryServerOnly(lang)
-  const { link, ...paragraphs } = homeBriefing
+  const {
+    home: {
+      briefing: { link, ...paragraphs },
+    },
+  } = getDictionaryServerOnly(lang)
   const paragraphsKeys = Object.keys(paragraphs) as (keyof typeof paragraphs)[]
 
   return (

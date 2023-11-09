@@ -5,7 +5,9 @@ import { Locale } from '@/config/i18n.config'
 import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 export default function Experiences({ lang }: { lang: Locale }) {
-  const { experiences } = getDictionaryServerOnly(lang)
+  const {
+    home: { experiences },
+  } = getDictionaryServerOnly(lang)
 
   return (
     <div

@@ -18,8 +18,10 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-s
 
 export default function BootcampsProjects({ lang }: { lang: Locale }) {
   const {
-    bootcampProjects: {
-      bootcamps: { nextBlog, waiterApp, desingSystem, videoPlatform },
+    home: {
+      bootcampProjects: {
+        bootcamps: { nextBlog, waiterApp, desingSystem, videoPlatform },
+      },
     },
   } = getDictionaryServerOnly(lang)
 

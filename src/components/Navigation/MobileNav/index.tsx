@@ -16,7 +16,9 @@ export default function MobileNav() {
 
   const params = useParams()
   const lang = params.lang as Locale
-  const { homeNavigation } = getDictionaryUseClient(lang)
+  const {
+    home: { navigation },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -118,33 +120,29 @@ export default function MobileNav() {
             <Navigation.Content>
               <Navigation.List className="flex-col px-0">
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="/" title={homeNavigation.home} newTab />
+                  <NavLink href="/" title={navigation.home} newTab />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink
-                    href="#briefing"
-                    title={homeNavigation.brefing}
-                    scroll
-                  />
+                  <NavLink href="#briefing" title={navigation.brefing} scroll />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="#projects"
-                    title={homeNavigation.projects}
+                    title={navigation.projects}
                     scroll
                   />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="#bootcamps"
-                    title={homeNavigation.bootcamps}
+                    title={navigation.bootcamps}
                     scroll
                   />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="#experience"
-                    title={homeNavigation.experience}
+                    title={navigation.experience}
                     scroll
                   />
                 </Navigation.Item>

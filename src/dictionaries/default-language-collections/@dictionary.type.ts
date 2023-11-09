@@ -100,12 +100,14 @@ interface Footer {
 }
 
 export interface DefaultDictionary {
-  homeNavigation: HomeNavigation
-  homeHero: HomeHero
-  homeBriefing: HomeBriefing
-  mainSkills: MainSkills
-  projects: Projects
-  bootcampProjects: BootcampProjects
-  experiences: Experiences
-  footer: Footer
+  home: {
+    navigation: HomeNavigation
+    hero: HomeHero
+    briefing: HomeBriefing
+    mainSkills: MainSkills
+    projects: Projects
+    bootcampProjects: BootcampProjects
+    experiences: Experiences
+    footer: Footer
+  }
 }

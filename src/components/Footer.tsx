@@ -11,9 +11,10 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-s
 
 export default function Footer({ lang }: { lang: Locale }) {
   const {
-    footer: { footerNav, leavingMessage, whatsappChat },
+    home: {
+      footer: { footerNav, leavingMessage, whatsappChat },
+    },
   } = getDictionaryServerOnly(lang)
-
   return (
     <div
       role="container"

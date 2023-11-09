@@ -16,7 +16,9 @@ export default function HomeNavigation() {
 
   const params = useParams()
   const lang = params.lang as Locale
-  const { homeNavigation } = getDictionaryUseClient(lang)
+  const {
+    home: { navigation },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -63,29 +65,21 @@ export default function HomeNavigation() {
         <Navigation.Content>
           <Navigation.List>
             <Navigation.Item>
-              <NavLink href="/" title={homeNavigation.home} newTab />
+              <NavLink href="/" title={navigation.home} newTab />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#briefing" title={homeNavigation.brefing} scroll />
+              <NavLink href="#briefing" title={navigation.brefing} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink
-                href="#projects"
-                title={homeNavigation.projects}
-                scroll
-              />
+              <NavLink href="#projects" title={navigation.projects} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink
-                href="#bootcamps"
-                title={homeNavigation.bootcamps}
-                scroll
-              />
+              <NavLink href="#bootcamps" title={navigation.bootcamps} scroll />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink
                 href="#experience"
-                title={homeNavigation.experience}
+                title={navigation.experience}
                 scroll
               />
             </Navigation.Item>

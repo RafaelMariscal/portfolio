@@ -9,7 +9,9 @@ import { Locale } from '@/config/i18n.config'
 import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 function Hero({ lang }: { lang: Locale }) {
-  const { homeHero } = getDictionaryServerOnly(lang)
+  const {
+    home: { hero },
+  } = getDictionaryServerOnly(lang)
 
   return (
     <div
@@ -47,12 +49,12 @@ function Hero({ lang }: { lang: Locale }) {
             Rafael Mariscal
           </h1>
           <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-            {homeHero.role[0]}{' '}
+            {hero.role[0]}{' '}
             <span className="max-tablets:hidden max-md:inline-block max-tablets-xs:hidden">
-              {homeHero.role[1]}
+              {hero.role[1]}
             </span>{' '}
             <span className="max-tablets:block max-md:inline-block max-tablets-xs:hidden">
-              {homeHero.role[2]}
+              {hero.role[2]}
             </span>
           </h2>
           <h3
@@ -71,7 +73,7 @@ function Hero({ lang }: { lang: Locale }) {
               [&_span]:text-cyan-400
             "
           >
-            {homeHero.description.map((text, index) => {
+            {hero.description.map((text, index) => {
               if (index % 2) {
                 return <span key={text + index}>{text}</span>
               } else {
@@ -120,7 +122,7 @@ function Hero({ lang }: { lang: Locale }) {
             <NavLink
               newTab
               href="https://wa.me/5585981182281"
-              title={homeHero.whatsappChat}
+              title={hero.whatsappChat}
               className="
                 flex items-center gap-[.375rem] text-xs
                 tracking-wider text-gray-100 duration-100 

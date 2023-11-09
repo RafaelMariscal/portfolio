@@ -7,7 +7,9 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-s
 
 export default function InboxWebsiteProject({ lang }: { lang: Locale }) {
   const {
-    projects: { ibWebsite, techsLabel },
+    home: {
+      projects: { ibWebsite, techsLabel },
+    },
   } = getDictionaryServerOnly(lang)
   return (
     <>

@@ -7,7 +7,9 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-s
 
 export default function RdInspectionProject({ lang }: { lang: Locale }) {
   const {
-    projects: { rdInspec, techsLabel },
+    home: {
+      projects: { rdInspec, techsLabel },
+    },
   } = getDictionaryServerOnly(lang)
   return (
     <>
