@@ -5,7 +5,8 @@ export const ptBR: DefaultDictionary = {
     home: 'Início',
     brefing: 'Introdução',
     projects: 'Projetos',
-    experience: 'Experiencias',
+    bootcamps: 'Bootcamps',
+    experience: 'Experiências',
   },
   homeHero: {
     role: ['Desenvolvedor de Software', '/', 'Gerente de Projetos'],

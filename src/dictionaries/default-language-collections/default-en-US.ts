@@ -5,6 +5,7 @@ export const enUS: DefaultDictionary = {
     home: 'Home',
     brefing: 'Briefing',
     projects: 'Projects',
+    bootcamps: 'Bootcamps',
     experience: 'Experience',
   },
   homeHero: {

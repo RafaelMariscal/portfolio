@@ -2,6 +2,7 @@ interface HomeNavigation {
   home: string
   brefing: string
   projects: string
+  bootcamps: string
   experience: string
 }
 
