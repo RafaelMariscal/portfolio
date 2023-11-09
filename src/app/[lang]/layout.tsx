@@ -38,7 +38,7 @@ export default function RootLayout({
         <GlobalToastContextProvider>
           {children}
           <Experiences lang={params.lang} />
-          <Footer />
+          <Footer lang={params.lang} />
         </GlobalToastContextProvider>
       </body>
     </html>

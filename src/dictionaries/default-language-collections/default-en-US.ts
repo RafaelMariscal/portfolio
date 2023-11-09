@@ -189,7 +189,7 @@ export const enUS: DefaultDictionary = {
   },
   footer: {
     leavingMessage:
-      "If you think that I can assist you, I'd love to talk about your problem. Feel free to shoot me an email or contact me through my socials below.",
+      "If you think that I can assist you, I'll love to talk about your problem. Feel free to shoot me an email or contact me through my socials below.",
     whatsappChat: 'Click to chat',
     footerNav: {
       title: 'Quick Navigation',

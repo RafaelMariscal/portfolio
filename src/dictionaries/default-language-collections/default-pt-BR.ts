@@ -189,12 +189,12 @@ export const ptBR: DefaultDictionary = {
   },
   footer: {
     leavingMessage:
-      "If you think that I can assist you, I'd love to talk about your problem. Feel free to shoot me an email or contact me through my socials below.",
+      'Caso acredite que posso te ajudar a resolver seu problema, adorarei conversar a respeito. Basta me enviar um e-mail ou entrar em contato pelas redes sociais abaixo.',
     whatsappChat: 'Click to chat',
     footerNav: {
-      title: 'Quick Navigation',
+      title: 'Navegação Rápida',
       pages: {
-        home: 'Home',
+        home: 'Início',
         rdInspec: 'RD Inspections - CRM',
         jPlanner: 'Jacked Planner - SaaS',
         ibWebsite: 'Inbox - Website',
