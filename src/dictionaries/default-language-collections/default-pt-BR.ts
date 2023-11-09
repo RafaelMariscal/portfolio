@@ -132,57 +132,57 @@ export const ptBR: DefaultDictionary = {
   },
   experiences: {
     mainExperiences: {
-      title: 'Main Experiences',
+      title: 'Experiências',
       list: [
         {
-          role: 'Rd Inspections - Contract',
-          company: 'Design and Full Stack Project',
-          timePeriod: '2023 - Present',
+          role: 'Desenvolvedor de Software',
+          company: 'Rd Inspections',
+          timePeriod: '2023–Atual',
         },
         {
-          role: 'Software Developer',
+          role: 'Desenvolvedor Web - Fullstack',
           company: 'Inbox - Refeições Coletivas',
-          timePeriod: '2021 - Present',
+          timePeriod: '2021–Atual',
         },
         {
-          role: 'Jacked Planner - Contract',
-          company: 'Design and Development',
-          timePeriod: '2022 - 2023',
+          role: 'Desenvolvedor Web - Design/Fullstack',
+          company: 'Jacked Planner',
+          timePeriod: '2022–2023',
         },
         {
-          role: 'Project Manager',
+          role: 'Gerente de Projetos',
           company: 'Inbox - Refeições Coletivas',
-          timePeriod: '2018 - 2020',
+          timePeriod: '2018–2020',
         },
         {
-          role: 'Operations Manager',
+          role: 'Gerente de Operações',
           company: 'Qualittè Alimentação e Serviços',
-          timePeriod: '2013 - 2017',
+          timePeriod: '2013–2017',
         },
       ],
     },
     bootcampsAndPappers: {
-      title: 'Bootcamps and Papers',
+      title: 'Cursos e Publicações',
       list: [
         {
           title: 'Rocketseat Ignite NodeJs Bootcamp',
           description:
-            '+100 hours web development focusing on Back-end using plain Node.js to develop RESTful APIs, but also Fastify and NestJs - In Progress.',
+            'Mais de 100 horas de desenvolvimento back-end utilizando Node.js para construir RESTful APIs, jonto com Fastify e Nestjs - Cursando. ',
           highlight:
-            'HTTP, REST, Fastify, NestJS, Docker, JWT, DDD, Clean Architecture and more.',
+            'HTTP, REST, Fastify, NestJS, Docker, JWT, DDD, Clean Architecture e mais.',
         },
         {
           title: 'Rocketseat Ignite ReactJs Bootcamp',
           description:
-            '+100 hours of Front-End web development, but also applying some Back-end tools into the development process.',
+            'Mais de 100 horas de desenvolvimento front-end, lidando com integrações de APIs, paginação, SSR/SSG e Design Patterns.',
           highlight:
-            'Typescript, React, NextJs, Jest, GraphQL, Radix, Tailwind, StripeAPI and more.',
+            'Typescript, React, NextJs, Jest, GraphQL, Radix, Tailwind, StripeAPI e mais.',
         },
         {
-          title: 'Net Profit increased by +25% by using OKR Framework',
+          title: 'Implementação do Framework OKR - Estudo de caso',
           description:
-            "Graduation Thesis based on the OKR framework implementation, which resulted in the project's net profit increasing by +25% - written in pt-BR.",
-          highlight: 'OKR Framework Case Study',
+            'Trabalho de conclusão de curso on foi documentada a implementação da ferramenta OKR, retornando um aumento de +25% do resultado.',
+          highlight: 'Framework OKR - Estudo de caso',
         },
       ],
     },

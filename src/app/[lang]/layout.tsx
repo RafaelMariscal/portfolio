@@ -2,7 +2,7 @@ import '../globals.css'
 import { ReactNode } from 'react'
 import { Montserrat } from 'next/font/google'
 import { GlobalToastContextProvider } from '@/contexts/ToastContext/provider'
-import { i18n } from '@/config/i18n.config'
+import { Locale, i18n } from '@/config/i18n.config'
 import Footer from '@/components/Footer'
 import Experiences from '@/components/Experiences'
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   params,
 }: {
   children: ReactNode
-  params: { lang: string }
+  params: { lang: Locale }
 }) {
   return (
     <html lang={params.lang}>
@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         <GlobalToastContextProvider>
           {children}
-          <Experiences />
+          <Experiences lang={params.lang} />
           <Footer />
         </GlobalToastContextProvider>
       </body>
