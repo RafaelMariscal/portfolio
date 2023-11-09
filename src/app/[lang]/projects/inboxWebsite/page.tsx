@@ -9,8 +9,14 @@ import IbProjectBriefing from './components/IbProjectBriefing'
 import IbDesignProcess from './components/IbDesignProcess'
 import IbSoftwareDevelopment from './components/IbSoftwareDevelopment'
 import IbProjectShowcase from './components/IbProjectShowcase'
+import { Locale } from '@/config/i18n.config'
 
-export default function RdInspectionsPage() {
+export default function RdInspectionsPage({
+  params,
+}: {
+  params: { lang: Locale }
+}) {
+  const lang = params.lang as Locale
   return (
     <>
       <IbNavigation />
@@ -40,7 +46,7 @@ export default function RdInspectionsPage() {
         >
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
-        <RdInspectionProject />
+        <RdInspectionProject lang={lang} />
       </main>
     </>
   )

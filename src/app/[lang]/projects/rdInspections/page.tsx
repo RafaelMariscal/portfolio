@@ -8,8 +8,15 @@ import JackedPlannerProject from '@/components/Projects/JackedPlannerProject'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
 import RdProjectShowcase from './components/RdProjectShowcase'
+import { Locale } from '@/config/i18n.config'
 
-export default function RdInspectionsPage() {
+export default function RdInspectionsPage({
+  params,
+}: {
+  params: { lang: Locale }
+}) {
+  const lang = params.lang as Locale
+
   return (
     <>
       <RdNavigation />
@@ -38,7 +45,7 @@ export default function RdInspectionsPage() {
         >
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
-        <JackedPlannerProject />
+        <JackedPlannerProject lang={lang} />
       </main>
     </>
   )

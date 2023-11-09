@@ -8,8 +8,14 @@ import Highlight from '@/components/Basic/Highlight'
 import JpDesignProcess from './components/JpDesignProcess'
 import JpSoftwareDevelopment from './components/JpSoftwareDevelopment'
 import InboxWebsiteProject from '@/components/Projects/IbWebsiteProject'
+import { Locale } from '@/config/i18n.config'
 
-export default function JackedPlannerPage() {
+export default function JackedPlannerPage({
+  params,
+}: {
+  params: { lang: Locale }
+}) {
+  const lang = params.lang as Locale
   return (
     <>
       <JpNavigation />
@@ -38,7 +44,7 @@ export default function JackedPlannerPage() {
         >
           Next<Highlight className="ml-1">Project</Highlight>
         </SectionTitle>
-        <InboxWebsiteProject />
+        <InboxWebsiteProject lang={lang} />
       </main>
     </>
   )
