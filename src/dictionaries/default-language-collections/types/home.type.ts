@@ -1,4 +1,4 @@
-interface HomeNavigation {
+export interface HomeNavigation {
   home: string
   brefing: string
   projects: string
@@ -8,27 +8,27 @@ interface HomeNavigation {
 
 type WhatsappChat = string
 
-interface HomeHero {
+export interface HomeHero {
   role: string[]
   description: string[]
   whatsappChat: WhatsappChat
 }
 
-interface HomeBriefing {
+export interface HomeBriefing {
   p1: string[]
   p2: string[]
   p3: string[]
   link: string
 }
 
-interface MainSkills {
+export interface MainSkills {
   title: string[]
   programming: string
   management: string
   learning: string
 }
 
-interface Project {
+export interface Project {
   title: string
   description: string[]
   learnMoreLink: string
@@ -36,19 +36,19 @@ interface Project {
   footnote?: string
 }
 
-interface Projects {
+export interface Projects {
   rdInspec: Project
   jPlanner: Project
   ibWebsite: Project
   techsLabel: string
 }
 
-interface Bootcamp {
+export interface Bootcamp {
   title: string
   description: string
 }
 
-interface BootcampProjects {
+export interface BootcampProjects {
   title: string[]
   bootcamps: {
     nextBlog: Bootcamp
@@ -58,34 +58,34 @@ interface BootcampProjects {
   }
 }
 
-interface Experience {
+export interface Experience {
   role: string
   company: string
   timePeriod: string
 }
 
-interface MainExperiences {
+export interface MainExperiences {
   title: string
   list: Experience[]
 }
 
-interface BootcampOrPapper {
+export interface BootcampOrPapper {
   title: string
   description: string
   highlight: string
 }
 
-interface BootcampsAndPappers {
+export interface BootcampsAndPappers {
   title: string
   list: BootcampOrPapper[]
 }
 
-interface Experiences {
+export interface Experiences {
   mainExperiences: MainExperiences
   bootcampsAndPappers: BootcampsAndPappers
 }
 
-interface Footer {
+export interface Footer {
   leavingMessage: string
   whatsappChat: WhatsappChat
   footerNav: {
@@ -96,18 +96,5 @@ interface Footer {
       jPlanner: string
       ibWebsite: string
     }
-  }
-}
-
-export interface DefaultDictionary {
-  home: {
-    navigation: HomeNavigation
-    hero: HomeHero
-    briefing: HomeBriefing
-    mainSkills: MainSkills
-    projects: Projects
-    bootcampProjects: BootcampProjects
-    experiences: Experiences
-    footer: Footer
   }
 }
