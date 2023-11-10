@@ -206,11 +206,12 @@ export const ptBR: DefaultDictionary = {
   },
   rdProjectPage: {
     navigation: {
-      pageTitle: 'RD Inspection',
-      briefing: 'Project Briefing',
-      features: 'Main Features',
-      components: 'Components Showcase',
-      nextProject: 'Next Project',
+      pageTitle: 'RD Inspeções',
+      briefing: 'Briefing do Project',
+      features: 'Funcionalidades',
+      components: 'Componentes',
+      nextProject: 'Próximo Projeto',
+      home: 'Página Inicial',
     },
     description: {
       p1: [

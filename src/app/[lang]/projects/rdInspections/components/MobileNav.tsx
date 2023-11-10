@@ -5,11 +5,20 @@ import NavLink from '@/components/Navigation/NavLink'
 import Navigation from '@/components/Navigation/NavigationCompose'
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
+import { Locale } from '@/config/i18n.config'
+import { useParams } from 'next/navigation'
+import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
 
 export default function MobileNav() {
   const [isShown, setIsShown] = useState(true)
   const [open, setOpen] = useState(false)
   const triggerBoxRef = useRef<HTMLDivElement>(null)
+
+  const params = useParams()
+  const lang = params.lang as Locale
+  const {
+    rdProjectPage: { navigation },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -105,32 +114,40 @@ export default function MobileNav() {
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="/projects/rdInspections"
-                    title="RD Inspections"
+                    title={navigation.pageTitle}
                     newTab
                   />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="#projectBriefing"
-                    title="Project Briefing"
+                    title={navigation.briefing}
                     scroll
                   />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#mainFeatures" title="Main Features" scroll />
+                  <NavLink
+                    href="#mainFeatures"
+                    title={navigation.features}
+                    scroll
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink
                     href="#componentsShowcase"
-                    title="Components Showcase"
+                    title={navigation.components}
                     scroll
                   />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#nextProject" title="Next Project" scroll />
+                  <NavLink
+                    href="#nextProject"
+                    title={navigation.nextProject}
+                    scroll
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="/" title="Home Page" newTab />
+                  <NavLink href="/" title={navigation.home} newTab />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>

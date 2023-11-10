@@ -4,6 +4,7 @@ export interface RdNavigation {
   features: string
   components: string
   nextProject: string
+  home: string
 }
 
 export interface RdDescription {

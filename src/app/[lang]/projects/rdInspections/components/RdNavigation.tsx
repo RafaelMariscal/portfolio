@@ -4,11 +4,20 @@ import NavLogo from '@/assets/NavLogo'
 import NavLink from '@/components/Navigation/NavLink'
 import Navigation from '@/components/Navigation/NavigationCompose'
 import MobileNav from './MobileNav'
-import { useState, useEffect } from 'react'
 import clsx from 'clsx'
+import { useState, useEffect } from 'react'
+import { useParams } from 'next/navigation'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
 
 export default function RdNavigation() {
   const [isShown, setIsShown] = useState(true)
+
+  const params = useParams()
+  const lang = params.lang as Locale
+  const {
+    rdProjectPage: { navigation },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -52,14 +61,14 @@ export default function RdNavigation() {
             <Navigation.Item>
               <NavLink
                 href="/projects/rdInspections"
-                title="RD Inspections"
+                title={navigation.pageTitle}
                 newTab
               />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink
                 href="#projectBriefing"
-                title="Project Briefing"
+                title={navigation.briefing}
                 scroll
               />
             </Navigation.Item>
@@ -69,12 +78,16 @@ export default function RdNavigation() {
             <Navigation.Item>
               <NavLink
                 href="#componentsShowcase"
-                title="Components Showcase"
+                title={navigation.components}
                 scroll
               />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#nextProject" title="Next Project" scroll />
+              <NavLink
+                href="#nextProject"
+                title={navigation.nextProject}
+                scroll
+              />
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Content>

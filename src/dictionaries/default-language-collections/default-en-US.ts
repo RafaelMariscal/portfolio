@@ -211,6 +211,7 @@ export const enUS: DefaultDictionary = {
       features: 'Main Features',
       components: 'Components Showcase',
       nextProject: 'Next Project',
+      home: 'Home Page',
     },
     description: {
       p1: [
