@@ -229,9 +229,9 @@ export const enUS: DefaultDictionary = {
         ', providing them with the necessary tools to develop the most efficient REST APIs for our software.',
       ],
       table: [
-        { head: 'Role:', body: 'Full Stack Developer' },
-        { head: 'Platform:', body: 'Desktop / Mobile' },
-        { head: 'Category:', body: 'Company System / CRM' },
+        { head: 'Role', body: 'Full Stack Developer' },
+        { head: 'Platform', body: 'Desktop' },
+        { head: 'Category', body: 'Company System / CRM' },
       ],
     },
     briefing: {

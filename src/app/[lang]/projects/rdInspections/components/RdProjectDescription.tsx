@@ -1,47 +1,50 @@
 import Description from '@/components/ProjectsPage/Description'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-function RdProjectDescription() {
+function RdProjectDescription({ lang }: { lang: Locale }) {
+  const {
+    rdProjectPage: {
+      description: { p1, p2, table },
+    },
+  } = getDictionaryServerOnly(lang)
   return (
     <Description.Root>
       <Description.Paragraph className="max-w-screen-tablets-sm text-xl leading-tight">
-        I am a{' '}
-        <Description.Highlight>Full Stack Developer</Description.Highlight> at{' '}
-        <Description.Highlight>RD Inspections</Description.Highlight>, an online
-        vehicle inspection company specialized in delivering vehicle technical
-        reports in Ceará, Brazil. Therefore, this project is presented in
-        Portuguese-BR.{' '}
+        {p1.map((text, index) => {
+          if (index % 2) {
+            return (
+              <Description.Highlight key={text + index}>
+                {text}
+              </Description.Highlight>
+            )
+          } else {
+            return text
+          }
+        })}
       </Description.Paragraph>
+
       <Description.Paragraph className="mt-4">
-        I’ve been enrolled with this project since the client’s first
-        Description{' '}
-        <Description.Highlight>
-          leading the Front End team
-        </Description.Highlight>
-        , striving to create the best CRM design for the company.{' '}
-        <Description.Highlight>
-          Simultaneously, I collaborate with the Back End team
-        </Description.Highlight>
-        , providing them with the necessary tools to develop the most efficient
-        REST APIs for our software.
+        {p2.map((text, index) => {
+          if (index % 2) {
+            return (
+              <Description.Highlight key={text + index}>
+                {text}
+              </Description.Highlight>
+            )
+          } else {
+            return text
+          }
+        })}
       </Description.Paragraph>
 
       <Description.Table>
-        <Description.TableItem>
-          <Description.ItemHeader>Role</Description.ItemHeader>
-          <Description.ItemContent>
-            Full Stack Developer
-          </Description.ItemContent>
-        </Description.TableItem>
-        <Description.TableItem>
-          <Description.ItemHeader>Platform</Description.ItemHeader>
-          <Description.ItemContent>Desktop / Mobile</Description.ItemContent>
-        </Description.TableItem>
-        <Description.TableItem>
-          <Description.ItemHeader>Category</Description.ItemHeader>
-          <Description.ItemContent>
-            Company System / CRM
-          </Description.ItemContent>
-        </Description.TableItem>
+        {table.map((item, index) => (
+          <Description.TableItem key={item.head + index}>
+            <Description.ItemHeader>{item.head}</Description.ItemHeader>
+            <Description.ItemContent>{item.body}</Description.ItemContent>
+          </Description.TableItem>
+        ))}
       </Description.Table>
     </Description.Root>
   )

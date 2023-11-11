@@ -29,10 +29,10 @@ export default function RdInspectionsPage({
           className="z-10 h-full max-h-screen w-full select-none object-cover"
           placeholder="blur"
         />
-        <RdProjectDescription />
+        <RdProjectDescription lang={lang} />
 
         <article className="flex w-full flex-col items-center">
-          <RdProjectBriefing />
+          <RdProjectBriefing lang={lang} />
           <RdMainFeatures />
           <RdProjectShowcase />
         </article>
