@@ -5,5 +5,5 @@ import { RdProjectPage } from './rdPage.type'
 export interface DefaultDictionary {
   home: HomePage
   rdProjectPage: RdProjectPage
-  jpProjectPage: JpProjectPage
+  jpProjectPage?: JpProjectPage
 }
