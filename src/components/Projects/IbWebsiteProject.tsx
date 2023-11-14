@@ -11,13 +11,24 @@ export default function InboxWebsiteProject({ lang }: { lang: Locale }) {
       projects: { ibWebsite, techsLabel },
     },
   } = getDictionaryServerOnly(lang)
+  const currPath = lang.split('/')
+  const set = new Set(currPath)
+  const hasProjects = set.has('projects')
+  const slug = hasProjects
+    ? lang === 'pt'
+      ? '/'
+      : `/${lang}`
+    : lang === 'pt'
+    ? ''
+    : `/${lang}`
+  const path = slug + '/projects/rdInspections'
+
   return (
     <>
       <ProjectCompose.Image
         src={IBProject}
         alt="A Meal Supply Company website promo image"
-        link="/projects/inboxWebsite"
-        priority
+        link={path}
         className="object-top"
       />
       <ProjectCompose.Content>
@@ -40,11 +51,7 @@ export default function InboxWebsiteProject({ lang }: { lang: Locale }) {
               })}
             </p>
             <ProjectCompose.Links>
-              <NavLink
-                href="/projects/inboxWebsite"
-                title={ibWebsite.learnMoreLink}
-                newTab
-              />
+              <NavLink href={path} title={ibWebsite.learnMoreLink} newTab />
               <NavLink
                 href="https://inboxrefeicoes.vercel.app/"
                 title={ibWebsite.accessLink}

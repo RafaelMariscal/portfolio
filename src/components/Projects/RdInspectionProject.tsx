@@ -11,12 +11,24 @@ export default function RdInspectionProject({ lang }: { lang: Locale }) {
       projects: { rdInspec, techsLabel },
     },
   } = getDictionaryServerOnly(lang)
+  const currPath = lang.split('/')
+  const set = new Set(currPath)
+  const hasProjects = set.has('projects')
+  const slug = hasProjects
+    ? lang === 'pt'
+      ? '/'
+      : `/${lang}`
+    : lang === 'pt'
+    ? ''
+    : `/${lang}`
+  const path = slug + '/projects/rdInspections'
+
   return (
     <>
       <ProjectCompose.Image
         src={RDProject}
         alt="CRM developed for an Online Vehicle Inspection Company that provides technical reports"
-        link="/projects/rdInspections"
+        link={path}
         priority
       />
       <ProjectCompose.Content>
@@ -39,11 +51,7 @@ export default function RdInspectionProject({ lang }: { lang: Locale }) {
               })}
             </p>
             <ProjectCompose.Links>
-              <NavLink
-                href="/projects/rdInspections"
-                title={rdInspec.learnMoreLink}
-                newTab
-              />
+              <NavLink href={path} title={rdInspec.learnMoreLink} newTab />
               <NavLink
                 href="https://www.rdinspecoesveiculares.com.br/"
                 title={rdInspec.accessLink}

@@ -11,13 +11,25 @@ export default function JackedPlannerProject({ lang }: { lang: Locale }) {
       projects: { jPlanner, techsLabel },
     },
   } = getDictionaryServerOnly(lang)
+  const currPath = lang.split('/')
+  const set = new Set(currPath)
+  const hasProjects = set.has('projects')
+  const slug = hasProjects
+    ? lang === 'pt'
+      ? '/'
+      : `/${lang}`
+    : lang === 'pt'
+    ? ''
+    : `/${lang}`
+  const path = slug + '/projects/jackedPlanner'
+
   return (
     <>
       <ProjectCompose.Image
         src={JackePlanner}
         alt="Jacked Plnner. A gym sass where the clients can create a user profile,
          manange their training plans and also take notes during the training sessions"
-        link="/projects/jackedPlanner"
+        link={path}
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="Jacked Planner" />
@@ -42,11 +54,7 @@ export default function JackedPlannerProject({ lang }: { lang: Locale }) {
               <p className="mt-1 text-xs leading-snug">{jPlanner.footnote}</p>
             )}
             <ProjectCompose.Links>
-              <NavLink
-                href="/projects/jackedPlanner"
-                title={jPlanner.learnMoreLink}
-                newTab
-              />
+              <NavLink href={path} title={jPlanner.learnMoreLink} newTab />
               <NavLink
                 href="https://jackedplannerreact.web.app/"
                 title={jPlanner.accessLink}
