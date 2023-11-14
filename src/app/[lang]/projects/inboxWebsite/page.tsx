@@ -32,10 +32,10 @@ export default function RdInspectionsPage({
         <IbProjectDescription />
 
         <article className="flex w-full flex-col items-center">
-          <IbProjectBriefing />
+          <IbProjectBriefing lang={lang} />
           <IbDesignProcess />
           <IbSoftwareDevelopment />
-          <IbProjectShowcase />
+          <IbProjectShowcase lang={lang} />
         </article>
         <SectionTitle
           id="nextProject"

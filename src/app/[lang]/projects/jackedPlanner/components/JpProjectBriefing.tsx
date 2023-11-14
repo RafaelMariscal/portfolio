@@ -3,11 +3,12 @@ import List from '@/components/Basic/List'
 import Paragraph from '@/components/Basic/Paragraph'
 import Title from '@/components/Basic/Title'
 import ProjectBriefing from '@/components/ProjectsPage/ProjectBriefing'
+import { Locale } from '@/config/i18n.config'
 
-function JpProjectBriefing() {
+function JpProjectBriefing({ lang }: { lang: Locale }) {
   return (
     <div id="projectBriefing" className="grid w-full place-items-center pt-14">
-      <ProjectBriefing.Root>
+      <ProjectBriefing.Root lang={lang}>
         <ProjectBriefing.Content>
           <Title className="max-w-md">
             Understanding the Client&rsquo;s Needs.
