@@ -31,22 +31,16 @@ interface JpdBriefing {
 interface JpDesignProcess {
   sectionTitle: string[]
   article: {
-    auth: {
-      title: string
-      p1: string[]
-      p2: string[]
-      p3: string[]
-      figcaption: string
-      p4: string[]
-      p5: string[]
-      p6: string[]
-      p7: string[]
-    }
-    dashboard: {
-      title: string
-      p1: string[]
-      p2: string[]
-    }
+    title: string
+    p1: string[]
+    p2: string[]
+    p3: string[]
+    figcaption: string
+    p4: string[]
+    p5: string[]
+    p6: string[]
+    p7: string[]
+    p8: string[]
   }
 }
 
@@ -55,7 +49,7 @@ interface JpSoftwareDevelopment {
   article: {
     p1: string[]
     p2: string[]
-    list1: string[]
+    list1: string[][]
     p3: string[]
     p4: string[]
   }
