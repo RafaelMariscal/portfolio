@@ -48,6 +48,7 @@ export interface RdMainFeatures extends SectionDictionary {
     dashboard: {
       title: string
       p1: string[]
+      p2: string[]
     }
   }
 }

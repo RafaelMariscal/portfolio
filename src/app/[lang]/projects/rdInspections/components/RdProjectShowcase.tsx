@@ -2,8 +2,9 @@ import ProjectShowcase from '@/components/ProjectsPage/ProjectShowcase'
 import RdInputs from './showcase/RdInputs'
 import RegisterDialogModal from './showcase/RegisterDialogModal'
 import QuickSearch from './showcase/QuickSearch'
+import { Locale } from '@/config/i18n.config'
 
-export default function RdProjectShowcase() {
+export default function RdProjectShowcase({ lang }: { lang: Locale }) {
   return (
     <ProjectShowcase>
       <div

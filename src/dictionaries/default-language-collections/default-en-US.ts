@@ -328,7 +328,14 @@ export const enUS: DefaultDictionary = {
           p1: [
             'As ',
             'the APIs are currently in development stage',
-            ', I’ll share some screenshots of the current dashboard front end. Please note that there might be potential changes in the future, but the following design was accepted by the company.',
+            ', I’ll share some screenshots of the current dashboard front end. Please note that there might be potential changes in the future, but ',
+            'the following design was accepted by the company',
+            '.',
+          ],
+          p2: [
+            'In addition to that, at the end of the page you’ll find the Components Showcase section, where you can quickly experience how these components work. Here’s a direct link to ',
+            'access the components showcase',
+            '.',
           ],
         },
       },

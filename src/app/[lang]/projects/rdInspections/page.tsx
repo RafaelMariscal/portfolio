@@ -33,8 +33,8 @@ export default function RdInspectionsPage({
 
         <article className="flex w-full flex-col items-center">
           <RdProjectBriefing lang={lang} />
-          <RdMainFeatures />
-          <RdProjectShowcase />
+          <RdMainFeatures lang={lang} />
+          <RdProjectShowcase lang={lang} />
         </article>
         <SectionTitle
           id="nextProject"
