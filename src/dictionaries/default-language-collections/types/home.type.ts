@@ -1,4 +1,4 @@
-export interface HomeNavigation {
+interface HomeNavigation {
   home: string
   brefing: string
   projects: string
@@ -8,27 +8,27 @@ export interface HomeNavigation {
 
 type WhatsappChat = string
 
-export interface HomeHero {
+interface HomeHero {
   role: string[]
   description: string[]
   whatsappChat: WhatsappChat
 }
 
-export interface HomeBriefing {
+interface HomeBriefing {
   p1: string[]
   p2: string[]
   p3: string[]
   link: string
 }
 
-export interface MainSkills {
+interface MainSkills {
   title: string[]
   programming: string
   management: string
   learning: string
 }
 
-export interface Project {
+interface Project {
   title: string
   description: string[]
   learnMoreLink: string
@@ -36,19 +36,19 @@ export interface Project {
   footnote?: string
 }
 
-export interface Projects {
+interface Projects {
   rdInspec: Project
   jPlanner: Project
   ibWebsite: Project
   techsLabel: string
 }
 
-export interface Bootcamp {
+interface Bootcamp {
   title: string
   description: string
 }
 
-export interface BootcampProjects {
+interface BootcampProjects {
   title: string[]
   bootcamps: {
     nextBlog: Bootcamp
@@ -58,34 +58,34 @@ export interface BootcampProjects {
   }
 }
 
-export interface Experience {
+interface Experience {
   role: string
   company: string
   timePeriod: string
 }
 
-export interface MainExperiences {
+interface MainExperiences {
   title: string
   list: Experience[]
 }
 
-export interface BootcampOrPapper {
+interface BootcampOrPapper {
   title: string
   description: string
   highlight: string
 }
 
-export interface BootcampsAndPappers {
+interface BootcampsAndPappers {
   title: string
   list: BootcampOrPapper[]
 }
 
-export interface Experiences {
+interface Experiences {
   mainExperiences: MainExperiences
   bootcampsAndPappers: BootcampsAndPappers
 }
 
-export interface Footer {
+interface Footer {
   leavingMessage: string
   whatsappChat: WhatsappChat
   footerNav: {
@@ -97,4 +97,15 @@ export interface Footer {
       ibWebsite: string
     }
   }
+}
+
+export interface HomePage {
+  navigation: HomeNavigation
+  hero: HomeHero
+  briefing: HomeBriefing
+  mainSkills: MainSkills
+  projects: Projects
+  bootcampProjects: BootcampProjects
+  experiences: Experiences
+  footer: Footer
 }

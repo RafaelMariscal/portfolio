@@ -1,4 +1,4 @@
-export interface RdNavigation {
+interface RdNavigation {
   pageTitle: string
   briefing: string
   features: string
@@ -7,7 +7,7 @@ export interface RdNavigation {
   home: string
 }
 
-export interface RdDescription {
+interface RdDescription {
   p1: string[]
   p2: string[]
   table: {
@@ -20,7 +20,7 @@ interface SectionDictionary {
   sectionTitle: string[]
 }
 
-export interface RdBriefing extends SectionDictionary {
+interface RdBriefing extends SectionDictionary {
   article: {
     title: string
     p1: string[]
@@ -35,7 +35,7 @@ export interface RdBriefing extends SectionDictionary {
   }
 }
 
-export interface RdMainFeatures extends SectionDictionary {
+interface RdMainFeatures extends SectionDictionary {
   article: {
     auth: {
       title: string
@@ -53,6 +53,15 @@ export interface RdMainFeatures extends SectionDictionary {
   }
 }
 
-export type RdCompShowcase = SectionDictionary
+type RdCompShowcase = SectionDictionary
 
-export type NextProject = SectionDictionary
+type NextProject = SectionDictionary
+
+export interface RdProjectPage {
+  navigation: RdNavigation
+  description: RdDescription
+  briefing: RdBriefing
+  mainFeatures: RdMainFeatures
+  compShowcase: RdCompShowcase
+  nextProject: NextProject
+}
