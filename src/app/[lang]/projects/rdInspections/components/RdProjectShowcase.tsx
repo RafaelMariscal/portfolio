@@ -6,7 +6,7 @@ import { Locale } from '@/config/i18n.config'
 
 export default function RdProjectShowcase({ lang }: { lang: Locale }) {
   return (
-    <ProjectShowcase>
+    <ProjectShowcase lang={lang}>
       <div
         className="
           mb-4 flex items-start gap-10

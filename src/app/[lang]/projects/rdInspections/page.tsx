@@ -9,6 +9,7 @@ import SectionTitle from '@/components/Basic/SectionTitle'
 import Highlight from '@/components/Basic/Highlight'
 import RdProjectShowcase from './components/RdProjectShowcase'
 import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 export default function RdInspectionsPage({
   params,
@@ -16,7 +17,11 @@ export default function RdInspectionsPage({
   params: { lang: Locale }
 }) {
   const lang = params.lang as Locale
-
+  const {
+    rdProjectPage: {
+      nextProject: { sectionTitle },
+    },
+  } = getDictionaryServerOnly(lang)
   return (
     <>
       <RdNavigation />
@@ -43,7 +48,13 @@ export default function RdInspectionsPage({
             max-md:max-w-screen-tablets-xs
           "
         >
-          Next<Highlight className="ml-1">Project</Highlight>
+          {sectionTitle.map((text, index) => {
+            if (index % 2) {
+              return <Highlight key={text + index}>{text}</Highlight>
+            } else {
+              return text
+            }
+          })}
         </SectionTitle>
         <JackedPlannerProject lang={lang} />
       </main>
