@@ -127,7 +127,7 @@ export const jpProjectPagePtBR: JpProjectPage = {
         '. Alinha-se perfeitamente com o objetivo do aplicativo de criar uma percepção do cliente que incentiva os entusiastas do fitness a se destacarem e transformarem seus corpos.',
       ],
       p8: [
-        'O próximo passo girou em torno do planejamento de desenvolvimento de software. Durante esta etapa, deliberamos sobre as ferramentas e tecnologias a serem usadas na criação do aplicativo, garantindo também a integração de todas as características principais delineadas na seção Resumo do Projeto.',
+        'O próximo passo girou em torno do planejamento de desenvolvimento de software. Durante esta etapa, deliberamos sobre as ferramentas e tecnologias a serem utilizadas na criação do aplicativo, garantindo a integração de todas as características principais apontadas na seção Resumo do Projeto.',
       ],
     },
   },

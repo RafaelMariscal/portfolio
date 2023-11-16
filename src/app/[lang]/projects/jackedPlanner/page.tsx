@@ -32,7 +32,7 @@ export default function JackedPlannerPage({
 
         <article className="flex w-full flex-col items-center">
           <JpProjectBriefing lang={lang} />
-          <JpDesignProcess />
+          <JpDesignProcess lang={lang} />
           <JpSoftwareDevelopment />
         </article>
         <SectionTitle
