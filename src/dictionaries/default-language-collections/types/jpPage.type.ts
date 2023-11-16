@@ -2,7 +2,7 @@ interface JpNavigation {
   pageTitle: string
   briefing: string
   design: string
-  develpment: string
+  development: string
   nextProject: string
   home: string
 }

@@ -5,7 +5,7 @@ export const jpProjectPageEnUS: JpProjectPage = {
     pageTitle: 'Jacked Planner',
     briefing: 'Project Briefing',
     design: 'Design Process',
-    develpment: 'Software Development',
+    development: 'Software Development',
     nextProject: 'Next Project',
     home: 'Home Page',
   },
