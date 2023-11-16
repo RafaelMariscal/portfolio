@@ -135,10 +135,22 @@ export const jpProjectPagePtBR: JpProjectPage = {
     sectionTitle: ['software', 'development'],
     article: {
       p1: [
-        'O planejamento de desenvolvimento de software é crucial, pois estabelece a base para um projeto bem-sucedido. Ele define o escopo, os objetivos e as tecnologia do projeto, garantindo alinhamento com os principais regras de negócio. Um planejamento eficaz promove a coordenação da equipe, gerenciamento de orçamento e facilita a entrega do projeto no prazo.',
+        '',
+        'O planejamento de desenvolvimento de software é crucial, pois estabelece a base para um projeto bem-sucedido',
+        '. Ele define o escopo, os objetivos e as tecnologia do projeto, garantindo alinhamento com os principais regras de negócio. Um planejamento eficaz promove a coordenação da equipe, gerenciamento de orçamento e facilita a entrega do projeto no prazo.',
       ],
       p2: [
-        'Quanto às tecnologia, usamos JavaScript, TypeScript, ReactJS e Tailwind como principais ferramentas de Front End para criar uma interface robusta, moderna e amigável ao usuário e que se alinha perfeitamente com os objetivos do projeto. Além disso, a integração do Firebase - provedor de Back End como Serviço - simplifica a implementação do projeto e aprimora o processo de desenvolvimento. Especificamente para este projeto, usamos os seguintes serviços do Firebase:',
+        'Quanto às tecnologia, usamos ',
+        'JavaScript',
+        ', ',
+        'TypeScript',
+        ', ',
+        'ReactJS',
+        ' e ',
+        'Tailwind ',
+        'como principais ferramentas de Front End para criar uma interface robusta, moderna e amigável ao usuário e que se alinha perfeitamente com os objetivos do projeto. Além disso, a integração do ',
+        'Firebase ',
+        '- provedor de Back End como Serviço - simplifica a implementação do projeto e aprimora o processo de desenvolvimento. Especificamente para este projeto, usamos os seguintes serviços do Firebase:',
       ],
       list1: [
         [

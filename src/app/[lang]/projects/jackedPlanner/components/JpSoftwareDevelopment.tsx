@@ -12,8 +12,24 @@ import Mobile2Src from '@/assets/projects/jackedPlanner/screenshots/jp-mobile2.p
 import Mobile3Src from '@/assets/projects/jackedPlanner/screenshots/jp-mobile3.png'
 import Mobile4Src from '@/assets/projects/jackedPlanner/screenshots/jp-mobile4.png'
 import NavLink from '@/components/Navigation/NavLink'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
+import { printParagraphs } from '@/utils/printParagraphs'
 
-export default function JpSoftwareDevelopment() {
+const modalImages = [Modal1Src, Modal2Src]
+const mobileImages = [Mobile1Src, Mobile2Src, Mobile3Src, Mobile4Src]
+
+export default function JpSoftwareDevelopment({ lang }: { lang: Locale }) {
+  const {
+    jpProjectPage: {
+      softwareDevelopment: {
+        sectionTitle,
+        article: { list1, ...paragraphs },
+      },
+    },
+  } = getDictionaryServerOnly(lang)
+  const firstList = [paragraphs.p1, paragraphs.p2]
+
   return (
     <section id="softwareDevelopment" className="pt-14">
       <div
@@ -23,8 +39,21 @@ export default function JpSoftwareDevelopment() {
         "
       >
         <SectionTitle className="leading-none">
-          Software<Highlight className="block">Development</Highlight>
+          {sectionTitle.map((text, index) => {
+            if (index % 2) {
+              return (
+                <Highlight key={text + index} className="block">
+                  {text}
+                </Highlight>
+              )
+            } else {
+              return text
+            }
+          })}
         </SectionTitle>
+
+        {printParagraphs(firstList, true)}
+
         <Paragraph className="mt-6">
           <Highlight>
             Software development planning is crucial as it sets the foundation
@@ -35,6 +64,7 @@ export default function JpSoftwareDevelopment() {
           planning promotes team coordination, budget management, and
           facilitates on-time project delivery.
         </Paragraph>
+
         <Paragraph className="mt-4">
           About tech stack, I&rsquo;ve strategically used{' '}
           <Highlight>JavaScript</Highlight>,<Highlight>TypeScript, </Highlight>
@@ -46,65 +76,49 @@ export default function JpSoftwareDevelopment() {
           enhances the development process. Specifically for this project, we
           used the following Firebase services:
         </Paragraph>
+
         <List.Content className="mt-4 [&_li]:mt-4">
-          <List.Item className="text-gray-200">
-            <Highlight className="text-gray-100 underline underline-offset-2">
-              Authentication
-            </Highlight>
-            : A cloud-based authentication service provided by Google as part of
-            the Firebase platform. It simplifies the process of implementing
-            user authentication in web and mobile applications by offering a set
-            of secure, easy-to-use authentication methods. We&rsquo;ve also
-            implemented login via providers like Github, Google, Facebook, and
-            Anonymous.
-          </List.Item>
-          <List.Item className="text-gray-200">
-            <Highlight className="text-gray-100 underline underline-offset-2">
-              Firestore
-            </Highlight>
-            : A cloud-based, NoSQL document database service provided by Google
-            as part of the Firebase platform. It&rsquo;s designed to help
-            developers store, synchronize, and query data for web and mobile
-            applications easily. Firestore is particularly well-suited for
-            real-time and offline-capable applications due to its real-time
-            synchronization and offline data support.
-          </List.Item>
-          <List.Item className="text-gray-200">
-            <Highlight className="text-gray-100 underline underline-offset-2">
-              Hosting
-            </Highlight>
-            : A web hosting service provided by Google as part of the Firebase
-            platform. It is designed to simplify the process of hosting,
-            deploying, and managing web applications and static content such as
-            HTML, CSS, JavaScript, and media files and It&rsquo;s especially
-            well-suited for SPA React projects.
-          </List.Item>
+          {list1.map((item, i) => (
+            <List.Item key={item[0] + i} className="text-gray-200">
+              {item.map((text, index) => {
+                if (index % 2) {
+                  return text
+                } else {
+                  return (
+                    <Highlight
+                      key={text + index}
+                      className="text-gray-100 underline underline-offset-2"
+                    >
+                      {text}
+                    </Highlight>
+                  )
+                }
+              })}
+            </List.Item>
+          ))}
         </List.Content>
+
+        {printParagraphs([paragraphs.p3])}
+
         <Paragraph className="mt-4">
-          With these tools in hand, the project started its development with
-          <Highlight>front-end-first</Highlight> approach, following the Figma
-          design previously done. Then,{' '}
-          <Highlight>
-            the Back-end functionalities were integrated incrementally
-          </Highlight>{' '}
-          as each page reached a “done” status. For example, the authentication
-          and authorization features were implemented when the login page
-          section was near completion.
-        </Paragraph>
-        <Paragraph className="mt-4">
-          This approach ensured a well-structured and step-by-step development
-          process. If you want to check it out how the project running, feel
-          free to{' '}
-          <NavLink
-            href="https://jackedplannerreact.web.app/"
-            title="access Jacked Planner here"
-            newTab
-            className="font-medium text-cyan-400 underline underline-offset-2"
-          />{' '}
-          , or check it out some screenshots showcasing the final outcome of
-          this project.
+          {paragraphs.p4.map((text, index) => {
+            if (index % 2) {
+              return (
+                <NavLink
+                  key={text + index}
+                  href="https://jackedplannerreact.web.app/"
+                  title={text}
+                  newTab
+                  className="font-medium text-cyan-400 underline underline-offset-2"
+                />
+              )
+            } else {
+              return text
+            }
+          })}
         </Paragraph>
       </div>
+
       <div
         className="
           relative mt-6 w-screen overflow-hidden bg-dot-pattern px-6 pb-6 pt-4
@@ -126,20 +140,16 @@ export default function JpSoftwareDevelopment() {
             placeholder="blur"
           />
           <div className="flex w-full max-w-screen-tablets justify-between gap-4">
-            <Image
-              className="w-full max-w-[49%]"
-              src={Modal1Src}
-              alt="Jacked Plnner SaaS screenshots"
-              quality={100}
-              placeholder="blur"
-            />
-            <Image
-              className="w-full max-w-[49%]"
-              src={Modal2Src}
-              alt="Jacked Plnner SaaS screenshots"
-              quality={100}
-              placeholder="blur"
-            />
+            {modalImages.map((img) => (
+              <Image
+                key={img.src}
+                className="w-full max-w-[49%]"
+                src={img}
+                alt="Jacked Plnner SaaS screenshots"
+                quality={100}
+                placeholder="blur"
+              />
+            ))}
           </div>
           <Image
             className="w-full max-w-screen-tablets"
@@ -149,34 +159,16 @@ export default function JpSoftwareDevelopment() {
             placeholder="blur"
           />
           <div className="flex w-full max-w-screen-tablets justify-between gap-4">
-            <Image
-              className="w-full max-w-[23%]"
-              src={Mobile1Src}
-              alt="Jacked Plnner SaaS screenshots"
-              quality={100}
-              placeholder="blur"
-            />
-            <Image
-              className="w-full max-w-[23%]"
-              src={Mobile2Src}
-              alt="Jacked Plnner SaaS screenshots"
-              quality={100}
-              placeholder="blur"
-            />
-            <Image
-              className="w-full max-w-[23%]"
-              src={Mobile3Src}
-              alt="Jacked Plnner SaaS screenshots"
-              quality={100}
-              placeholder="blur"
-            />
-            <Image
-              className="w-full max-w-[23%]"
-              src={Mobile4Src}
-              alt="Jacked Plnner SaaS screenshots"
-              quality={100}
-              placeholder="blur"
-            />
+            {mobileImages.map((img) => (
+              <Image
+                key={img.src}
+                className="w-full max-w-[23%]"
+                src={img}
+                alt="Jacked Plnner SaaS screenshots"
+                quality={100}
+                placeholder="blur"
+              />
+            ))}
           </div>
         </div>
       </div>

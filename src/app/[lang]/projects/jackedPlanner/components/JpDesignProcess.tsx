@@ -105,7 +105,7 @@ export default function JpDesignProcess({ lang }: { lang: Locale }) {
       >
         {printParagraphs([paragraphs.p4])}
 
-        <div className="flex gap-4">
+        <div className="mt-4 flex gap-4">
           {ProjectColors.map((color) => (
             <div
               key={color}
@@ -150,7 +150,7 @@ export default function JpDesignProcess({ lang }: { lang: Locale }) {
           </div>
           <div
             className="
-              flex justify-center gap-4 py-2
+              mt-4 flex justify-center gap-4 py-2
               max-sm:flex-wrap
             "
           >

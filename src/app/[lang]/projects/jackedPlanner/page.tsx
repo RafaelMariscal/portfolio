@@ -9,6 +9,7 @@ import JpDesignProcess from './components/JpDesignProcess'
 import JpSoftwareDevelopment from './components/JpSoftwareDevelopment'
 import InboxWebsiteProject from '@/components/Projects/IbWebsiteProject'
 import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 export default function JackedPlannerPage({
   params,
@@ -16,6 +17,12 @@ export default function JackedPlannerPage({
   params: { lang: Locale }
 }) {
   const lang = params.lang as Locale
+  const {
+    jpProjectPage: {
+      nextProject: { sectionTitle },
+    },
+  } = getDictionaryServerOnly(lang)
+
   return (
     <>
       <JpNavigation />
@@ -33,7 +40,7 @@ export default function JackedPlannerPage({
         <article className="flex w-full flex-col items-center">
           <JpProjectBriefing lang={lang} />
           <JpDesignProcess lang={lang} />
-          <JpSoftwareDevelopment />
+          <JpSoftwareDevelopment lang={lang} />
         </article>
         <SectionTitle
           id="nextProject"
@@ -42,7 +49,17 @@ export default function JackedPlannerPage({
             max-md:max-w-screen-tablets-xs
           "
         >
-          Next<Highlight className="ml-1">Project</Highlight>
+          {sectionTitle.map((text, index) => {
+            if (index % 2) {
+              return (
+                <Highlight key={text + index} className="ml-1">
+                  {text}
+                </Highlight>
+              )
+            } else {
+              return text
+            }
+          })}
         </SectionTitle>
         <InboxWebsiteProject lang={lang} />
       </main>

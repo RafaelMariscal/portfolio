@@ -134,10 +134,23 @@ export const jpProjectPageEnUS: JpProjectPage = {
     sectionTitle: ['software', 'development'],
     article: {
       p1: [
-        'Software development planning is crucial as it sets the foundation for a successful project. It defines the project’s scope, goals, and the technology stack, ensuring alignment with business key objectives. Effective planning promotes team coordination, budget management, and facilitates on-time project delivery.',
+        '',
+        'Software development planning is crucial as it sets the foundation for a successful project',
+        '. It defines the project’s scope, goals, and the technology stack, ensuring alignment with business key objectives. Effective planning promotes team coordination, budget management, and facilitates on-time project delivery.',
       ],
       p2: [
-        'About tech stack, I’ve strategically used JavaScript,TypeScript, ReactJS, and Tailwind as main Front End tools to create a robust, modern and user-friendly interface that perfectly aligns with the project’s objectives. Furthermore, the integration of Firebase - Back End as a Service provider - streamlines the project implementation and enhances the development process. Specifically for this project, we used the following Firebase services:',
+        'About tech stack, I’ve strategically used ',
+        'JavaScript',
+        ', ',
+        'TypeScript',
+        ', ',
+        'ReactJS',
+        ',',
+        ' and ',
+        'Tailwind',
+        ' as main Front End tools to create a robust, modern and user-friendly interface that perfectly aligns with the project’s objectives. Furthermore, the integration of ',
+        'Firebase ',
+        '- Back End as a Service provider - streamlines the project implementation and enhances the development process. Specifically for this project, we used the following Firebase services:',
       ],
       list1: [
         [
