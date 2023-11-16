@@ -4,66 +4,50 @@ import Paragraph from '@/components/Basic/Paragraph'
 import Title from '@/components/Basic/Title'
 import ProjectBriefing from '@/components/ProjectsPage/ProjectBriefing'
 import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 function JpProjectBriefing({ lang }: { lang: Locale }) {
+  const {
+    jpProjectPage: {
+      briefing: {
+        article: { title, ...paragraphs },
+      },
+    },
+  } = getDictionaryServerOnly(lang)
+
+  const paragraphsKeys = Object.keys(paragraphs) as (keyof typeof paragraphs)[]
+
   return (
     <div id="projectBriefing" className="grid w-full place-items-center pt-14">
       <ProjectBriefing.Root lang={lang}>
         <ProjectBriefing.Content>
-          <Title className="max-w-md">
-            Understanding the Client&rsquo;s Needs.
-          </Title>
-          <Paragraph>
-            Jacked Planner is a SaaS developed for Gyms, Personal Trainers and
-            Fitness Enthusiasts that serves as{' '}
-            <Highlight>
-              a platform responsible for documenting and tracking fitness goals
-            </Highlight>
-            .
-          </Paragraph>
-          <Paragraph>
-            The central idea behind Jacked Planner is to{' '}
-            <Highlight>provide a user-friendly tool</Highlight> that not only
-            <Highlight>simplifies the creation of training plans</Highlight> but
-            also{' '}
-            <Highlight>
-              facilitates the monitoring of the key metrics and the effective
-              tracking
-            </Highlight>{' '}
-            of the results achieved through dedicated plan adherence.
-          </Paragraph>
-          <Paragraph>
-            We started this project by planning{' '}
-            <Highlight>
-              the core features for creating a training plan, and tacking its
-              results
-            </Highlight>
-            . Consequently, we have identified the following essential features:
-          </Paragraph>
-          <List.Content>
-            <List.Item>
-              Authentication and Authorization based on User / Roles.
-            </List.Item>
-            <List.Item>
-              Users can create and manage up to 3 Training Planners with the
-              Free Plan.
-            </List.Item>
-            <List.Item>
-              CRUD operations for Training Planner, Exercises and Sets.
-            </List.Item>
-            <List.Item>
-              Users can take notes regarding Reps Completed and Weight lifted
-              for each exercise set.
-            </List.Item>
-            <List.Item>
-              Users are able to take notes for each training day.
-            </List.Item>
-          </List.Content>
-          <Paragraph>
-            In this context, we kicked off the screen design process and
-            initiated the planning of the technologies we would use to bring
-            this application to life.
-          </Paragraph>
+          <Title className="max-w-md">{title}</Title>
+          {paragraphsKeys.map((key) => {
+            const firstChar = key.at(0)
+            const currParagraph = paragraphs[key]
+
+            if (firstChar !== 'p') {
+              return (
+                <List.Content key={key}>
+                  {currParagraph.map((text, index) => (
+                    <List.Item key={text + index}>{text}</List.Item>
+                  ))}
+                </List.Content>
+              )
+            } else {
+              return (
+                <Paragraph key={key}>
+                  {currParagraph.map((text, index) => {
+                    if (index % 2) {
+                      return <Highlight key={text + index}>{text}</Highlight>
+                    } else {
+                      return text
+                    }
+                  })}
+                </Paragraph>
+              )
+            }
+          })}
         </ProjectBriefing.Content>
       </ProjectBriefing.Root>
     </div>
