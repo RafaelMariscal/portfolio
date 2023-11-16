@@ -17,7 +17,6 @@ interface JpDescription {
 }
 
 interface JpdBriefing {
-  sectionTitle: string[]
   article: {
     title: string
     p1: string[]
@@ -31,7 +30,6 @@ interface JpdBriefing {
 interface JpDesignProcess {
   sectionTitle: string[]
   article: {
-    title: string
     p1: string[]
     p2: string[]
     p3: string[]

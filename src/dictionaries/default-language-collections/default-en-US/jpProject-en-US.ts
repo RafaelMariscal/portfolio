@@ -33,7 +33,6 @@ export const jpProjectPageEnUS: JpProjectPage = {
     ],
   },
   briefing: {
-    sectionTitle: [],
     article: {
       title: 'Understanding the Client’s Needs.',
       p1: [
@@ -72,7 +71,6 @@ export const jpProjectPageEnUS: JpProjectPage = {
   designProcess: {
     sectionTitle: ['design', 'process'],
     article: {
-      title: '',
       p1: [
         'Looking for a proper Inspiration for the app, I was in search of something that embodies the essence of ',
         'Sports',
@@ -156,10 +154,16 @@ export const jpProjectPageEnUS: JpProjectPage = {
         ],
       ],
       p3: [
-        'With these tools in hand, the project started its development withfront-end-first approach, following the Figma design previously done. Then, the Back-end functionalities were integrated incrementally as each page reached a “done” status. For example, the authentication and authorization features were implemented when the login page section was near completion.',
+        'With these tools in hand, the project started its development with ',
+        'front-end-first ',
+        'approach, following the Figma design previously done. Then, ',
+        'the Back-end functionalities were integrated incrementally',
+        ' as each page reached a “done” status. For example, the authentication and authorization features were implemented when the login page section was near completion.',
       ],
       p4: [
-        'This approach ensured a well-structured and step-by-step development process. If you want to check it out how the project running, feel free to access Jacked Planner here , or check it out some screenshots showcasing the final outcome of this project.',
+        'This approach ensured a well-structured and step-by-step development process. If you want to check it out how the project running, feel free to ',
+        'access Jacked Planner here',
+        ' , or check it out some screenshots showcasing the final outcome of this project.',
       ],
     },
   },
