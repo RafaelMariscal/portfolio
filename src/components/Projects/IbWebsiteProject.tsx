@@ -21,7 +21,7 @@ export default function InboxWebsiteProject({ lang }: { lang: Locale }) {
     : lang === 'pt'
     ? ''
     : `/${lang}`
-  const path = slug + '/projects/rdInspections'
+  const path = slug + '/projects/inboxWebsite'
 
   return (
     <>
