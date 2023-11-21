@@ -93,7 +93,7 @@ export const ibProjectPagePtBR: IbProjectPage = {
     },
   },
   softwareDevelopment: {
-    sectionTitle: ['desenvolvimento', 'de software'],
+    sectionTitle: ['software', 'development'],
     p1: [
       '',
       'O planejamento do desenvolvimento de software é uma etapa crucial, pois define a base para um projeto bem-sucedido',

@@ -39,7 +39,7 @@ export default function RdInspectionsPage({
 
         <article className="flex w-full flex-col items-center">
           <IbProjectBriefing lang={lang} />
-          <IbDesignProcess />
+          <IbDesignProcess lang={lang} />
           <IbSoftwareDevelopment />
           <IbProjectShowcase lang={lang} />
         </article>
