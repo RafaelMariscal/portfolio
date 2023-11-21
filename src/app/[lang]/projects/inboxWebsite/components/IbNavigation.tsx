@@ -6,9 +6,27 @@ import Navigation from '@/components/Navigation/NavigationCompose'
 import MobileNav from './MobileNav'
 import { useState, useEffect } from 'react'
 import clsx from 'clsx'
+import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
+import { useParams } from 'next/navigation'
+import { Locale } from '@/config/i18n.config'
 
 export default function IbNavigation() {
   const [isShown, setIsShown] = useState(true)
+
+  const params = useParams()
+  const lang = params.lang as Locale
+  const {
+    ibProjectPage: {
+      navigation: {
+        pageTitle,
+        briefing,
+        design,
+        development,
+        components,
+        nextProject,
+      },
+    },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -51,38 +69,22 @@ export default function IbNavigation() {
         <Navigation.Content className="">
           <Navigation.List>
             <Navigation.Item>
-              <NavLink
-                href="/projects/inboxWebsite"
-                title="Inbox Website"
-                newTab
-              />
+              <NavLink href="/projects/inboxWebsite" title={pageTitle} newTab />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink
-                href="#projectBriefing"
-                title="Project Briefing"
-                scroll
-              />
+              <NavLink href="#projectBriefing" title={briefing} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#designProcess" title="Design Process" scroll />
+              <NavLink href="#designProcess" title={design} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink
-                href="#softwareDevelopment"
-                title="Software Development"
-                scroll
-              />
+              <NavLink href="#softwareDevelopment" title={development} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink
-                href="#componentsShowcase"
-                title="Components Showcase"
-                scroll
-              />
+              <NavLink href="#componentsShowcase" title={components} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#nextProject" title="Next Project" scroll />
+              <NavLink href="#nextProject" title={nextProject} scroll />
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Content>

@@ -10,6 +10,7 @@ import IbDesignProcess from './components/IbDesignProcess'
 import IbSoftwareDevelopment from './components/IbSoftwareDevelopment'
 import IbProjectShowcase from './components/IbProjectShowcase'
 import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
 export default function RdInspectionsPage({
   params,
@@ -17,6 +18,11 @@ export default function RdInspectionsPage({
   params: { lang: Locale }
 }) {
   const lang = params.lang as Locale
+  const {
+    ibProjectPage: {
+      nextProject: { sectionTitle },
+    },
+  } = getDictionaryServerOnly(lang)
   return (
     <>
       <IbNavigation />
@@ -44,7 +50,17 @@ export default function RdInspectionsPage({
             max-md:max-w-screen-tablets-xs
           "
         >
-          Next<Highlight className="ml-1">Project</Highlight>
+          {sectionTitle.map((text, index) => {
+            if (index % 2) {
+              return (
+                <Highlight key={text + index} className="ml-1">
+                  {text}
+                </Highlight>
+              )
+            } else {
+              return text
+            }
+          })}
         </SectionTitle>
         <RdInspectionProject lang={lang} />
       </main>
