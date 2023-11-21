@@ -13,7 +13,7 @@ export const ibProjectPagePtBR: IbProjectPage = {
   description: {
     p1: [
       'Atuo como ',
-      'Desenvolvedor Web ',
+      'Desenvolvedor Web - Fullstack ',
       'na ',
       'Inbox Refeições Coletivas ',
       ', uma empresa fornecedora do serviço de catering, com foco no setor industrial. Esta empresa está sediada em Fortaleza-CE (Brasil), consequentemente, este projeto está apresentado em Português-BR.',

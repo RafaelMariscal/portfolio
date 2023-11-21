@@ -13,7 +13,7 @@ export const ibProjectPageEnUS: IbProjectPage = {
   description: {
     p1: [
       'I’m a ',
-      'Web Developer ',
+      'Web Developer - Fullstack ',
       'at ',
       'Inbox Refeições Coletivas ',
       ', a catering company with focus on the Industrial sector - B2B. This company is based in Fortaleza-CE (Brazil), consequently, this project is presented in Portuguese-BR.',
