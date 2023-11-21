@@ -24,7 +24,7 @@ export const jpProjectPagePtBR: JpProjectPage = {
       'SPA com React',
       ', e para o Back End, usei os serviços do ',
       'Firebase ',
-      ', que forneceram funcionalidades para Autenticação, Banco de Dados em Nuvem e Hospedagem.',
+      ', que fornecendo ferramentas para Autenticação, Banco de Dados em Nuvem e Hospedagem.',
     ],
     table: [
       { head: 'Posição', body: 'Desenvolvedor Web' },

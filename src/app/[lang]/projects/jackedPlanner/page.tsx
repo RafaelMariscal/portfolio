@@ -35,7 +35,7 @@ export default function JackedPlannerPage({
           className="z-10 h-full max-h-screen w-full select-none object-cover"
           placeholder="blur"
         />
-        <JpProjectDescription />
+        <JpProjectDescription lang={lang} />
 
         <article className="flex w-full flex-col items-center">
           <JpProjectBriefing lang={lang} />

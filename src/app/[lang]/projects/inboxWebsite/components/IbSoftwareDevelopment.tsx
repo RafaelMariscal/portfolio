@@ -12,6 +12,7 @@ function IbSoftwareDevelopment({ lang }: { lang: Locale }) {
       softwareDevelopment: { sectionTitle, p7, ...rest },
     },
   } = getDictionaryServerOnly(lang)
+
   const paragraphsKeys = Object.keys(rest) as (keyof typeof rest)[]
   const paragraphs = paragraphsKeys.map((key) => rest[key])
 

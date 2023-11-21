@@ -5,39 +5,32 @@ import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-s
 function RdProjectDescription({ lang }: { lang: Locale }) {
   const {
     rdProjectPage: {
-      description: { p1, p2, table },
+      description: { table, ...paragraphs },
     },
   } = getDictionaryServerOnly(lang)
+
+  const paragraphsKeys = Object.keys(paragraphs) as (keyof typeof paragraphs)[]
+
   return (
     <Description.Root>
-      <Description.Paragraph className="max-w-screen-tablets-sm text-xl leading-tight">
-        {p1.map((text, index) => {
-          if (index % 2) {
-            return (
-              <Description.Highlight key={text + index}>
-                {text}
-              </Description.Highlight>
-            )
-          } else {
-            return text
-          }
-        })}
-      </Description.Paragraph>
-
-      <Description.Paragraph className="mt-4">
-        {p2.map((text, index) => {
-          if (index % 2) {
-            return (
-              <Description.Highlight key={text + index}>
-                {text}
-              </Description.Highlight>
-            )
-          } else {
-            return text
-          }
-        })}
-      </Description.Paragraph>
-
+      {paragraphsKeys.map((key) => {
+        const currParagraph = paragraphs[key]
+        return (
+          <Description.Paragraph key={key} className="[&~p]:mt-4">
+            {currParagraph.map((text, index) => {
+              if (index % 2) {
+                return (
+                  <Description.Highlight key={text + index}>
+                    {text}
+                  </Description.Highlight>
+                )
+              } else {
+                return text
+              }
+            })}
+          </Description.Paragraph>
+        )
+      })}
       <Description.Table>
         {table.map((item, index) => (
           <Description.TableItem key={item.head + index}>
