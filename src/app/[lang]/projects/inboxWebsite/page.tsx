@@ -35,7 +35,7 @@ export default function RdInspectionsPage({
           className="z-10 h-full max-h-screen w-full select-none object-cover object-top"
           placeholder="blur"
         />
-        <IbProjectDescription />
+        <IbProjectDescription lang={lang} />
 
         <article className="flex w-full flex-col items-center">
           <IbProjectBriefing lang={lang} />
