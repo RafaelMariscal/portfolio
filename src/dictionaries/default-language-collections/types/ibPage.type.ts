@@ -54,7 +54,7 @@ type IbCompShowcase = SectionDictionary
 
 type IbNextProject = SectionDictionary
 
-export interface RdProjectPage {
+export interface IbProjectPage {
   navigation: IbNavigation
   description: IbDescription
   briefing: IbBriefing
