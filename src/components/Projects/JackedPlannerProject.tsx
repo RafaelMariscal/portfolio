@@ -2,15 +2,34 @@ import NavLink from '../Navigation/NavLink'
 import ProjectCompose from './ProjectCompose'
 import JackePlanner from '@/assets/projects/jackedPlanner/jp-project.png'
 import { jackedPlannerTechs } from './techsLists'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-export default function JackedPlannerProject() {
+export default function JackedPlannerProject({ lang }: { lang: Locale }) {
+  const {
+    home: {
+      projects: { jPlanner, techsLabel },
+    },
+  } = getDictionaryServerOnly(lang)
+  const currPath = lang.split('/')
+  const set = new Set(currPath)
+  const hasProjects = set.has('projects')
+  const slug = hasProjects
+    ? lang === 'pt'
+      ? '/'
+      : `/${lang}`
+    : lang === 'pt'
+    ? ''
+    : `/${lang}`
+  const path = slug + '/projects/jackedPlanner'
+
   return (
     <>
       <ProjectCompose.Image
         src={JackePlanner}
         alt="Jacked Plnner. A gym sass where the clients can create a user profile,
          manange their training plans and also take notes during the training sessions"
-        link="/projects/jackedPlanner"
+        link={path}
       />
       <ProjectCompose.Content>
         <ProjectCompose.Title title="Jacked Planner" />
@@ -23,35 +42,22 @@ export default function JackedPlannerProject() {
                 [&_strong]:font-semibold [&_strong]:text-cyan-400
               "
             >
-              An SaaS platform developed specifically for Gyms and trainers.{' '}
-              <strong>
-                It enables customers to easily Create, Access, and Manage their
-                training plans
-              </strong>
-              , offering them the flexibility to select daily exercises and
-              create schedules that suit their needs. Additionally, users have
-              the capability to{' '}
-              <strong>take notes for each training day</strong>, providing both
-              quantitative and qualitative assessments of their workouts. This
-              system enhances the overall gym experience,{' '}
-              <strong>
-                empowering users to have more control over their fitness
-                routines and progress tracking
-              </strong>
-              .
+              {jPlanner.description.map((text, index) => {
+                if (index % 2) {
+                  return <strong key={text + index}>{text}</strong>
+                } else {
+                  return text
+                }
+              })}
             </p>
-            <p className="mt-1 text-xs leading-snug">
-              **All payment methods in this project are currently unavailable.
-            </p>
+            {jPlanner.footnote && (
+              <p className="mt-1 text-xs leading-snug">{jPlanner.footnote}</p>
+            )}
             <ProjectCompose.Links>
-              <NavLink
-                href="/projects/jackedPlanner"
-                title="Learn more about Jacked Planner"
-                newTab
-              />
+              <NavLink href={path} title={jPlanner.learnMoreLink} newTab />
               <NavLink
                 href="https://jackedplannerreact.web.app/"
-                title="Access Jacked Planner"
+                title={jPlanner.accessLink}
                 newTab
                 className="min-w-max"
               />
@@ -59,7 +65,7 @@ export default function JackedPlannerProject() {
           </ProjectCompose.Text>
           <ProjectCompose.Techs>
             <div>
-              <ProjectCompose.TechsTitle title="Techs used in this project:" />
+              <ProjectCompose.TechsTitle title={techsLabel} />
               <ProjectCompose.TechsList techsList={jackedPlannerTechs} />
             </div>
           </ProjectCompose.Techs>

@@ -2,13 +2,23 @@ import Highlight from '@/components/Basic/Highlight'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-type ProjectShowcaseProps = ComponentProps<'div'>
+type ProjectShowcaseProps = ComponentProps<'div'> & {
+  lang: Locale
+}
 
 export default function ProjectShowcase({
+  lang,
   className,
   ...props
 }: ProjectShowcaseProps) {
+  const {
+    rdProjectPage: {
+      compShowcase: { sectionTitle },
+    },
+  } = getDictionaryServerOnly(lang)
   return (
     <section
       id="componentsShowcase"
@@ -19,7 +29,17 @@ export default function ProjectShowcase({
       "
     >
       <SectionTitle className="leading-none">
-        Components<Highlight className="block">Showcase</Highlight>
+        {sectionTitle.map((text, index) => {
+          if (index % 2) {
+            return (
+              <Highlight key={text + index} className="block">
+                {text}
+              </Highlight>
+            )
+          } else {
+            return text
+          }
+        })}
       </SectionTitle>
 
       <div

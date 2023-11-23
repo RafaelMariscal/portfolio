@@ -10,7 +10,11 @@ export default function NavigationLinks({
   return (
     <ul
       {...props}
-      className={twMerge('flex h-full items-end gap-8 px-8', className)}
+      className={twMerge(
+        'flex h-full items-end gap-8 px-8',
+        'max-tablets-sm:gap-6',
+        className,
+      )}
     />
   )
 }

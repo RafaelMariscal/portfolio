@@ -13,8 +13,18 @@ import {
   designSystemTechs,
   videoPlatformTechs,
 } from './techsLists'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-export default function BootcampsProjects() {
+export default function BootcampsProjects({ lang }: { lang: Locale }) {
+  const {
+    home: {
+      bootcampProjects: {
+        bootcamps: { nextBlog, waiterApp, desingSystem, videoPlatform },
+      },
+    },
+  } = getDictionaryServerOnly(lang)
+
   return (
     <div
       id="bootcamps"
@@ -53,13 +63,15 @@ export default function BootcampsProjects() {
             <BootcampProject.Card name="nextBlog">
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
-                  <BootcampProject.Title title="Next.js blog" />
+                  <BootcampProject.Title title={nextBlog.title} />
                   <BootcampProject.CompanyIcon
                     icon={rocketseatIcon}
                     link="https://www.rocketseat.com.br/"
                   />
                 </div>
-                <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access the articles content if subscribed." />
+                <BootcampProject.Description
+                  description={nextBlog.description}
+                />
                 <BootcampProject.TechsList techsList={nextBlogTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
@@ -73,13 +85,15 @@ export default function BootcampsProjects() {
             <BootcampProject.Card name="waiterApp">
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
-                  <BootcampProject.Title title="Reataurant Sass" />
+                  <BootcampProject.Title title={waiterApp.title} />
                   <BootcampProject.CompanyIcon
                     icon={jstackIcon}
                     link="https://jstack.com.br/"
                   />
                 </div>
-                <BootcampProject.Description description="A Node.js Backend was developed to provide the Orders Functionalities, such as a Mobile App and a Web Dashboard Manager." />
+                <BootcampProject.Description
+                  description={waiterApp.description}
+                />
                 <BootcampProject.TechsList techsList={waiterAppTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
@@ -93,13 +107,15 @@ export default function BootcampsProjects() {
             <BootcampProject.Card name="desingSystem">
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
-                  <BootcampProject.Title title="Design System" />
+                  <BootcampProject.Title title={desingSystem.title} />
                   <BootcampProject.CompanyIcon
                     icon={rocketseatIcon}
                     link="https://www.rocketseat.com.br/"
                   />
                 </div>
-                <BootcampProject.Description description="A Login form page created just to be used as an exemple to build a Design System with Storybook, MSW and a CI/CD use case." />
+                <BootcampProject.Description
+                  description={desingSystem.description}
+                />
                 <BootcampProject.TechsList techsList={designSystemTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image
@@ -113,13 +129,15 @@ export default function BootcampsProjects() {
             <BootcampProject.Card name="videoPlatform">
               <BootcampProject.Content>
                 <div className="flex items-center justify-between px-3 pt-3">
-                  <BootcampProject.Title title="Video Platform" />
+                  <BootcampProject.Title title={videoPlatform.title} />
                   <BootcampProject.CompanyIcon
                     icon={rocketseatIcon}
                     link="https://www.rocketseat.com.br/"
                   />
                 </div>
-                <BootcampProject.Description description="Developed using Next, NextAuth, FaunaDB, Stripe and Prismic. The user only will be able to access full content if signed up." />
+                <BootcampProject.Description
+                  description={videoPlatform.description}
+                />
                 <BootcampProject.TechsList techsList={videoPlatformTechs} />
               </BootcampProject.Content>
               <BootcampProject.Image

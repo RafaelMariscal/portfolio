@@ -2,18 +2,37 @@ import NavLink from '../Navigation/NavLink'
 import ProjectCompose from './ProjectCompose'
 import RDProject from '@/assets/projects/rd-inspection/rd-project.png'
 import { rdInspecTechs } from './techsLists'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-export default function RdInspectionProject() {
+export default function RdInspectionProject({ lang }: { lang: Locale }) {
+  const {
+    home: {
+      projects: { rdInspec, techsLabel },
+    },
+  } = getDictionaryServerOnly(lang)
+  const currPath = lang.split('/')
+  const set = new Set(currPath)
+  const hasProjects = set.has('projects')
+  const slug = hasProjects
+    ? lang === 'pt'
+      ? '/'
+      : `/${lang}`
+    : lang === 'pt'
+    ? ''
+    : `/${lang}`
+  const path = slug + '/projects/rdInspections'
+
   return (
     <>
       <ProjectCompose.Image
         src={RDProject}
         alt="CRM developed for an Online Vehicle Inspection Company that provides technical reports"
-        link="/projects/rdInspections"
+        link={path}
         priority
       />
       <ProjectCompose.Content>
-        <ProjectCompose.Title title="RD Inspections - CRM" />
+        <ProjectCompose.Title title={rdInspec.title} />
         <ProjectCompose.Description>
           <ProjectCompose.Text>
             <p
@@ -23,30 +42,26 @@ export default function RdInspectionProject() {
                 [&_strong]:font-semibold [&_strong]:text-cyan-400
               "
             >
-              CRM developed for an online vehicle inspection company that
-              provides technical reports. The reason behind this project is to
-              unify two services, <strong>Inspection Meetings Manager</strong>{' '}
-              and <strong>Vehicle&#39;s Pictures Geolocation Provider</strong>.
-              To achieve this, a <strong>REST API</strong> was developed to
-              bridge the gap between these two services, and a modern dashboard
-              to enhance user experience.
+              {rdInspec.description.map((text, index) => {
+                if (index % 2) {
+                  return <strong key={text + index}>{text}</strong>
+                } else {
+                  return text
+                }
+              })}
             </p>
             <ProjectCompose.Links>
-              <NavLink
-                href="/projects/rdInspections"
-                title="Learn more about RD Inspections"
-                newTab
-              />
+              <NavLink href={path} title={rdInspec.learnMoreLink} newTab />
               <NavLink
                 href="https://www.rdinspecoesveiculares.com.br/"
-                title="Access RD Inspections"
+                title={rdInspec.accessLink}
                 newTab
               />
             </ProjectCompose.Links>
           </ProjectCompose.Text>
           <ProjectCompose.Techs className="max-w-[16rem]">
             <div>
-              <ProjectCompose.TechsTitle title="Techs used in this project:" />
+              <ProjectCompose.TechsTitle title={techsLabel} />
               <ProjectCompose.TechsList
                 techsList={rdInspecTechs}
                 className="max-phones:max-w-[18rem]"

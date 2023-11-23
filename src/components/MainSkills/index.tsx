@@ -29,8 +29,13 @@ import POSTGRE from '../../assets/icons/techs/POSTGRE.svg'
 import MYSQL from '../../assets/icons/techs/MYSQL.svg'
 import DOCKER from '../../assets/icons/techs/DOCKER.svg'
 import AWS from '../../assets/icons/techs/AWS.svg'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-export default function MainSkills() {
+export default function MainSkills({ lang }: { lang: Locale }) {
+  const {
+    home: { mainSkills },
+  } = getDictionaryServerOnly(lang)
   return (
     <div
       className="
@@ -40,13 +45,23 @@ export default function MainSkills() {
       "
     >
       <h2 className="text-[2.5rem] font-bold uppercase leading-none text-cyan-500 drop-shadow-custom-text">
-        main<span className="ml-1 text-gray-100">skills</span>
+        {mainSkills.title.map((text, index) => {
+          if (index % 2) {
+            return (
+              <span key={text + index} className="ml-1 text-gray-100">
+                {text}
+              </span>
+            )
+          } else {
+            return text
+          }
+        })}
       </h2>
 
       <div className="mb-16 mt-4 flex gap-10 text-gray-100 max-tablets:flex-col">
         <div className="">
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
-            Programming:
+            {mainSkills.programming}:
           </h3>
           <div
             className="
@@ -75,7 +90,7 @@ export default function MainSkills() {
 
         <div className="">
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
-            Management and Design:
+            {mainSkills.management}:
           </h3>
           <div
             className="
@@ -97,7 +112,7 @@ export default function MainSkills() {
 
         <div className="">
           <h3 className="mb-2 text-lg font-semibold drop-shadow-custom-text">
-            Currently Learning:
+            {mainSkills.learning}:
           </h3>
           <div
             className="

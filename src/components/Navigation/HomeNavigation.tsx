@@ -4,12 +4,22 @@ import NavLogo from '@/assets/NavLogo'
 import NavLink from './NavLink'
 import Navigation from './NavigationCompose'
 import MobileNav from './MobileNav'
-import { useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
+import { useEffect, useRef, useState } from 'react'
+import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
+import { useParams } from 'next/navigation'
+import { Locale } from '@/config/i18n.config'
+import LangSwitch from './LangSwitch'
 
 export default function HomeNavigation() {
   const [isShown, setIsShown] = useState(true)
   const NavRef = useRef<HTMLDivElement>(null)
+
+  const params = useParams()
+  const lang = params.lang as Locale
+  const {
+    home: { navigation },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -53,21 +63,29 @@ export default function HomeNavigation() {
         >
           <NavLogo />
         </NavLink>
-        <Navigation.Content>
+        <Navigation.Content className="max-w-[986px]">
           <Navigation.List>
             <Navigation.Item>
-              <NavLink href="/" title="Home" newTab />
+              <NavLink href="/" title={navigation.home} newTab />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#briefing" title="Briefing" scroll />
+              <NavLink href="#briefing" title={navigation.brefing} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#projects" title="Projects" scroll />
+              <NavLink href="#projects" title={navigation.projects} scroll />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#experience" title="Experience" scroll />
+              <NavLink href="#bootcamps" title={navigation.bootcamps} scroll />
+            </Navigation.Item>
+            <Navigation.Item>
+              <NavLink
+                href="#experience"
+                title={navigation.experience}
+                scroll
+              />
             </Navigation.Item>
           </Navigation.List>
+          <LangSwitch />
         </Navigation.Content>
       </Navigation.Root>
       <MobileNav />

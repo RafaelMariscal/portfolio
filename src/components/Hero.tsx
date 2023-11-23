@@ -5,8 +5,14 @@ import LinkedInIcon from '@/assets/icons/LinkedInIcon'
 import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
 import WhatsappIcon from '@/assets/icons/WhatsappIcon'
 import NavLink from './Navigation/NavLink'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-function Hero() {
+function Hero({ lang }: { lang: Locale }) {
+  const {
+    home: { hero },
+  } = getDictionaryServerOnly(lang)
+
   return (
     <div
       id="hero"
@@ -30,8 +36,7 @@ function Hero() {
       <div
         className="
           relative flex w-full max-w-lg items-center justify-center text-gray-100 
-          max-tablets:items-start
-          
+          max-tablets:items-start 
         "
       >
         <div className="max-tablets-xs:max-w-md max-phones:text-center">
@@ -44,12 +49,12 @@ function Hero() {
             Rafael Mariscal
           </h1>
           <h2 className="mt-[0.125rem] text-xl font-semibold leading-none text-gray-200 drop-shadow-custom-text">
-            Full-Stack Software Developer{' '}
+            {hero.role[0]}{' '}
             <span className="max-tablets:hidden max-md:inline-block max-tablets-xs:hidden">
-              -
+              {hero.role[1]}
             </span>{' '}
             <span className="max-tablets:block max-md:inline-block max-tablets-xs:hidden">
-              React / Node.js
+              {hero.role[2]}
             </span>
           </h2>
           <h3
@@ -68,8 +73,13 @@ function Hero() {
               [&_span]:text-cyan-400
             "
           >
-            I <span>develop solutions</span> to real-life problems,{' '}
-            <span>managing teams</span> to achieve goals.
+            {hero.description.map((text, index) => {
+              if (index % 2) {
+                return <span key={text + index}>{text}</span>
+              } else {
+                return text
+              }
+            })}
           </h3>
 
           <div
@@ -112,7 +122,7 @@ function Hero() {
             <NavLink
               newTab
               href="https://wa.me/5585981182281"
-              title="Click to chat"
+              title={hero.whatsappChat}
               className="
                 flex items-center gap-[.375rem] text-xs
                 tracking-wider text-gray-100 duration-100 

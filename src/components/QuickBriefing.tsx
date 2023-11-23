@@ -1,6 +1,15 @@
 import NavLink from './Navigation/NavLink'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-export default function QuickBriefing() {
+export default function QuickBriefing({ lang }: { lang: Locale }) {
+  const {
+    home: {
+      briefing: { link, ...paragraphs },
+    },
+  } = getDictionaryServerOnly(lang)
+  const paragraphsKeys = Object.keys(paragraphs) as (keyof typeof paragraphs)[]
+
   return (
     <article
       id="briefing"
@@ -16,27 +25,24 @@ export default function QuickBriefing() {
         [&_strong]:underline [&_strong]:underline-offset-2
         "
     >
-      <p>
-        I&#39;m a Software Developer with{' '}
-        <strong>over two years of experience</strong> working on End-2-End
-        projects, including leadership positions. Outside of work, I have a
-        strong passion about barbecue, fitness and sports in general.
-      </p>
-      <p>
-        In my career, I&#39;ve been involved with projects using
-        <strong> Javascript</strong>, <strong>Typescript</strong>,{' '}
-        <strong>React</strong>, <strong>Next</strong>, <strong>Node.js</strong>{' '}
-        and <strong>NestJs</strong>. In these projects, I had the opportunity to
-        contribute from the initial client briefing to the final sprint.
-      </p>
-      <p>
-        In terms of my academic background, I hold a degree in{' '}
-        <strong>Engineering</strong> and I&#39;m currently pursuing my second
-        degree in <strong>System Analysis and Development</strong> - 2024.
-      </p>
+      {paragraphsKeys.map((key) => {
+        const currParagraph = paragraphs[key]
+        return (
+          <p key={key}>
+            {currParagraph.map((text, index) => {
+              if (index % 2) {
+                return <strong key={text + index}>{text}</strong>
+              } else {
+                return text
+              }
+            })}
+          </p>
+        )
+      })}
+
       <NavLink
         href="#experience"
-        title="About my experiences"
+        title={link}
         scroll
         className="mt-2 text-gray-200 underline underline-offset-2 max-tablets:focus:text-gray-200"
       />

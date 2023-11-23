@@ -6,8 +6,15 @@ import MsOutlookIcon from '@/assets/icons/MsOutlookIcon'
 import Squares from '@/assets/Squares.png'
 import WhatsappIcon from '@/assets/icons/WhatsappIcon'
 import Navigation from './Navigation/NavigationCompose'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-export default function Footer() {
+export default function Footer({ lang }: { lang: Locale }) {
+  const {
+    home: {
+      footer: { footerNav, leavingMessage, whatsappChat },
+    },
+  } = getDictionaryServerOnly(lang)
   return (
     <div
       role="container"
@@ -33,9 +40,7 @@ export default function Footer() {
         </NavLink>
 
         <p className="w-full max-w-sm text-start font-medium max-tablets-xs:max-w-none">
-          If you think that I can assist you, I&#39;d love to talk about your
-          problem. Feel free to shoot me an email or contact me through my
-          socials below.
+          {leavingMessage}
         </p>
 
         <div className="flex flex-col gap-3 max-phones:gap-4">
@@ -70,7 +75,7 @@ export default function Footer() {
           <NavLink
             newTab
             href="https://wa.me/5585981182281"
-            title="Click to chat"
+            title={whatsappChat}
             className="
                 flex items-center gap-[.375rem] text-xs
                 tracking-wider text-gray-100 duration-100 
@@ -104,30 +109,30 @@ export default function Footer() {
 
       <Navigation.Content className="max-md:mt-4">
         <span className="mb-4 mr-7 block text-end text-sm text-gray-100/50 max-md:text-start">
-          Quick Navigation:
+          {footerNav.title}:
         </span>
         <Navigation.List className="flex-col whitespace-nowrap  max-md:items-start max-md:pl-0">
           <Navigation.Item>
-            <NavLink href="/" title="Home" newTab />
+            <NavLink href="/" title={footerNav.pages.home} newTab />
           </Navigation.Item>
           <Navigation.Item>
             <NavLink
               href="/projects/rdInspections"
-              title="RD Inspections - CRM"
+              title={footerNav.pages.rdInspec}
               newTab
             />
           </Navigation.Item>
           <Navigation.Item>
             <NavLink
               href="/projects/jackedPlanner"
-              title="Jacked Planner - SaaS"
+              title={footerNav.pages.jPlanner}
               newTab
             />
           </Navigation.Item>
           <Navigation.Item>
             <NavLink
               href="/projects/inboxWebsite"
-              title="Inbox - Website"
+              title={footerNav.pages.ibWebsite}
               newTab
             />
           </Navigation.Item>

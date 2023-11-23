@@ -5,11 +5,21 @@ import clsx from 'clsx'
 import Navigation from '@/components/Navigation/NavigationCompose'
 import NavLink from '../NavLink'
 import { useEffect, useRef, useState } from 'react'
+import { useParams } from 'next/navigation'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
+import LangSwitch from '../LangSwitch'
 
 export default function MobileNav() {
   const [isShown, setIsShown] = useState(true)
   const [open, setOpen] = useState(false)
   const triggerBoxRef = useRef<HTMLDivElement>(null)
+
+  const params = useParams()
+  const lang = params.lang as Locale
+  const {
+    home: { navigation },
+  } = getDictionaryUseClient(lang)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -111,19 +121,34 @@ export default function MobileNav() {
             <Navigation.Content>
               <Navigation.List className="flex-col px-0">
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="/" title="Home" newTab />
+                  <NavLink href="/" title={navigation.home} newTab />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#briefing" title="Briefing" scroll />
+                  <NavLink href="#briefing" title={navigation.brefing} scroll />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#projects" title="Projects" scroll />
+                  <NavLink
+                    href="#projects"
+                    title={navigation.projects}
+                    scroll
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#bootcamps" title="Bootcamps" scroll />
+                  <NavLink
+                    href="#bootcamps"
+                    title={navigation.bootcamps}
+                    scroll
+                  />
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
-                  <NavLink href="#experience" title="Experiences" scroll />
+                  <NavLink
+                    href="#experience"
+                    title={navigation.experience}
+                    scroll
+                  />
+                </Navigation.Item>
+                <Navigation.Item>
+                  <LangSwitch />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>

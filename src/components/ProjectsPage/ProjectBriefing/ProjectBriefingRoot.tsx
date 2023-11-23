@@ -2,14 +2,24 @@ import Highlight from '@/components/Basic/Highlight'
 import SectionTitle from '@/components/Basic/SectionTitle'
 import { ComponentProps } from 'react'
 import { twMerge } from 'tailwind-merge'
+import { Locale } from '@/config/i18n.config'
+import { getDictionaryServerOnly } from '@/dictionaries/default-dictionary-use-server'
 
-type ProjectBriefingRootProps = ComponentProps<'section'>
+type ProjectBriefingRootProps = ComponentProps<'section'> & {
+  lang: Locale
+}
 
 export default function ProjectBriefingRoot({
+  lang,
   className,
   children,
   ...props
 }: ProjectBriefingRootProps) {
+  const {
+    rdProjectPage: {
+      briefing: { sectionTitle },
+    },
+  } = getDictionaryServerOnly(lang)
   return (
     <section
       {...props}
@@ -22,10 +32,20 @@ export default function ProjectBriefingRoot({
       )}
     >
       <SectionTitle className="max-phones:leading-none">
-        Project
-        <Highlight className="block phones:ml-1 phones:inline">
-          Briefing
-        </Highlight>
+        {sectionTitle.map((text, index) => {
+          if (index % 2) {
+            return (
+              <Highlight
+                key={text + index}
+                className="block phones:ml-1 phones:inline"
+              >
+                {text}
+              </Highlight>
+            )
+          } else {
+            return text
+          }
+        })}
       </SectionTitle>
       <div
         className="
