@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { Locale } from '@/config/i18n.config'
 import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
+import LangSwitch from '../LangSwitch'
 
 export default function MobileNav() {
   const [isShown, setIsShown] = useState(true)
@@ -145,6 +146,9 @@ export default function MobileNav() {
                     title={navigation.experience}
                     scroll
                   />
+                </Navigation.Item>
+                <Navigation.Item>
+                  <LangSwitch />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>

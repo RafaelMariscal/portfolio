@@ -9,6 +9,7 @@ import clsx from 'clsx'
 import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
 import { useParams } from 'next/navigation'
 import { Locale } from '@/config/i18n.config'
+import LangSwitch from '@/components/Navigation/LangSwitch'
 
 export default function IbNavigation() {
   const [isShown, setIsShown] = useState(true)
@@ -85,6 +86,9 @@ export default function IbNavigation() {
             </Navigation.Item>
             <Navigation.Item>
               <NavLink href="#nextProject" title={nextProject} scroll />
+            </Navigation.Item>
+            <Navigation.Item>
+              <LangSwitch />
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Content>

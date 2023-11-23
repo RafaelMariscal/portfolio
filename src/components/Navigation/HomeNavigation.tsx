@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react'
 import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
 import { useParams } from 'next/navigation'
 import { Locale } from '@/config/i18n.config'
+import LangSwitch from './LangSwitch'
 
 export default function HomeNavigation() {
   const [isShown, setIsShown] = useState(true)
@@ -82,6 +83,9 @@ export default function HomeNavigation() {
                 title={navigation.experience}
                 scroll
               />
+            </Navigation.Item>
+            <Navigation.Item>
+              <LangSwitch />
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Content>

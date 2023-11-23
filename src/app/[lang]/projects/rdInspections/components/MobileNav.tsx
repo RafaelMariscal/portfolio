@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Locale } from '@/config/i18n.config'
 import { useParams } from 'next/navigation'
 import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
+import LangSwitch from '@/components/Navigation/LangSwitch'
 
 export default function MobileNav() {
   const [isShown, setIsShown] = useState(true)
@@ -148,6 +149,9 @@ export default function MobileNav() {
                 </Navigation.Item>
                 <Navigation.Item onClick={() => setOpen(false)}>
                   <NavLink href="/" title={navigation.home} newTab />
+                </Navigation.Item>
+                <Navigation.Item>
+                  <LangSwitch />
                 </Navigation.Item>
               </Navigation.List>
             </Navigation.Content>

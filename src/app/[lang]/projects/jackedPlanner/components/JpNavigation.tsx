@@ -9,6 +9,7 @@ import clsx from 'clsx'
 import { Locale } from '@/config/i18n.config'
 import { useParams } from 'next/navigation'
 import { getDictionaryUseClient } from '@/dictionaries/default-dictionary-use-client'
+import LangSwitch from '@/components/Navigation/LangSwitch'
 
 export default function JpNavigation() {
   const [isShown, setIsShown] = useState(true)
@@ -78,6 +79,9 @@ export default function JpNavigation() {
             </Navigation.Item>
             <Navigation.Item>
               <NavLink href="#nextProject" title={nextProject} scroll />
+            </Navigation.Item>
+            <Navigation.Item>
+              <LangSwitch />
             </Navigation.Item>
           </Navigation.List>
         </Navigation.Content>
