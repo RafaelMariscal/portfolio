@@ -3,9 +3,9 @@ import { IbProjectPage } from '../types/ibPage.type'
 export const ibProjectPagePtBR: IbProjectPage = {
   navigation: {
     pageTitle: 'Inbox Website',
-    briefing: 'Briefing do Projeto',
-    design: 'Processo Criativo',
-    development: 'Software Development',
+    briefing: 'Briefing',
+    design: 'Design',
+    development: 'Desenvolvimento',
     components: 'Componentes',
     nextProject: 'Próximo Projeto',
     home: 'Página Inicial',

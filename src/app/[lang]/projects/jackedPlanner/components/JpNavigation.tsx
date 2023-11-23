@@ -80,10 +80,8 @@ export default function JpNavigation() {
             <Navigation.Item>
               <NavLink href="#nextProject" title={nextProject} scroll />
             </Navigation.Item>
-            <Navigation.Item>
-              <LangSwitch />
-            </Navigation.Item>
           </Navigation.List>
+          <LangSwitch />
         </Navigation.Content>
       </Navigation.Root>
       <MobileNav />

@@ -74,7 +74,11 @@ export default function RdNavigation() {
               />
             </Navigation.Item>
             <Navigation.Item>
-              <NavLink href="#mainFeatures" title="Main Features" scroll />
+              <NavLink
+                href="#mainFeatures"
+                title={navigation.features}
+                scroll
+              />
             </Navigation.Item>
             <Navigation.Item>
               <NavLink
@@ -90,10 +94,8 @@ export default function RdNavigation() {
                 scroll
               />
             </Navigation.Item>
-            <Navigation.Item>
-              <LangSwitch />
-            </Navigation.Item>
           </Navigation.List>
+          <LangSwitch />
         </Navigation.Content>
       </Navigation.Root>
       <MobileNav />

@@ -3,10 +3,10 @@ import { IbProjectPage } from '../types/ibPage.type'
 export const ibProjectPageEnUS: IbProjectPage = {
   navigation: {
     pageTitle: 'Inbox Website',
-    briefing: 'Project Briefing',
-    design: 'Design Process',
-    development: 'Software Development',
-    components: 'Components Showcase',
+    briefing: 'Briefing',
+    design: 'Design',
+    development: 'Development',
+    components: 'Components',
     nextProject: 'Next Project',
     home: 'Home Page',
   },

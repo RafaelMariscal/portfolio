@@ -26,7 +26,7 @@ export default function NavLink({
   ...rest
 }: NavLinkProps) {
   const path = usePathname()
-  const routeSelected = path === href
+  const routeSelected = path === href || path === '/en' + href
 
   const { setIsOpen, setMessage, setTitle } = useToastContext()
 

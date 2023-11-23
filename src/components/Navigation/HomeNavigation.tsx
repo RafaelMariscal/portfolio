@@ -63,7 +63,7 @@ export default function HomeNavigation() {
         >
           <NavLogo />
         </NavLink>
-        <Navigation.Content>
+        <Navigation.Content className="max-w-[986px]">
           <Navigation.List>
             <Navigation.Item>
               <NavLink href="/" title={navigation.home} newTab />
@@ -84,10 +84,8 @@ export default function HomeNavigation() {
                 scroll
               />
             </Navigation.Item>
-            <Navigation.Item>
-              <LangSwitch />
-            </Navigation.Item>
           </Navigation.List>
+          <LangSwitch />
         </Navigation.Content>
       </Navigation.Root>
       <MobileNav />

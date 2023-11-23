@@ -7,5 +7,10 @@ export default function NavigationContent({
   className,
   ...props
 }: NavigationContentProps) {
-  return <nav {...props} className={twMerge(className)} />
+  return (
+    <nav
+      {...props}
+      className={twMerge('flex w-full justify-between', className)}
+    />
+  )
 }

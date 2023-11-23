@@ -3,9 +3,9 @@ import { JpProjectPage } from '../types/jpPage.type'
 export const jpProjectPageEnUS: JpProjectPage = {
   navigation: {
     pageTitle: 'Jacked Planner',
-    briefing: 'Project Briefing',
-    design: 'Design Process',
-    development: 'Software Development',
+    briefing: 'Briefing',
+    design: 'Design',
+    development: 'Development',
     nextProject: 'Next Project',
     home: 'Home Page',
   },

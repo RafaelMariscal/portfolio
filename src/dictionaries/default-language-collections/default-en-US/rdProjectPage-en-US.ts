@@ -3,9 +3,9 @@ import { RdProjectPage } from '../types/rdPage.type'
 export const rdProjectPageEnUS: RdProjectPage = {
   navigation: {
     pageTitle: 'RD Inspection',
-    briefing: 'Project Briefing',
-    features: 'Main Features',
-    components: 'Components Showcase',
+    briefing: 'Briefing',
+    features: 'Features',
+    components: 'Components',
     nextProject: 'Next Project',
     home: 'Home Page',
   },
