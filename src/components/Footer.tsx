@@ -107,7 +107,7 @@ export default function Footer({ lang }: { lang: Locale }) {
         />
       </div>
 
-      <Navigation.Content className="max-md:mt-4">
+      <Navigation.Content className="w-fit flex-col max-md:mt-4">
         <span className="mb-4 mr-7 block text-end text-sm text-gray-100/50 max-md:text-start">
           {footerNav.title}:
         </span>
